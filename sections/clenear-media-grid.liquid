@@ -1,0 +1,97 @@
+<section class="clenear-institutional-shell clenear-section clenear-section--soft">
+  <div class="clenear-container">
+    <div class="clenear-centered">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="clenear-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 class="clenear-heading clenear-heading--section">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}
+        <p class="clenear-text">{{ section.settings.text }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="clenear-media-grid">
+      {%- for block in section.blocks -%}
+        <article class="clenear-media-card" {{ block.shopify_attributes }}>
+          <div class="clenear-media-card__image">
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 640
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '240, 360, 480, 640',
+                  sizes: '(min-width: 990px) 20vw, 92vw',
+                  alt: block.settings.heading
+              }}
+            {%- else -%}
+              <div class="clenear-visual-placeholder">
+                <div class="clenear-visual-placeholder__title">{{ block.settings.heading }}</div>
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="clenear-media-card__body">
+            <h3>{{ block.settings.heading }}</h3>
+            <p>{{ block.settings.text }}</p>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear midias",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto superior",
+      "default": "Aplicações e linhas"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Conheça algumas soluções Clenear"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Uma visão institucional de linhas, aplicações e bastidores da marca, sem vitrine de compra."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Mídia",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagem"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Titulo",
+          "default": "Clean Max"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texto",
+          "default": "Soluções de alto desempenho para uso profissional."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear mídias"
+    }
+  ]
+}
+{% endschema %}

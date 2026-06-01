@@ -1,0 +1,42 @@
+<section id="pesquisa-qualidade" class="clenear-institutional-shell clenear-section">
+  <div class="clenear-container">
+    <div class="clenear-centered">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="clenear-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 class="clenear-heading clenear-heading--section">{{ section.settings.heading }}</h2>
+      <p class="clenear-text">{{ section.settings.text }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear qualidade",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto superior",
+      "default": "Pesquisa e qualidade"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Pesquisa, qualidade e desenvolvimento técnico"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Cada solução Clenear é desenvolvida com atenção à performance, segurança de aplicação e consistência. A empresa combina experiência prática, testes e aprimoramento contínuo para entregar produtos confiáveis ao mercado profissional."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear qualidade"
+    }
+  ]
+}
+{% endschema %}

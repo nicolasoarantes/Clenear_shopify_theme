@@ -1,0 +1,42 @@
+<section class="clenear-institutional-shell clenear-section clenear-section--soft">
+  <div class="clenear-container">
+    <div class="clenear-centered">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="clenear-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 class="clenear-heading clenear-heading--section">{{ section.settings.heading }}</h2>
+      <p class="clenear-text">{{ section.settings.text }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear relacionamento",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto superior",
+      "default": "Prova social"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Relacionamento com clientes e parceiros"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "A Clenear constrói parcerias com empresas, revendedores e profissionais que buscam qualidade, regularidade e suporte no fornecimento de soluções de limpeza."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear relacionamento"
+    }
+  ]
+}
+{% endschema %}

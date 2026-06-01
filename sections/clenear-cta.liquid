@@ -1,0 +1,79 @@
+<span id="revenda" aria-hidden="true"></span>
+<section id="contato" class="clenear-institutional-shell clenear-section clenear-section--green">
+  <div class="clenear-container">
+    <div class="clenear-cta">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="clenear-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        <h2 class="clenear-heading clenear-heading--section">{{ section.settings.heading }}</h2>
+        <p class="clenear-text">{{ section.settings.text }}</p>
+      </div>
+      <div class="clenear-button-row">
+        {%- if section.settings.primary_label != blank -%}
+          <a class="clenear-button clenear-button--primary" href="{{ section.settings.primary_link }}">
+            {{ section.settings.primary_label | escape }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.secondary_label != blank -%}
+          <a class="clenear-button clenear-button--secondary" href="{{ section.settings.secondary_link }}">
+            {{ section.settings.secondary_label | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto superior",
+      "default": "Contato comercial"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Fale com a equipe Clenear"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Precisa de suporte técnico, informações comerciais ou deseja desenvolver uma solução para sua empresa?"
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Botao principal",
+      "default": "Chamar no WhatsApp"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Link do botao principal"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Botao secundario",
+      "default": "Quero ser revendedor"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Link do botao secundario"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear CTA"
+    }
+  ]
+}
+{% endschema %}

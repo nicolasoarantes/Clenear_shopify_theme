@@ -1,0 +1,29 @@
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container clenear-institutional-menu-drawer">
+    <summary
+      class="header__icon header__icon--menu header__icon--summary link focus-inset"
+      aria-label="{{ 'sections.header.menu' | t }}"
+    >
+      <span>
+        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+    <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
+      <div class="menu-drawer__inner-container">
+        <div class="menu-drawer__navigation-container">
+          <nav class="menu-drawer__navigation" aria-label="Menu institucional">
+            <ul class="menu-drawer__menu list-menu" role="list">
+              <li><a href="{{ routes.root_url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Home</a></li>
+              <li><a href="{{ routes.root_url }}#solucoes" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Soluções</a></li>
+              <li><a href="{{ routes.root_url }}#sobre" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Sobre</a></li>
+              <li><a href="{{ routes.root_url }}#pesquisa-qualidade" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Pesquisa e Qualidade</a></li>
+              <li><a href="{{ routes.root_url }}#revenda" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Revenda</a></li>
+              <li><a href="{{ routes.root_url }}#contato" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>

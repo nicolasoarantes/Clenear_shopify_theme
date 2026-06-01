@@ -1,0 +1,115 @@
+<section class="clenear-institutional-shell clenear-hero">
+  <div class="clenear-container">
+    <div class="clenear-hero__grid">
+      <div class="clenear-hero__content">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="clenear-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        <h1 class="clenear-heading">{{ section.settings.heading }}</h1>
+        {%- if section.settings.subheading != blank -%}
+          <p class="clenear-text">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+        <div class="clenear-button-row">
+          {%- if section.settings.primary_label != blank -%}
+            <a class="clenear-button clenear-button--primary" href="{{ section.settings.primary_link }}">
+              {{ section.settings.primary_label | escape }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.secondary_label != blank -%}
+            <a class="clenear-button clenear-button--secondary" href="{{ section.settings.secondary_link }}">
+              {{ section.settings.secondary_label | escape }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="clenear-hero__media">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1000
+            | image_tag:
+              loading: 'eager',
+              widths: '360, 540, 720, 900, 1000',
+              sizes: '(min-width: 990px) 46vw, 92vw',
+              alt: section.settings.image_alt
+          }}
+        {%- else -%}
+          <div class="clenear-visual-placeholder">
+            <div class="clenear-visual-placeholder__title">Produtos profissionais Clenear</div>
+            <div class="clenear-visual-placeholder__list">
+              <span>Saneantes</span>
+              <span>Higienização</span>
+              <span>Revenda</span>
+              <span>Marca própria</span>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear hero institucional",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto superior",
+      "default": "Clenear para empresas"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Soluções profissionais de limpeza, saneantes e higienização para empresas"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subtitulo",
+      "default": "A Clenear desenvolve produtos de alto desempenho para limpeza profissional, revenda, lavanderias, automotivo e marcas parceiras."
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Botao principal",
+      "default": "Falar com a equipe"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Link do botao principal"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Botao secundario",
+      "default": "Conhecer soluções"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Link do botao secundario"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Texto alternativo da imagem",
+      "default": "Soluções profissionais Clenear"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear hero institucional"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,77 @@
+<section id="sobre" class="clenear-institutional-shell clenear-section">
+  <div class="clenear-container">
+    <div class="clenear-split">
+      <div class="clenear-image-panel">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 900
+            | image_tag:
+              loading: 'lazy',
+              widths: '360, 540, 720, 900',
+              sizes: '(min-width: 990px) 42vw, 92vw',
+              alt: section.settings.image_alt
+          }}
+        {%- else -%}
+          <div class="clenear-visual-placeholder">
+            <div class="clenear-visual-placeholder__title">Indústria capixaba com foco técnico</div>
+            <div class="clenear-visual-placeholder__list">
+              <span>Qualidade</span>
+              <span>Desempenho</span>
+              <span>Suporte</span>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+      <div>
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="clenear-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        <h2 class="clenear-heading clenear-heading--section">{{ section.settings.heading }}</h2>
+        <div class="clenear-text">{{ section.settings.text }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear sobre",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Texto superior",
+      "default": "Quem é a Clenear"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Desenvolvimento de saneantes e soluções para limpeza profissional"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto",
+      "default": "<p>A Clenear é uma indústria capixaba especializada no desenvolvimento de saneantes, aromatizantes e soluções de limpeza profissional. Atuamos com foco em qualidade, desempenho, responsabilidade ambiental e suporte técnico para empresas e parceiros.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Texto alternativo da imagem",
+      "default": "Equipe e estrutura Clenear"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear sobre"
+    }
+  ]
+}
+{% endschema %}
