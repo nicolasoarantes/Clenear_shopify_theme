@@ -87,7 +87,40 @@
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
-                    {%- if block.settings.menu != blank -%}
+                    {%- if section.settings.institutional_links_enable -%}
+                      <ul class="footer-block__details-content list-unstyled">
+                        <li>
+                          <a href="{{ routes.root_url }}" class="link link--text list-menu__item list-menu__item--link">
+                            Home
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ routes.root_url }}#solucoes" class="link link--text list-menu__item list-menu__item--link">
+                            Soluções
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ routes.root_url }}#sobre" class="link link--text list-menu__item list-menu__item--link">
+                            Sobre
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ routes.root_url }}#pesquisa-qualidade" class="link link--text list-menu__item list-menu__item--link">
+                            Pesquisa e Qualidade
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ routes.root_url }}#revenda" class="link link--text list-menu__item list-menu__item--link">
+                            Revenda
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ routes.root_url }}#contato" class="link link--text list-menu__item list-menu__item--link">
+                            Contato
+                          </a>
+                        </li>
+                      </ul>
+                    {%- elsif block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
                         {%- for link in block.settings.menu.links -%}
                           <li>
@@ -434,6 +467,13 @@
       "type": "header",
       "content": "t:sections.footer.settings.header__1.content",
       "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "institutional_links_enable",
+      "default": false,
+      "label": "Usar links institucionais",
+      "info": "Substitui menus do rodape por links para secoes da pagina inicial."
     },
     {
       "type": "checkbox",
