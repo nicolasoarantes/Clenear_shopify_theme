@@ -329,8 +329,7 @@
             "emoji": "✅",
             "number": "03",
             "title": "Resultado comprovado",
-            "text": "Testado em aplicações reais: limpeza pesada, automotivo, lavanderia."
-          }
+            "text": "Testado em aplicações reais: limpeza pesada, automotivo, lavanderia."          }
         }
       },
       "block_order": [
@@ -342,6 +341,7 @@
         "eyebrow": "Pesquisa e qualidade",
         "heading": "Desenvolvimento que se comprova",
         "subtext": "Performance, segurança e consistência de resultado em cada produto."
+    },
       }
     },
     "reseller_cta": {
@@ -432,3 +432,4 @@
     "final_cta"
   ]
 }
+

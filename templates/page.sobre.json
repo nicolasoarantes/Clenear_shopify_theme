@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "clenear-page-sobre",
+      "blocks": {
+        "st1": {
+          "type": "stat",
+          "settings": {
+            "value": "+18 anos",
+            "label": "de experiência"
+          }
+        },
+        "st2": {
+          "type": "stat",
+          "settings": {
+            "value": "+50",
+            "label": "produtos"
+          }
+        },
+        "st3": {
+          "type": "stat",
+          "settings": {
+            "value": "ES BR",
+            "label": "todo o país"
+          }
+        },
+        "st4": {
+          "type": "stat",
+          "settings": {
+            "value": "B2B",
+            "label": "foco empresarial"
+          }
+        },
+        "v1": {
+          "type": "value",
+          "settings": {
+            "emoji": "🎯",
+            "title": "Qualidade",
+            "text": "Rigor técnico e consistência em cada produto."
+          }
+        },
+        "v2": {
+          "type": "value",
+          "settings": {
+            "emoji": "🤝",
+            "title": "Parceria",
+            "text": "Relações de longo prazo baseadas em confiança."
+          }
+        },
+        "v3": {
+          "type": "value",
+          "settings": {
+            "emoji": "🌿",
+            "title": "Responsabilidade",
+            "text": "Fórmulas seguras com consciência ambiental."
+          }
+        }
+      },
+      "block_order": [
+        "st1",
+        "st2",
+        "st3",
+        "st4",
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "settings": {
+        "eyebrow": "Quem é a Clenear",
+        "heading": "Indústria capixaba comprometida com qualidade",
+        "subtext": "Desde 2006 desenvolvendo soluções de limpeza profissional para empresas e parceiros."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

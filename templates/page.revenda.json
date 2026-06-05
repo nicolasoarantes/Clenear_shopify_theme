@@ -1,0 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "clenear-page-revenda",
+      "blocks": {
+        "b1": {
+          "type": "benefit",
+          "settings": {
+            "text": "Linhas completas por segmento"
+          }
+        },
+        "b2": {
+          "type": "benefit",
+          "settings": {
+            "text": "Orientação técnica e suporte de vendas"
+          }
+        },
+        "b3": {
+          "type": "benefit",
+          "settings": {
+            "text": "Condições para diferentes volumes"
+          }
+        },
+        "b4": {
+          "type": "benefit",
+          "settings": {
+            "text": "Parceria de longo prazo"
+          }
+        },
+        "s1": {
+          "type": "segment",
+          "settings": {
+            "emoji": "🚗",
+            "title": "Automotivo",
+            "text": "Linha+ completa"
+          }
+        },
+        "s2": {
+          "type": "segment",
+          "settings": {
+            "emoji": "🧺",
+            "title": "Lavanderia",
+            "text": "Amaciantes e detergentes"
+          }
+        },
+        "s3": {
+          "type": "segment",
+          "settings": {
+            "emoji": "🏢",
+            "title": "Corporativo",
+            "text": "Para empresas"
+          }
+        },
+        "s4": {
+          "type": "segment",
+          "settings": {
+            "emoji": "🏭",
+            "title": "Industrial",
+            "text": "Alta concentração"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {
+        "eyebrow": "Seja um parceiro",
+        "heading": "Revenda Clenear e expanda seu negócio",
+        "subtext": "Portfólio completo, suporte técnico e condições para crescer.",
+        "phone": "(27) 3228-0140"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
