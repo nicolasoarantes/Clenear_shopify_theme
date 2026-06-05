@@ -1,0 +1,31 @@
+{{ 'clenear-home-v2.css' | asset_url | stylesheet_tag }}
+<section class="cl-hero cl-dark" id="inicio">
+  <canvas class="cl-hero__canvas" id="cl-hero-canvas" aria-hidden="true"></canvas>
+  <div class="cl-hero__bg-shape cl-hero__bg-shape--1" aria-hidden="true"></div>
+  <div class="cl-hero__bg-shape cl-hero__bg-shape--2" aria-hidden="true"></div>
+  <div class="cl-hero__bg-shape cl-hero__bg-shape--3" aria-hidden="true"></div>
+  <div class="cl-wrap">
+    <div class="cl-hero__grid">
+      <div class="cl-hero__content">
+        {%- if section.settings.eyebrow != blank -%}<p class="cl-label">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+        <h1 class="cl-hero__h1">{{ section.settings.headline | default: 'Soluções profissionais de' }}<span>{{ section.settings.headline_accent | default: 'limpeza e saneantes' }}</span></h1>
+        {%- if section.settings.subtext != blank -%}<p class="cl-hero__sub">{{ section.settings.subtext }}</p>{%- endif -%}
+        <div class="cl-btn-row">
+          {%- if section.settings.cta_primary_label != blank -%}<a href="{{ section.settings.cta_primary_url }}" class="cl-btn cl-btn--primary">{{ section.settings.cta_primary_label | escape }}</a>{%- endif -%}
+          {%- if section.settings.cta_whatsapp_label != blank -%}<a href="{{ section.settings.cta_whatsapp_url }}" class="cl-btn cl-btn--whatsapp" target="_blank" rel="noopener">{{ section.settings.cta_whatsapp_label | escape }}</a>{%- endif -%}
+          {%- if section.settings.cta_secondary_label != blank -%}<a href="{{ section.settings.cta_secondary_url }}" class="cl-btn cl-btn--ghost">{{ section.settings.cta_secondary_label | escape }}</a>{%- endif -%}
+        </div>
+        <div class="cl-hero__trust">{%- for block in section.blocks -%}{%- if block.type == 'trust_item' -%}<div class="cl-hero__trust-item" {{ block.shopify_attributes }}><span class="cl-hero__trust-dot"></span>{{ block.settings.label | escape }}</div>{%- endif -%}{%- endfor -%}</div>
+      </div>
+      <div class="cl-hero__visual">
+        <div class="cl-hero__img-wrap">
+          {%- if section.settings.hero_image != blank -%}{{ section.settings.hero_image | image_url: width: 800 | image_tag: loading: 'eager', widths: '400, 600, 800', sizes: '(min-width: 1024px) 44vw, 90vw', alt: section.settings.hero_image_alt | default: 'Clenear' }}{%- else -%}<div style="width:100%;height:100%;background:linear-gradient(160deg,#1A5C30,#0D3B20);display:flex;align-items:center;justify-content:center;"><div style="text-align:center;color:rgba(255,255,255,.4);padding:3.2rem;"><div style="font-size:6rem;margin-bottom:1.6rem;">🧴</div><div style="font-size:1.6rem;font-weight:700;">Adicione a imagem dos produtos</div></div></div>{%- endif -%}
+          {%- if section.settings.badge_value != blank -%}<div class="cl-hero__img-badge"><strong>{{ section.settings.badge_value | escape }}</strong>{{ section.settings.badge_label | escape }}</div>{%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cl-hero__wave cl-wave"><svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 30 Q360 60 720 30 Q1080 0 1440 30 L1440 60 L0 60 Z" fill="{{ section.settings.wave_color | default: '#1A5C30' }}"/></svg></div>
+</section>
+<script src="{{ 'clenear-home-v2.js' | asset_url }}" defer></script>
+{% schema %}{"name":"Clenear: Hero V2","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Desde 2006"},{"type":"text","id":"headline","label":"Título linha 1","default":"Soluções profissionais de"},{"type":"text","id":"headline_accent","label":"Título linha 2 (verde)","default":"limpeza e saneantes"},{"type":"textarea","id":"subtext","label":"Subtítulo","default":"Desenvolvemos produtos de alto desempenho para limpeza profissional, revenda, lavanderias, automotivo e marcas parceiras."},{"type":"image_picker","id":"hero_image","label":"Imagem"},{"type":"text","id":"hero_image_alt","label":"Alt"},{"type":"text","id":"badge_value","label":"Badge número","default":"+18 anos"},{"type":"text","id":"badge_label","label":"Badge texto","default":"de experiência"},{"type":"text","id":"cta_primary_label","label":"Botão 1","default":"Conhecer soluções"},{"type":"url","id":"cta_primary_url","label":"Botão 1 link"},{"type":"text","id":"cta_whatsapp_label","label":"WhatsApp","default":"Falar no WhatsApp"},{"type":"url","id":"cta_whatsapp_url","label":"WhatsApp link"},{"type":"text","id":"cta_secondary_label","label":"Botão 3","default":"Quero revender"},{"type":"url","id":"cta_secondary_url","label":"Botão 3 link"},{"type":"text","id":"wave_color","label":"Cor onda","default":"#1A5C30"}],"blocks":[{"type":"trust_item","name":"Trust item","settings":[{"type":"text","id":"label","label":"Texto"}]}],"presets":[{"name":"Clenear Hero V2","blocks":[{"type":"trust_item","settings":{"label":"Alto rendimento"}},{"type":"trust_item","settings":{"label":"Uso profissional"}},{"type":"trust_item","settings":{"label":"Suporte técnico"}},{"type":"trust_item","settings":{"label":"Linhas completas"}}]}]}{% endschema %}
