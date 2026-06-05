@@ -1,0 +1,38 @@
+<style>
+  .clenear-redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .clenear-redirect__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .clenear-redirect__text {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+</style>
+
+<div class="clenear-redirect page-width">
+  <h1 class="clenear-redirect__title">Página não disponível</h1>
+  <p class="clenear-redirect__text">Esta área não está ativa no momento. Você será redirecionado para o início.</p>
+  <a href="{{ routes.root_url }}" class="button">Voltar para o início</a>
+</div>
+
+<script>
+  setTimeout(function() {
+    window.location.href = '{{ routes.root_url }}';
+  }, 3000);
+</script>
+
+{% schema %}
+{
+  "name": "Clenear: Redirect Home",
+  "settings": []
+}
+{% endschema %}

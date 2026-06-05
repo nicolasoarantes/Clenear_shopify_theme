@@ -1,17 +1,10 @@
 {
+  "_comment": "v1.0 institucional — rota /collections desativada, redireciona para home. Para reativar na v2.0: restaurar section main-list-collections.",
   "sections": {
     "main": {
-      "type": "main-list-collections",
-      "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "columns_mobile": "2"
-      }
+      "type": "clenear-redirect-home",
+      "settings": {}
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["main"]
 }
