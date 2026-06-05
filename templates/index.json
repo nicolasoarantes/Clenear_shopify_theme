@@ -178,7 +178,8 @@
       "settings": {
         "eyebrow": "Soluções completas",
         "heading": "Linhas pensadas para cada necessidade",
-        "subtext": "Produtos com qualidade, performance e suporte técnico para cada segmento."
+        "subtext": "Produtos com qualidade, performance e suporte técnico para cada segmento.",
+        "default_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!"
       }
     },
     "auto_line": {
@@ -426,7 +427,7 @@
         "cta_wa_label": "Chamar no WhatsApp",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!",
         "cta2_label": "Solicitar orçamento",
-        "cta2_url": "#contato",
+        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Orcamento",
         "cta3_label": "Quero revender",
         "cta3_url": "#revenda",
         "phone": "(27) 3228-0140",

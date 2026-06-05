@@ -1,5 +1,151 @@
-<section class="cl-section cl-solutions" id="solucoes"><div class="cl-wrap">
-  <div class="cl-solutions__intro"><div>{%- if section.settings.eyebrow != blank -%}<p class="cl-label">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}<h2 class="cl-h2">{{ section.settings.heading }}</h2>{%- if section.settings.subtext != blank -%}<p class="cl-lead">{{ section.settings.subtext }}</p>{%- endif -%}</div></div>
-  <div class="cl-sol-grid">{%- for block in section.blocks -%}{%- if block.type == 'solution' -%}<a href="{{ block.settings.link | default: '#' }}" class="cl-sol-card cl-fade-in" {{ block.shopify_attributes }}><div class="cl-sol-card__icon" aria-hidden="true">{{ block.settings.emoji }}</div><h3 class="cl-sol-card__title">{{ block.settings.title | escape }}</h3><p class="cl-sol-card__text">{{ block.settings.text | escape }}</p><span class="cl-sol-card__link">Saiba mais →</span></a>{%- endif -%}{%- endfor -%}</div>
-</div></section>
-{% schema %}{"name":"Clenear: Grid Soluções","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Soluções completas"},{"type":"text","id":"heading","label":"Título","default":"Linhas para cada necessidade"},{"type":"textarea","id":"subtext","label":"Subtexto","default":"Produtos para diferentes segmentos — com qualidade, performance e suporte técnico."}],"blocks":[{"type":"solution","name":"Solução","settings":[{"type":"text","id":"emoji","label":"Emoji","default":"🧺"},{"type":"text","id":"title","label":"Título"},{"type":"textarea","id":"text","label":"Descrição"},{"type":"url","id":"link","label":"Link"}]}],"presets":[{"name":"Clenear Soluções Grid","blocks":[{"type":"solution","settings":{"emoji":"🧺","title":"Lavanderia","text":"Amaciantes, detergentes e soluções para higienização têxtil."}},{"type":"solution","settings":{"emoji":"🚗","title":"Limpeza Automotiva","text":"Linha completa: Brilha+, Limpa+, Descola+, Revita+."}},{"type":"solution","settings":{"emoji":"🏢","title":"Uso Profissional","text":"Padrão, rendimento e regularidade para empresas."}},{"type":"solution","settings":{"emoji":"⚗️","title":"Alta Concentração","text":"Alto rendimento com diluição controlada."}},{"type":"solution","settings":{"emoji":"🏭","title":"Aditivos Industriais","text":"Remoção de graxa e sujeiras pesadas."}},{"type":"solution","settings":{"emoji":"🌸","title":"Essências e Matérias-Primas","text":"Insumos para formulação e marcas parceiras."}}]}]}{% endschema %}
+<section class="cl-section cl-solutions" id="solucoes">
+  <div class="cl-wrap">
+    <div class="cl-solutions__intro">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="cl-label">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        <h2 class="cl-h2">{{ section.settings.heading }}</h2>
+        {%- if section.settings.subtext != blank -%}
+          <p class="cl-lead">{{ section.settings.subtext }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="cl-sol-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'solution' -%}
+          {%- assign solution_link = block.settings.link | default: section.settings.default_link | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ola!' -%}
+          <a
+            href="{{ solution_link }}"
+            class="cl-sol-card cl-fade-in"
+            {% if solution_link contains 'http' %}
+              target="_blank" rel="noopener"
+            {% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <div class="cl-sol-card__icon" aria-hidden="true">{{ block.settings.emoji }}</div>
+            <h3 class="cl-sol-card__title">{{ block.settings.title | escape }}</h3>
+            <p class="cl-sol-card__text">{{ block.settings.text | escape }}</p>
+            <span class="cl-sol-card__link">Saiba mais -></span>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clenear: Grid Soluções",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Soluções completas"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Linhas para cada necessidade"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtexto",
+      "default": "Produtos para diferentes segmentos, com qualidade, performance e suporte técnico."
+    },
+    {
+      "type": "url",
+      "id": "default_link",
+      "label": "Link padrão dos cards"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "solution",
+      "name": "Solução",
+      "settings": [
+        {
+          "type": "text",
+          "id": "emoji",
+          "label": "Emoji",
+          "default": "🧺"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Descrição"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear Soluções Grid",
+      "blocks": [
+        {
+          "type": "solution",
+          "settings": {
+            "emoji": "🧺",
+            "title": "Lavanderia",
+            "text": "Amaciantes, detergentes e soluções para higienização têxtil."
+          }
+        },
+        {
+          "type": "solution",
+          "settings": {
+            "emoji": "🚗",
+            "title": "Limpeza Automotiva",
+            "text": "Linha completa: Brilha+, Limpa+, Descola+, Revita+."
+          }
+        },
+        {
+          "type": "solution",
+          "settings": {
+            "emoji": "🏢",
+            "title": "Uso Profissional",
+            "text": "Padrão, rendimento e regularidade para empresas."
+          }
+        },
+        {
+          "type": "solution",
+          "settings": {
+            "emoji": "⚗️",
+            "title": "Alta Concentração",
+            "text": "Alto rendimento com diluição controlada."
+          }
+        },
+        {
+          "type": "solution",
+          "settings": {
+            "emoji": "🏭",
+            "title": "Aditivos Industriais",
+            "text": "Remoção de graxa e sujeiras pesadas."
+          }
+        },
+        {
+          "type": "solution",
+          "settings": {
+            "emoji": "🌸",
+            "title": "Essências e Matérias-Primas",
+            "text": "Insumos para formulação e marcas parceiras."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

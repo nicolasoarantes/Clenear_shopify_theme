@@ -2,6 +2,23 @@
   max-width: 120rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.cl-hero,
+.cl-section,
+.cl-final-cta,
+.clenear-section {
+  scroll-margin-top: 8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .clenear-header--institutional .header__heading-logo-wrapper {
   transition: width 180ms ease;
 }
