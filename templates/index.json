@@ -55,7 +55,7 @@
         "cta_primary_label": "Conhecer soluções",
         "cta_primary_url": "#solucoes",
         "cta_whatsapp_label": "Falar no WhatsApp",
-        "cta_whatsapp_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!",
+        "cta_whatsapp_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20sobre%20solu%C3%A7%C3%B5es%20profissionais%20de%20limpeza%20e%20saneantes.",
         "cta_secondary_label": "Quero revender",
         "cta_secondary_url": "#revenda",
         "wave_color": "#1A5C30"
@@ -118,7 +118,7 @@
             "emoji": "🧺",
             "title": "Lavanderia",
             "text": "Amaciantes, detergentes e soluções para higienização têxtil.",
-            "link": ""
+            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20solu%C3%A7%C3%B5es%20para%20lavanderia."
           }
         },
         "sol2": {
@@ -127,7 +127,7 @@
             "emoji": "🚗",
             "title": "Limpeza Automotiva",
             "text": "Brilha+, Limpa+, Descola+, Revita+.",
-            "link": ""
+            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20linha%20de%20limpeza%20automotiva."
           }
         },
         "sol3": {
@@ -136,7 +136,7 @@
             "emoji": "🏢",
             "title": "Uso Profissional",
             "text": "Padrão, rendimento e regularidade para empresas.",
-            "link": ""
+            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20produtos%20para%20uso%20profissional."
           }
         },
         "sol4": {
@@ -145,7 +145,7 @@
             "emoji": "⚗️",
             "title": "Alta Concentração",
             "text": "Alto rendimento com diluição controlada.",
-            "link": ""
+            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20produtos%20de%20alta%20concentra%C3%A7%C3%A3o."
           }
         },
         "sol5": {
@@ -154,7 +154,7 @@
             "emoji": "🏭",
             "title": "Aditivos Industriais",
             "text": "Remoção de graxa e sujeiras pesadas.",
-            "link": ""
+            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20aditivos%20industriais."
           }
         },
         "sol6": {
@@ -163,7 +163,7 @@
             "emoji": "🌸",
             "title": "Essências e Matérias-Primas",
             "text": "Insumos para formulação e marcas parceiras.",
-            "link": ""
+            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20ess%C3%AAncias%20e%20mat%C3%A9rias-primas."
           }
         }
       },
@@ -179,7 +179,7 @@
         "eyebrow": "Soluções completas",
         "heading": "Linhas pensadas para cada necessidade",
         "subtext": "Produtos com qualidade, performance e suporte técnico para cada segmento.",
-        "default_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!"
+        "default_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20ajuda%20para%20escolher%20a%20linha%20ideal%20para%20minha%20necessidade."
       }
     },
     "auto_line": {
@@ -262,7 +262,7 @@
         "cta_label": "Conhecer a linha",
         "cta_url": "#solucoes",
         "cta2_label": "Pedir orçamento",
-        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!",
+        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20a%20linha%20automotiva.",
         "wave_color": "#F7FAF8"
       }
     },
@@ -412,7 +412,7 @@
         "box_heading": "Quero ser revendedor",
         "box_text": "Entre em contato com nossa equipe e comece a revender.",
         "cta_wa_label": "Falar com comercial",
-        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Revendedor",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20comercial%20sobre%20revenda.",
         "cta2_label": "Ver condições",
         "cta2_url": "#revenda",
         "note": "Atendimento em dias úteis."
@@ -425,9 +425,9 @@
         "heading": "Fale com a equipe Clenear",
         "subtext": "Orçamento, revenda ou dúvida técnica? Nossa equipe está pronta.",
         "cta_wa_label": "Chamar no WhatsApp",
-        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20a%20equipe.",
         "cta2_label": "Solicitar orçamento",
-        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Orcamento",
+        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
         "cta3_label": "Quero revender",
         "cta3_url": "#revenda",
         "phone": "(27) 3228-0140",

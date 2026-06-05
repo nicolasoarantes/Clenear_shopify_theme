@@ -27,7 +27,7 @@
           "type": "button",
           "settings": {
             "button_label": "Falar pelo WhatsApp",
-            "button_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!%20Gostaria%20de%20falar%20com%20a%20equipe%20Clenear.",
+            "button_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20contato%20da%20Clenear%20e%20gostaria%20de%20atendimento.",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
