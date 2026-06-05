@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "clenear_hero": {
@@ -19,7 +28,7 @@
       "settings": {
         "eyebrow": "Quem é a Clenear",
         "heading": "Indústria capixaba com foco em desempenho, qualidade e suporte",
-        "text": "<p>A Clenear é uma indústria capixaba especializada no desenvolvimento de saneantes, aromatizantes e soluções de limpeza profissional. Atuamos com foco em qualidade, desempenho, responsabilidade ambiental e suporte técnico para empresas e parceiros.</p>",
+        "text": "<p>A Clenear é uma indústria capixaba especializada no desenvolvimento de saneantes, aromatizantes e soluções de limpeza profissional.</p>",
         "image": "shopify://shop_images/3.jpg",
         "image_alt": "Estrutura e soluções Clenear"
       }
@@ -27,89 +36,89 @@
     "clenear_solutions": {
       "type": "clenear-solutions",
       "blocks": {
-        "solution_professional": {
+        "b1": {
           "type": "solution",
           "settings": {
             "heading": "Limpeza profissional",
-            "text": "Soluções para ambientes comerciais, industriais e operações que exigem rendimento e padrão constante."
+            "text": "Soluções para ambientes comerciais e industriais."
           }
         },
-        "solution_laundry": {
+        "b2": {
           "type": "solution",
           "settings": {
             "heading": "Lavanderias e uso institucional",
-            "text": "Produtos para rotinas de higienizacao, cuidado têxtil e uso recorrente em empresas e instituicoes."
+            "text": "Produtos para rotinas de higienização e cuidado têxtil."
           }
         },
-        "solution_auto": {
+        "b3": {
           "type": "solution",
           "settings": {
             "heading": "Linha automotiva",
-            "text": "Soluções para limpeza, acabamento e manutenção de veículos em operações profissionais."
+            "text": "Soluções para limpeza e acabamento veicular."
           }
         },
-        "solution_distribution": {
+        "b4": {
           "type": "solution",
           "settings": {
             "heading": "Revenda e distribuição",
-            "text": "Atendimento para parceiros comerciais que buscam fornecimento regular, orientação e mix competitivo."
+            "text": "Atendimento para parceiros comerciais."
           }
         },
-        "solution_private_label": {
+        "b5": {
           "type": "solution",
           "settings": {
-            "heading": "Marca própria e soluções sob medida",
-            "text": "Desenvolvimento de alternativas para empresas e marcas parceiras com necessidades específicas."
+            "heading": "Marca própria",
+            "text": "Soluções sob medida para marcas parceiras."
           }
         }
       },
       "block_order": [
-        "solution_professional",
-        "solution_laundry",
-        "solution_auto",
-        "solution_distribution",
-        "solution_private_label"
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
       ],
       "settings": {
         "eyebrow": "Soluções atendidas",
-        "heading": "Linhas pensadas para empresas, revendas e operações profissionais",
-        "text": "A Clenear combina desenvolvimento técnico, atendimento consultivo e portfólio profissional para diferentes canais de aplicação."
+        "heading": "Linhas pensadas para empresas e operações profissionais",
+        "text": "Portfólio profissional para diferentes canais de aplicação."
       }
     },
     "clenear_differentials": {
       "type": "clenear-differentials",
       "blocks": {
-        "feature_formula": {
+        "d1": {
           "type": "feature",
           "settings": {
             "heading": "Desenvolvimento técnico de fórmulas"
           }
         },
-        "feature_quality": {
+        "d2": {
           "type": "feature",
           "settings": {
             "heading": "Controle de qualidade"
           }
         },
-        "feature_yield": {
+        "d3": {
           "type": "feature",
           "settings": {
             "heading": "Alto rendimento"
           }
         },
-        "feature_consulting": {
+        "d4": {
           "type": "feature",
           "settings": {
             "heading": "Atendimento consultivo"
           }
         },
-        "feature_professional": {
+        "d5": {
           "type": "feature",
           "settings": {
             "heading": "Produtos para uso profissional"
           }
         },
-        "feature_environment": {
+        "d6": {
           "type": "feature",
           "settings": {
             "heading": "Compromisso ambiental"
@@ -117,70 +126,16 @@
         }
       },
       "block_order": [
-        "feature_formula",
-        "feature_quality",
-        "feature_yield",
-        "feature_consulting",
-        "feature_professional",
-        "feature_environment"
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6"
       ],
       "settings": {
         "eyebrow": "Diferenciais",
         "heading": "O que sustenta a entrega Clenear"
-      }
-    },
-    "clenear_media": {
-      "type": "clenear-media-grid",
-      "blocks": {
-        "media_clean_max": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/Copia_de_Banner_Clenear_4eb85d78-2b46-4ed7-b5c1-56ad3813d303.png",
-            "heading": "Clean Max",
-            "text": "Soluções de alto desempenho para rotinas profissionais."
-          }
-        },
-        "media_auto": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/3.jpg",
-            "heading": "Linha automotiva",
-            "text": "Produtos para limpeza, acabamento e manutenção veicular."
-          }
-        },
-        "media_professional": {
-          "type": "media",
-          "settings": {
-            "heading": "Produtos profissionais",
-            "text": "Formulações para empresas, instituições e revendedores."
-          }
-        },
-        "media_team": {
-          "type": "media",
-          "settings": {
-            "heading": "Equipe e atendimento",
-            "text": "Relacionamento consultivo para orientar cada aplicação."
-          }
-        },
-        "media_application": {
-          "type": "media",
-          "settings": {
-            "heading": "Aplicações reais",
-            "text": "Performance em ambientes que exigem regularidade e confiança."
-          }
-        }
-      },
-      "block_order": [
-        "media_clean_max",
-        "media_auto",
-        "media_professional",
-        "media_team",
-        "media_application"
-      ],
-      "settings": {
-        "eyebrow": "Aplicações e linhas",
-        "heading": "Conheça algumas soluções Clenear",
-        "text": "Uma seleção visual inspirada nas linhas e aplicações da marca, apresentada como conteúdo institucional."
       }
     },
     "clenear_quality": {
@@ -188,7 +143,7 @@
       "settings": {
         "eyebrow": "Pesquisa e qualidade",
         "heading": "Pesquisa, qualidade e desenvolvimento técnico",
-        "text": "Cada solução Clenear é desenvolvida com atenção à performance, segurança de aplicação e consistência. A empresa combina experiência prática, testes e aprimoramento contínuo para entregar produtos confiáveis ao mercado profissional."
+        "text": "Cada solução Clenear é desenvolvida com atenção à performance e consistência."
       }
     },
     "clenear_relationship": {
@@ -196,7 +151,7 @@
       "settings": {
         "eyebrow": "Parcerias",
         "heading": "Relacionamento com clientes e parceiros",
-        "text": "A Clenear constrói parcerias com empresas, revendedores e profissionais que buscam qualidade, regularidade e suporte no fornecimento de soluções de limpeza."
+        "text": "A Clenear constrói parcerias com empresas e revendedores que buscam qualidade e suporte."
       }
     },
     "clenear_cta": {
@@ -204,11 +159,11 @@
       "settings": {
         "eyebrow": "Contato comercial",
         "heading": "Fale com a equipe Clenear",
-        "text": "Precisa de suporte técnico, informações comerciais ou deseja desenvolver uma solução para sua empresa?",
+        "text": "Precisa de suporte técnico ou informações comerciais?",
         "primary_label": "Chamar no WhatsApp",
-        "primary_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!%20Gostaria%20de%20falar%20com%20a%20equipe%20Clenear.",
+        "primary_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!",
         "secondary_label": "Quero ser revendedor",
-        "secondary_link": "https://api.whatsapp.com/send?phone=552732280140&text=Ola!%20Tenho%20interesse%20em%20revender%20solucoes%20Clenear."
+        "secondary_link": "https://api.whatsapp.com/send?phone=552732280140&text=Revendedor"
       }
     }
   },
@@ -217,7 +172,6 @@
     "clenear_about",
     "clenear_solutions",
     "clenear_differentials",
-    "clenear_media",
     "clenear_quality",
     "clenear_relationship",
     "clenear_cta"
