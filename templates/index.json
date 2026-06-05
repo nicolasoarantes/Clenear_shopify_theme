@@ -48,6 +48,8 @@
         "headline": "Soluções profissionais de",
         "headline_accent": "limpeza e saneantes",
         "subtext": "Desenvolvemos produtos de alto desempenho para limpeza profissional, revenda, lavanderias, automotivo e marcas parceiras. Qualidade capixaba que você sente na prática.",
+        "hero_image": "shopify://shop_images/ChatGPT_Image_5_de_jun._de_2026_11_57_18.png",
+        "hero_image_alt": "",
         "badge_value": "+18 anos",
         "badge_label": "de experiência no mercado",
         "cta_primary_label": "Conhecer soluções",
@@ -115,7 +117,8 @@
           "settings": {
             "emoji": "🧺",
             "title": "Lavanderia",
-            "text": "Amaciantes, detergentes e soluções para higienização têxtil."
+            "text": "Amaciantes, detergentes e soluções para higienização têxtil.",
+            "link": ""
           }
         },
         "sol2": {
@@ -123,7 +126,8 @@
           "settings": {
             "emoji": "🚗",
             "title": "Limpeza Automotiva",
-            "text": "Brilha+, Limpa+, Descola+, Revita+."
+            "text": "Brilha+, Limpa+, Descola+, Revita+.",
+            "link": ""
           }
         },
         "sol3": {
@@ -131,7 +135,8 @@
           "settings": {
             "emoji": "🏢",
             "title": "Uso Profissional",
-            "text": "Padrão, rendimento e regularidade para empresas."
+            "text": "Padrão, rendimento e regularidade para empresas.",
+            "link": ""
           }
         },
         "sol4": {
@@ -139,7 +144,8 @@
           "settings": {
             "emoji": "⚗️",
             "title": "Alta Concentração",
-            "text": "Alto rendimento com diluição controlada."
+            "text": "Alto rendimento com diluição controlada.",
+            "link": ""
           }
         },
         "sol5": {
@@ -147,7 +153,8 @@
           "settings": {
             "emoji": "🏭",
             "title": "Aditivos Industriais",
-            "text": "Remoção de graxa e sujeiras pesadas."
+            "text": "Remoção de graxa e sujeiras pesadas.",
+            "link": ""
           }
         },
         "sol6": {
@@ -155,7 +162,8 @@
           "settings": {
             "emoji": "🌸",
             "title": "Essências e Matérias-Primas",
-            "text": "Insumos para formulação e marcas parceiras."
+            "text": "Insumos para formulação e marcas parceiras.",
+            "link": ""
           }
         }
       },
@@ -179,24 +187,28 @@
         "p1": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/brilha.png",
             "name": "Brilha+"
           }
         },
         "p2": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/limpa.png",
             "name": "Limpa+"
           }
         },
         "p3": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/descola.png",
             "name": "Descola+"
           }
         },
         "p4": {
           "type": "product_card",
           "settings": {
+            "image": "shopify://shop_images/revita.png",
             "name": "Revita+"
           }
         },
@@ -296,6 +308,7 @@
         "heading": "Indústria capixaba comprometida com qualidade",
         "text": "Desde 2006, a Clenear desenvolve saneantes e soluções de limpeza profissional para empresas, revendedores e parceiros.",
         "purpose": "Oferecer soluções eficazes e produtos de alta qualidade que enriquecem a vida dos nossos clientes.",
+        "image": "shopify://shop_images/ChatGPT_Image_5_de_jun._de_2026_12_07_24.png",
         "accent_value": "2006",
         "accent_label": "fundação da Clenear",
         "cta_label": "Nossa história",
@@ -417,6 +430,7 @@
         "cta3_label": "Quero revender",
         "cta3_url": "#revenda",
         "phone": "(27) 3228-0140",
+        "email": "",
         "city": "Serra — Espírito Santo"
       }
     }
