@@ -1,3 +1,5 @@
+{{ 'clenear-home-v2.css' | asset_url | stylesheet_tag }}
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
 <section class="cl-final-cta cl-dark" id="contato"><div class="cl-final-cta__bg" aria-hidden="true"></div><div class="cl-wrap cl-final-cta__inner">
   {%- if section.settings.eyebrow != blank -%}<p class="cl-label" style="justify-content:center;">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
   <h2 class="cl-h2">{{ section.settings.heading }}</h2>
