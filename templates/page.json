@@ -1,1 +1,157 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":36,"padding_bottom":44}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "clenear_pesquisa_pi_68LVFU": {
+      "type": "clenear-pesquisa-pi",
+      "blocks": {
+        "pilar_x49Yzt": {
+          "type": "pilar",
+          "settings": {
+            "number": "01",
+            "icon": "🔬",
+            "title": "Pesquisa e formulação",
+            "text": "Cada fórmula começa em laboratório próprio, com testes rigorosos de pH, viscosidade e performance antes de sair para o mercado."
+          }
+        },
+        "pilar_brQ7jK": {
+          "type": "pilar",
+          "settings": {
+            "number": "02",
+            "icon": "🧪",
+            "title": "Matérias-primas selecionadas",
+            "text": "Trabalhamos apenas com fornecedores certificados. Cada insumo passa por análise de qualidade antes de entrar na linha de produção."
+          }
+        },
+        "pilar_eTdjnk": {
+          "type": "pilar",
+          "settings": {
+            "number": "03",
+            "icon": "♻️",
+            "title": "Sustentabilidade aplicada",
+            "text": "Desenvolvemos formulações biodegradáveis e embalagens retornáveis, reduzindo o impacto ambiental sem abrir mão da eficácia."
+          }
+        },
+        "pilar_6NQThq": {
+          "type": "pilar",
+          "settings": {
+            "number": "04",
+            "icon": "📋",
+            "title": "Validação e conformidade",
+            "text": "Todos os produtos são testados para conformidade com normas ANVISA e regulatórias do setor de limpeza profissional."
+          }
+        },
+        "processo_item_Lkta3t": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Identificação da necessidade técnica com o cliente"
+          }
+        },
+        "processo_item_VqUFKg": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Pesquisa de matérias-primas e formulação em laboratório"
+          }
+        },
+        "processo_item_k3xaxH": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Testes de desempenho, estabilidade e segurança"
+          }
+        },
+        "processo_item_dhiqwd": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Ajustes finos e validação com uso real em campo"
+          }
+        },
+        "processo_item_3W4nH3": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Registro, conformidade regulatória e escala de produção"
+          }
+        },
+        "parceria_item_ptz4V9": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Desenvolvimento de fórmulas exclusivas para sua marca"
+          }
+        },
+        "parceria_item_EeNVwy": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Suporte técnico contínuo e treinamento de equipe"
+          }
+        },
+        "parceria_item_CNrrgg": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Adaptação de produtos para segmentos específicos"
+          }
+        },
+        "parceria_item_b6bkiC": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Consultoria em diluição, uso e dosagem correta"
+          }
+        }
+      },
+      "block_order": [
+        "pilar_x49Yzt",
+        "pilar_brQ7jK",
+        "pilar_eTdjnk",
+        "pilar_6NQThq",
+        "processo_item_Lkta3t",
+        "processo_item_VqUFKg",
+        "processo_item_k3xaxH",
+        "processo_item_dhiqwd",
+        "processo_item_3W4nH3",
+        "parceria_item_ptz4V9",
+        "parceria_item_EeNVwy",
+        "parceria_item_CNrrgg",
+        "parceria_item_b6bkiC"
+      ],
+      "settings": {
+        "hero_badge": "Laboratório próprio · Serra, ES",
+        "hero_eyebrow": "Pesquisa & Inovação",
+        "hero_title": "Ciência e técnica no desenvolvimento de cada fórmula",
+        "hero_subtitle": "",
+        "cta_wa_label": "Falar com o Setor Técnico",
+        "cta_wa_url": "",
+        "cta2_label": "Conheça Nossas Linhas",
+        "cta2_url": "",
+        "pilares_eyebrow": "Nossos pilares",
+        "pilares_title": "Como desenvolvemos cada produto",
+        "pilares_subtitle": "",
+        "proc_eyebrow": "Da ideia ao produto",
+        "proc_title": "Um processo rigoroso de desenvolvimento",
+        "proc_text": "",
+        "parceria_eyebrow": "Desenvolvimento colaborativo",
+        "parceria_title": "Formulamos sob medida para o seu negócio",
+        "parceria_text": "",
+        "mid_cta_eyebrow": "Vamos conversar?",
+        "mid_cta_heading": "Tem uma necessidade técnica específica?",
+        "mid_cta_text": "Nossa equipe de P&D está pronta para desenvolver a formulação ideal para o seu segmento."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "clenear_pesquisa_pi_68LVFU"
+  ]
+}
