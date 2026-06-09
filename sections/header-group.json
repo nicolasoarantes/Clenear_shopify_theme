@@ -1,1 +1,96 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","disabled":true,"blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Frete gratis para pedidos acima de R$199","link":""}},"announcement_rUL36g":{"type":"announcement","settings":{"text":"Promocao de lancamento: 10% OFF na sua primeira compra!","link":""}},"announcement_afAAwi":{"type":"announcement","settings":{"text":"Solucoes para limpeza profissional e automotiva","link":""}},"announcement_gg9y76":{"type":"announcement","settings":{"text":"Consulte condicoes especiais para distribuidores","link":""}}},"block_order":["announcement-bar-0","announcement_rUL36g","announcement_afAAwi","announcement_gg9y76"],"settings":{"auto_rotate":true,"change_slides_speed":6,"color_scheme":"scheme-4","show_line_separator":true,"show_social":false,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","settings":{"enable_institutional_mode":true,"logo_position":"middle-left","mobile_logo_position":"center","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-1","enable_country_selector":false,"enable_language_selector":false,"enable_customer_avatar":true,"margin_bottom":0,"padding_top":20,"padding_bottom":20}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Frete gratis para pedidos acima de R$199",
+            "link": ""
+          }
+        },
+        "announcement_rUL36g": {
+          "type": "announcement",
+          "settings": {
+            "text": "Promocao de lancamento: 10% OFF na sua primeira compra!",
+            "link": ""
+          }
+        },
+        "announcement_afAAwi": {
+          "type": "announcement",
+          "settings": {
+            "text": "Solucoes para limpeza profissional e automotiva",
+            "link": ""
+          }
+        },
+        "announcement_gg9y76": {
+          "type": "announcement",
+          "settings": {
+            "text": "Consulte condicoes especiais para distribuidores",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_rUL36g",
+        "announcement_afAAwi",
+        "announcement_gg9y76"
+      ],
+      "disabled": true,
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 6,
+        "color_scheme": "scheme-4",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "enable_institutional_mode": true,
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "cl_pi_test_b_8q7J8Q": {
+      "type": "cl-pi-test-b",
+      "name": "CL PI Test B",
+      "settings": {
+        "hero_title": ""
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "cl_pi_test_b_8q7J8Q"
+  ]
+}
