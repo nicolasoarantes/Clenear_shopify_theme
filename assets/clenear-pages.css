@@ -3,93 +3,11 @@
    Clenear B2B | Serra – ES
    ============================================================ */
 
-/* --- Fallback for cl-* classes from clenear-home-v2.css ---- */
-/* Garante que o clenear-final-cta funcione em páginas secundárias */
+/* --- Final CTA fallback (scoped — não afeta seções da Home) -- */
+/* clenear-home-v2.css é carregado pelo final-cta; estas regras
+   existem apenas para cobrir casos em que a ordem de cascata falhe */
 
-.cl-dark {
-  background: #0E1F1A;
-  color: #fff;
-}
-
-.cl-wrap {
-  margin: 0 auto;
-  max-width: 120rem;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
-  width: 100%;
-}
-
-.cl-h2 {
-  color: #fff;
-  font-size: clamp(2.8rem, 3.8vw, 4.8rem);
-  font-weight: 800;
-  line-height: 1.06;
-  margin: 0;
-}
-
-.cl-lead {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 1.75rem;
-  line-height: 1.65;
-  margin: 1.6rem 0 0;
-}
-
-.cl-label {
-  color: #1D6E5A;
-  display: block;
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  margin: 0 0 1.4rem;
-  text-transform: uppercase;
-}
-
-.cl-btn-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-top: 3.2rem;
-}
-
-.cl-btn {
-  align-items: center;
-  border-radius: 0.8rem;
-  display: inline-flex;
-  font-size: 1.5rem;
-  font-weight: 700;
-  justify-content: center;
-  min-height: 4.8rem;
-  padding: 1.2rem 2.4rem;
-  text-decoration: none;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-}
-
-.cl-btn:hover { transform: translateY(-2px); }
-
-.cl-btn--whatsapp {
-  background: #25D366;
-  border: none;
-  color: #fff;
-}
-.cl-btn--whatsapp:hover { background: #1fbd5a; color: #fff; }
-
-.cl-btn--white {
-  background: #fff;
-  border: none;
-  color: #0E1F1A;
-}
-.cl-btn--white:hover { background: #e8e8e8; color: #0E1F1A; }
-
-.cl-btn--ghost {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-}
-.cl-btn--ghost:hover { border-color: rgba(255, 255, 255, 0.65); color: #fff; }
-
-/* Final CTA section */
 .cl-final-cta {
-  padding: 7.2rem 0;
   position: relative;
   text-align: center;
 }
