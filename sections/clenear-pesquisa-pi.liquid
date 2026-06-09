@@ -1,32 +1,40 @@
 {{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
-{{ 'clenear-home-v2.css' | asset_url | stylesheet_tag }}
 {{ 'clenear-pi.css' | asset_url | stylesheet_tag }}
 
-{%- comment -%} ===== CURSOR GLOW (non-hero sections) ===== {%- endcomment -%}
+{%- comment -%} Cursor 3-layer system {%- endcomment -%}
 <div class="cl-pi-cursor-glow" id="cl-pi-cursor" aria-hidden="true"></div>
 <div class="cl-pi-cursor-inner" id="cl-pi-cursor-inner" aria-hidden="true"></div>
 <div class="cl-pi-orbit-ring" id="cl-pi-orbit-ring" aria-hidden="true"></div>
 
 <div class="cl-pg-page" id="pesquisa-inovacao">
 
-  {%- comment -%} ===== HERO - THREE.JS ===== {%- endcomment -%}
+  {%- comment -%} ===== HERO — THREE.JS ===== {%- endcomment -%}
   <section class="cl-pi-hero" id="cl-pi-hero-section">
     <canvas class="cl-pi-hero__canvas" id="cl-pi-canvas" aria-hidden="true"></canvas>
     <div class="cl-pi-hero__overlay" aria-hidden="true"></div>
     <div class="cl-pg-wrap cl-pi-hero__wrap">
-      <div class="cl-pi-hero__content cl-pg-fade">
-        <div class="cl-pi-hero__badge">
+      <div class="cl-pi-hero__content">
+        <div class="cl-pi-hero__badge cl-pg-fade">
           <span class="cl-pi-hero__badge-dot"></span>
           {{ section.settings.hero_badge | default: 'Laboratório próprio · Serra, ES' }}
         </div>
-        <p class="cl-pg-eyebrow" style="text-align:center;">{{ section.settings.hero_eyebrow | default: 'Pesquisa & Inovação' }}</p>
-        <h1 class="cl-pg-h1" style="text-align:center;margin-bottom:2.4rem;max-width:84rem;margin-left:auto;margin-right:auto;">
+        <p class="cl-pg-eyebrow cl-pg-fade" style="text-align:center;">{{ section.settings.hero_eyebrow | default: 'Pesquisa & Inovação' }}</p>
+        <h1 class="cl-pg-h1 cl-pg-fade" style="text-align:center;margin-bottom:2rem;max-width:86rem;margin-left:auto;margin-right:auto;">
           {{ section.settings.hero_title | default: 'Ciência e técnica no <em>desenvolvimento de cada fórmula</em>' }}
         </h1>
-        <p class="cl-pg-lead" style="text-align:center;max-width:66rem;margin-left:auto;margin-right:auto;margin-bottom:4rem;">
+        <p class="cl-pg-lead cl-pg-fade cl-pg-fade--d1" style="text-align:center;max-width:64rem;margin-left:auto;margin-right:auto;margin-bottom:3.6rem;">
           {{ section.settings.hero_subtitle | default: 'Cada produto Clenear nasce de um processo rigoroso de pesquisa, teste e validação. Investimos em P&D para entregar formulações que se destacam em desempenho, segurança e sustentabilidade.' }}
         </p>
-        <div class="cl-pg-btn-row" style="justify-content:center;">
+        <div class="cl-pi-hero__stats cl-pg-fade cl-pg-fade--d2">
+          <div class="cl-pi-hero__stat"><strong>+18</strong><span>anos de experiência</span></div>
+          <div class="cl-pi-hero__stat-sep" aria-hidden="true"></div>
+          <div class="cl-pi-hero__stat"><strong>+50</strong><span>formulações</span></div>
+          <div class="cl-pi-hero__stat-sep" aria-hidden="true"></div>
+          <div class="cl-pi-hero__stat"><strong>100%</strong><span>desenvolvimento interno</span></div>
+          <div class="cl-pi-hero__stat-sep" aria-hidden="true"></div>
+          <div class="cl-pi-hero__stat"><strong>Lab.</strong><span>próprio em Serra, ES</span></div>
+        </div>
+        <div class="cl-pg-btn-row cl-pg-fade cl-pg-fade--d3" style="justify-content:center;">
           <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20Setor%20T%C3%A9cnico.' }}"
              class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
             {{ section.settings.cta_wa_label | default: 'Falar com o Setor Técnico' }}
@@ -41,67 +49,42 @@
   </section>
 
   {%- comment -%} ===== PILARES ===== {%- endcomment -%}
-  <section class="cl-pg-section cl-pg-section--alt cl-pi-section" data-cursor-section>
+  <section class="cl-pg-section cl-pg-section--alt" data-cursor-section>
     <div class="cl-pg-wrap">
       <div class="cl-pg-intro cl-pg-intro--center cl-pg-fade">
         <p class="cl-pg-eyebrow">{{ section.settings.pilares_eyebrow | default: 'Nossos pilares' }}</p>
-        <h2 class="cl-pg-h2">{{ section.settings.pilares_title | default: 'Como desenvolvemos cada produto' }}</h2>
-        <p class="cl-pg-lead cl-pg-lead--wide">{{ section.settings.pilares_subtitle | default: 'Quatro pilares guiam o nosso processo de pesquisa e desenvolvimento desde a concepção até o produto final.' }}</p>
+        <h2 class="cl-pg-h2">{{ section.settings.pilares_title | default: 'Como <em>desenvolvemos</em> cada produto' }}</h2>
+        <p class="cl-pg-lead cl-pg-lead--wide">{{ section.settings.pilares_subtitle | default: 'Quatro pilares guiam o nosso processo de pesquisa e desenvolvimento — da concepção à validação final.' }}</p>
       </div>
-      <div class="cl-pg-cards cl-pg-cards--4 cl-pg-fade cl-pg-fade--d1 cl-pi-desktop-cards">
+      <div class="cl-pg-cards cl-pg-cards--4 cl-pg-fade cl-pg-fade--d1">
         {%- for block in section.blocks -%}
           {%- if block.type == 'pilar' -%}
             <div class="cl-pg-card cl-pi-card" {{ block.shopify_attributes }}>
               <div class="cl-pg-card__number">{{ block.settings.number | default: '01' }}</div>
-              <div class="cl-pi-card__icon-wrap"><span class="cl-pg-card__icon" aria-hidden="true">{{ block.settings.icon }}</span></div>
+              <div class="cl-pi-card__icon-wrap">
+                <span class="cl-pg-card__icon" aria-hidden="true">{{ block.settings.icon }}</span>
+              </div>
               <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
               <p class="cl-pg-card__text">{{ block.settings.text }}</p>
             </div>
           {%- endif -%}
         {%- endfor -%}
       </div>
-      <div class="cl-pi-carousel cl-pg-fade cl-pg-fade--d1">
-        <div class="cl-pi-carousel__track" id="cl-pilares-track">
-          {%- for block in section.blocks -%}
-            {%- if block.type == 'pilar' -%}
-              <div class="cl-pg-card cl-pi-card cl-pi-carousel__item" {{ block.shopify_attributes }}>
-                <div class="cl-pg-card__number">{{ block.settings.number | default: '01' }}</div>
-                <div class="cl-pi-card__icon-wrap"><span class="cl-pg-card__icon" aria-hidden="true">{{ block.settings.icon }}</span></div>
-                <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
-                <p class="cl-pg-card__text">{{ block.settings.text }}</p>
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-        <div class="cl-pi-carousel__dots" id="cl-pilares-dots" aria-hidden="true"></div>
-      </div>
-    </div>
-  </section>
-
-  {%- comment -%} ===== STATS ===== {%- endcomment -%}
-  <section class="cl-pg-section cl-pg-section--dark cl-pi-stats-section" data-cursor-section>
-    <div class="cl-pg-wrap">
-      <div class="cl-pi-stats cl-pg-fade">
-        <div class="cl-pi-stat"><span class="cl-pi-stat__value">+18</span><span class="cl-pi-stat__label">anos de experiência</span></div>
-        <div class="cl-pi-stat__divider" aria-hidden="true"></div>
-        <div class="cl-pi-stat"><span class="cl-pi-stat__value">+50</span><span class="cl-pi-stat__label">formulações desenvolvidas</span></div>
-        <div class="cl-pi-stat__divider" aria-hidden="true"></div>
-        <div class="cl-pi-stat"><span class="cl-pi-stat__value">100%</span><span class="cl-pi-stat__label">desenvolvimento interno</span></div>
-        <div class="cl-pi-stat__divider" aria-hidden="true"></div>
-        <div class="cl-pi-stat"><span class="cl-pi-stat__value">Lab</span><span class="cl-pi-stat__label">próprio em Serra, ES</span></div>
+      <div class="cl-pg-scroll-dots" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
       </div>
     </div>
   </section>
 
   {%- comment -%} ===== PROCESSO ===== {%- endcomment -%}
-  <section class="cl-pg-section cl-pg-section--alt cl-pi-section" data-cursor-section>
+  <section class="cl-pg-section cl-pg-section--dark" data-cursor-section>
     <div class="cl-pg-wrap">
       <div class="cl-pg-split">
         <div class="cl-pg-fade">
           <p class="cl-pg-eyebrow">{{ section.settings.proc_eyebrow | default: 'Da ideia ao produto' }}</p>
-          <h2 class="cl-pg-h2">{{ section.settings.proc_title | default: 'Um processo rigoroso de desenvolvimento' }}</h2>
+          <h2 class="cl-pg-h2">{{ section.settings.proc_title | default: 'Um processo rigoroso de <em>desenvolvimento</em>' }}</h2>
           <p class="cl-pg-lead">{{ section.settings.proc_text | default: 'Nenhum produto chega ao mercado sem passar por fases estruturadas de pesquisa, formulação, testes de campo e validação de segurança.' }}</p>
-          <ul class="cl-pg-split__list cl-pi-steps">
+          <ul class="cl-pi-steps">
             {%- assign step_num = 1 -%}
             {%- for block in section.blocks -%}
               {%- if block.type == 'processo_item' -%}
@@ -128,8 +111,8 @@
     </div>
   </section>
 
-  {%- comment -%} ===== PARCERIA TECNICA ===== {%- endcomment -%}
-  <section class="cl-pg-section cl-pg-section--dark cl-pi-section" data-cursor-section>
+  {%- comment -%} ===== PARCERIA TÉCNICA ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--alt" data-cursor-section>
     <div class="cl-pg-wrap">
       <div class="cl-pg-split cl-pg-split--flip">
         <div class="cl-pg-split__media cl-pg-fade">
@@ -144,7 +127,7 @@
         </div>
         <div class="cl-pg-fade cl-pg-fade--d1">
           <p class="cl-pg-eyebrow">{{ section.settings.parceria_eyebrow | default: 'Desenvolvimento colaborativo' }}</p>
-          <h2 class="cl-pg-h2">{{ section.settings.parceria_title | default: 'Formulamos sob medida para o seu negócio' }}</h2>
+          <h2 class="cl-pg-h2">{{ section.settings.parceria_title | default: 'Formulamos sob medida para o <em>seu negócio</em>' }}</h2>
           <p class="cl-pg-lead">{{ section.settings.parceria_text | default: 'Seja para criar uma nova linha, adaptar uma formulação ou desenvolver um produto exclusivo, nosso time técnico trabalha ao seu lado em cada etapa.' }}</p>
           <ul class="cl-pg-split__list">
             {%- for block in section.blocks -%}
@@ -165,7 +148,7 @@
   </section>
 
   {%- comment -%} ===== MID CTA ===== {%- endcomment -%}
-  <section class="cl-pg-section cl-pg-section--alt cl-pi-section" data-cursor-section>
+  <section class="cl-pg-section cl-pg-section--dark" data-cursor-section>
     <div class="cl-pg-wrap">
       <div class="cl-pg-mid-cta cl-pg-fade">
         <p class="cl-pg-eyebrow" style="text-align:center;">{{ section.settings.mid_cta_eyebrow | default: 'Vamos conversar?' }}</p>
@@ -193,27 +176,27 @@
   "name": "Clenear: Pesquisa e Inovação",
   "settings": [
     { "type": "header", "content": "Hero" },
-    { "type": "text", "id": "hero_badge", "label": "Badge", "default": "Laboratório próprio · Serra, ES" },
+    { "type": "text", "id": "hero_badge", "label": "Badge do hero", "default": "Laboratório próprio · Serra, ES" },
     { "type": "text", "id": "hero_eyebrow", "label": "Eyebrow", "default": "Pesquisa & Inovação" },
-    { "type": "text", "id": "hero_title", "label": "Título", "default": "Ciência e técnica no <em>desenvolvimento de cada fórmula</em>" },
-    { "type": "textarea", "id": "hero_subtitle", "label": "Subtítulo", "default": "Cada produto Clenear nasce de um processo rigoroso de pesquisa, teste e validação. Investimos em P&D para entregar formulações que se destacam em desempenho, segurança e sustentabilidade." },
+    { "type": "text", "id": "hero_title", "label": "Título (use <em> para destaque)", "default": "Ciência e técnica no <em>desenvolvimento de cada fórmula</em>" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Subtítulo" },
     { "type": "text", "id": "cta_wa_label", "label": "CTA WhatsApp", "default": "Falar com o Setor Técnico" },
     { "type": "url", "id": "cta_wa_url", "label": "Link WhatsApp" },
     { "type": "text", "id": "cta2_label", "label": "CTA secundário", "default": "Conheça Nossas Linhas" },
     { "type": "url", "id": "cta2_url", "label": "Link CTA secundário" },
     { "type": "header", "content": "Seção: Pilares" },
     { "type": "text", "id": "pilares_eyebrow", "label": "Eyebrow", "default": "Nossos pilares" },
-    { "type": "text", "id": "pilares_title", "label": "Título", "default": "Como desenvolvemos cada produto" },
-    { "type": "textarea", "id": "pilares_subtitle", "label": "Subtítulo", "default": "Quatro pilares guiam o nosso processo de pesquisa e desenvolvimento desde a concepção até o produto final." },
+    { "type": "text", "id": "pilares_title", "label": "Título (use <em>)", "default": "Como <em>desenvolvemos</em> cada produto" },
+    { "type": "textarea", "id": "pilares_subtitle", "label": "Subtítulo" },
     { "type": "header", "content": "Seção: Processo" },
     { "type": "text", "id": "proc_eyebrow", "label": "Eyebrow", "default": "Da ideia ao produto" },
-    { "type": "text", "id": "proc_title", "label": "Título", "default": "Um processo rigoroso de desenvolvimento" },
-    { "type": "textarea", "id": "proc_text", "label": "Texto", "default": "Nenhum produto chega ao mercado sem passar por fases estruturadas de pesquisa, formulação, testes de campo e validação de segurança." },
+    { "type": "text", "id": "proc_title", "label": "Título (use <em>)", "default": "Um processo rigoroso de <em>desenvolvimento</em>" },
+    { "type": "textarea", "id": "proc_text", "label": "Texto" },
     { "type": "image_picker", "id": "proc_image", "label": "Imagem processo (16:9)" },
     { "type": "header", "content": "Seção: Parceria técnica" },
     { "type": "text", "id": "parceria_eyebrow", "label": "Eyebrow", "default": "Desenvolvimento colaborativo" },
-    { "type": "text", "id": "parceria_title", "label": "Título", "default": "Formulamos sob medida para o seu negócio" },
-    { "type": "textarea", "id": "parceria_text", "label": "Texto", "default": "Seja para criar uma nova linha, adaptar uma formulação ou desenvolver um produto exclusivo, nosso time técnico trabalha ao seu lado em cada etapa." },
+    { "type": "text", "id": "parceria_title", "label": "Título (use <em>)", "default": "Formulamos sob medida para o <em>seu negócio</em>" },
+    { "type": "textarea", "id": "parceria_text", "label": "Texto" },
     { "type": "image_picker", "id": "parceria_image", "label": "Imagem parceria (16:9)" },
     { "type": "header", "content": "Mid CTA" },
     { "type": "text", "id": "mid_cta_eyebrow", "label": "Eyebrow", "default": "Vamos conversar?" },
@@ -235,7 +218,7 @@
       "type": "processo_item",
       "name": "Item do processo",
       "settings": [
-        { "type": "text", "id": "text", "label": "Texto do item" }
+        { "type": "text", "id": "text", "label": "Texto do passo" }
       ]
     },
     {
@@ -248,7 +231,22 @@
   ],
   "presets": [
     {
-      "name": "Clenear: Pesquisa e Inovação"
+      "name": "Clenear: Pesquisa e Inovação",
+      "blocks": [
+        { "type": "pilar", "settings": { "number": "01", "icon": "🔬", "title": "Pesquisa e formulação", "text": "Cada fórmula começa em laboratório próprio, com testes rigorosos de pH, viscosidade e performance antes de sair para o mercado." } },
+        { "type": "pilar", "settings": { "number": "02", "icon": "🧪", "title": "Matérias-primas selecionadas", "text": "Trabalhamos apenas com fornecedores certificados. Cada insumo passa por análise de qualidade antes de entrar na linha de produção." } },
+        { "type": "pilar", "settings": { "number": "03", "icon": "♻️", "title": "Sustentabilidade aplicada", "text": "Desenvolvemos formulações biodegradáveis e embalagens retornáveis, reduzindo o impacto ambiental sem abrir mão da eficácia." } },
+        { "type": "pilar", "settings": { "number": "04", "icon": "📋", "title": "Validação e conformidade", "text": "Todos os produtos são testados para conformidade com normas ANVISA e regulatórias do setor de limpeza profissional." } },
+        { "type": "processo_item", "settings": { "text": "Identificação da necessidade técnica com o cliente" } },
+        { "type": "processo_item", "settings": { "text": "Pesquisa de matérias-primas e formulação em laboratório" } },
+        { "type": "processo_item", "settings": { "text": "Testes de desempenho, estabilidade e segurança" } },
+        { "type": "processo_item", "settings": { "text": "Ajustes finos e validação com uso real em campo" } },
+        { "type": "processo_item", "settings": { "text": "Registro, conformidade regulatória e escala de produção" } },
+        { "type": "parceria_item", "settings": { "text": "Desenvolvimento de fórmulas exclusivas para sua marca" } },
+        { "type": "parceria_item", "settings": { "text": "Suporte técnico contínuo e treinamento de equipe" } },
+        { "type": "parceria_item", "settings": { "text": "Adaptação de produtos para segmentos específicos" } },
+        { "type": "parceria_item", "settings": { "text": "Consultoria em diluição, uso e dosagem correta" } }
+      ]
     }
   ]
 }
