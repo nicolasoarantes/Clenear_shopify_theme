@@ -26,8 +26,8 @@
         "hero_subtitle": "A Clenear oferece portfólio completo, condições exclusivas para revendedores, suporte técnico e produtos com alta rotatividade para impulsionar suas vendas.",
         "cta_wa_label": "Quero ser revendedor",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Revenda%20da%20Clenear%20e%20quero%20ser%20revendedor.",
-        "cta2_label": "Formulário de contato",
-        "cta2_url": "/pages/contato",
+        "cta2_label": "Ver portfólio de produtos",
+        "cta2_url": "/pages/nossas-linhas",
         "mid_cta_heading": "Pronto para expandir seu portfólio?",
         "mid_cta_text": "Fale com nossa equipe comercial e receba uma proposta personalizada para o seu negócio."
       }

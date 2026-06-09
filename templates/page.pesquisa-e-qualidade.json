@@ -1,23 +1,39 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
-{
+﻿{
   "sections": {
-    "main": {
-      "type": "main-page",
+    "pi_main": {
+      "type": "clenear-pi-main",
+      "blocks": {
+        "p1": { "type": "pilar", "settings": { "number": "01", "icon": "🔬", "title": "Pesquisa científica", "text": "Análise de insumos, pesquisa de mercado e benchmarks técnicos orientam cada nova formulação." } },
+        "p2": { "type": "pilar", "settings": { "number": "02", "icon": "⚗️", "title": "Desenvolvimento de fórmulas", "text": "Formulação interna com foco em eficiência, segurança química e rendimento por aplicação." } },
+        "p3": { "type": "pilar", "settings": { "number": "03", "icon": "✅", "title": "Validação & Testes", "text": "Testes de campo em condições reais de uso para garantir desempenho antes do lançamento." } },
+        "p4": { "type": "pilar", "settings": { "number": "04", "icon": "🌿", "title": "Sustentabilidade", "text": "Desenvolvimento com uso responsável de recursos, menor impacto ambiental e fórmulas biodegradáveis." } },
+        "pr1": { "type": "processo_item", "settings": { "text": "Levantamento de necessidade e briefing técnico" } },
+        "pr2": { "type": "processo_item", "settings": { "text": "Seleção de insumos e formulação em laboratório" } },
+        "pr3": { "type": "processo_item", "settings": { "text": "Testes de performance, estabilidade e segurança" } },
+        "pr4": { "type": "processo_item", "settings": { "text": "Validação com clientes parceiros em campo" } },
+        "pr5": { "type": "processo_item", "settings": { "text": "Controle de qualidade na produção em escala" } },
+        "pa1": { "type": "parceria_item", "settings": { "text": "Desenvolvimento de formulações exclusivas para sua marca" } },
+        "pa2": { "type": "parceria_item", "settings": { "text": "Adaptação de produtos para segmentos específicos" } },
+        "pa3": { "type": "parceria_item", "settings": { "text": "Suporte técnico contínuo pós-lançamento" } },
+        "pa4": { "type": "parceria_item", "settings": { "text": "Consultoria em escolha de insumos e fornecedores" } }
+      },
+      "block_order": ["p1","p2","p3","p4","pr1","pr2","pr3","pr4","pr5","pa1","pa2","pa3","pa4"],
+      "settings": {}
+    },
+    "final_cta": {
+      "type": "clenear-final-cta",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 44
+        "eyebrow": "Vamos desenvolver juntos?",
+        "heading": "Fale com nossa equipe técnica",
+        "subtext": "Formulações personalizadas, suporte especializado e soluções desenvolvidas para o seu negócio.",
+        "cta_wa_label": "Falar com o Setor Técnico",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20P%26I%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20Setor%20T%C3%A9cnico.",
+        "cta2_label": "Conhecer nossas linhas",
+        "cta2_url": "/pages/nossas-linhas",
+        "phone": "(27) 3228-0140",
+        "city": "Serra — Espírito Santo"
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["pi_main", "final_cta"]
 }

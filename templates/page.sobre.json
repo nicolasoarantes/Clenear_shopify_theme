@@ -164,10 +164,10 @@
         "hero_subtitle": "Desde 2006, a Clenear desenvolve soluções de limpeza e saneantes para empresas, revendedores e parceiros em todo o Espírito Santo e Brasil.",
         "hero_image": "shopify://shop_images/ChatGPT_Image_5_de_jun._de_2026_12_07_24.png",
         "hero_image_alt": "",
-        "cta_wa_label": "Falar no WhatsApp",
-        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Sobre%20da%20Clenear%20e%20gostaria%20de%20saber%20mais.",
-        "cta2_label": "Formulário de contato",
-        "cta2_url": "/pages/contato",
+        "cta_wa_label": "Conheça a Clenear no WhatsApp",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Sobre%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20empresa.",
+        "cta2_label": "Ver nossas linhas",
+        "cta2_url": "/pages/nossas-linhas",
         "history_eyebrow": "Nossa trajetória",
         "history_title": "Uma história construída com trabalho e técnica",
         "history_subtitle": "",
@@ -175,8 +175,8 @@
         "mvv_title": "O que nos move",
         "diff_eyebrow": "Por que a Clenear",
         "diff_title": "Nossos diferenciais",
-        "mid_cta_heading": "Pronto para conhecer nossas soluções?",
-        "mid_cta_text": "Fale com nosso time e descubra como a Clenear pode ser o parceiro ideal para o seu negócio."
+        "mid_cta_heading": "Quer conhecer o portfólio Clenear?",
+        "mid_cta_text": "Mais de 50 produtos desenvolvidos internamente para empresas, revendedores e profissionais."
       }
     },
     "final_cta": {
@@ -187,10 +187,10 @@
         "subtext": "Orçamento, revenda ou dúvida técnica? Nossa equipe está pronta para ajudar.",
         "cta_wa_label": "Chamar no WhatsApp",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Sobre%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20a%20equipe.",
-        "cta2_label": "Solicitar orçamento",
-        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
-        "cta3_label": "Quero revender",
-        "cta3_url": "",
+        "cta2_label": "Ver nossas linhas",
+        "cta2_url": "/pages/nossas-linhas",
+        "cta3_label": "Quero ser revendedor",
+        "cta3_url": "/pages/revenda",
         "phone": "(27) 3228-0140",
         "email": "",
         "city": "Serra — Espírito Santo"
