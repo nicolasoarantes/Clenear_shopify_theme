@@ -64,6 +64,98 @@
   color: #fff;
 }
 
+/* --- Section transitions ------------------------------------ */
+/* Linha separadora teal suave no topo de cada section */
+.cl-pg-section {
+  position: relative;
+}
+
+.cl-pg-section::before {
+  content: '';
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(29, 110, 90, 0.28) 30%,
+    rgba(29, 110, 90, 0.28) 70%,
+    transparent 100%
+  );
+}
+
+/* Alt section: gradiente teal sutil no topo + fundo levemente distinto */
+.cl-pg-section--alt {
+  background: linear-gradient(
+    180deg,
+    rgba(29, 110, 90, 0.05) 0%,
+    transparent 16rem
+  ),
+  #111D17;
+}
+
+/* Dark section: fade para preto nas bordas laterais (profundidade) */
+.cl-pg-section--dark {
+  background: #0E1F1A;
+}
+
+/* Gradiente de saída no fundo de cada section — transição suave para próxima */
+.cl-pg-section--dark::after,
+.cl-pg-section--alt::after {
+  bottom: 0;
+  content: '';
+  height: 10rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.cl-pg-section--dark::after {
+  background: linear-gradient(0deg, rgba(17, 29, 23, 0.55) 0%, transparent 100%);
+}
+
+.cl-pg-section--alt::after {
+  background: linear-gradient(0deg, rgba(14, 31, 26, 0.45) 0%, transparent 100%);
+}
+
+/* Mid-CTA dentro de section precisa de z-index acima do ::after */
+.cl-pg-mid-cta {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero: glow radial ambiente no fundo */
+.cl-pg-hero::after {
+  background: radial-gradient(
+    ellipse 80% 55% at 50% 100%,
+    rgba(29, 110, 90, 0.1) 0%,
+    transparent 70%
+  );
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.cl-pg-hero__grid,
+.cl-pg-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* P&I hero não herda o ::after genérico */
+.cl-pi-hero::after {
+  display: none;
+}
+
 .cl-pg-wrap {
   margin: 0 auto;
   padding: 0 2.4rem;

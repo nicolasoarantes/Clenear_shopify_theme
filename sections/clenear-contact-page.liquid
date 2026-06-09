@@ -1,0 +1,315 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+{{ 'clenear-home-v2.css' | asset_url | stylesheet_tag }}
+
+<div class="cl-pg-page" id="contato-page">
+
+  {%- comment -%} ===== HERO ===== {%- endcomment -%}
+  <section class="cl-pg-hero cl-pg-hero--contact">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-fade" style="max-width:72rem;">
+        <p class="cl-pg-eyebrow">{{ section.settings.eyebrow | default: 'Atendimento B2B' }}</p>
+        <h1 class="cl-pg-h1">{{ section.settings.title | default: 'Fale com a <em>equipe Clenear</em>' }}</h1>
+        <p class="cl-pg-lead">{{ section.settings.subtitle | default: 'Estamos prontos para atender sua empresa, tirar dúvidas técnicas, apresentar condições de revenda ou desenvolver soluções personalizadas.' }}</p>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== SPLIT: INFO + FORM ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--alt cl-pg-contact-body">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-contact-grid">
+
+        {%- comment -%} — INFO COLUMN — {%- endcomment -%}
+        <div class="cl-pg-contact-info cl-pg-fade">
+
+          <div class="cl-pg-contact-wa">
+            <p class="cl-pg-eyebrow">Resposta rápida</p>
+            <h2 class="cl-pg-h3" style="margin-bottom:1.2rem;">Prefere falar agora?</h2>
+            <p style="color:rgba(255,255,255,0.6);font-size:1.55rem;line-height:1.6;margin:0 0 2.4rem;">Nossa equipe responde no WhatsApp em horário comercial.</p>
+            <a href="{{ section.settings.wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20contato%20da%20Clenear%20e%20gostaria%20de%20atendimento.' }}"
+               class="cl-pg-btn cl-pg-btn--wa cl-pg-btn--full" target="_blank" rel="noopener">
+              {{ section.settings.wa_label | default: 'Chamar no WhatsApp' }}
+            </a>
+          </div>
+
+          <div class="cl-pg-contact-details">
+            {%- if section.settings.phone != blank -%}
+              <div class="cl-pg-contact-detail">
+                <span class="cl-pg-contact-detail__label">Telefone</span>
+                <a href="tel:{{ section.settings.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}" class="cl-pg-contact-detail__value">{{ section.settings.phone }}</a>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.email != blank -%}
+              <div class="cl-pg-contact-detail">
+                <span class="cl-pg-contact-detail__label">E-mail</span>
+                <a href="mailto:{{ section.settings.email }}" class="cl-pg-contact-detail__value">{{ section.settings.email }}</a>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.hours != blank -%}
+              <div class="cl-pg-contact-detail">
+                <span class="cl-pg-contact-detail__label">Atendimento</span>
+                <span class="cl-pg-contact-detail__value">{{ section.settings.hours }}</span>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.city != blank -%}
+              <div class="cl-pg-contact-detail">
+                <span class="cl-pg-contact-detail__label">Localização</span>
+                <span class="cl-pg-contact-detail__value">{{ section.settings.city }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+
+        </div>
+
+        {%- comment -%} — FORM COLUMN — {%- endcomment -%}
+        <div class="cl-pg-contact-form-wrap cl-pg-fade cl-pg-fade--d2">
+          <div class="cl-pg-contact-form-card">
+            <p class="cl-pg-eyebrow">Formulário de contato</p>
+            <h2 class="cl-pg-h3" style="margin-bottom:2.4rem;">{{ section.settings.form_heading | default: 'Envie sua mensagem' }}</h2>
+
+            {%- form 'contact', id: 'cl-contact-form', class: 'cl-pg-form' -%}
+              {%- if form.posted_successfully? -%}
+                <div class="cl-pg-form__success" role="status">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                  <p>Mensagem enviada! Retornaremos em breve.</p>
+                </div>
+              {%- else -%}
+                {%- if form.errors -%}
+                  <div class="cl-pg-form__error" role="alert">
+                    <p>Por favor, corrija os campos destacados.</p>
+                  </div>
+                {%- endif -%}
+
+                <div class="cl-pg-form__row cl-pg-form__row--2">
+                  <div class="cl-pg-form__field">
+                    <label for="cl-contact-name">Nome *</label>
+                    <input type="text" id="cl-contact-name" name="contact[name]" value="{{ form.name }}" required autocomplete="name" placeholder="Seu nome completo">
+                  </div>
+                  <div class="cl-pg-form__field">
+                    <label for="cl-contact-email">E-mail *</label>
+                    <input type="email" id="cl-contact-email" name="contact[email]" value="{{ form.email }}" required autocomplete="email" placeholder="seu@email.com.br"
+                      {%- if form.errors contains 'email' %} aria-invalid="true"{%- endif -%}>
+                  </div>
+                </div>
+
+                <div class="cl-pg-form__field">
+                  <label for="cl-contact-phone">Telefone / WhatsApp</label>
+                  <input type="tel" id="cl-contact-phone" name="contact[phone]" autocomplete="tel" placeholder="(27) 9 0000-0000">
+                </div>
+
+                <div class="cl-pg-form__field">
+                  <label for="cl-contact-company">Empresa</label>
+                  <input type="text" id="cl-contact-company" name="contact[company]" placeholder="Nome da sua empresa">
+                </div>
+
+                <div class="cl-pg-form__field">
+                  <label for="cl-contact-subject">Assunto</label>
+                  <select id="cl-contact-subject" name="contact[subject]">
+                    <option value="">Selecione o assunto...</option>
+                    <option value="Orçamento de produtos">Orçamento de produtos</option>
+                    <option value="Informações sobre revenda">Informações sobre revenda</option>
+                    <option value="Suporte técnico">Suporte técnico</option>
+                    <option value="Desenvolvimento de fórmula">Desenvolvimento de fórmula</option>
+                    <option value="Marca própria">Marca própria</option>
+                    <option value="Outro assunto">Outro assunto</option>
+                  </select>
+                </div>
+
+                <div class="cl-pg-form__field">
+                  <label for="cl-contact-message">Mensagem *</label>
+                  <textarea id="cl-contact-message" name="contact[body]" rows="5" required placeholder="Descreva sua necessidade ou dúvida...">{{ form.body }}</textarea>
+                </div>
+
+                <button type="submit" class="cl-pg-btn cl-pg-btn--teal cl-pg-btn--full">
+                  {{ section.settings.submit_label | default: 'Enviar mensagem' }}
+                </button>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<style>
+  /* Contact page specifics */
+  .cl-pg-hero--contact { padding-bottom: 5rem; }
+
+  .cl-pg-contact-grid {
+    display: grid;
+    gap: 4.8rem;
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .cl-pg-contact-wa {
+    background: rgba(37, 211, 102, 0.06);
+    border: 1px solid rgba(37, 211, 102, 0.18);
+    border-radius: 1.2rem;
+    margin-bottom: 3.2rem;
+    padding: 2.8rem;
+  }
+
+  .cl-pg-btn--full { width: 100%; justify-content: center; }
+
+  .cl-pg-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cl-pg-contact-detail {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.6rem 0;
+  }
+
+  .cl-pg-contact-detail:last-child { border-bottom: none; }
+
+  .cl-pg-contact-detail__label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .cl-pg-contact-detail__value {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .cl-pg-contact-detail__value:hover { color: #fff; }
+
+  .cl-pg-contact-form-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.6rem;
+    padding: 4rem;
+  }
+
+  /* Form styles */
+  .cl-pg-form { display: flex; flex-direction: column; gap: 1.6rem; }
+
+  .cl-pg-form__row { display: grid; gap: 1.6rem; }
+  .cl-pg-form__row--2 { grid-template-columns: 1fr 1fr; }
+
+  .cl-pg-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .cl-pg-form__field label {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
+
+  .cl-pg-form__field input,
+  .cl-pg-form__field select,
+  .cl-pg-form__field textarea {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.8rem;
+    color: #fff;
+    font-size: 1.5rem;
+    outline: none;
+    padding: 1.2rem 1.6rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    width: 100%;
+  }
+
+  .cl-pg-form__field input::placeholder,
+  .cl-pg-form__field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .cl-pg-form__field input:focus,
+  .cl-pg-form__field select:focus,
+  .cl-pg-form__field textarea:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(29, 110, 90, 0.6);
+  }
+
+  .cl-pg-form__field select option { background: #111D17; color: #fff; }
+
+  .cl-pg-form__field textarea { resize: vertical; min-height: 13rem; }
+
+  .cl-pg-form__success {
+    align-items: center;
+    background: rgba(29, 110, 90, 0.12);
+    border: 1px solid rgba(29, 110, 90, 0.3);
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+    gap: 1.2rem;
+    padding: 2rem 2.4rem;
+  }
+
+  .cl-pg-form__success svg { color: #1D6E5A; flex-shrink: 0; }
+
+  .cl-pg-form__error {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: 0.8rem;
+    color: #f8a5a5;
+    font-size: 1.4rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  @media (max-width: 1023px) {
+    .cl-pg-contact-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 767px) {
+    .cl-pg-form__row--2 { grid-template-columns: 1fr; }
+    .cl-pg-contact-form-card { padding: 2.8rem 2rem; }
+  }
+</style>
+
+<script>
+(function () {
+  var fades = document.querySelectorAll('#contato-page .cl-pg-fade');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    fades.forEach(function (el) { io.observe(el); });
+  } else {
+    fades.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Clenear: Contato",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Atendimento B2B" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Fale com a <em>equipe Clenear</em>" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo" },
+    { "type": "header", "content": "WhatsApp" },
+    { "type": "text", "id": "wa_label", "label": "Label botão", "default": "Chamar no WhatsApp" },
+    { "type": "url", "id": "wa_url", "label": "Link WhatsApp" },
+    { "type": "header", "content": "Dados de contato" },
+    { "type": "text", "id": "phone", "label": "Telefone", "default": "(27) 3228-0140" },
+    { "type": "text", "id": "email", "label": "E-mail" },
+    { "type": "text", "id": "hours", "label": "Horário", "default": "Segunda a sexta, 8h às 17h" },
+    { "type": "text", "id": "city", "label": "Localização", "default": "Serra — Espírito Santo" },
+    { "type": "header", "content": "Formulário" },
+    { "type": "text", "id": "form_heading", "label": "Título do form", "default": "Envie sua mensagem" },
+    { "type": "text", "id": "submit_label", "label": "Botão enviar", "default": "Enviar mensagem" }
+  ],
+  "presets": [{ "name": "Clenear: Contato" }]
+}
+{% endschema %}
