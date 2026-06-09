@@ -1,43 +1,124 @@
 {
   "sections": {
     "pi_main": {
-      "type": "clenear-pi-section",
+      "type": "clenear-pesquisa-pi",
       "blocks": {
-        "p1": { "type": "pilar", "settings": { "number": "01", "icon": "🔬", "title": "Pesquisa científica", "text": "Análise de insumos, pesquisa de mercado e benchmarks técnicos orientam cada nova formulação." } },
-        "p2": { "type": "pilar", "settings": { "number": "02", "icon": "⚗️", "title": "Desenvolvimento de fórmulas", "text": "Formulação interna com foco em eficiência, segurança química e rendimento por aplicação." } },
-        "p3": { "type": "pilar", "settings": { "number": "03", "icon": "✅", "title": "Validação & Testes", "text": "Testes de campo em condições reais de uso para garantir desempenho antes do lançamento." } },
-        "p4": { "type": "pilar", "settings": { "number": "04", "icon": "🌿", "title": "Sustentabilidade", "text": "Desenvolvimento com uso responsável de recursos, menor impacto ambiental e fórmulas biodegradáveis." } },
-        "pr1": { "type": "processo_item", "settings": { "text": "Levantamento de necessidade e briefing técnico" } },
-        "pr2": { "type": "processo_item", "settings": { "text": "Seleção de insumos e formulação em laboratório" } },
-        "pr3": { "type": "processo_item", "settings": { "text": "Testes de performance, estabilidade e segurança" } },
-        "pr4": { "type": "processo_item", "settings": { "text": "Validação com clientes parceiros em campo" } },
-        "pr5": { "type": "processo_item", "settings": { "text": "Controle de qualidade na produção em escala" } },
-        "pa1": { "type": "parceria_item", "settings": { "text": "Desenvolvimento de formulações exclusivas para sua marca" } },
-        "pa2": { "type": "parceria_item", "settings": { "text": "Adaptação de produtos para segmentos específicos" } },
-        "pa3": { "type": "parceria_item", "settings": { "text": "Suporte técnico contínuo pós-lançamento" } },
-        "pa4": { "type": "parceria_item", "settings": { "text": "Consultoria em escolha de insumos e fornecedores" } }
+        "p1": {
+          "type": "pilar",
+          "settings": {
+            "number": "01",
+            "icon": "🔬",
+            "title": "Pesquisa e formulação",
+            "text": "Cada fórmula começa em laboratório próprio, com testes rigorosos de pH, viscosidade e performance antes de sair para o mercado."
+          }
+        },
+        "p2": {
+          "type": "pilar",
+          "settings": {
+            "number": "02",
+            "icon": "🧪",
+            "title": "Matérias-primas selecionadas",
+            "text": "Trabalhamos apenas com fornecedores certificados. Cada insumo passa por análise de qualidade antes de entrar na linha de produção."
+          }
+        },
+        "p3": {
+          "type": "pilar",
+          "settings": {
+            "number": "03",
+            "icon": "♻️",
+            "title": "Sustentabilidade aplicada",
+            "text": "Desenvolvemos formulações biodegradáveis e embalagens retornáveis, reduzindo o impacto ambiental sem abrir mão da eficácia."
+          }
+        },
+        "p4": {
+          "type": "pilar",
+          "settings": {
+            "number": "04",
+            "icon": "📋",
+            "title": "Validação e conformidade",
+            "text": "Todos os produtos são testados para conformidade com normas ANVISA e regulatórias do setor de limpeza profissional."
+          }
+        },
+        "pr1": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Identificação da necessidade técnica com o cliente"
+          }
+        },
+        "pr2": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Pesquisa de matérias-primas e formulação em laboratório"
+          }
+        },
+        "pr3": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Testes de desempenho, estabilidade e segurança"
+          }
+        },
+        "pr4": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Ajustes finos e validação com uso real em campo"
+          }
+        },
+        "pr5": {
+          "type": "processo_item",
+          "settings": {
+            "text": "Registro, conformidade regulatória e escala de produção"
+          }
+        },
+        "pa1": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Desenvolvimento de fórmulas exclusivas para sua marca"
+          }
+        },
+        "pa2": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Suporte técnico contínuo e treinamento de equipe"
+          }
+        },
+        "pa3": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Adaptação de produtos para segmentos específicos"
+          }
+        },
+        "pa4": {
+          "type": "parceria_item",
+          "settings": {
+            "text": "Consultoria em diluição, uso e dosagem correta"
+          }
+        }
       },
-      "block_order": ["p1","p2","p3","p4","pr1","pr2","pr3","pr4","pr5","pa1","pa2","pa3","pa4"],
-      "settings": {
-        "hero_eyebrow": "Pesquisa & Inovação",
-        "hero_title": "Ciência e técnica no <em>desenvolvimento de cada fórmula</em>",
-        "hero_subtitle": "Cada produto Clenear nasce de um processo rigoroso de pesquisa, teste e validação. Investimos em P&D para entregar formulações que se destacam em desempenho, segurança e sustentabilidade.",
-        "cta_wa_label": "Falar com equipe técnica",
-        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20P%26I%20da%20Clenear%20e%20gostaria%20de%20conversar%20com%20a%20equipe%20t%C3%A9cnica.",
-        "cta2_label": "Conheça Nossas Linhas",
-        "cta2_url": "/pages/nossas-linhas",
-        "mid_cta_heading": "Tem uma necessidade técnica específica?",
-        "mid_cta_text": "Nossa equipe de P&D está pronta para desenvolver a formulação ideal para o seu segmento e aplicação."
-      }
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "pr1",
+        "pr2",
+        "pr3",
+        "pr4",
+        "pr5",
+        "pa1",
+        "pa2",
+        "pa3",
+        "pa4"
+      ],
+      "settings": {}
     },
     "final_cta": {
       "type": "clenear-final-cta",
       "settings": {
         "eyebrow": "Vamos desenvolver juntos?",
-        "heading": "Fale com nossa equipe técnica",
-        "subtext": "Formulações personalizadas, suporte especializado e soluções desenvolvidas para o seu negócio.",
+        "heading": "Fale com o setor técnico da Clenear",
+        "subtext": "Pesquisa, formulação e suporte para empresas que precisam de produtos de limpeza profissionais com desempenho comprovado.",
         "cta_wa_label": "Falar com o Setor Técnico",
-        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20P%26I%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20Setor%20T%C3%A9cnico.",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Pesquisa%20e%20Inova%C3%A7%C3%A3o%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20Setor%20T%C3%A9cnico.",
         "cta2_label": "Conheça Nossas Linhas",
         "cta2_url": "/pages/nossas-linhas",
         "phone": "(27) 3228-0140",
@@ -45,5 +126,8 @@
       }
     }
   },
-  "order": ["pi_main", "final_cta"]
+  "order": [
+    "pi_main",
+    "final_cta"
+  ]
 }
