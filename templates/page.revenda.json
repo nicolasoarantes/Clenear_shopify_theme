@@ -12,31 +12,153 @@
     "revenda_main": {
       "type": "clenear-revenda-main",
       "blocks": {
-        "b1": { "type": "beneficio", "settings": { "icon": "📦", "title": "Portfólio amplo", "text": "Mais de 50 produtos em 6 linhas para atender múltiplos segmentos sem precisar de outro fornecedor." } },
-        "b2": { "type": "beneficio", "settings": { "icon": "💰", "title": "Condições para revendedores", "text": "Preço de fábrica, tabela progressiva e condições de pagamento facilitadas para quem faz volume." } },
-        "b3": { "type": "beneficio", "settings": { "icon": "🎯", "title": "Suporte técnico incluído", "text": "Nossa equipe orienta você e seus clientes na aplicação correta e dilução ideal de cada produto." } },
-        "b4": { "type": "beneficio", "settings": { "icon": "🔄", "title": "Alta rotatividade", "text": "Produtos de uso contínuo e recorrente com alta demanda em empresas, lavanderias e automotivo." } },
-        "b5": { "type": "beneficio", "settings": { "icon": "🏷️", "title": "Marca própria disponível", "text": "Personalize rótulos e embalagens com a sua marca. Desenvolvemos a solução sob medida para você." } },
-        "b6": { "type": "beneficio", "settings": { "icon": "🤝", "title": "Parceria de longo prazo", "text": "Valorizamos relacionamentos duradouros. Crescemos juntos com suporte constante e dedicação." } },
-        "ci1": { "type": "custom_item", "settings": { "text": "Rótulos personalizados com a sua identidade visual" } },
-        "ci2": { "type": "custom_item", "settings": { "text": "Embalagens em diferentes volumes (1L, 5L, 20L, 200L)" } },
-        "ci3": { "type": "custom_item", "settings": { "text": "Formulações sob encomenda para necessidades específicas" } },
-        "ci4": { "type": "custom_item", "settings": { "text": "Mínimo de pedido acessível para começar" } },
-        "ci5": { "type": "custom_item", "settings": { "text": "Suporte na criação de materiais de apresentação" } },
-        "s1": { "type": "step", "settings": { "icon": "💬", "title": "Entre em contato", "text": "Fale com nossa equipe comercial pelo WhatsApp ou formulário. Atendimento consultivo desde o primeiro contato." } },
-        "s2": { "type": "step", "settings": { "icon": "📋", "title": "Receba a proposta", "text": "Enviamos portfólio detalhado com preços de revendedor e condições comerciais personalizadas." } },
-        "s3": { "type": "step", "settings": { "icon": "🛒", "title": "Faça seu pedido", "text": "Confirme os produtos, volumes e entrega. Produção local garante agilidade no atendimento." } },
-        "s4": { "type": "step", "settings": { "icon": "🚀", "title": "Comece a vender", "text": "Receba seus produtos, materiais de apoio e suporte técnico para impulsionar suas vendas imediatamente." } }
+        "b1": {
+          "type": "beneficio",
+          "settings": {
+            "icon": "📦",
+            "title": "Portfólio amplo",
+            "text": "Mais de 50 produtos em 6 linhas para atender múltiplos segmentos sem precisar de outro fornecedor."
+          }
+        },
+        "b2": {
+          "type": "beneficio",
+          "settings": {
+            "icon": "💰",
+            "title": "Condições para revendedores",
+            "text": "Preço de fábrica, tabela progressiva e condições de pagamento facilitadas para quem faz volume."
+          }
+        },
+        "b3": {
+          "type": "beneficio",
+          "settings": {
+            "icon": "🎯",
+            "title": "Suporte técnico incluído",
+            "text": "Nossa equipe orienta você e seus clientes na aplicação correta e dilução ideal de cada produto."
+          }
+        },
+        "b4": {
+          "type": "beneficio",
+          "settings": {
+            "icon": "🔄",
+            "title": "Alta rotatividade",
+            "text": "Produtos de uso contínuo e recorrente com alta demanda em empresas, lavanderias e automotivo."
+          }
+        },
+        "b5": {
+          "type": "beneficio",
+          "settings": {
+            "icon": "🏷️",
+            "title": "Marca própria disponível",
+            "text": "Personalize rótulos e embalagens com a sua marca. Desenvolvemos a solução sob medida para você."
+          }
+        },
+        "b6": {
+          "type": "beneficio",
+          "settings": {
+            "icon": "🤝",
+            "title": "Parceria de longo prazo",
+            "text": "Valorizamos relacionamentos duradouros. Crescemos juntos com suporte constante e dedicação."
+          }
+        },
+        "ci1": {
+          "type": "custom_item",
+          "settings": {
+            "text": "Rótulos personalizados com a sua identidade visual"
+          }
+        },
+        "ci2": {
+          "type": "custom_item",
+          "settings": {
+            "text": "Embalagens em diferentes volumes (1L, 5L, 20L, 200L)"
+          }
+        },
+        "ci3": {
+          "type": "custom_item",
+          "settings": {
+            "text": "Formulações sob encomenda para necessidades específicas"
+          }
+        },
+        "ci4": {
+          "type": "custom_item",
+          "settings": {
+            "text": "Mínimo de pedido acessível para começar"
+          }
+        },
+        "ci5": {
+          "type": "custom_item",
+          "settings": {
+            "text": "Suporte na criação de materiais de apresentação"
+          }
+        },
+        "s1": {
+          "type": "step",
+          "settings": {
+            "icon": "💬",
+            "title": "Entre em contato",
+            "text": "Fale com nossa equipe comercial pelo WhatsApp ou formulário. Atendimento consultivo desde o primeiro contato."
+          }
+        },
+        "s2": {
+          "type": "step",
+          "settings": {
+            "icon": "📋",
+            "title": "Receba a proposta",
+            "text": "Enviamos portfólio detalhado com preços de revendedor e condições comerciais personalizadas."
+          }
+        },
+        "s3": {
+          "type": "step",
+          "settings": {
+            "icon": "🛒",
+            "title": "Faça seu pedido",
+            "text": "Confirme os produtos, volumes e entrega. Produção local garante agilidade no atendimento."
+          }
+        },
+        "s4": {
+          "type": "step",
+          "settings": {
+            "icon": "🚀",
+            "title": "Comece a vender",
+            "text": "Receba seus produtos, materiais de apoio e suporte técnico para impulsionar suas vendas imediatamente."
+          }
+        }
       },
-      "block_order": ["b1","b2","b3","b4","b5","b6","ci1","ci2","ci3","ci4","ci5","s1","s2","s3","s4"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "ci1",
+        "ci2",
+        "ci3",
+        "ci4",
+        "ci5",
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
       "settings": {
         "hero_eyebrow": "Seja parceiro Clenear",
-        "hero_title": "Expanda seu negócio com <em>quem produz para vencer</em>",
+        "hero_title": "Expanda seu negócio com quem produz para vencer",
         "hero_subtitle": "A Clenear oferece portfólio completo, condições exclusivas para revendedores, suporte técnico e produtos com alta rotatividade para impulsionar suas vendas.",
+        "hero_image_alt": "",
         "cta_wa_label": "Quero ser revendedor",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Revenda%20da%20Clenear%20e%20quero%20ser%20revendedor.",
         "cta2_label": "Ver portfólio de produtos",
         "cta2_url": "/pages/nossas-linhas",
+        "ben_eyebrow": "",
+        "ben_title": "",
+        "ben_subtitle": "",
+        "custom_eyebrow": "",
+        "custom_title": "",
+        "custom_text": "",
+        "custom_image": "shopify://shop_images/lab3.png",
+        "steps_eyebrow": "",
+        "steps_title": "",
+        "steps_subtitle": "",
         "mid_cta_heading": "Pronto para expandir seu portfólio?",
         "mid_cta_text": "Fale com nossa equipe comercial e receba uma proposta personalizada para o seu negócio."
       }
@@ -51,10 +173,16 @@
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Revenda%20da%20Clenear%20e%20gostaria%20de%20ser%20revendedor.",
         "cta2_label": "Solicitar proposta",
         "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20uma%20proposta%20comercial.",
+        "cta3_label": "Quero revender",
+        "cta3_url": "",
         "phone": "(27) 3228-0140",
+        "email": "",
         "city": "Serra — Espírito Santo"
       }
     }
   },
-  "order": ["revenda_main", "final_cta"]
+  "order": [
+    "revenda_main",
+    "final_cta"
+  ]
 }
