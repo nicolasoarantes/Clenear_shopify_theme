@@ -1,4 +1,4 @@
-/* Clenear P&I page scripts: Three.js hero, cursor glow, scroll fade, carousel */
+/* Clenear P&I: Three.js hero, cursor em 3 camadas, scroll fade, carousel */
 
 /* Three.js particle hero */
 (function () {
@@ -90,20 +90,52 @@
   document.head.appendChild(s);
 })();
 
-/* Cursor glow */
+/* Cursor em 3 camadas: glow ambiente + spot preciso + anel sonar */
 (function () {
-  var glow = document.getElementById('cl-pi-cursor');
+  var glow  = document.getElementById('cl-pi-cursor');
+  var inner = document.getElementById('cl-pi-cursor-inner');
+  var ring  = document.getElementById('cl-pi-orbit-ring');
   if (!glow || window.matchMedia('(pointer: coarse)').matches) return;
-  var tx=-999, ty=-999, cx=-999, cy=-999;
+
+  var tx = -999, ty = -999;
+  var cx = -999, cy = -999;   /* glow: inércia alta (lerp 0.06) */
+  var fx = -999, fy = -999;   /* inner: inércia média (lerp 0.15) */
+  var isVisible = false;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
   document.addEventListener('mousemove', function(e) {
-    tx=e.clientX; ty=e.clientY;
+    tx = e.clientX;
+    ty = e.clientY;
     var el = document.elementFromPoint(e.clientX, e.clientY);
-    glow.style.opacity = (el && el.closest('[data-cursor-section]')) ? '1' : '0';
+    var inSection = el && el.closest('[data-cursor-section]');
+    if (inSection && !isVisible) {
+      isVisible = true;
+      glow.style.opacity  = '1';
+      if (inner) inner.style.opacity = '1';
+      if (ring)  ring.style.opacity  = '1';
+    } else if (!inSection && isVisible) {
+      isVisible = false;
+      glow.style.opacity  = '0';
+      if (inner) inner.style.opacity = '0';
+      if (ring)  ring.style.opacity  = '0';
+    }
   });
-  function lerp(a,b,t) { return a+(b-a)*t; }
+
   (function tick() {
-    cx=lerp(cx,tx,0.08); cy=lerp(cy,ty,0.08);
-    glow.style.transform='translate('+(cx-200)+'px,'+(cy-200)+'px)';
+    /* glow: segue lentamente */
+    cx = lerp(cx, tx, 0.06);
+    cy = lerp(cy, ty, 0.06);
+    glow.style.transform = 'translate(' + (cx - 240) + 'px,' + (cy - 240) + 'px)';
+
+    /* inner: segue com velocidade média */
+    fx = lerp(fx, tx, 0.15);
+    fy = lerp(fy, ty, 0.15);
+    if (inner) inner.style.transform = 'translate(' + (fx - 48) + 'px,' + (fy - 48) + 'px)';
+
+    /* ring: acompanha o cursor imediatamente (raio pequeno) */
+    if (ring) ring.style.transform = 'translate(' + (tx - 26) + 'px,' + (ty - 26) + 'px)';
+
     requestAnimationFrame(tick);
   })();
 })();
