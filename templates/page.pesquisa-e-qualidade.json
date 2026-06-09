@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "pi_main": {
@@ -39,76 +48,17 @@
             "text": "Todos os produtos são testados para conformidade com normas ANVISA e regulatórias do setor de limpeza profissional."
           }
         },
-        "pr1": {
-          "type": "processo_item",
-          "settings": {
-            "text": "Identificação da necessidade técnica com o cliente"
-          }
-        },
-        "pr2": {
-          "type": "processo_item",
-          "settings": {
-            "text": "Pesquisa de matérias-primas e formulação em laboratório"
-          }
-        },
-        "pr3": {
-          "type": "processo_item",
-          "settings": {
-            "text": "Testes de desempenho, estabilidade e segurança"
-          }
-        },
-        "pr4": {
-          "type": "processo_item",
-          "settings": {
-            "text": "Ajustes finos e validação com uso real em campo"
-          }
-        },
-        "pr5": {
-          "type": "processo_item",
-          "settings": {
-            "text": "Registro, conformidade regulatória e escala de produção"
-          }
-        },
-        "pa1": {
-          "type": "parceria_item",
-          "settings": {
-            "text": "Desenvolvimento de fórmulas exclusivas para sua marca"
-          }
-        },
-        "pa2": {
-          "type": "parceria_item",
-          "settings": {
-            "text": "Suporte técnico contínuo e treinamento de equipe"
-          }
-        },
-        "pa3": {
-          "type": "parceria_item",
-          "settings": {
-            "text": "Adaptação de produtos para segmentos específicos"
-          }
-        },
-        "pa4": {
-          "type": "parceria_item",
-          "settings": {
-            "text": "Consultoria em diluição, uso e dosagem correta"
-          }
-        }
+        "pr1": { "type": "processo_item", "settings": { "text": "Identificação da necessidade técnica com o cliente" } },
+        "pr2": { "type": "processo_item", "settings": { "text": "Pesquisa de matérias-primas e formulação em laboratório" } },
+        "pr3": { "type": "processo_item", "settings": { "text": "Testes de desempenho, estabilidade e segurança" } },
+        "pr4": { "type": "processo_item", "settings": { "text": "Ajustes finos e validação com uso real em campo" } },
+        "pr5": { "type": "processo_item", "settings": { "text": "Registro, conformidade regulatória e escala de produção" } },
+        "pa1": { "type": "parceria_item", "settings": { "text": "Desenvolvimento de fórmulas exclusivas para sua marca" } },
+        "pa2": { "type": "parceria_item", "settings": { "text": "Suporte técnico contínuo e treinamento de equipe" } },
+        "pa3": { "type": "parceria_item", "settings": { "text": "Adaptação de produtos para segmentos específicos" } },
+        "pa4": { "type": "parceria_item", "settings": { "text": "Consultoria em diluição, uso e dosagem correta" } }
       },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3",
-        "p4",
-        "pr1",
-        "pr2",
-        "pr3",
-        "pr4",
-        "pr5",
-        "pa1",
-        "pa2",
-        "pa3",
-        "pa4"
-      ],
+      "block_order": ["p1","p2","p3","p4","pr1","pr2","pr3","pr4","pr5","pa1","pa2","pa3","pa4"],
       "settings": {}
     },
     "final_cta": {
@@ -126,8 +76,5 @@
       }
     }
   },
-  "order": [
-    "pi_main",
-    "final_cta"
-  ]
+  "order": ["pi_main", "final_cta"]
 }
