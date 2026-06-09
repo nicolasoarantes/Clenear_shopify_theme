@@ -79,18 +79,10 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "cl_pi_test_b_8q7J8Q": {
-      "type": "cl-pi-test-b",
-      "name": "CL PI Test B",
-      "settings": {
-        "hero_title": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "cl_pi_test_b_8q7J8Q"
+    "header"
   ]
 }
