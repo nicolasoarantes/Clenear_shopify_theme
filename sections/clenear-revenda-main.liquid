@@ -1,0 +1,262 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+
+<div class="cl-pg-page" id="revenda">
+
+  {%- comment -%} CURSOR GLOW {%- endcomment -%}
+  <div class="cl-cursor-glow" id="cl-revenda-glow" aria-hidden="true"></div>
+
+  {%- comment -%} ===== HERO ===== {%- endcomment -%}
+  <section class="cl-pg-hero" style="min-height:60vh;display:flex;align-items:center;">
+    <div class="cl-pg-wrap" style="width:100%;">
+      <div class="cl-pg-hero__grid">
+        <div class="cl-pg-fade">
+          <p class="cl-pg-eyebrow">{{ section.settings.hero_eyebrow | default: 'Seja parceiro Clenear' }}</p>
+          <h1 class="cl-pg-h1">{{ section.settings.hero_title | default: 'Expanda seu negócio com <em>quem produz para vencer</em>' }}</h1>
+          <p class="cl-pg-lead">{{ section.settings.hero_subtitle | default: 'A Clenear oferece portfólio completo, condições exclusivas para revendedores, suporte técnico e produtos com alta rotatividade para impulsionar suas vendas.' }}</p>
+          <div class="cl-pg-btn-row">
+            <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20quero%20ser%20revendedor.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+              {{ section.settings.cta_wa_label | default: 'Quero ser revendedor' }}
+            </a>
+            <a href="{{ section.settings.cta2_url | default: '/pages/contato' }}" class="cl-pg-btn cl-pg-btn--outline">
+              {{ section.settings.cta2_label | default: 'Formulário de contato' }}
+            </a>
+          </div>
+        </div>
+        <div class="cl-pg-hero__media cl-pg-fade cl-pg-fade--d2">
+          {%- if section.settings.hero_image != blank -%}
+            {{ section.settings.hero_image | image_url: width: 800 | image_tag: loading: 'eager', widths: '400, 600, 800', sizes: '(min-width: 1024px) 44vw, 90vw', alt: section.settings.hero_image_alt | default: 'Parceria Clenear' }}
+          {%- else -%}
+            <div class="cl-pg-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Foto produtos ou parceiros<br>(aspect 4:3)</span>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== BENEFÍCIOS ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--alt">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-intro cl-pg-intro--center cl-pg-fade">
+        <p class="cl-pg-eyebrow">{{ section.settings.ben_eyebrow | default: 'Vantagens exclusivas' }}</p>
+        <h2 class="cl-pg-h2">{{ section.settings.ben_title | default: 'Por que revender <em>Clenear</em>' }}</h2>
+        <p class="cl-pg-lead cl-pg-lead--wide">{{ section.settings.ben_subtitle | default: 'Benefícios pensados para revendedores que buscam resultado real, portfólio diversificado e suporte de quem entende do negócio.' }}</p>
+      </div>
+      <div class="cl-pg-cards cl-pg-cards--benef cl-pg-fade cl-pg-fade--d1">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'beneficio' -%}
+            <div class="cl-pg-card" {{ block.shopify_attributes }}>
+              <div class="cl-pg-card__icon">{{ block.settings.icon }}</div>
+              <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
+              <p class="cl-pg-card__text">{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="cl-pg-scroll-dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== PERSONALIZAÇÃO ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--dark">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-split cl-pg-split--flip">
+        <div class="cl-pg-split__media cl-pg-fade cl-pg-fade--d1">
+          {%- if section.settings.custom_image != blank -%}
+            {{ section.settings.custom_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400, 700, 800', sizes: '(min-width: 1024px) 44vw, 90vw', alt: 'Personalização Clenear' }}
+          {%- else -%}
+            <div class="cl-pg-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Foto rótulos / embalagens<br>(16:9)</span>
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="cl-pg-fade">
+          <p class="cl-pg-eyebrow">{{ section.settings.custom_eyebrow | default: 'Marca própria' }}</p>
+          <h2 class="cl-pg-h2">{{ section.settings.custom_title | default: 'Personalize com a <em>sua marca</em>' }}</h2>
+          <p class="cl-pg-lead">{{ section.settings.custom_text | default: 'Oferecemos serviço de marca própria para revendedores e empresas: rótulos personalizados, embalagens exclusivas e até formulações sob demanda.' }}</p>
+          <ul class="cl-pg-split__list">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'custom_item' -%}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+          <div class="cl-pg-btn-row">
+            <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20quero%20saber%20sobre%20marca%20pr%C3%B3pria.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+              Falar sobre marca própria
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== COMO FUNCIONA ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--alt">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-intro cl-pg-intro--center cl-pg-fade">
+        <p class="cl-pg-eyebrow">{{ section.settings.steps_eyebrow | default: 'Processo simples' }}</p>
+        <h2 class="cl-pg-h2">{{ section.settings.steps_title | default: 'Como <em>funciona</em>' }}</h2>
+        <p class="cl-pg-lead cl-pg-lead--wide">{{ section.settings.steps_subtitle | default: 'Em poucos passos você começa a revender produtos Clenear e aumentar seu portfólio.' }}</p>
+      </div>
+      <div class="cl-pg-steps cl-pg-steps--revenda cl-pg-fade cl-pg-fade--d1">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'step' -%}
+            <div class="cl-pg-step" {{ block.shopify_attributes }}>
+              <span class="cl-pg-step__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+              <div class="cl-pg-step__icon">{{ block.settings.icon }}</div>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} MID CTA {%- endcomment -%}
+      <div class="cl-pg-mid-cta cl-pg-fade">
+        <h3>{{ section.settings.mid_cta_heading | default: 'Pronto para expandir seu portfólio?' }}</h3>
+        <p>{{ section.settings.mid_cta_text | default: 'Fale com nossa equipe comercial e receba uma proposta personalizada para o seu negócio.' }}</p>
+        <div class="cl-pg-btn-row">
+          <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20quero%20ser%20revendedor.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+            {{ section.settings.cta_wa_label | default: 'Quero ser revendedor' }}
+          </a>
+          <a href="{{ section.settings.cta2_url | default: '/pages/contato' }}" class="cl-pg-btn cl-pg-btn--outline">
+            {{ section.settings.cta2_label | default: 'Formulário de contato' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<style>
+  .cl-pg-cards--benef {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cl-pg-steps--revenda {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1023px) {
+    .cl-pg-cards--benef { grid-template-columns: repeat(2, 1fr); }
+    .cl-pg-steps--revenda { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<script>
+(function () {
+  var fades = document.querySelectorAll('#revenda .cl-pg-fade');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    fades.forEach(function (el) { io.observe(el); });
+  } else {
+    fades.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* Cursor glow */
+  var glow = document.getElementById('cl-revenda-glow');
+  if (glow && window.matchMedia('(pointer: fine)').matches) {
+    var tx = window.innerWidth / 2, ty = window.innerHeight / 2, cx = tx, cy = ty;
+    function lerp(a, b, t) { return a + (b - a) * t; }
+    document.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; });
+    (function tick() {
+      cx = lerp(cx, tx, 0.08); cy = lerp(cy, ty, 0.08);
+      glow.style.transform = 'translate(calc(' + cx + 'px - 50%), calc(' + cy + 'px - 50%))';
+      requestAnimationFrame(tick);
+    })();
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Clenear: Revenda",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_eyebrow", "label": "Eyebrow", "default": "Seja parceiro Clenear" },
+    { "type": "text", "id": "hero_title", "label": "Título", "default": "Expanda seu negócio com <em>quem produz para vencer</em>" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Subtítulo" },
+    { "type": "image_picker", "id": "hero_image", "label": "Imagem hero (4:3)" },
+    { "type": "text", "id": "hero_image_alt", "label": "Alt da imagem" },
+    { "type": "header", "content": "CTAs globais" },
+    { "type": "text", "id": "cta_wa_label", "label": "WhatsApp label", "default": "Quero ser revendedor" },
+    { "type": "url", "id": "cta_wa_url", "label": "WhatsApp link" },
+    { "type": "text", "id": "cta2_label", "label": "CTA 2 label", "default": "Formulário de contato" },
+    { "type": "url", "id": "cta2_url", "label": "CTA 2 link" },
+    { "type": "header", "content": "Seção: Benefícios" },
+    { "type": "text", "id": "ben_eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "ben_title", "label": "Título" },
+    { "type": "textarea", "id": "ben_subtitle", "label": "Subtítulo" },
+    { "type": "header", "content": "Seção: Personalização" },
+    { "type": "text", "id": "custom_eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "custom_title", "label": "Título" },
+    { "type": "textarea", "id": "custom_text", "label": "Texto" },
+    { "type": "image_picker", "id": "custom_image", "label": "Imagem (16:9)" },
+    { "type": "header", "content": "Seção: Como funciona" },
+    { "type": "text", "id": "steps_eyebrow", "label": "Eyebrow" },
+    { "type": "text", "id": "steps_title", "label": "Título" },
+    { "type": "textarea", "id": "steps_subtitle", "label": "Subtítulo" },
+    { "type": "header", "content": "Mid CTA" },
+    { "type": "text", "id": "mid_cta_heading", "label": "Título" },
+    { "type": "textarea", "id": "mid_cta_text", "label": "Texto" }
+  ],
+  "blocks": [
+    {
+      "type": "beneficio",
+      "name": "Benefício",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji", "default": "📦" },
+        { "type": "text", "id": "title", "label": "Título" },
+        { "type": "textarea", "id": "text", "label": "Descrição" }
+      ]
+    },
+    {
+      "type": "custom_item",
+      "name": "Item de personalização",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Texto do item" }
+      ]
+    },
+    {
+      "type": "step",
+      "name": "Passo",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji", "default": "💬" },
+        { "type": "text", "id": "title", "label": "Título do passo" },
+        { "type": "textarea", "id": "text", "label": "Descrição" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear: Revenda",
+      "blocks": [
+        { "type": "beneficio", "settings": { "icon": "📦", "title": "Portfólio amplo", "text": "Mais de 50 produtos em 6 linhas para atender múltiplos segmentos sem precisar de outro fornecedor." } },
+        { "type": "beneficio", "settings": { "icon": "💰", "title": "Condições para revendedores", "text": "Preço de fábrica, tabela progressiva e condições de pagamento facilitadas para quem faz volume." } },
+        { "type": "beneficio", "settings": { "icon": "🎯", "title": "Suporte técnico incluído", "text": "Nossa equipe orienta você e seus clientes na aplicação correta e dilução ideal de cada produto." } },
+        { "type": "beneficio", "settings": { "icon": "🔄", "title": "Alta rotatividade", "text": "Produtos de uso contínuo e recorrente com alta demanda em empresas, lavanderias e automotivo." } },
+        { "type": "beneficio", "settings": { "icon": "🏷️", "title": "Marca própria disponível", "text": "Personalize rótulos e embalagens com a sua marca. Desenvolvemos a solução sob medida para você." } },
+        { "type": "beneficio", "settings": { "icon": "🤝", "title": "Parceria de longo prazo", "text": "Valorizamos relacionamentos duradouros. Crescemos juntos, com suporte constante e dedicação." } },
+        { "type": "custom_item", "settings": { "text": "Rótulos personalizados com a sua identidade visual" } },
+        { "type": "custom_item", "settings": { "text": "Embalagens em diferentes volumes (1L, 5L, 20L, 200L)" } },
+        { "type": "custom_item", "settings": { "text": "Formulações sob encomenda para necessidades específicas" } },
+        { "type": "custom_item", "settings": { "text": "Mínimo de pedido acessível para começar" } },
+        { "type": "custom_item", "settings": { "text": "Suporte na criação de materiais de apresentação" } },
+        { "type": "step", "settings": { "icon": "💬", "title": "Entre em contato", "text": "Fale com nossa equipe comercial pelo WhatsApp ou formulário. Atendimento consultivo desde o primeiro contato." } },
+        { "type": "step", "settings": { "icon": "📋", "title": "Receba a proposta", "text": "Enviamos um portfólio detalhado com preços de revendedor e condições comerciais personalizadas." } },
+        { "type": "step", "settings": { "icon": "🛒", "title": "Faça seu pedido", "text": "Confirme os produtos, volumes e a entrega. Produção local garante agilidade no atendimento." } },
+        { "type": "step", "settings": { "icon": "🚀", "title": "Comece a vender", "text": "Receba seus produtos, materiais de apoio e suporte técnico para impulsionar suas vendas imediatamente." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

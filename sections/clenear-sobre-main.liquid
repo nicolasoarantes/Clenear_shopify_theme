@@ -1,0 +1,262 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+
+<div class="cl-pg-page" id="sobre">
+
+  {%- comment -%} CURSOR GLOW {%- endcomment -%}
+  <div class="cl-cursor-glow" id="cl-sobre-glow" aria-hidden="true"></div>
+
+  {%- comment -%} ===== HERO ===== {%- endcomment -%}
+  <section class="cl-pg-hero" style="position:relative;">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-hero__grid">
+        <div class="cl-pg-hero__content cl-pg-fade">
+          <p class="cl-pg-eyebrow">{{ section.settings.hero_eyebrow | default: 'Nossa história' }}</p>
+          <h1 class="cl-pg-h1">{{ section.settings.hero_title | default: 'Comprometidos com <em>qualidade e resultado</em>' }}</h1>
+          <p class="cl-pg-lead">{{ section.settings.hero_subtitle | default: 'Desde 2006, a Clenear desenvolve soluções de limpeza e saneantes para empresas, revendedores e parceiros em todo o Espírito Santo e Brasil.' }}</p>
+          <div class="cl-pg-btn-row">
+            <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20empresa.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+              {{ section.settings.cta_wa_label | default: 'Falar no WhatsApp' }}
+            </a>
+            <a href="{{ section.settings.cta2_url | default: '/pages/contato' }}" class="cl-pg-btn cl-pg-btn--outline">
+              {{ section.settings.cta2_label | default: 'Formulário de contato' }}
+            </a>
+          </div>
+        </div>
+        <div class="cl-pg-hero__media cl-pg-fade cl-pg-fade--d2">
+          {%- if section.settings.hero_image != blank -%}
+            {{ section.settings.hero_image | image_url: width: 800 | image_tag: loading: 'eager', widths: '400, 600, 800', sizes: '(min-width: 1024px) 44vw, 90vw', alt: section.settings.hero_image_alt | default: 'Equipe e instalações Clenear' }}
+          {%- else -%}
+            <div class="cl-pg-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Foto da equipe ou ambiente industrial<br>(aspect 4:3)</span>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== STATS ===== {%- endcomment -%}
+  <div class="cl-pg-stats">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-stats__grid">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'stat' -%}
+            <div class="cl-pg-stat cl-pg-fade" {{ block.shopify_attributes }}>
+              <strong>{{ block.settings.value }}</strong>
+              <span>{{ block.settings.label }}</span>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} ===== HISTÓRIA — TIMELINE ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--alt">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-intro cl-pg-fade">
+        <p class="cl-pg-eyebrow">{{ section.settings.history_eyebrow | default: 'Nossa trajetória' }}</p>
+        <h2 class="cl-pg-h2">{{ section.settings.history_title | default: 'Uma história construída com <em>trabalho e técnica</em>' }}</h2>
+        <p class="cl-pg-lead">{{ section.settings.history_subtitle | default: 'Cada etapa da Clenear foi marcada por aprendizado, investimento em pesquisa e compromisso com os clientes.' }}</p>
+      </div>
+      <div class="cl-pg-timeline">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'timeline_item' -%}
+            <div class="cl-pg-tl-item cl-pg-fade" {{ block.shopify_attributes }}>
+              <p class="cl-pg-tl-year">{{ block.settings.year }}</p>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== MISSÃO / VISÃO / VALORES ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--dark">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-intro cl-pg-intro--center cl-pg-fade">
+        <p class="cl-pg-eyebrow">{{ section.settings.mvv_eyebrow | default: 'Propósito e valores' }}</p>
+        <h2 class="cl-pg-h2">{{ section.settings.mvv_title | default: 'O que nos move' }}</h2>
+      </div>
+      <div class="cl-pg-mvv">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'mvv_card' -%}
+            <div class="cl-pg-mvv-card cl-pg-fade cl-pg-fade--d{{ forloop.index }}" {{ block.shopify_attributes }}>
+              <div class="cl-pg-mvv-card__icon">{{ block.settings.icon }}</div>
+              <p class="cl-pg-mvv-card__label">{{ block.settings.label }}</p>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="cl-pg-scroll-dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ===== DIFERENCIAIS ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--alt">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-intro cl-pg-fade">
+        <p class="cl-pg-eyebrow">{{ section.settings.diff_eyebrow | default: 'Por que a Clenear' }}</p>
+        <h2 class="cl-pg-h2">{{ section.settings.diff_title | default: 'Nossos <em>diferenciais</em>' }}</h2>
+      </div>
+      <div class="cl-pg-diffs">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'diferencial' -%}
+            <div class="cl-pg-diff cl-pg-fade cl-pg-fade--d{{ forloop.index }}" {{ block.shopify_attributes }}>
+              <div class="cl-pg-diff__icon">{{ block.settings.icon }}</div>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} MID CTA {%- endcomment -%}
+      <div class="cl-pg-mid-cta cl-pg-fade">
+        <h3>{{ section.settings.mid_cta_heading | default: 'Pronto para conhecer nossas soluções?' }}</h3>
+        <p>{{ section.settings.mid_cta_text | default: 'Fale com nosso time e descubra como a Clenear pode ser o parceiro ideal para o seu negócio.' }}</p>
+        <div class="cl-pg-btn-row">
+          <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20empresa.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+            {{ section.settings.cta_wa_label | default: 'Falar no WhatsApp' }}
+          </a>
+          <a href="{{ section.settings.cta2_url | default: '/pages/contato' }}" class="cl-pg-btn cl-pg-btn--outline">
+            {{ section.settings.cta2_label | default: 'Formulário de contato' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  /* ── Scroll fade-in ── */
+  var fades = document.querySelectorAll('#sobre .cl-pg-fade');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    fades.forEach(function (el) { io.observe(el); });
+  } else {
+    fades.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ── Cursor glow ── */
+  var glow = document.getElementById('cl-sobre-glow');
+  if (glow && window.matchMedia('(pointer: fine)').matches) {
+    var tx = window.innerWidth / 2, ty = window.innerHeight / 2;
+    var cx = tx, cy = ty;
+    function lerp(a, b, t) { return a + (b - a) * t; }
+    document.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; });
+    (function tick() {
+      cx = lerp(cx, tx, 0.08);
+      cy = lerp(cy, ty, 0.08);
+      glow.style.transform = 'translate(calc(' + cx + 'px - 50%), calc(' + cy + 'px - 50%))';
+      requestAnimationFrame(tick);
+    })();
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Clenear: Sobre",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_eyebrow", "label": "Eyebrow", "default": "Nossa história" },
+    { "type": "text", "id": "hero_title", "label": "Título (HTML permitido: <em>)", "default": "Comprometidos com <em>qualidade e resultado</em>" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Subtítulo" },
+    { "type": "image_picker", "id": "hero_image", "label": "Imagem (4:3)" },
+    { "type": "text", "id": "hero_image_alt", "label": "Alt da imagem" },
+    { "type": "header", "content": "CTAs (usados em todo o bloco)" },
+    { "type": "text", "id": "cta_wa_label", "label": "WhatsApp label", "default": "Falar no WhatsApp" },
+    { "type": "url", "id": "cta_wa_url", "label": "WhatsApp link" },
+    { "type": "text", "id": "cta2_label", "label": "CTA 2 label", "default": "Formulário de contato" },
+    { "type": "url", "id": "cta2_url", "label": "CTA 2 link" },
+    { "type": "header", "content": "Seção: História" },
+    { "type": "text", "id": "history_eyebrow", "label": "Eyebrow", "default": "Nossa trajetória" },
+    { "type": "text", "id": "history_title", "label": "Título", "default": "Uma história construída com <em>trabalho e técnica</em>" },
+    { "type": "textarea", "id": "history_subtitle", "label": "Subtítulo" },
+    { "type": "header", "content": "Seção: Missão / Visão / Valores" },
+    { "type": "text", "id": "mvv_eyebrow", "label": "Eyebrow", "default": "Propósito e valores" },
+    { "type": "text", "id": "mvv_title", "label": "Título", "default": "O que nos move" },
+    { "type": "header", "content": "Seção: Diferenciais" },
+    { "type": "text", "id": "diff_eyebrow", "label": "Eyebrow", "default": "Por que a Clenear" },
+    { "type": "text", "id": "diff_title", "label": "Título", "default": "Nossos <em>diferenciais</em>" },
+    { "type": "header", "content": "Mid CTA" },
+    { "type": "text", "id": "mid_cta_heading", "label": "Título", "default": "Pronto para conhecer nossas soluções?" },
+    { "type": "textarea", "id": "mid_cta_text", "label": "Texto" }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Número",
+      "settings": [
+        { "type": "text", "id": "value", "label": "Valor", "default": "+18 anos" },
+        { "type": "text", "id": "label", "label": "Descrição", "default": "de experiência" }
+      ]
+    },
+    {
+      "type": "timeline_item",
+      "name": "Linha do tempo",
+      "settings": [
+        { "type": "text", "id": "year", "label": "Ano", "default": "2006" },
+        { "type": "text", "id": "title", "label": "Título" },
+        { "type": "textarea", "id": "text", "label": "Descrição" }
+      ]
+    },
+    {
+      "type": "mvv_card",
+      "name": "Missão / Visão / Valor",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji", "default": "🎯" },
+        { "type": "text", "id": "label", "label": "Label (Missão, Visão ou Valores)", "default": "Missão" },
+        { "type": "text", "id": "title", "label": "Título" },
+        { "type": "textarea", "id": "text", "label": "Texto" }
+      ]
+    },
+    {
+      "type": "diferencial",
+      "name": "Diferencial",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji", "default": "⚗️" },
+        { "type": "text", "id": "title", "label": "Título" },
+        { "type": "textarea", "id": "text", "label": "Texto" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clenear: Sobre",
+      "blocks": [
+        { "type": "stat", "settings": { "value": "+18 anos", "label": "de experiência no mercado" } },
+        { "type": "stat", "settings": { "value": "+50", "label": "produtos desenvolvidos" } },
+        { "type": "stat", "settings": { "value": "ES → BR", "label": "origem capixaba, alcance nacional" } },
+        { "type": "stat", "settings": { "value": "B2B", "label": "foco em empresas e parceiros" } },
+        { "type": "timeline_item", "settings": { "year": "2006", "title": "Fundação da Clenear", "text": "A empresa nasce em Serra (ES) com o propósito de oferecer soluções profissionais de limpeza e saneantes para o mercado capixaba." } },
+        { "type": "timeline_item", "settings": { "year": "2010", "title": "Expansão do portfólio", "text": "Desenvolvimento das primeiras linhas concentradas e ampliação do portfólio para atender lavanderias e uso institucional." } },
+        { "type": "timeline_item", "settings": { "year": "2015", "title": "Linha Automotiva", "text": "Lançamento da linha automotiva com os produtos Brilha+, Limpa+, Descola+ e Revita+, consolidando a presença no segmento." } },
+        { "type": "timeline_item", "settings": { "year": "2020", "title": "Foco B2B e parcerias", "text": "Reposicionamento estratégico com foco em atendimento consultivo a revendedores, empresas e marcas parceiras em todo o Brasil." } },
+        { "type": "timeline_item", "settings": { "year": "2024", "title": "Inovação e novas linhas", "text": "Investimento em pesquisa e desenvolvimento de novas formulações, incluindo aditivos industriais e matérias-primas para formuladores." } },
+        { "type": "mvv_card", "settings": { "icon": "🎯", "label": "Missão", "title": "Oferecer soluções que funcionam", "text": "Desenvolvemos produtos de alta performance para limpeza profissional, com foco em eficiência, segurança e resultado comprovado." } },
+        { "type": "mvv_card", "settings": { "icon": "🔭", "label": "Visão", "title": "Referência nacional em B2B", "text": "Ser reconhecida como a parceira preferencial de empresas e revendedores que buscam qualidade, suporte técnico e consistência." } },
+        { "type": "mvv_card", "settings": { "icon": "🌿", "label": "Valores", "title": "Qualidade, técnica e parceria", "text": "Rigor técnico no desenvolvimento de produtos, compromisso ambiental e relacionamento de longo prazo com cada cliente." } },
+        { "type": "diferencial", "settings": { "icon": "⚗️", "title": "Formulação própria", "text": "Desenvolvemos nossas fórmulas internamente, com controle total sobre eficiência, segurança e rendimento." } },
+        { "type": "diferencial", "settings": { "icon": "🏭", "title": "Indústria capixaba", "text": "Produção local no Espírito Santo desde 2006, com suporte técnico próximo e entrega ágil." } },
+        { "type": "diferencial", "settings": { "icon": "🤝", "title": "Atendimento consultivo", "text": "Nossa equipe orienta cada cliente na escolha da solução ideal para cada necessidade e segmento." } },
+        { "type": "diferencial", "settings": { "icon": "📦", "title": "Linhas completas", "text": "Do automotivo à lavanderia, oferecemos portfólio amplo para múltiplos segmentos do mercado profissional." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

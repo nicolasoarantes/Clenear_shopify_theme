@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "linhas_main": {
+      "type": "clenear-linhas-main",
+      "blocks": {
+        "l1": { "type": "linha", "settings": { "tag": "Higiene têxtil", "title": "Lavanderia", "description": "Amaciantes, detergentes concentrados e soluções para higienização têxtil. Formulações eficazes para lavanderias comerciais e industriais com alto rendimento por diluição." } },
+        "l2": { "type": "linha", "settings": { "tag": "Automotivo", "title": "Limpeza Automotiva", "description": "Linha completa Brilha+, Limpa+, Descola+ e Revita+. Performance comprovada para estéticas, revendas e uso profissional em veículos." } },
+        "l3": { "type": "linha", "settings": { "tag": "Corporativo", "title": "Uso Profissional", "description": "Soluções para limpeza e higiene em ambientes corporativos, hospitais, escolas e indústrias. Padrão constante de qualidade e rendimento para grandes volumes." } },
+        "l4": { "type": "linha", "settings": { "tag": "Alta performance", "title": "Alta Concentração", "description": "Produtos com altíssimo rendimento por diluição controlada. Ideais para revendedores e empresas que buscam reduzir custo operacional sem abrir mão de eficiência." } },
+        "l5": { "type": "linha", "settings": { "tag": "Industrial", "title": "Aditivos Industriais", "description": "Formulações técnicas para remoção de graxa pesada, óleos industriais e manutenção de equipamentos. Para uso em fábricas, oficinas e frotas." } },
+        "l6": { "type": "linha", "settings": { "tag": "Essências & Insumos", "title": "Exóticas & Matérias-Primas", "description": "Essências, fragrâncias e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza." } }
+      },
+      "block_order": ["l1","l2","l3","l4","l5","l6"],
+      "settings": {
+        "hero_eyebrow": "Nossas linhas",
+        "hero_title": "Soluções desenvolvidas para <em>cada segmento</em>",
+        "hero_subtitle": "Cada linha Clenear é formulada com rigor técnico para entregar desempenho real no dia a dia de empresas, lavanderias, revendedores e profissionais automotivos.",
+        "cta_wa_label": "Falar sobre as linhas",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20saber%20mais.",
+        "cta2_label": "Formulário de contato",
+        "cta2_url": "/pages/contato",
+        "mid_cta_heading": "Qual linha é ideal para o seu negócio?",
+        "mid_cta_text": "Nossa equipe técnica orienta você na escolha dos produtos certos para cada aplicação."
+      }
+    },
+    "final_cta": {
+      "type": "clenear-final-cta",
+      "settings": {
+        "eyebrow": "Vamos conversar?",
+        "heading": "Fale com a equipe Clenear",
+        "subtext": "Portfólio completo, suporte técnico e condições especiais para empresas e revendedores.",
+        "cta_wa_label": "Chamar no WhatsApp",
+        "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20atendimento.",
+        "cta2_label": "Solicitar orçamento",
+        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
+        "phone": "(27) 3228-0140",
+        "city": "Serra — Espírito Santo"
+      }
+    }
+  },
+  "order": ["linhas_main", "final_cta"]
+}
