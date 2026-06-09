@@ -1,0 +1,59 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+{{ 'clenear-pi.css' | asset_url | stylesheet_tag }}
+
+<div class="cl-pg-page" id="pesquisa-inovacao">
+  <section class="cl-pi-hero" id="cl-pi-hero-section">
+    <canvas class="cl-pi-hero__canvas" id="cl-pi-canvas" aria-hidden="true"></canvas>
+    <div class="cl-pg-wrap cl-pi-hero__wrap">
+      <div class="cl-pi-hero__content cl-pg-fade">
+        <h1 class="cl-pg-h1">{{ section.settings.hero_title | default: 'Pesquisa e Inovacao' }}</h1>
+        <div class="cl-pg-btn-row">
+          <a href="https://api.whatsapp.com/send?phone=552732280140&amp;text=Ol%C3%A1!"
+             class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+            Falar com a Equipe
+          </a>
+          <a href="/pages/nossas-linhas" class="cl-pg-btn cl-pg-btn--outline">
+            Nossas Linhas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cl-pg-section cl-pg-section--alt" data-cursor-section>
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-cards cl-pg-cards--4">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'pilar' -%}
+            <div class="cl-pg-card" {{ block.shopify_attributes }}>
+              <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
+              <p class="cl-pg-card__text">{{ block.settings.text }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="{{ 'clenear-pi.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "CL PI Test B",
+  "settings": [
+    { "type": "text", "id": "hero_title", "label": "Titulo hero" }
+  ],
+  "blocks": [
+    {
+      "type": "pilar",
+      "name": "Pilar",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji", "default": "🔬" },
+        { "type": "text", "id": "title", "label": "Titulo" },
+        { "type": "textarea", "id": "text", "label": "Descricao" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "CL PI Test B" }]
+}
+{% endschema %}
