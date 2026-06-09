@@ -1,7 +1,7 @@
 {
   "sections": {
     "pi_main": {
-      "type": "clenear-pi-main",
+      "type": "clenear-pi-section",
       "blocks": {
         "p1": { "type": "pilar", "settings": { "number": "01", "icon": "🔬", "title": "Pesquisa científica", "text": "Análise de insumos, pesquisa de mercado e benchmarks técnicos orientam cada nova formulação." } },
         "p2": { "type": "pilar", "settings": { "number": "02", "icon": "⚗️", "title": "Desenvolvimento de fórmulas", "text": "Formulação interna com foco em eficiência, segurança química e rendimento por aplicação." } },
