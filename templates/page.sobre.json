@@ -1,34 +1,180 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "sobre_main": {
       "type": "clenear-sobre-main",
       "blocks": {
-        "stat1": { "type": "stat", "settings": { "value": "+18 anos", "label": "de experiência no mercado" } },
-        "stat2": { "type": "stat", "settings": { "value": "+50", "label": "produtos desenvolvidos" } },
-        "stat3": { "type": "stat", "settings": { "value": "ES → BR", "label": "origem capixaba, alcance nacional" } },
-        "stat4": { "type": "stat", "settings": { "value": "B2B", "label": "foco em empresas e parceiros" } },
-        "tl1": { "type": "timeline_item", "settings": { "year": "2006", "title": "Fundação da Clenear", "text": "A empresa nasce em Serra (ES) com o propósito de oferecer soluções profissionais de limpeza e saneantes para o mercado capixaba." } },
-        "tl2": { "type": "timeline_item", "settings": { "year": "2010", "title": "Expansão do portfólio", "text": "Desenvolvimento das primeiras linhas concentradas e ampliação do portfólio para atender lavanderias e uso institucional." } },
-        "tl3": { "type": "timeline_item", "settings": { "year": "2015", "title": "Linha Automotiva", "text": "Lançamento da linha automotiva com os produtos Brilha+, Limpa+, Descola+ e Revita+, consolidando a presença no segmento." } },
-        "tl4": { "type": "timeline_item", "settings": { "year": "2020", "title": "Foco B2B e parcerias", "text": "Reposicionamento estratégico com foco em atendimento consultivo a revendedores, empresas e marcas parceiras em todo o Brasil." } },
-        "tl5": { "type": "timeline_item", "settings": { "year": "2024", "title": "Inovação e novas linhas", "text": "Investimento em pesquisa e desenvolvimento de novas formulações, incluindo aditivos industriais e matérias-primas para formuladores." } },
-        "mvv1": { "type": "mvv_card", "settings": { "icon": "🎯", "label": "Missão", "title": "Oferecer soluções que funcionam", "text": "Desenvolvemos produtos de alta performance para limpeza profissional, com foco em eficiência, segurança e resultado comprovado." } },
-        "mvv2": { "type": "mvv_card", "settings": { "icon": "🔭", "label": "Visão", "title": "Referência nacional em B2B", "text": "Ser reconhecida como a parceira preferencial de empresas e revendedores que buscam qualidade, suporte técnico e consistência." } },
-        "mvv3": { "type": "mvv_card", "settings": { "icon": "🌿", "label": "Valores", "title": "Qualidade, técnica e parceria", "text": "Rigor técnico no desenvolvimento de produtos, compromisso ambiental e relacionamento de longo prazo com cada cliente." } },
-        "diff1": { "type": "diferencial", "settings": { "icon": "⚗️", "title": "Formulação própria", "text": "Desenvolvemos nossas fórmulas internamente, com controle total sobre eficiência, segurança e rendimento." } },
-        "diff2": { "type": "diferencial", "settings": { "icon": "🏭", "title": "Indústria capixaba", "text": "Produção local no Espírito Santo desde 2006, com suporte técnico próximo e entrega ágil." } },
-        "diff3": { "type": "diferencial", "settings": { "icon": "🤝", "title": "Atendimento consultivo", "text": "Nossa equipe orienta cada cliente na escolha da solução ideal para cada necessidade e segmento." } },
-        "diff4": { "type": "diferencial", "settings": { "icon": "📦", "title": "Linhas completas", "text": "Do automotivo à lavanderia, portfólio amplo para múltiplos segmentos do mercado profissional." } }
+        "stat1": {
+          "type": "stat",
+          "settings": {
+            "value": "+18 anos",
+            "label": "de experiência no mercado"
+          }
+        },
+        "stat2": {
+          "type": "stat",
+          "settings": {
+            "value": "+50",
+            "label": "produtos desenvolvidos"
+          }
+        },
+        "stat3": {
+          "type": "stat",
+          "settings": {
+            "value": "ES → BR",
+            "label": "origem capixaba, alcance nacional"
+          }
+        },
+        "stat4": {
+          "type": "stat",
+          "settings": {
+            "value": "B2B",
+            "label": "foco em empresas e parceiros"
+          }
+        },
+        "tl1": {
+          "type": "timeline_item",
+          "settings": {
+            "year": "2006",
+            "title": "Fundação da Clenear",
+            "text": "A empresa nasce em Serra (ES) com o propósito de oferecer soluções profissionais de limpeza e saneantes para o mercado capixaba."
+          }
+        },
+        "tl2": {
+          "type": "timeline_item",
+          "settings": {
+            "year": "2010",
+            "title": "Expansão do portfólio",
+            "text": "Desenvolvimento das primeiras linhas concentradas e ampliação do portfólio para atender lavanderias e uso institucional."
+          }
+        },
+        "tl3": {
+          "type": "timeline_item",
+          "settings": {
+            "year": "2015",
+            "title": "Linha Automotiva",
+            "text": "Lançamento da linha automotiva com os produtos Brilha+, Limpa+, Descola+ e Revita+, consolidando a presença no segmento."
+          }
+        },
+        "tl4": {
+          "type": "timeline_item",
+          "settings": {
+            "year": "2020",
+            "title": "Foco B2B e parcerias",
+            "text": "Reposicionamento estratégico com foco em atendimento consultivo a revendedores, empresas e marcas parceiras em todo o Brasil."
+          }
+        },
+        "tl5": {
+          "type": "timeline_item",
+          "settings": {
+            "year": "2024",
+            "title": "Inovação e novas linhas",
+            "text": "Investimento em pesquisa e desenvolvimento de novas formulações, incluindo aditivos industriais e matérias-primas para formuladores."
+          }
+        },
+        "mvv1": {
+          "type": "mvv_card",
+          "settings": {
+            "icon": "🎯",
+            "label": "Missão",
+            "title": "Oferecer soluções que funcionam",
+            "text": "Desenvolvemos produtos de alta performance para limpeza profissional, com foco em eficiência, segurança e resultado comprovado."
+          }
+        },
+        "mvv2": {
+          "type": "mvv_card",
+          "settings": {
+            "icon": "🔭",
+            "label": "Visão",
+            "title": "Referência nacional em B2B",
+            "text": "Ser reconhecida como a parceira preferencial de empresas e revendedores que buscam qualidade, suporte técnico e consistência."
+          }
+        },
+        "mvv3": {
+          "type": "mvv_card",
+          "settings": {
+            "icon": "🌿",
+            "label": "Valores",
+            "title": "Qualidade, técnica e parceria",
+            "text": "Rigor técnico no desenvolvimento de produtos, compromisso ambiental e relacionamento de longo prazo com cada cliente."
+          }
+        },
+        "diff1": {
+          "type": "diferencial",
+          "settings": {
+            "icon": "⚗️",
+            "title": "Formulação própria",
+            "text": "Desenvolvemos nossas fórmulas internamente, com controle total sobre eficiência, segurança e rendimento."
+          }
+        },
+        "diff2": {
+          "type": "diferencial",
+          "settings": {
+            "icon": "🏭",
+            "title": "Indústria capixaba",
+            "text": "Produção local no Espírito Santo desde 2006, com suporte técnico próximo e entrega ágil."
+          }
+        },
+        "diff3": {
+          "type": "diferencial",
+          "settings": {
+            "icon": "🤝",
+            "title": "Atendimento consultivo",
+            "text": "Nossa equipe orienta cada cliente na escolha da solução ideal para cada necessidade e segmento."
+          }
+        },
+        "diff4": {
+          "type": "diferencial",
+          "settings": {
+            "icon": "📦",
+            "title": "Linhas completas",
+            "text": "Do automotivo à lavanderia, portfólio amplo para múltiplos segmentos do mercado profissional."
+          }
+        }
       },
-      "block_order": ["stat1","stat2","stat3","stat4","tl1","tl2","tl3","tl4","tl5","mvv1","mvv2","mvv3","diff1","diff2","diff3","diff4"],
+      "block_order": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "stat4",
+        "tl1",
+        "tl2",
+        "tl3",
+        "tl4",
+        "tl5",
+        "mvv1",
+        "mvv2",
+        "mvv3",
+        "diff1",
+        "diff2",
+        "diff3",
+        "diff4"
+      ],
       "settings": {
         "hero_eyebrow": "Nossa história",
-        "hero_title": "Comprometidos com <em>qualidade e resultado</em>",
+        "hero_title": "Comprometidos com qualidade e resultado",
         "hero_subtitle": "Desde 2006, a Clenear desenvolve soluções de limpeza e saneantes para empresas, revendedores e parceiros em todo o Espírito Santo e Brasil.",
+        "hero_image": "shopify://shop_images/ChatGPT_Image_5_de_jun._de_2026_12_07_24.png",
+        "hero_image_alt": "",
         "cta_wa_label": "Falar no WhatsApp",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Sobre%20da%20Clenear%20e%20gostaria%20de%20saber%20mais.",
         "cta2_label": "Formulário de contato",
         "cta2_url": "/pages/contato",
+        "history_eyebrow": "Nossa trajetória",
+        "history_title": "Uma história construída com trabalho e técnica",
+        "history_subtitle": "",
+        "mvv_eyebrow": "Propósito e valores",
+        "mvv_title": "O que nos move",
+        "diff_eyebrow": "Por que a Clenear",
+        "diff_title": "Nossos diferenciais",
         "mid_cta_heading": "Pronto para conhecer nossas soluções?",
         "mid_cta_text": "Fale com nosso time e descubra como a Clenear pode ser o parceiro ideal para o seu negócio."
       }
@@ -43,10 +189,16 @@
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Sobre%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20a%20equipe.",
         "cta2_label": "Solicitar orçamento",
         "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
+        "cta3_label": "Quero revender",
+        "cta3_url": "",
         "phone": "(27) 3228-0140",
+        "email": "",
         "city": "Serra — Espírito Santo"
       }
     }
   },
-  "order": ["sobre_main", "final_cta"]
+  "order": [
+    "sobre_main",
+    "final_cta"
+  ]
 }
