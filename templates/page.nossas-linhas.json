@@ -77,7 +77,7 @@
       ],
       "settings": {
         "hero_eyebrow": "Nossas linhas",
-        "hero_title": "Soluções desenvolvidas para <em>cada segmento</em>",
+        "hero_title": "Soluções desenvolvidas para cada segmento",
         "hero_subtitle": "Cada linha Clenear é formulada com rigor técnico para entregar desempenho real no dia a dia de empresas, lavanderias, revendedores e profissionais automotivos.",
         "cta_wa_label": "Solicitar tabela de preços",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20receber%20a%20tabela%20de%20pre%C3%A7os.",
@@ -89,6 +89,7 @@
         "why_eyebrow": "",
         "why_title": "",
         "why_text": "",
+        "why_image": "shopify://shop_images/lab1.png",
         "mid_cta_heading": "Qual linha se encaixa no seu segmento?",
         "mid_cta_text": "Nossa equipe orienta a escolha certa — automotivo, lavanderia, industrial ou corporativo."
       }
