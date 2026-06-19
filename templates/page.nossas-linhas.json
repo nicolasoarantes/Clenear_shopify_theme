@@ -62,8 +62,8 @@
           "settings": {
             "image": "shopify://shop_images/fragancia.png",
             "tag": "Essências & Insumos",
-            "title": "Exóticas & Matérias-Primas",
-            "description": "Essências, fragrâncias e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
+            "title": "Essências & Matérias-Primas",
+            "description": "Essências, e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
           }
         }
       },
