@@ -33,10 +33,10 @@
         "l3": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/detergentemultiusoclenear2.webp",
-            "tag": "Corporativo",
-            "title": "Uso Profissional",
-            "description": "Soluções para limpeza e higiene em ambientes corporativos, hospitais, escolas e indústrias. Padrão constante de qualidade e rendimento para grandes volumes."
+            "image": "shopify://shop_images/domiciliar.png",
+            "tag": "DOMISSANITÁRIOS",
+            "title": "Soluções Domissanitárias",
+            "description": "Produtos desenvolvidos para atender rotinas de limpeza e higiene em casas, empresas e ambientes de uso coletivo, com variedade, rendimento e confiança."
           }
         },
         "l4": {
