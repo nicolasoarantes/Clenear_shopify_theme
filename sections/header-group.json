@@ -17,39 +17,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Frete gratis para pedidos acima de R$199",
-            "link": ""
-          }
-        },
-        "announcement_rUL36g": {
-          "type": "announcement",
-          "settings": {
-            "text": "Promocao de lancamento: 10% OFF na sua primeira compra!",
-            "link": ""
-          }
-        },
-        "announcement_afAAwi": {
-          "type": "announcement",
-          "settings": {
-            "text": "Solucoes para limpeza profissional e automotiva",
-            "link": ""
-          }
-        },
-        "announcement_gg9y76": {
-          "type": "announcement",
-          "settings": {
-            "text": "Consulte condicoes especiais para distribuidores",
+            "text": "Site Em Construção & Evolução",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_rUL36g",
-        "announcement_afAAwi",
-        "announcement_gg9y76"
+        "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
         "auto_rotate": true,
         "change_slides_speed": 6,
