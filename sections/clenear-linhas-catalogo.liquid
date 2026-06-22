@@ -1,0 +1,296 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign wa_base = 'https://api.whatsapp.com/send?phone=552732280140&text='
+%}
+
+<section class="cl-catalog" id="linhas-e-sublinhas-clenear">
+  <!-- Clenear sync marker: catalogo-linhas-v3 -->
+  <div class="cl-catalog__wrap">
+    <header class="cl-catalog__header">
+      <p class="cl-catalog__eyebrow">Catalogo de linhas</p>
+      <h2>Linhas e Sublinhas Clenear</h2>
+      <p>
+        Organizamos as solucoes por segmento para facilitar a escolha de produtos,
+        insumos e abordagens tecnicas para a sua operacao.
+      </p>
+    </header>
+
+    <nav class="cl-catalog__nav" aria-label="Navegar pelas linhas Clenear">
+      <a href="#linha-domissanitaria">Domissanitaria</a>
+      <a href="#linha-automotiva">Automotiva</a>
+      <a href="#linha-industrial">Industrial</a>
+      <a href="#linha-construcao-civil">Construcao Civil</a>
+    </nav>
+
+    <div class="cl-catalog__list">
+      <article class="cl-catalog-line" id="linha-domissanitaria">
+        <div class="cl-catalog-line__content">
+          <p class="cl-catalog-line__kicker">Linha Domissanitaria</p>
+          <h3>Limpeza, higienizacao e perfumacao para ambientes coletivos</h3>
+          <p>
+            Limpeza, higienizacao e perfumacao para condominios, comercios e
+            ambientes coletivos, com destaque para limpadores, detergentes,
+            cloro, sabao liquido e aromatizantes.
+          </p>
+        </div>
+        <div class="cl-catalog-line__items">
+          <div><strong>Cloro e Desinfeccao</strong><span>Cloro</span></div>
+          <div><strong>Limpadores Perfumados</strong><span>Limpador Perfumado</span></div>
+          <div><strong>Limpadores Multiuso</strong><span>Multiuso Clenear</span></div>
+          <div><strong>Detergentes</strong><span>Detergente</span></div>
+          <div><strong>Sabao Liquido</strong><span>Sabao Liquido</span></div>
+          <div><strong>Aromatizantes</strong><span>Aromatizante Clenear; Aromatizante Stigma</span></div>
+        </div>
+        {% capture wa_domissanitaria %}Ola! Vim pela pagina de Linhas da Clenear e tenho interesse em saber mais sobre Linha Domissanitaria.{% endcapture %}
+        <a class="cl-catalog__cta" href="{{ wa_base }}{{ wa_domissanitaria | url_encode }}" target="_blank" rel="noopener">
+          Falar sobre Domissanitaria
+        </a>
+      </article>
+
+      <article class="cl-catalog-line" id="linha-automotiva">
+        <div class="cl-catalog-line__content">
+          <p class="cl-catalog-line__kicker">Linha Automotiva</p>
+          <h3>Lavagem, protecao e acabamento profissional</h3>
+          <p>
+            Produtos para lava-rapidos, frotas e profissionais automotivos,
+            cobrindo pre-lavagem, limpeza pesada, vidros, ceras, interiores e acabamento.
+          </p>
+        </div>
+        <div class="cl-catalog-line__items">
+          <div><strong>Shampoos Automotivos</strong><span>Shampoo Omega Super; Shampoo Espuma+</span></div>
+          <div><strong>Desengraxantes</strong><span>Desengraxante Beta; Beta Super</span></div>
+          <div><strong>Limpa Aluminio</strong><span>Limpa Aluminio Delta; Delta Super</span></div>
+          <div><strong>Brilha+</strong><span>Cera Liquida Brilha+</span></div>
+          <div><strong>Brilha Vidro+</strong><span>Brilha Vidro+</span></div>
+          <div><strong>Limpa+</strong><span>Limpa+</span></div>
+          <div><strong>Descola+</strong><span>Descola+</span></div>
+          <div><strong>Revita+/Renova+</strong><span>Revitale Plus; Revitale Super</span></div>
+          <div><strong>Acabamento e Interior</strong><span>Limpa Pneu Pretinho Alfa; Limpa Carpete Zeta; Limpa Painel Gama Gel; Hand Clean</span></div>
+        </div>
+        {% capture wa_automotiva %}Ola! Vim pela pagina de Linhas da Clenear e tenho interesse em saber mais sobre Linha Automotiva.{% endcapture %}
+        <a class="cl-catalog__cta" href="{{ wa_base }}{{ wa_automotiva | url_encode }}" target="_blank" rel="noopener">
+          Falar sobre Automotiva
+        </a>
+      </article>
+
+      <article class="cl-catalog-line" id="linha-industrial">
+        <div class="cl-catalog-line__content">
+          <p class="cl-catalog-line__kicker">Linha Industrial</p>
+          <h3>Limpeza pesada, lavanderias e processos produtivos</h3>
+          <p>
+            Solucoes para manutencao, cozinhas industriais, transportadoras,
+            lavanderias, higienizacao textil e operacoes que exigem linha industrial.
+          </p>
+        </div>
+        <div class="cl-catalog-line__items">
+          <div><strong>Desengraxantes Concentrados</strong><span>Beta Super; CL Max 15; Clean Max</span></div>
+          <div><strong>Desincrustantes Acidos</strong><span>Desincrustante Acido; Delta Super</span></div>
+          <div><strong>Limpadores Alcalinos</strong><span>Clean Max; CL Max 15</span></div>
+          <div><strong>Sanitizantes</strong><span>Sanitizante</span></div>
+          <div><strong>Cozinhas Industriais</strong><span>Solucoes para limpeza de gordura e superficies</span></div>
+          <div><strong>Lavanderias</strong><span>Solucoes para higienizacao textil</span></div>
+          <div><strong>Limpeza Pesada</strong><span>Clean Max; Desincrustante Acido; CL Max 15</span></div>
+        </div>
+        {% capture wa_industrial %}Ola! Vim pela pagina de Linhas da Clenear e tenho interesse em saber mais sobre Linha Industrial.{% endcapture %}
+        <a class="cl-catalog__cta" href="{{ wa_base }}{{ wa_industrial | url_encode }}" target="_blank" rel="noopener">
+          Falar sobre Industrial
+        </a>
+      </article>
+
+      <article class="cl-catalog-line" id="linha-construcao-civil">
+        <div class="cl-catalog-line__content">
+          <p class="cl-catalog-line__kicker">Linha Construcao Civil</p>
+          <h3>Aditivos e solucoes tecnicas para obra</h3>
+          <p>
+            Produtos e desenvolvimentos sob demanda para concreto, formas,
+            reducao de agua, desmolde e protecao de superficies.
+          </p>
+        </div>
+        <div class="cl-catalog-line__items">
+          <div><strong>Superplastificante</strong><span>Aditivo para concreto e ganho de trabalhabilidade</span></div>
+          <div><strong>Desmoldante</strong><span>Solucoes para formas e acabamento</span></div>
+          <div><strong>Redutor de agua</strong><span>Aditivo para reducao de agua na mistura</span></div>
+          <div><strong>Impermeabilizantes</strong><span>Protecao tecnica de superficies</span></div>
+        </div>
+        {% capture wa_construcao %}Ola! Vim pela pagina de Linhas da Clenear e tenho interesse em saber mais sobre Linha Construcao Civil.{% endcapture %}
+        <a class="cl-catalog__cta" href="{{ wa_base }}{{ wa_construcao | url_encode }}" target="_blank" rel="noopener">
+          Falar sobre Construcao Civil
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cl-catalog {
+    background: #061f19;
+    color: #fff;
+    padding: clamp(56px, 8vw, 104px) 0;
+  }
+
+  .cl-catalog__wrap {
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 0 20px;
+  }
+
+  .cl-catalog__header {
+    margin: 0 auto 28px;
+    max-width: 780px;
+    text-align: center;
+  }
+
+  .cl-catalog__eyebrow,
+  .cl-catalog-line__kicker {
+    color: #39d59f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .cl-catalog h2,
+  .cl-catalog h3,
+  .cl-catalog p {
+    margin-top: 0;
+  }
+
+  .cl-catalog h2 {
+    color: #fff;
+    font-size: clamp(32px, 4vw, 54px);
+    line-height: 1.08;
+    margin-bottom: 16px;
+  }
+
+  .cl-catalog h3 {
+    color: #fff;
+    font-size: clamp(24px, 2.4vw, 34px);
+    line-height: 1.14;
+    margin-bottom: 14px;
+  }
+
+  .cl-catalog p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .cl-catalog__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 34px;
+  }
+
+  .cl-catalog__nav a,
+  .cl-catalog__cta {
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .cl-catalog__nav a {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #fff;
+    padding: 10px 16px;
+  }
+
+  .cl-catalog__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  .cl-catalog-line {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+    border: 1px solid rgba(57, 213, 159, 0.22);
+    border-radius: 8px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr) auto;
+    padding: clamp(22px, 3vw, 34px);
+    scroll-margin-top: 96px;
+  }
+
+  .cl-catalog-line__content {
+    min-width: 0;
+  }
+
+  .cl-catalog-line__items {
+    display: grid;
+    gap: 10px;
+  }
+
+  .cl-catalog-line__items div {
+    background: rgba(0, 0, 0, 0.18);
+    border-left: 3px solid #39d59f;
+    padding: 12px 14px;
+  }
+
+  .cl-catalog-line__items strong,
+  .cl-catalog-line__items span {
+    display: block;
+  }
+
+  .cl-catalog-line__items strong {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .cl-catalog-line__items span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cl-catalog__cta {
+    align-self: start;
+    background: #1d6e5a;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 1.2;
+    min-height: 44px;
+    padding: 14px 18px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cl-catalog__cta:hover {
+    background: #24a17d;
+    color: #fff;
+  }
+
+  @media (max-width: 980px) {
+    .cl-catalog-line {
+      grid-template-columns: 1fr;
+    }
+
+    .cl-catalog__cta {
+      width: 100%;
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .cl-catalog__nav a {
+      text-align: center;
+      width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Clenear: Catalogo de Linhas",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Clenear: Catalogo de Linhas"
+    }
+  ]
+}
+{% endschema %}
