@@ -1,0 +1,1059 @@
+{% comment %}
+  ============================================================
+  clenear-linhas-sublinhas.liquid
+  Seção: Catálogo detalhado — Linhas, Sublinhas e Produtos
+  Página: Nossas Linhas (/pages/nossas-linhas)
+
+  Âncoras de linha:
+    #linha-domissanitaria
+    #linha-automotiva
+    #linha-industrial
+    #linha-construcao-civil
+
+  Legenda de cards:
+    cl-sl-product--img      → produto com imagem real
+    cl-sl-product--slot     → produto aguardando imagem (SLOT nomeado)
+    cl-sl-product--text     → produto sem imagem (card editorial)
+    cl-sl-product--highlight → destaque editorial em destaque full-width
+
+  TODO: migrar conteúdo fixo para blocos editáveis no editor de tema.
+  ============================================================
+{% endcomment %}
+
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+
+<div class="cl-sl-page">
+
+  {%- comment -%} ===== INTRO + NAVEGAÇÃO POR ÂNCORAS ===== {%- endcomment -%}
+  <section class="cl-pg-section cl-pg-section--dark cl-sl-intro-section">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-intro cl-pg-intro--center cl-pg-fade">
+        <p class="cl-pg-eyebrow">Portfólio detalhado</p>
+        <h2 class="cl-pg-h2">Linhas, sublinhas e <em>produtos</em></h2>
+        <p class="cl-pg-lead cl-pg-lead--wide">
+          Cada linha Clenear é organizada em sublinhas especializadas.
+          Encontre o produto certo para o seu segmento e entre em contato direto pelo WhatsApp.
+        </p>
+      </div>
+      <nav class="cl-sl-anchor-nav cl-pg-fade cl-pg-fade--d2" aria-label="Navegar pelas linhas de produto">
+        <a href="#linha-domissanitaria" class="cl-sl-anchor-nav__item">Domissanitária</a>
+        <a href="#linha-automotiva"     class="cl-sl-anchor-nav__item">Automotiva</a>
+        <a href="#linha-industrial"     class="cl-sl-anchor-nav__item">Industrial</a>
+        <a href="#linha-construcao-civil" class="cl-sl-anchor-nav__item">Construção Civil</a>
+      </nav>
+    </div>
+  </section>
+
+  {%- comment -%} ========================================================
+    LINHA 1 — DOMISSANITÁRIA
+  ======================================================== {%- endcomment -%}
+  <section id="linha-domissanitaria" class="cl-pg-section cl-pg-section--alt cl-sl-linha-section">
+    <div class="cl-pg-wrap">
+
+      <div class="cl-sl-linha-header cl-pg-fade">
+        <p class="cl-pg-eyebrow">Linha</p>
+        <h2 class="cl-sl-linha-header__name"><em>Domissanitária</em></h2>
+        <p class="cl-sl-linha-header__desc">
+          Limpeza, higienização e perfumação para o dia a dia de condomínios,
+          comércios e ambientes coletivos. Alto rendimento com eficiência, segurança e economia.
+        </p>
+      </div>
+
+      {%- comment -%} — Limpadores Multiuso — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Limpadores Multiuso</h3>
+        <div class="cl-sl-products">
+
+          {%- assign _p = 'Multiuso Clenear' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--img">
+            <div class="cl-sl-product__img">
+              <img src="{{ 'detergentemultiusoclenear2.webp' | file_img_url: '480x480' }}"
+                   alt="Multiuso Clenear" loading="lazy" width="480" height="480">
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Multiuso Clenear</h4>
+              <p class="cl-sl-product__desc">Limpador multiuso de alto rendimento para superfícies diversas. Disponível em 1&nbsp;L, 5&nbsp;L, 25&nbsp;L e 50&nbsp;L.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Aromatizantes de Ambiente — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Aromatizantes de Ambiente</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: aromatizante-clenear.webp {%- endcomment -%}
+          {%- assign _p = 'Aromatizante Clenear' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="aromatizante-clenear.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: aromatizante-clenear.webp -->
+              <div class="cl-sl-img-slot">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Aromatizante Clenear</h4>
+              <p class="cl-sl-product__desc">Fragrância de ambiente de longa duração para espaços coletivos. Disponível em 1&nbsp;L, 5&nbsp;L, 25&nbsp;L e 50&nbsp;L.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: aromatizante-stigma.webp {%- endcomment -%}
+          {%- assign _p = 'Aromatizante Stigma' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="aromatizante-stigma.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: aromatizante-stigma.webp -->
+              <div class="cl-sl-img-slot">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Aromatizante Stigma</h4>
+              <p class="cl-sl-product__desc">Linha premium de aromatizantes de longa duração, linha Stigma. Disponível em 1&nbsp;L, 5&nbsp;L, 25&nbsp;L e 50&nbsp;L.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Cloro e Desinfecção [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Cloro e Desinfecção</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Cloro Clenear' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Desinfecção</span>
+            <h4 class="cl-sl-product__name">Cloro</h4>
+            <p class="cl-sl-product__desc">Solução clorada para desinfecção de superfícies, água e ambientes. Alta eficiência bactericida com formulação de alto rendimento por diluição.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Limpadores Perfumados [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Limpadores Perfumados</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Limpador Perfumado Clenear' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Perfumação</span>
+            <h4 class="cl-sl-product__name">Limpador Perfumado</h4>
+            <p class="cl-sl-product__desc">Limpeza eficaz com fragrância agradável e durável. Ideal para pisos e superfícies de ambientes que exigem higiene e aroma.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Detergentes e Sabão Líquido [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Detergentes e Sabão Líquido</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Detergente Clenear' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Limpeza</span>
+            <h4 class="cl-sl-product__name">Detergente</h4>
+            <p class="cl-sl-product__desc">Detergente concentrado para louças, equipamentos e superfícies. Alto poder de corte de gordura com baixa formação de espuma.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+          {%- assign _p = 'Sabão Líquido Clenear' -%}{%- assign _l = 'Domissanitária' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Higiene</span>
+            <h4 class="cl-sl-product__name">Sabão Líquido</h4>
+            <p class="cl-sl-product__desc">Sabão líquido para higiene das mãos em banheiros, vestiários e ambientes coletivos. Formulação suave, pH balanceado e fragrância agradável.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {%- comment -%} ========================================================
+    LINHA 2 — AUTOMOTIVA
+  ======================================================== {%- endcomment -%}
+  <section id="linha-automotiva" class="cl-pg-section cl-pg-section--dark cl-sl-linha-section">
+    <div class="cl-pg-wrap">
+
+      <div class="cl-sl-linha-header cl-pg-fade">
+        <p class="cl-pg-eyebrow">Linha</p>
+        <h2 class="cl-sl-linha-header__name"><em>Automotiva</em></h2>
+        <p class="cl-sl-linha-header__desc">
+          Lavagem, proteção e acabamento de veículos, de lava-rápidos a frotas.
+          Limpeza profunda, brilho e proteção duradoura para cada etapa do processo.
+        </p>
+      </div>
+
+      {%- comment -%} — Shampoos Automotivos — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Shampoos Automotivos</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: shampoo-omega-super.webp {%- endcomment -%}
+          {%- assign _p = 'Shampoo Ômega Super' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="shampoo-omega-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: shampoo-omega-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Shampoo Ômega Super</h4>
+              <p class="cl-sl-product__desc">Shampoo automotivo concentrado para lavagem manual e máquina. Alta espumação e eficiência na remoção de sujeira e resíduos de estrada.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: shampoo-espuma-plus.webp {%- endcomment -%}
+          {%- assign _p = 'Shampoo Espuma+' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="shampoo-espuma-plus.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: shampoo-espuma-plus.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Shampoo Espuma+</h4>
+              <p class="cl-sl-product__desc">Shampoo expansivo de altíssima espumação para pré-lavagem e lavagem profissional. Excelente cobertura e proteção à pintura.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Desengraxantes Automotivos — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Desengraxantes Automotivos</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: desengraxante-beta.webp {%- endcomment -%}
+          {%- assign _p = 'Desengraxante Beta' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="desengraxante-beta.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: desengraxante-beta.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Desengraxante Beta</h4>
+              <p class="cl-sl-product__desc">Desengraxante alcalino para remoção de óleo, graxa e sujeira pesada em motor, chassis e rodas.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: beta-super.webp {%- endcomment -%}
+          {%- assign _p = 'Beta Super' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="beta-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: beta-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Beta Super</h4>
+              <p class="cl-sl-product__desc">Versão concentrada do Beta — alto poder desengraxante para limpeza pesada automotiva e industrial. Diluição até 1:50.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Limpa Alumínio — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Limpa Alumínio</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: limpa-aluminio-delta.webp {%- endcomment -%}
+          {%- assign _p = 'Limpa Alumínio Delta' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="limpa-aluminio-delta.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: limpa-aluminio-delta.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Limpa Alumínio Delta</h4>
+              <p class="cl-sl-product__desc">Desincrustante ácido para limpeza de rodas de alumínio, cromados e chassi. Remove manchas, ferrugem e incrustações com facilidade.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: delta-super.webp {%- endcomment -%}
+          {%- assign _p = 'Delta Super' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="delta-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: delta-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Delta Super</h4>
+              <p class="cl-sl-product__desc">Versão reforçada do Delta para incrustações severas. Alto poder de penetração, ação rápida e eficiência em uso industrial e automotivo.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Ceras e Proteção de Pintura (Brilha+) — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Ceras e Proteção de Pintura — Brilha+</h3>
+        <div class="cl-sl-products">
+
+          {%- assign _p = 'Cera Líquida Brilha+' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--img">
+            <div class="cl-sl-product__img">
+              <img src="{{ 'brilha.png' | file_img_url: '480x480' }}"
+                   alt="Cera Líquida Brilha+" loading="lazy" width="480" height="480">
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Cera Líquida Brilha+</h4>
+              <p class="cl-sl-product__desc">Cera líquida automotiva para brilho intenso e proteção duradoura da pintura. Fácil aplicação e acabamento espelhado.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Removedores e Desincrustantes (Descola+) — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Removedores e Desincrustantes — Descola+</h3>
+        <div class="cl-sl-products">
+
+          {%- assign _p = 'Descola+' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--img">
+            <div class="cl-sl-product__img">
+              <img src="{{ 'descola.png' | file_img_url: '480x480' }}"
+                   alt="Descola+" loading="lazy" width="480" height="480">
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Descola+</h4>
+              <p class="cl-sl-product__desc">Removedor de colas, adesivos, pichação e resíduos difíceis em pintura, vidro e plásticos sem agredir a superfície.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: desincrustante-acido-auto.webp {%- endcomment -%}
+          {%- assign _p = 'Desincrustante Ácido Clenear' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="desincrustante-acido-auto.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: desincrustante-acido-auto.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Desincrustante Ácido Clenear</h4>
+              <p class="cl-sl-product__desc">Remove incrustações de calcário, ferrugem e oxidação em rodas, freios e chassis. Ação rápida com resultado profissional.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Revitalizadores de Plásticos e Borrachas (Revita+) — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Revitalizadores de Plásticos e Borrachas — Revita+</h3>
+        <div class="cl-sl-products">
+
+          {%- assign _p = 'Revitale Plus' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--img">
+            <div class="cl-sl-product__img">
+              <img src="{{ 'revita.png' | file_img_url: '480x480' }}"
+                   alt="Revitale Plus" loading="lazy" width="480" height="480">
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Revitale Plus</h4>
+              <p class="cl-sl-product__desc">Revitalizador de plásticos internos e externos. Restaura a cor original, protege contra ressecamento e oferece acabamento acetinado.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: revitale-super.webp {%- endcomment -%}
+          {%- assign _p = 'Revitale Super' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="revitale-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: revitale-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Revitale Super</h4>
+              <p class="cl-sl-product__desc">Versão premium do Revitale — revitalização intensa de plásticos, borrachas e painéis. Maior durabilidade e proteção UV.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Acabamento e Interior — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Acabamento e Interior</h3>
+        <div class="cl-sl-products">
+
+          {%- for _prod in "Limpa Pneu Pretinho Alfa,limpa-pneu-pretinho-alfa.webp,Pretinho de alta cobertura para pneus. Resultado espelhado e proteção contra ressecamento com uma única aplicação.|Limpa Carpete Zeta,limpa-carpete-zeta.webp,Extrator de manchas e limpador de carpetes e estofados automotivos. Remove sujeiras profundas sem encharcar.|Limpa Painel Gama Gel,limpa-painel-gama.webp,Gel para limpeza e revitalização de painel, borrachas e plásticos internos. Sem resíduos gordurosos, acabamento seco e fosco.|Hand Clean Desengraxante Gel,hand-clean.webp,Gel desengraxante para mãos em uso profissional. Remove graxa, óleo e sujeira intensa sem necessidade de água." | split: "|" -%}
+            {%- assign _parts = _prod | split: "," -%}
+            {%- assign _p = _parts[0] -%}
+            {%- assign _slot = _parts[1] -%}
+            {%- assign _desc = _parts[2] -%}
+            {%- assign _l = 'Automotiva' -%}
+            {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+            {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+            <div class="cl-sl-product cl-sl-product--slot" data-slot="{{ _slot }}">
+              <div class="cl-sl-product__img cl-sl-product__img--slot">
+                <!-- SLOT aguardando imagem: {{ _slot }} -->
+                <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+              </div>
+              <div class="cl-sl-product__body">
+                <h4 class="cl-sl-product__name">{{ _p }}</h4>
+                <p class="cl-sl-product__desc">{{ _desc }}</p>
+                <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+              </div>
+            </div>
+          {%- endfor -%}
+
+        </div>
+      </div>
+
+      {%- comment -%} — Limpa Vidros (Brilha Vidro+) [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Limpa Vidros — Brilha Vidro+</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Brilha Vidro+' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Vidros</span>
+            <h4 class="cl-sl-product__name">Brilha Vidro+</h4>
+            <p class="cl-sl-product__desc">Limpa vidros automotivo de alta performance — remove gordura, chuva ácida e névoa sem deixar listras. Visibilidade máxima em qualquer condição.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Limpador Multiuso Automotivo (Limpa+) — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Limpador Multiuso Automotivo — Limpa+</h3>
+        <div class="cl-sl-products">
+
+          {%- assign _p = 'Limpa+' -%}{%- assign _l = 'Automotiva' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--img">
+            <div class="cl-sl-product__img">
+              <img src="{{ 'limpa.png' | file_img_url: '480x480' }}"
+                   alt="Limpa+" loading="lazy" width="480" height="480">
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Limpa+</h4>
+              <p class="cl-sl-product__desc">Limpador multiuso automotivo de uso profissional. Eficaz em motor, chassis, interior e lataria. Versátil, concentrado e de alto rendimento.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {%- comment -%} ========================================================
+    LINHA 3 — INDUSTRIAL
+  ======================================================== {%- endcomment -%}
+  <section id="linha-industrial" class="cl-pg-section cl-pg-section--alt cl-sl-linha-section">
+    <div class="cl-pg-wrap">
+
+      <div class="cl-sl-linha-header cl-pg-fade">
+        <p class="cl-pg-eyebrow">Linha</p>
+        <h2 class="cl-sl-linha-header__name"><em>Industrial</em></h2>
+        <p class="cl-sl-linha-header__desc">
+          Limpeza pesada e manutenção de instalações, equipamentos e processos para
+          indústrias, transportadoras, cozinhas industriais e lavanderias. Máxima eficiência
+          onde a sujeira é mais exigente.
+        </p>
+      </div>
+
+      {%- comment -%} ★ DESTAQUE — Linha Lavanderia ★ {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">⭐ Linha Lavanderia — Higienização Têxtil</h3>
+        <div class="cl-sl-products">
+
+          {%- assign _p = 'Linha Lavanderia Clenear' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse na Linha Lavanderia (higienização têxtil industrial).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--highlight">
+            <div class="cl-sl-product__body">
+              <span class="cl-sl-product__badge">🏆 Destaque Clenear</span>
+              <h4 class="cl-sl-product__name">Higienização Têxtil Industrial</h4>
+              <p class="cl-sl-product__desc">
+                Linha completa para lavanderias comerciais e industriais: detergentes alcalinos de alto rendimento,
+                amaciantes concentrados e alvejantes formulados para garantir higiene e maciez têxtil em
+                larga escala. Ideal para hospitais, hotéis, uniformes e roupas de trabalho.
+                Diluições controladas que reduzem custo por quilo de roupa lavada.
+              </p>
+            </div>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Falar com especialista</a>
+          </div>
+
+          {%- assign _p = 'Amaciante têxtil industrial' -%}{%- assign _l = 'Industrial — Lavanderia' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--img">
+            <div class="cl-sl-product__img">
+              <img src="{{ 'amaciantefofura2.webp' | file_img_url: '480x480' }}"
+                   alt="Amaciante Têxtil Industrial" loading="lazy" width="480" height="480">
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Amaciante Têxtil Industrial</h4>
+              <p class="cl-sl-product__desc">Amaciante concentrado para higienização têxtil em lavanderias comerciais. Maciez duradoura, fragrância agradável e alto rendimento por diluição.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Desengraxantes Concentrados — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Desengraxantes Concentrados</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: beta-super-industrial.webp {%- endcomment -%}
+          {%- assign _p = 'Beta Super' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="beta-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: beta-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Beta Super</h4>
+              <p class="cl-sl-product__desc">Desengraxante alcalino concentrado — remoção de óleos, graxas e resíduos industriais de equipamentos, máquinas e pisos. Diluição até 1:50.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: clmax15.webp {%- endcomment -%}
+          {%- assign _p = 'Detergente Desengraxante CL Max 15' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="clmax15.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: clmax15.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">CL Max 15</h4>
+              <p class="cl-sl-product__desc">Detergente desengraxante alcalino concentrado. Limpeza pesada em pisos industriais, caldeiras, trocadores de calor e maquinário.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: cleanmax.webp {%- endcomment -%}
+          {%- assign _p = 'Clean Max' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="cleanmax.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: cleanmax.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Clean Max</h4>
+              <p class="cl-sl-product__desc">Detergente alcalino de alto poder desengraxante. Rende até 1.000&nbsp;L — ideal para uso industrial e automotivo em grande escala.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Desincrustantes Ácidos — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Desincrustantes Ácidos</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: desincrustante-acido-industrial.webp {%- endcomment -%}
+          {%- assign _p = 'Desincrustante Ácido Clenear' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="desincrustante-acido-industrial.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: desincrustante-acido-industrial.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Desincrustante Ácido Clenear</h4>
+              <p class="cl-sl-product__desc">Remove incrustações severas de calcário, ferrugem e depósitos minerais em equipamentos industriais, caldeiras e sistemas de resfriamento.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+          {%- comment -%} SLOT: delta-super-industrial.webp {%- endcomment -%}
+          {%- assign _p = 'Limpa Alumínio Delta Super' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="delta-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: delta-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Limpa Alumínio Delta Super</h4>
+              <p class="cl-sl-product__desc">Desincrustante ácido industrial de alta performance. Remove incrustações severas em superfícies metálicas de forma rápida e eficiente.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Sanitizantes [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Sanitizantes</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Sanitizante Clenear' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Higiene Industrial</span>
+            <h4 class="cl-sl-product__name">Sanitizante</h4>
+            <p class="cl-sl-product__desc">Solução sanitizante para ambientes, equipamentos e superfícies industriais. Elimina bactérias, fungos e vírus — atende normas da vigilância sanitária e ANVISA.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Cozinhas Industriais — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Cozinhas Industriais</h3>
+        <div class="cl-sl-products">
+
+          {%- comment -%} SLOT: beta-cozinha.webp — reaproveiта beta-super.webp {%- endcomment -%}
+          {%- assign _p = 'Desengraxante Beta / Beta Super' -%}{%- assign _l = 'Industrial' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} para cozinha industrial (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--slot" data-slot="beta-super.webp">
+            <div class="cl-sl-product__img cl-sl-product__img--slot">
+              <!-- SLOT aguardando imagem: beta-super.webp -->
+              <div class="cl-sl-img-slot"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            </div>
+            <div class="cl-sl-product__body">
+              <h4 class="cl-sl-product__name">Desengraxante Beta / Beta Super</h4>
+              <p class="cl-sl-product__desc">Remoção de gordura em coifas, fritadeiras, fornos e superfícies de cozinhas industriais e restaurantes. Eficiência comprovada, seguro para uso em áreas alimentícias.</p>
+              <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {%- comment -%} ========================================================
+    LINHA 4 — CONSTRUÇÃO CIVIL
+  ======================================================== {%- endcomment -%}
+  <section id="linha-construcao-civil" class="cl-pg-section cl-pg-section--dark cl-sl-linha-section">
+    <div class="cl-pg-wrap">
+
+      <div class="cl-sl-linha-header cl-pg-fade">
+        <p class="cl-pg-eyebrow">Linha</p>
+        <h2 class="cl-sl-linha-header__name"><em>Construção Civil</em></h2>
+        <p class="cl-sl-linha-header__desc">
+          Aditivos e soluções técnicas para concreto, formas e proteção de superfícies.
+          Mais produtividade e durabilidade na obra.
+        </p>
+        <div class="cl-sl-construcao-note">
+          <strong>Linha desenvolvida sob demanda.</strong> Formulamos aditivos e soluções customizadas conforme a necessidade da sua obra ou processo construtivo.
+          Isso é parte do nosso DNA: <em>criamos e desenvolvemos a sua linha</em>. Entre em contato e vamos conversar.
+        </div>
+      </div>
+
+      {%- comment -%} — Aditivos para Concreto [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Aditivos para Concreto</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Superplastificante Clenear' -%}{%- assign _l = 'Construção Civil' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Concreto</span>
+            <h4 class="cl-sl-product__name">Superplastificante</h4>
+            <p class="cl-sl-product__desc">Aditivo plastificante de alta eficiência para concreto. Melhora a trabalhabilidade, reduz a relação água/cimento e aumenta a resistência final da peça.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+          {%- assign _p = 'Redutor de Água Clenear' -%}{%- assign _l = 'Construção Civil' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Concreto</span>
+            <h4 class="cl-sl-product__name">Redutor de Água</h4>
+            <p class="cl-sl-product__desc">Permite reduzir o consumo de água na mistura sem perda de fluidez. Maior durabilidade e menor porosidade no concreto endurecido.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Desmoldantes [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Desmoldantes</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Desmoldante Clenear' -%}{%- assign _l = 'Construção Civil' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Formas</span>
+            <h4 class="cl-sl-product__name">Desmoldante</h4>
+            <p class="cl-sl-product__desc">Agente desmoldante para formas de madeira, metálicas e plásticas. Facilita a desfôrma, preserva as formas e garante acabamento limpo nas peças de concreto.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+      {%- comment -%} — Impermeabilizantes [TEXTO] — {%- endcomment -%}
+      <div class="cl-sl-sublinha cl-pg-fade">
+        <h3 class="cl-sl-sublinha__title">Impermeabilizantes</h3>
+        <div class="cl-sl-products cl-sl-products--text">
+
+          {%- assign _p = 'Impermeabilizante Clenear' -%}{%- assign _l = 'Construção Civil' -%}
+          {%- capture _wm -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse no produto {{ _p }} (linha {{ _l }}).{%- endcapture -%}
+          {%- assign _wu = 'https://api.whatsapp.com/send?phone=552732280140&text=' | append: _wm | url_encode -%}
+          <div class="cl-sl-product cl-sl-product--text">
+            <span class="cl-sl-product__badge">Proteção</span>
+            <h4 class="cl-sl-product__name">Impermeabilizante</h4>
+            <p class="cl-sl-product__desc">Proteção contra infiltração em lajes, fundações, paredes e reservatórios. Formulação de alta aderência compatível com concreto, argamassa e alvenaria.</p>
+            <a href="{{ _wu }}" class="cl-pg-btn cl-pg-btn--wa cl-sl-product__cta" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<style>
+  /* ============================================================
+     clenear-linhas-sublinhas — estilos próprios
+     Complementa clenear-pages.css sem conflitos
+  ============================================================ */
+
+  /* Âncora de navegação */
+  .cl-sl-anchor-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3.6rem;
+  }
+  .cl-sl-anchor-nav__item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.85rem 2.2rem;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  .cl-sl-anchor-nav__item:hover {
+    background: rgba(29, 110, 90, 0.16);
+    border-color: rgba(29, 110, 90, 0.45);
+    color: #fff;
+  }
+
+  /* Cabeçalho de linha */
+  .cl-sl-linha-section { scroll-margin-top: 8rem; }
+  .cl-sl-linha-header { margin-bottom: 5.6rem; }
+  .cl-sl-linha-header__name {
+    color: #fff;
+    font-size: clamp(3rem, 4.5vw, 5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    margin: 0.4rem 0 1.4rem;
+  }
+  .cl-sl-linha-header__name em { color: #1D6E5A; font-style: normal; }
+  .cl-sl-linha-header__desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.7rem;
+    line-height: 1.65;
+    margin: 0;
+    max-width: 72rem;
+  }
+
+  /* Caixa de nota (Construção Civil) */
+  .cl-sl-construcao-note {
+    background: rgba(29, 110, 90, 0.08);
+    border: 1px dashed rgba(29, 110, 90, 0.35);
+    border-radius: 1.2rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-top: 2.4rem;
+    padding: 2.4rem 3.2rem;
+  }
+  .cl-sl-construcao-note strong { color: #1D6E5A; }
+  .cl-sl-construcao-note em { color: rgba(255, 255, 255, 0.8); font-style: normal; font-weight: 600; }
+
+  /* Sublinha */
+  .cl-sl-sublinha { margin-bottom: 5.6rem; }
+  .cl-sl-sublinha__title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin: 0 0 2.4rem;
+    padding-bottom: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  /* Grade de produtos */
+  .cl-sl-products {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .cl-sl-products--text {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Card base */
+  .cl-sl-product {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .cl-sl-product:hover {
+    border-color: rgba(29, 110, 90, 0.4);
+    transform: translateY(-3px);
+  }
+
+  /* Área de imagem */
+  .cl-sl-product__img {
+    aspect-ratio: 4 / 3;
+    background: #1D3D30;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .cl-sl-product__img img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  /* Slot de imagem pendente */
+  .cl-sl-product__img--slot {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .cl-sl-img-slot {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.14);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  /* Corpo do card */
+  .cl-sl-product__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .cl-sl-product__name {
+    color: #fff;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.8rem;
+  }
+  .cl-sl-product__desc {
+    color: rgba(255, 255, 255, 0.58);
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0 0 1.8rem;
+  }
+  .cl-sl-product__cta {
+    font-size: 1.35rem;
+    justify-content: center;
+    min-height: 4rem;
+    padding: 0.9rem 1.6rem;
+    width: 100%;
+  }
+
+  /* Card editorial (texto) */
+  .cl-sl-product--text {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #1D6E5A;
+    border-radius: 0 1.2rem 1.2rem 0;
+    padding: 2.2rem;
+    overflow: visible;
+  }
+  .cl-sl-product--text .cl-sl-product__body { padding: 0; }
+  .cl-sl-product--text:hover { transform: translateY(-2px); }
+
+  /* Badge */
+  .cl-sl-product__badge {
+    background: rgba(29, 110, 90, 0.14);
+    border: 1px solid rgba(29, 110, 90, 0.28);
+    border-radius: 999px;
+    color: #1D6E5A;
+    display: inline-block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+    padding: 0.35rem 1rem;
+    text-transform: uppercase;
+  }
+
+  /* Card de destaque (Lavanderia) */
+  .cl-sl-product--highlight {
+    align-items: center;
+    background: linear-gradient(135deg, rgba(29, 110, 90, 0.16) 0%, rgba(29, 110, 90, 0.05) 100%);
+    border: 1px solid rgba(29, 110, 90, 0.38);
+    border-radius: 1.2rem;
+    display: grid;
+    gap: 3.2rem;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr auto;
+    overflow: visible;
+    padding: 3.2rem 4rem;
+  }
+  .cl-sl-product--highlight:hover { transform: none; }
+  .cl-sl-product--highlight .cl-sl-product__body { padding: 0; }
+  .cl-sl-product--highlight .cl-sl-product__name { font-size: 2.2rem; }
+  .cl-sl-product--highlight .cl-sl-product__desc {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.55rem;
+    margin-bottom: 0;
+  }
+  .cl-sl-product--highlight .cl-sl-product__badge {
+    background: rgba(29, 110, 90, 0.25);
+    border-color: rgba(29, 110, 90, 0.5);
+    font-size: 1.1rem;
+  }
+  .cl-sl-product--highlight .cl-sl-product__cta { width: auto; white-space: nowrap; }
+
+  /* Responsivo */
+  @media (max-width: 1199px) {
+    .cl-sl-products { grid-template-columns: repeat(3, 1fr); }
+    .cl-sl-products--text { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 1023px) {
+    .cl-sl-products { grid-template-columns: repeat(2, 1fr); }
+    .cl-sl-products--text { grid-template-columns: repeat(2, 1fr); }
+    .cl-sl-product--highlight { grid-template-columns: 1fr; gap: 2rem; }
+    .cl-sl-product--highlight .cl-sl-product__cta { width: 100%; }
+  }
+  @media (max-width: 767px) {
+    .cl-sl-products,
+    .cl-sl-products--text { grid-template-columns: 1fr; }
+    .cl-sl-product--highlight { padding: 2.4rem; }
+    .cl-sl-anchor-nav__item { font-size: 1.3rem; padding: 0.75rem 1.6rem; }
+  }
+</style>
+
+<script>
+(function () {
+  // Fade-in ao scroll
+  var fades = document.querySelectorAll('.cl-sl-page .cl-pg-fade');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    fades.forEach(function (el) { io.observe(el); });
+  } else {
+    fades.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+  // Scroll suave para âncoras internas
+  document.querySelectorAll('.cl-sl-anchor-nav__item').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Clenear: Linhas e Sublinhas",
+  "settings": [],
+  "presets": [
+    { "name": "Clenear: Linhas e Sublinhas" }
+  ]
+}
+{% endschema %}

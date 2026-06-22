@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/amaciantefofura2.webp",
             "tag": "Higiene têxtil",
             "title": "Lavanderia",
-            "description": "Amaciantes, detergentes concentrados e soluções para higienização têxtil. Formulações eficazes para lavanderias comerciais e industriais com alto rendimento por diluição."
+            "description": "Insumos, detergentes concentrados e amaciantes para higienização têxtil de alto rendimento. Formulações específicas para lavanderias comerciais e industriais."
           }
         },
         "l2": {
@@ -26,17 +26,17 @@
           "settings": {
             "image": "shopify://shop_images/limpa.png",
             "tag": "Automotivo",
-            "title": "Limpeza Automotiva",
-            "description": "Linha completa Brilha+, Limpa+, Descola+ e Revita+. Performance comprovada para estéticas, revendas e uso profissional em veículos."
+            "title": "Automotiva",
+            "description": "Linha completa para lavagem, proteção e acabamento de veículos. Brilha+, Limpa+, Descola+, Revita+ e mais — para lava-rápidos, estéticas e frotas profissionais."
           }
         },
         "l3": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/domiciliar.png",
-            "tag": "DOMISSANITÁRIOS",
-            "title": "Soluções Domissanitárias",
-            "description": "Produtos desenvolvidos para atender rotinas de limpeza e higiene em casas, empresas e ambientes de uso coletivo, com variedade, rendimento e confiança."
+            "image": "shopify://shop_images/detergentemultiusoclenear2.webp",
+            "tag": "Corporativo",
+            "title": "Uso Profissional",
+            "description": "Soluções para limpeza e higiene em ambientes corporativos, hospitais, escolas e indústrias. Padrão constante de qualidade e rendimento para grandes volumes."
           }
         },
         "l4": {
@@ -45,7 +45,7 @@
             "image": "shopify://shop_images/alisantesuperterra2.webp",
             "tag": "Alta performance",
             "title": "Alta Concentração",
-            "description": "Formulações técnicas para remoção de graxa pesada, óleos industriais e manutenção de equipamentos. Para uso em fábricas, oficinas e frotas."
+            "description": "Produtos com altíssimo rendimento por diluição controlada. Ideais para revendedores e empresas que buscam reduzir custo operacional sem abrir mão de eficiência."
           }
         },
         "l5": {
@@ -53,7 +53,7 @@
           "settings": {
             "image": "shopify://shop_images/ceraliquida2.webp",
             "tag": "Industrial",
-            "title": "Aditivos Pré-Moldados",
+            "title": "Aditivos Industriais",
             "description": "Formulações técnicas para remoção de graxa pesada, óleos industriais e manutenção de equipamentos. Para uso em fábricas, oficinas e frotas."
           }
         },
@@ -62,8 +62,8 @@
           "settings": {
             "image": "shopify://shop_images/fragancia.png",
             "tag": "Essências & Insumos",
-            "title": "Essências & Matérias-Primas",
-            "description": "Essências e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
+            "title": "Exóticas & Matérias-Primas",
+            "description": "Essências, fragrâncias e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
           }
         }
       },
@@ -76,9 +76,9 @@
         "l6"
       ],
       "settings": {
-        "hero_eyebrow": "Nossas linhas",
-        "hero_title": "Soluções desenvolvidas para cada segmento",
-        "hero_subtitle": "Cada linha Clenear é formulada com rigor técnico para entregar desempenho real no dia a dia de empresas, lavanderias, revendedores e profissionais automotivos.",
+        "hero_eyebrow": "Nossas Linhas",
+        "hero_title": "Criamos e desenvolvemos <em>a sua linha</em>",
+        "hero_subtitle": "Formulação sob medida para cada segmento: domissanitária, automotiva, industrial e construção civil. Insumos selecionados, rigor técnico e suporte especializado do início ao fim.",
         "cta_wa_label": "Solicitar tabela de preços",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20receber%20a%20tabela%20de%20pre%C3%A7os.",
         "cta2_label": "Consultar condições de revenda",
@@ -93,6 +93,10 @@
         "mid_cta_heading": "Qual linha se encaixa no seu segmento?",
         "mid_cta_text": "Nossa equipe orienta a escolha certa — automotivo, lavanderia, industrial ou corporativo."
       }
+    },
+    "linhas_sublinhas": {
+      "type": "clenear-linhas-sublinhas",
+      "settings": {}
     },
     "final_cta": {
       "type": "clenear-final-cta",
@@ -114,6 +118,7 @@
   },
   "order": [
     "linhas_main",
+    "linhas_sublinhas",
     "final_cta"
   ]
 }
