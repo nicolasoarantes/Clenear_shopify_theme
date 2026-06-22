@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "linhas_main": {
@@ -15,10 +6,10 @@
         "l1": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/amaciantefofura2.webp",
-            "tag": "Higiene têxtil",
-            "title": "Lavanderia",
-            "description": "Insumos, detergentes concentrados e amaciantes para higienização têxtil de alto rendimento. Formulações específicas para lavanderias comerciais e industriais."
+            "image": "shopify://shop_images/detergentemultiusoclenear2.webp",
+            "tag": "Domissanitária",
+            "title": "Linha Domissanitária",
+            "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos. Inclui limpadores, detergentes, sabão líquido, cloro e aromatizantes Clenear e Stigma."
           }
         },
         "l2": {
@@ -26,44 +17,35 @@
           "settings": {
             "image": "shopify://shop_images/limpa.png",
             "tag": "Automotivo",
-            "title": "Automotiva",
-            "description": "Linha completa para lavagem, proteção e acabamento de veículos. Brilha+, Limpa+, Descola+, Revita+ e mais — para lava-rápidos, estéticas e frotas profissionais."
+            "title": "Linha Automotiva",
+            "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos. Shampoos, desengraxantes, limpa alumínio, ceras, vidros, interiores e acabamento."
           }
         },
         "l3": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/detergentemultiusoclenear2.webp",
-            "tag": "Corporativo",
-            "title": "Uso Profissional",
-            "description": "Soluções para limpeza e higiene em ambientes corporativos, hospitais, escolas e indústrias. Padrão constante de qualidade e rendimento para grandes volumes."
-          }
-        },
-        "l4": {
-          "type": "linha",
-          "settings": {
-            "image": "shopify://shop_images/alisantesuperterra2.webp",
-            "tag": "Alta performance",
-            "title": "Alta Concentração",
-            "description": "Produtos com altíssimo rendimento por diluição controlada. Ideais para revendedores e empresas que buscam reduzir custo operacional sem abrir mão de eficiência."
+            "image": "shopify://shop_images/ceraliquida2.webp",
+            "tag": "Industrial",
+            "title": "Linha Industrial",
+            "description": "Soluções para limpeza pesada, manutenção, lavanderias, cozinhas industriais, transportadoras e processos produtivos. Produtos para linha industrial com suporte técnico."
           }
         },
         "l5": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/ceraliquida2.webp",
-            "tag": "Industrial",
-            "title": "Aditivos Industriais",
-            "description": "Formulações técnicas para remoção de graxa pesada, óleos industriais e manutenção de equipamentos. Para uso em fábricas, oficinas e frotas."
+            "image": "shopify://shop_images/alisantesuperterra2.webp",
+            "tag": "Construção Civil",
+            "title": "Linha Construção Civil",
+            "description": "Aditivos e soluções técnicas para concreto, formas e proteção de superfícies. Superplastificantes, desmoldantes, redutores de água e impermeabilizantes."
           }
         },
         "l6": {
           "type": "linha",
           "settings": {
             "image": "shopify://shop_images/fragancia.png",
-            "tag": "Essências & Insumos",
-            "title": "Exóticas & Matérias-Primas",
-            "description": "Essências, fragrâncias e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
+            "tag": "Insumos e fragrâncias",
+            "title": "Exóticas & Insumos",
+            "description": "Essências, fragrâncias e insumos para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
           }
         }
       },
@@ -71,7 +53,6 @@
         "l1",
         "l2",
         "l3",
-        "l4",
         "l5",
         "l6"
       ],
@@ -84,14 +65,14 @@
         "cta2_label": "Consultar condições de revenda",
         "cta2_url": "/pages/revenda",
         "grid_eyebrow": "Portfólio institucional",
-        "grid_title": "",
-        "grid_subtitle": "",
-        "why_eyebrow": "",
-        "why_title": "",
-        "why_text": "",
+        "grid_title": "Linhas completas para cada segmento",
+        "grid_subtitle": "Produtos com qualidade, performance e suporte técnico para cada necessidade profissional.",
+        "why_eyebrow": "Por que escolher a Clenear",
+        "why_title": "Desenvolvimento técnico <em>sob medida</em>",
+        "why_text": "Criamos linhas com formulação própria, insumos selecionados, controle de qualidade e acompanhamento técnico para aplicações reais.",
         "why_image": "shopify://shop_images/lab5.png",
         "mid_cta_heading": "Qual linha se encaixa no seu segmento?",
-        "mid_cta_text": "Nossa equipe orienta a escolha certa — automotivo, lavanderia, industrial ou corporativo."
+        "mid_cta_text": "Nossa equipe orienta a escolha certa: domissanitária, automotiva, industrial ou construção civil."
       }
     },
     "linhas_sublinhas": {
@@ -112,7 +93,7 @@
         "cta3_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20t%C3%A9cnica%20sobre%20produtos%20Clenear.",
         "phone": "(27) 3228-0140",
         "email": "",
-        "city": "Serra — Espírito Santo"
+        "city": "Serra - Espírito Santo"
       }
     }
   },
