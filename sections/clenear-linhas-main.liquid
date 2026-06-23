@@ -48,9 +48,16 @@
               <span class="cl-pg-card__tag">{{ block.settings.tag | default: 'Linha profissional' }}</span>
               <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
               <p class="cl-pg-card__text">{{ block.settings.description }}</p>
-              <a href="https://api.whatsapp.com/send?phone=552732280140&text={{ wa_text }}" class="cl-pg-card__link" target="_blank" rel="noopener" aria-label="Saiba mais sobre {{ block.settings.title }} via WhatsApp">
-                Saiba mais via WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;">
+                <a href="https://api.whatsapp.com/send?phone=552732280140&text={{ wa_text }}" class="cl-pg-card__link" target="_blank" rel="noopener" aria-label="Saiba mais sobre {{ block.settings.title }} via WhatsApp">
+                  Saiba mais via WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                {%- if block.settings.anchor_id != blank -%}
+                  <a href="#linha-{{ block.settings.anchor_id }}" class="cl-pg-card__link cl-pg-card__link--outline" aria-label="Ver produtos da linha {{ block.settings.title }}">
+                    Ver produtos ↓
+                  </a>
+                {%- endif -%}
+              </div>
             </div>
           {%- endif -%}
         {%- endfor -%}
@@ -125,6 +132,20 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  .cl-pg-card__link--outline {
+    color: #4dd1b0;
+    border: 1px solid rgba(77,209,176,0.4);
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  .cl-pg-card__link--outline:hover {
+    background: rgba(77,209,176,0.08);
+    color: #4dd1b0;
+  }
 </style>
 
 <script>
@@ -177,7 +198,8 @@
         { "type": "image_picker", "id": "image", "label": "Imagem (4:3)" },
         { "type": "text", "id": "tag", "label": "Tag / segmento", "default": "Linha profissional" },
         { "type": "text", "id": "title", "label": "Nome da linha" },
-        { "type": "textarea", "id": "description", "label": "Descrição institucional" }
+        { "type": "textarea", "id": "description", "label": "Descrição institucional" },
+        { "type": "text", "id": "anchor_id", "label": "ID âncora (ex: domissanitaria)", "info": "Liga o card à seção de sublinhas via link #linha-{id}" }
       ]
     }
   ],
@@ -187,10 +209,9 @@
       "blocks": [
         { "type": "linha", "settings": { "tag": "Higiene têxtil", "title": "Lavanderia", "description": "Amaciantes, detergentes concentrados e soluções para higienização têxtil. Formulações eficazes para lavanderias comerciais e industriais com alto rendimento por diluição." } },
         { "type": "linha", "settings": { "tag": "Automotivo", "title": "Limpeza Automotiva", "description": "Linha completa Brilha+, Limpa+, Descola+ e Revita+. Produtos com performance comprovada para estéticas, revenda e uso profissional em veículos." } },
-        { "type": "linha", "settings": { "tag": "Corporativo", "title": "Uso Profissional", "description": "Soluções para limpeza e higiene em ambientes corporativos, hospitais, escolas e indústrias. Padrão constante de qualidade e rendimento para grandes volumes." } },
-        { "type": "linha", "settings": { "tag": "Alta performance", "title": "Alta Concentração", "description": "Produtos com altíssimo rendimento por diluição controlada. Ideais para revendedores e empresas que buscam reduzir custo operacional sem abrir mão de eficiência." } },
-        { "type": "linha", "settings": { "tag": "Industrial", "title": "Aditivos Industriais", "description": "Formulações técnicas para remoção de graxa pesada, óleos industriais, sujeiras agressivas e manutenção de equipamentos. Para uso em fábricas e oficinas." } },
-        { "type": "linha", "settings": { "tag": "Essências & Insumos", "title": "Exóticas & Matérias-Primas", "description": "Essências, fragrâncias e matérias-primas para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza." } }
+        { "type": "linha", "settings": { "tag": "Corporativo", "title": "Uso Profissional", "description": "Soluções para limpeza e higiene em ambientes corporativos, hospitais, escolas e indústrias." } },
+        { "type": "linha", "settings": { "tag": "Industrial", "title": "Linha Industrial", "description": "Formulações técnicas para remoção de graxa pesada, óleos industriais e manutenção de equipamentos." } },
+        { "type": "linha", "settings": { "tag": "Essências & Insumos", "title": "Exóticas & Insumos", "description": "Essências, fragrâncias e insumos para formuladores e marcas próprias." } }
       ]
     }
   ]
