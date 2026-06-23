@@ -1,6 +1,5 @@
 {{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
 
-<!-- Clenear sync marker: linhas-sublinhas-v2 -->
 {%- assign wa_base = 'https://api.whatsapp.com/send?phone=552732280140&text=' -%}
 
 <section class="cl-lines" aria-labelledby="cl-lines-title">
@@ -8,9 +7,7 @@
     <div class="cl-lines__intro">
       <p class="cl-lines__eyebrow">Linhas e Sublinhas</p>
       <h2 id="cl-lines-title">Escolha a linha certa para o seu segmento</h2>
-      <p>
-        Veja as principais linhas Clenear, suas sublinhas e produtos. Todas podem ser ajustadas com suporte técnico para a sua operação.
-      </p>
+      <p>Veja as principais linhas Clenear, suas sublinhas e produtos. Todas podem ser ajustadas com suporte técnico para a sua operação.</p>
     </div>
 
     <nav class="cl-lines__nav" aria-label="Navegar pelas linhas">
@@ -24,7 +21,7 @@
       <article class="cl-line-card" id="linha-domissanitaria">
         <span class="cl-line-card__label">Linha Domissanitária</span>
         <h3>Limpeza, higienização e perfumação</h3>
-        <p>Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos.</p>
+        <p>Para condomínios, comércios e ambientes coletivos.</p>
         <div class="cl-line-card__groups">
           <div><strong>Cloro e Desinfecção</strong><span>Cloro</span></div>
           <div><strong>Limpadores Perfumados</strong><span>Limpador Perfumado</span></div>
@@ -34,217 +31,93 @@
           <div><strong>Aromatizantes</strong><span>Aromatizante Clenear; Aromatizante Stigma</span></div>
         </div>
         {%- capture wa_dom -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse em saber mais sobre Linha Domissanitária.{%- endcapture -%}
-        {%- assign wa_dom_encoded = wa_dom | url_encode -%}
-        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_dom_encoded }}" target="_blank" rel="noopener">Falar sobre Domissanitária</a>
+        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_dom | url_encode }}" target="_blank" rel="noopener">Falar sobre Domissanitária</a>
       </article>
 
       <article class="cl-line-card" id="linha-automotiva">
         <span class="cl-line-card__label">Linha Automotiva</span>
         <h3>Lavagem, proteção e acabamento</h3>
-        <p>Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos.</p>
+        <p>Para lava-rápidos, frotas e profissionais automotivos.</p>
         <div class="cl-line-card__groups">
           <div><strong>Shampoos Automotivos</strong><span>Shampoo Omega Super; Shampoo Espuma+</span></div>
           <div><strong>Desengraxantes</strong><span>Desengraxante Beta; Beta Super</span></div>
-          <div><strong>Limpa Alumínio</strong><span>Limpa Alumínio Delta; Delta Super</span></div>
+          <div><strong>Limpa Alumínio</strong><span>Delta; Delta Super</span></div>
           <div><strong>Brilha+</strong><span>Cera Líquida Brilha+</span></div>
-          <div><strong>Brilha Vidro+</strong><span>Brilha Vidro+</span></div>
-          <div><strong>Limpa+</strong><span>Limpa+</span></div>
-          <div><strong>Descola+</strong><span>Descola+</span></div>
+          <div><strong>Brilha Vidro+</strong><span>Limpeza e brilho de vidros</span></div>
+          <div><strong>Limpa+</strong><span>Limpeza automotiva</span></div>
+          <div><strong>Descola+</strong><span>Descola+ Clenear</span></div>
           <div><strong>Revita+/Renova+</strong><span>Revitale Plus; Revitale Super</span></div>
-          <div><strong>Acabamento e Interior</strong><span>Limpa Pneu Pretinho Alfa; Limpa Carpete Zeta; Limpa Painel Gama Gel; Hand Clean</span></div>
+          <div><strong>Acabamento e Interior</strong><span>Pretinho Alfa; Limpa Carpete Zeta; Painel Gama; Hand Clean</span></div>
         </div>
         {%- capture wa_auto -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse em saber mais sobre Linha Automotiva.{%- endcapture -%}
-        {%- assign wa_auto_encoded = wa_auto | url_encode -%}
-        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_auto_encoded }}" target="_blank" rel="noopener">Falar sobre Automotiva</a>
+        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_auto | url_encode }}" target="_blank" rel="noopener">Falar sobre Automotiva</a>
       </article>
 
       <article class="cl-line-card" id="linha-industrial">
         <span class="cl-line-card__label">Linha Industrial</span>
         <h3>Limpeza pesada e processos produtivos</h3>
-        <p>Soluções para limpeza pesada, manutenção, lavanderias, cozinhas industriais, transportadoras e processos produtivos.</p>
+        <p>Para lavanderias, cozinhas industriais, transportadoras e processos produtivos.</p>
         <div class="cl-line-card__groups">
+          <div class="cl-line-card__groups-highlight"><strong>★ Lavanderia (destaque)</strong><span>Amaciantes, detergentes concentrados e soluções para higienização têxtil</span></div>
           <div><strong>Desengraxantes Concentrados</strong><span>Beta Super; CL Max 15; Clean Max</span></div>
           <div><strong>Desincrustantes Ácidos</strong><span>Desincrustante Ácido; Delta Super</span></div>
           <div><strong>Limpadores Alcalinos</strong><span>Clean Max; CL Max 15</span></div>
           <div><strong>Sanitizantes</strong><span>Sanitizante</span></div>
-          <div><strong>Cozinhas Industriais</strong><span>Soluções para limpeza de gordura e superfícies</span></div>
-          <div><strong>Lavanderias</strong><span>Soluções para higienização têxtil</span></div>
-          <div><strong>Limpeza Pesada</strong><span>Clean Max; Desincrustante Ácido; CL Max 15</span></div>
+          <div><strong>Cozinhas Industriais</strong><span>Limpeza de gordura e superfícies</span></div>
         </div>
         {%- capture wa_ind -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse em saber mais sobre Linha Industrial.{%- endcapture -%}
-        {%- assign wa_ind_encoded = wa_ind | url_encode -%}
-        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_ind_encoded }}" target="_blank" rel="noopener">Falar sobre Industrial</a>
+        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_ind | url_encode }}" target="_blank" rel="noopener">Falar sobre Industrial</a>
       </article>
 
-      <article class="cl-line-card" id="linha-construcao-civil">
+      <article class="cl-line-card cl-line-card--dev" id="linha-construcao-civil">
         <span class="cl-line-card__label">Linha Construção Civil</span>
+        <span class="cl-line-card__badge">Em desenvolvimento • Sob demanda</span>
         <h3>Aditivos e soluções técnicas</h3>
-        <p>Aditivos e soluções técnicas para concreto, formas e proteção de superfícies.</p>
+        <p>Produtos e desenvolvimentos sob demanda para concreto, formas e proteção de superfícies.</p>
         <div class="cl-line-card__groups">
-          <div><strong>Superplastificante</strong><span>Aditivo para ganho de trabalhabilidade e desempenho</span></div>
+          <div><strong>Superplastificante</strong><span>Aditivo para trabalhabilidade e desempenho</span></div>
           <div><strong>Desmoldante</strong><span>Soluções para formas e acabamento</span></div>
           <div><strong>Redutor de água</strong><span>Aditivo para redução de água na mistura</span></div>
           <div><strong>Impermeabilizantes</strong><span>Proteção técnica de superfícies</span></div>
         </div>
         {%- capture wa_cc -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse em saber mais sobre Linha Construção Civil.{%- endcapture -%}
-        {%- assign wa_cc_encoded = wa_cc | url_encode -%}
-        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_cc_encoded }}" target="_blank" rel="noopener">Falar sobre Construção Civil</a>
+        <a class="cl-lines__cta" href="{{ wa_base }}{{ wa_cc | url_encode }}" target="_blank" rel="noopener">Consultar disponibilidade</a>
       </article>
     </div>
   </div>
 </section>
 
 <style>
-  .cl-lines {
-    background: #071d18;
-    color: #fff;
-    padding: clamp(56px, 8vw, 104px) 0;
-  }
-
-  .cl-lines__wrap {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-  }
-
-  .cl-lines__intro {
-    margin: 0 auto 28px;
-    max-width: 760px;
-    text-align: center;
-  }
-
-  .cl-lines__eyebrow,
-  .cl-line-card__label {
-    color: #4dd1b0;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .cl-lines h2,
-  .cl-line-card h3 {
-    color: #fff;
-    line-height: 1.12;
-    margin: 10px 0 14px;
-  }
-
-  .cl-lines h2 {
-    font-size: clamp(32px, 4vw, 52px);
-  }
-
-  .cl-lines p {
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 16px;
-    line-height: 1.65;
-    margin: 0;
-  }
-
-  .cl-lines__nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin: 0 0 34px;
-  }
-
-  .cl-lines__nav a,
-  .cl-lines__cta {
-    border-radius: 999px;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  .cl-lines__nav a {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #fff;
-    padding: 10px 16px;
-  }
-
-  .cl-lines__grid {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .cl-line-card {
-    background: rgba(255, 255, 255, 0.045);
-    border: 1px solid rgba(77, 209, 176, 0.18);
-    border-radius: 8px;
-    scroll-margin-top: 96px;
-    padding: clamp(22px, 3vw, 34px);
-  }
-
-  .cl-line-card h3 {
-    font-size: clamp(24px, 2.4vw, 34px);
-  }
-
-  .cl-line-card__groups {
-    display: grid;
-    gap: 10px;
-    margin: 24px 0;
-  }
-
-  .cl-line-card__groups div {
-    background: rgba(255, 255, 255, 0.045);
-    border-left: 3px solid #4dd1b0;
-    padding: 12px 14px;
-  }
-
-  .cl-line-card__groups strong,
-  .cl-line-card__groups span {
-    display: block;
-  }
-
-  .cl-line-card__groups strong {
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 4px;
-  }
-
-  .cl-line-card__groups span {
-    color: rgba(255, 255, 255, 0.68);
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .cl-lines__cta {
-    background: #1d6e5a;
-    color: #fff;
-    display: inline-flex;
-    justify-content: center;
-    line-height: 1.2;
-    min-height: 44px;
-    padding: 14px 20px;
-  }
-
-  .cl-lines__cta:hover {
-    background: #249276;
-    color: #fff;
-  }
-
-  @media (max-width: 820px) {
-    .cl-lines__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .cl-lines__nav a,
-    .cl-lines__cta {
-      width: 100%;
-      text-align: center;
-    }
-  }
+  .cl-lines { background: #071d18; color: #fff; padding: clamp(56px, 8vw, 104px) 0; }
+  .cl-lines__wrap { margin: 0 auto; max-width: 1200px; padding: 0 20px; }
+  .cl-lines__intro { margin: 0 auto 28px; max-width: 760px; text-align: center; }
+  .cl-lines__eyebrow, .cl-line-card__label { color: #4dd1b0; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .cl-lines h2 { color: #fff; font-size: clamp(32px, 4vw, 52px); line-height: 1.12; margin: 10px 0 14px; }
+  .cl-line-card h3 { color: #fff; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.14; margin: 8px 0 12px; }
+  .cl-lines p { color: rgba(255,255,255,0.72); font-size: 16px; line-height: 1.65; margin: 0; }
+  .cl-line-card__badge { display: inline-block; background: rgba(255,200,50,0.12); border: 1px solid rgba(255,200,50,0.3); color: #ffc832; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 8px; margin-bottom: 10px; text-transform: uppercase; }
+  .cl-lines__nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 0 34px; }
+  .cl-lines__nav a, .cl-lines__cta { border-radius: 999px; font-weight: 800; text-decoration: none; }
+  .cl-lines__nav a { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 10px 16px; }
+  .cl-lines__nav a:hover { background: rgba(255,255,255,0.1); }
+  .cl-lines__grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cl-line-card { background: rgba(255,255,255,0.045); border: 1px solid rgba(77,209,176,0.18); border-radius: 8px; scroll-margin-top: 96px; padding: clamp(22px, 3vw, 34px); display: flex; flex-direction: column; }
+  .cl-line-card--dev { border-color: rgba(255,200,50,0.2); }
+  .cl-line-card__groups { display: grid; gap: 10px; margin: 20px 0; flex: 1; }
+  .cl-line-card__groups div { background: rgba(255,255,255,0.045); border-left: 3px solid #4dd1b0; padding: 12px 14px; }
+  .cl-line-card__groups-highlight { border-left-color: #ffc832 !important; background: rgba(255,200,50,0.06) !important; }
+  .cl-line-card__groups strong, .cl-line-card__groups span { display: block; }
+  .cl-line-card__groups strong { color: #fff; font-size: 14px; margin-bottom: 4px; }
+  .cl-line-card__groups span { color: rgba(255,255,255,0.68); font-size: 14px; line-height: 1.5; }
+  .cl-lines__cta { background: #1d6e5a; color: #fff; display: inline-flex; justify-content: center; align-items: center; line-height: 1.2; min-height: 44px; padding: 12px 20px; margin-top: 4px; align-self: flex-start; }
+  .cl-lines__cta:hover { background: #249276; color: #fff; }
+  @media (max-width: 820px) { .cl-lines__grid { grid-template-columns: 1fr; } .cl-lines__nav a, .cl-lines__cta { width: 100%; text-align: center; justify-content: center; } }
 </style>
 
 {% schema %}
 {
-  "name": "Clenear: Linhas e Sublinhas",
+  "name": "Linhas e Sublinhas",
   "settings": [],
-  "presets": [
-    {
-      "name": "Clenear: Linhas e Sublinhas"
-    }
-  ]
+  "presets": [{ "name": "Linhas e Sublinhas" }]
 }
 {% endschema %}
