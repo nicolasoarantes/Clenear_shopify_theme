@@ -48,7 +48,7 @@
         "headline": "Soluções profissionais de",
         "headline_accent": "limpeza e saneantes",
         "subtext": "Desenvolvemos produtos de alto desempenho para limpeza profissional, revenda, lavanderias, automotivo e marcas parceiras. Qualidade capixaba que você sente na prática.",
-        "hero_image": "shopify://shop_images/ChatGPT_Image_5_de_jun._de_2026_11_57_18.png",
+        "hero_image": "shopify://shop_images/Hero_1Home_v2.png",
         "hero_image_alt": "",
         "badge_value": "+18 anos",
         "badge_label": "de experiência no mercado",
@@ -178,7 +178,8 @@
       "settings": {
         "eyebrow": "Soluções completas",
         "heading": "Linhas pensadas para cada necessidade",
-        "subtext": "Produtos com qualidade, performance e suporte técnico para cada segmento."
+        "subtext": "Produtos com qualidade, performance e suporte técnico para cada segmento.",
+        "default_link": ""
       }
     },
     "auto_line": {
