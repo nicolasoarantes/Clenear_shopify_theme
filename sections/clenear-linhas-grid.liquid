@@ -7,6 +7,7 @@
       <h2 class="cl-pg-h2">{{ section.settings.grid_title | default: 'Linhas completas para cada segmento' }}</h2>
       <p class="cl-pg-lead cl-pg-lead--wide">{{ section.settings.grid_subtitle | default: 'Produtos com qualidade, performance e suporte técnico para cada necessidade profissional.' }}</p>
     </div>
+
     <div class="cl-pg-cards cl-pg-cards--linhas cl-pg-fade">
       {%- for block in section.blocks -%}
         {%- if block.type == 'linha' -%}
@@ -16,31 +17,53 @@
               {%- if block.settings.image != blank -%}
                 {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 500, 600', sizes: '(min-width: 768px) 30vw, 85vw', alt: block.settings.title }}
               {%- else -%}
-                <div class="cl-pg-placeholder" style="min-height:18rem;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Imagem da linha<br>(aspecto 4:3)</span></div>
+                <div class="cl-pg-placeholder" style="min-height:18rem;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                  <span>Imagem da linha<br>(aspecto 4:3)</span>
+                </div>
               {%- endif -%}
             </div>
             <span class="cl-pg-card__tag">{{ block.settings.tag | default: 'Linha profissional' }}</span>
             <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
             <p class="cl-pg-card__text">{{ block.settings.description }}</p>
             <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;">
-              <a href="https://api.whatsapp.com/send?phone=552732280140&text={{ wa_text }}" class="cl-pg-card__link" target="_blank" rel="noopener">Saiba mais via WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="https://api.whatsapp.com/send?phone=552732280140&text={{ wa_text }}" class="cl-pg-card__link" target="_blank" rel="noopener" aria-label="Saiba mais sobre {{ block.settings.title }} via WhatsApp">
+                Saiba mais via WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
               {%- if block.settings.anchor_id != blank -%}
-                <a href="#linha-{{ block.settings.anchor_id }}" class="cl-pg-card__link cl-pg-card__link--outline">Ver produtos ↓</a>
+                <a href="#linha-{{ block.settings.anchor_id }}" class="cl-pg-card__link cl-pg-card__link--outline" aria-label="Ver produtos da linha {{ block.settings.title }}">
+                  Ver produtos ↓
+                </a>
               {%- endif -%}
             </div>
           </div>
         {%- endif -%}
       {%- endfor -%}
     </div>
-    <div class="cl-pg-scroll-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <!-- Bridge: connects grid to sublinhas section below -->
+    <div class="cl-lg__bridge">
+      <p class="cl-lg__bridge-text">Selecione uma linha acima para ir direto, ou role abaixo para explorar todas as sublinhas</p>
+      <svg class="cl-lg__bridge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </div>
   </div>
+  <!-- Gradient foot: smooth transition to dark sublinhas section (#071d18) -->
+  <div class="cl-lg__gradient-foot" aria-hidden="true"></div>
 </section>
+
 <style>
 .cl-pg-cards--linhas{grid-template-columns:repeat(3,1fr)}
 @media(max-width:1023px){.cl-pg-cards--linhas{grid-template-columns:repeat(2,1fr)}}
 .cl-pg-card__link--outline{color:#4dd1b0;border:1px solid rgba(77,209,176,0.4);border-radius:4px;padding:6px 12px;font-size:13px;text-decoration:none;display:inline-flex;align-items:center}
 .cl-pg-card__link--outline:hover{background:rgba(77,209,176,0.08);color:#4dd1b0}
+/* Bridge + gradient transition to sublinhas */
+.cl-lg{position:relative;padding-bottom:0!important}
+.cl-lg__bridge{text-align:center;padding:40px 0 32px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.cl-lg__bridge-text{font-size:13px;font-weight:600;color:rgba(0,0,0,0.32);letter-spacing:.03em;margin:0;max-width:380px;line-height:1.5}
+.cl-lg__bridge-arrow{width:26px;height:26px;color:rgba(0,0,0,0.18);animation:cl-lg-bounce 2s ease-in-out infinite}
+@keyframes cl-lg-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+.cl-lg__gradient-foot{height:80px;background:linear-gradient(to bottom,transparent,#071d18)}
 </style>
+
 <script>
 (function(){
   var fades=document.querySelectorAll('#linhas-grid .cl-pg-fade');
@@ -50,6 +73,7 @@
   } else { fades.forEach(function(el){el.classList.add('is-visible');}); }
 })();
 </script>
+
 {% schema %}
 {
   "name": "Grid de Linhas",
@@ -63,14 +87,24 @@
       "type": "linha",
       "name": "Linha de produto",
       "settings": [
-        { "type": "image_picker", "id": "image",       "label": "Imagem (4:3)" },
-        { "type": "text",         "id": "tag",         "label": "Tag / segmento", "default": "Linha profissional" },
-        { "type": "text",         "id": "title",       "label": "Nome da linha" },
-        { "type": "textarea",     "id": "description", "label": "Descrição institucional" },
-        { "type": "text",         "id": "anchor_id",   "label": "ID âncora (ex: domissanitaria)", "info": "Liga o card à seção de sublinhas via link #linha-{id}" }
+        { "type": "image_picker", "id": "image",     "label": "Imagem (4:3)" },
+        { "type": "text",         "id": "tag",       "label": "Tag / segmento",                          "default": "Linha profissional" },
+        { "type": "text",         "id": "title",     "label": "Nome da linha" },
+        { "type": "textarea",     "id": "description","label": "Descrição institucional" },
+        { "type": "text",         "id": "anchor_id", "label": "ID âncora (ex: domissanitaria)", "info": "Liga o card à seção de sublinhas via link #linha-{id}" }
       ]
     }
   ],
-  "presets": [{ "name": "Grid de Linhas" }]
+  "presets": [
+    {
+      "name": "Grid de Linhas",
+      "blocks": [
+        { "type": "linha", "settings": { "tag": "Domissanitária",   "title": "Linha Domissanitária",   "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos.", "anchor_id": "domissanitaria" } },
+        { "type": "linha", "settings": { "tag": "Automotivo",       "title": "Linha Automotiva",       "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos.", "anchor_id": "automotiva" } },
+        { "type": "linha", "settings": { "tag": "Industrial",       "title": "Linha Industrial",       "description": "Limpeza pesada, manutenção, lavanderias e cozinhas industriais.", "anchor_id": "industrial" } },
+        { "type": "linha", "settings": { "tag": "Construção Civil", "title": "Linha Construção Civil", "description": "Aditivos técnicos para concreto, formas e impermeabilização.", "anchor_id": "construcao-civil" } }
+      ]
+    }
+  ]
 }
 {% endschema %}
