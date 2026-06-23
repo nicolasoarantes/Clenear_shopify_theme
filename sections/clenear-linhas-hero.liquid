@@ -1,0 +1,47 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+
+<section class="cl-pg-hero cl-lh" id="linhas-hero" style="min-height:56vh;display:flex;align-items:center;">
+  <div class="cl-pg-wrap" style="width:100%;">
+    <div style="max-width:80rem;margin:0 auto;text-align:center;" class="cl-pg-fade">
+      <p class="cl-pg-eyebrow">{{ section.settings.hero_eyebrow | default: 'Nossas linhas' }}</p>
+      <h1 class="cl-pg-h1" style="margin-bottom:2rem;">{{ section.settings.hero_title | default: 'Soluções desenvolvidas para <em>cada segmento</em>' }}</h1>
+      <p class="cl-pg-lead" style="margin-left:auto;margin-right:auto;max-width:65rem;">{{ section.settings.hero_subtitle | default: 'Cada linha Clenear é formulada com rigor técnico para entregar desempenho real no dia a dia de empresas, lavanderias, revendedores e profissionais automotivos.' }}</p>
+      <div class="cl-pg-btn-row" style="justify-content:center;">
+        <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20linhas%20de%20produto.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
+          {{ section.settings.cta_wa_label | default: 'Falar sobre as linhas' }}
+        </a>
+        <a href="{{ section.settings.cta2_url | default: '/pages/contato' }}" class="cl-pg-btn cl-pg-btn--outline">
+          {{ section.settings.cta2_label | default: 'Formulário de contato' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var fades=document.querySelectorAll('#linhas-hero .cl-pg-fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-visible');io.unobserve(x.target);}});},{threshold:0.1});
+    fades.forEach(function(el){io.observe(el);});
+  } else { fades.forEach(function(el){el.classList.add('is-visible');}); }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Hero — Nossas Linhas",
+  "settings": [
+    { "type": "text",     "id": "hero_eyebrow",  "label": "Eyebrow",    "default": "Nossas linhas" },
+    { "type": "text",     "id": "hero_title",    "label": "Título",     "default": "Soluções desenvolvidas para <em>cada segmento</em>" },
+    { "type": "textarea", "id": "hero_subtitle", "label": "Subtítulo",  "default": "Cada linha Clenear é formulada com rigor técnico para entregar desempenho real no dia a dia de empresas, lavanderias, revendedores e profissionais automotivos." },
+    { "type": "header",  "content": "CTA principal (WhatsApp)" },
+    { "type": "text",    "id": "cta_wa_label",  "label": "Label",     "default": "Falar sobre as linhas" },
+    { "type": "url",     "id": "cta_wa_url",    "label": "Link" },
+    { "type": "header",  "content": "CTA secundário" },
+    { "type": "text",    "id": "cta2_label",    "label": "Label",     "default": "Formulário de contato" },
+    { "type": "url",     "id": "cta2_url",      "label": "Link" }
+  ],
+  "presets": [{ "name": "Hero — Nossas Linhas" }]
+}
+{% endschema %}

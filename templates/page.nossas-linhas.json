@@ -9,62 +9,8 @@
  */
 {
   "sections": {
-    "linhas_main": {
-      "type": "clenear-linhas-main",
-      "blocks": {
-        "l1": {
-          "type": "linha",
-          "settings": {
-            "image": "shopify://shop_images/detergentemultiusoclenear2.webp",
-            "tag": "Domissanitária",
-            "title": "Linha Domissanitária",
-            "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos. Inclui limpadores, detergentes, sabão líquido, cloro e aromatizantes Clenear e Stigma."
-          }
-        },
-        "l2": {
-          "type": "linha",
-          "settings": {
-            "image": "shopify://shop_images/limpa.png",
-            "tag": "Automotivo",
-            "title": "Linha Automotiva",
-            "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos. Shampoos, desengraxantes, limpa alumínio, ceras, vidros, interiores e acabamento."
-          }
-        },
-        "l3": {
-          "type": "linha",
-          "settings": {
-            "image": "shopify://shop_images/ceraliquida2.webp",
-            "tag": "Industrial",
-            "title": "Linha Industrial",
-            "description": "Soluções para limpeza pesada, manutenção, lavanderias, cozinhas industriais, transportadoras e processos produtivos. Produtos para linha industrial com suporte técnico."
-          }
-        },
-        "l5": {
-          "type": "linha",
-          "settings": {
-            "image": "shopify://shop_images/alisantesuperterra2.webp",
-            "tag": "Construção Civil",
-            "title": "Linha Construção Civil",
-            "description": "Aditivos e soluções técnicas para concreto, formas e proteção de superfícies. Superplastificantes, desmoldantes, redutores de água e impermeabilizantes."
-          }
-        },
-        "l6": {
-          "type": "linha",
-          "settings": {
-            "image": "shopify://shop_images/fragancia.png",
-            "tag": "Insumos e fragrâncias",
-            "title": "Exóticas & Insumos",
-            "description": "Essências, fragrâncias e insumos para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza."
-          }
-        }
-      },
-      "block_order": [
-        "l1",
-        "l2",
-        "l3",
-        "l5",
-        "l6"
-      ],
+    "linhas_hero": {
+      "type": "clenear-linhas-hero",
       "settings": {
         "hero_eyebrow": "Nossas Linhas",
         "hero_title": "Criamos e desenvolvemos <em>a sua linha</em>",
@@ -72,10 +18,25 @@
         "cta_wa_label": "Solicitar tabela de preços",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20receber%20a%20tabela%20de%20pre%C3%A7os.",
         "cta2_label": "Consultar condições de revenda",
-        "cta2_url": "/pages/revenda",
-        "grid_eyebrow": "Portfólio institucional",
-        "grid_title": "Linhas completas para cada segmento",
-        "grid_subtitle": "Produtos com qualidade, performance e suporte técnico para cada necessidade profissional.",
+        "cta2_url": "/pages/revenda"
+      }
+    },
+    "linhas_grid": {
+      "type": "clenear-linhas-grid",
+      "blocks": {
+        "l1": { "type": "linha", "settings": { "image": "shopify://shop_images/detergentemultiusoclenear2.webp", "tag": "Domissanitária", "title": "Linha Domissanitária", "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos. Inclui limpadores, detergentes, sabão líquido, cloro e aromatizantes Clenear e Stigma.", "anchor_id": "domissanitaria" } },
+        "l2": { "type": "linha", "settings": { "image": "shopify://shop_images/limpa.png", "tag": "Automotivo", "title": "Linha Automotiva", "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos. Shampoos, desengraxantes, limpa alumínio, ceras, vidros, interiores e acabamento.", "anchor_id": "automotiva" } },
+        "l3": { "type": "linha", "settings": { "image": "shopify://shop_images/ceraliquida2.webp", "tag": "Industrial", "title": "Linha Industrial", "description": "Soluções para limpeza pesada, manutenção, lavanderias, cozinhas industriais, transportadoras e processos produtivos. Produtos com suporte técnico.", "anchor_id": "industrial" } },
+        "l5": { "type": "linha", "settings": { "image": "shopify://shop_images/alisantesuperterra2.webp", "tag": "Construção Civil", "title": "Linha Construção Civil", "description": "Aditivos e soluções técnicas para concreto, formas e proteção de superfícies. Superplastificantes, desmoldantes, redutores de água e impermeabilizantes.", "anchor_id": "construcao-civil" } },
+        "l6": { "type": "linha", "settings": { "image": "shopify://shop_images/fragancia.png", "tag": "Insumos e fragrâncias", "title": "Exóticas & Insumos", "description": "Essências, fragrâncias e insumos para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza." } }
+      },
+      "block_order": ["l1","l2","l3","l5","l6"],
+      "settings": { "grid_eyebrow": "Portfólio institucional", "grid_title": "Linhas completas para cada segmento", "grid_subtitle": "Produtos com qualidade, performance e suporte técnico para cada necessidade profissional." }
+    },
+    "linhas_sublinhas": { "type": "clenear-linhas-sublinhas", "settings": {} },
+    "linhas_why": {
+      "type": "clenear-linhas-why",
+      "settings": {
         "why_eyebrow": "Por que escolher a Clenear",
         "why_title": "Desenvolvimento técnico <em>sob medida</em>",
         "why_text": "Criamos linhas com formulação própria, insumos selecionados, controle de qualidade e acompanhamento técnico para aplicações reais.",
@@ -83,10 +44,6 @@
         "mid_cta_heading": "Qual linha se encaixa no seu segmento?",
         "mid_cta_text": "Nossa equipe orienta a escolha certa: domissanitária, automotiva, industrial ou construção civil."
       }
-    },
-    "linhas_sublinhas": {
-      "type": "clenear-linhas-sublinhas",
-      "settings": {}
     },
     "final_cta": {
       "type": "clenear-final-cta",
@@ -99,16 +56,12 @@
         "cta2_label": "Quero ser revendedor",
         "cta2_url": "/pages/revenda",
         "cta3_label": "Dúvida técnica",
-        "cta3_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20t%C3%A9cnica%20sobre%20produtos%20Clenear.",
+        "cta3_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Tenho%20uma%20dúvida%20técnica%20sobre%20produtos%20Clenear.",
         "phone": "(27) 3228-0140",
         "email": "",
         "city": "Serra - Espírito Santo"
       }
     }
   },
-  "order": [
-    "linhas_main",
-    "linhas_sublinhas",
-    "final_cta"
-  ]
+  "order": ["linhas_hero","linhas_grid","linhas_sublinhas","linhas_why","final_cta"]
 }

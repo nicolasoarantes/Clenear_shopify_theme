@@ -1,0 +1,81 @@
+{{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
+
+<div class="cl-lw" id="linhas-why">
+  <section class="cl-pg-section cl-pg-section--dark">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-split">
+        <div class="cl-pg-fade">
+          <p class="cl-pg-eyebrow">{{ section.settings.why_eyebrow | default: 'Por que escolher a Clenear' }}</p>
+          <h2 class="cl-pg-h2">{{ section.settings.why_title | default: 'Qualidade <em>comprovada</em> em cada linha' }}</h2>
+          <p class="cl-pg-lead">{{ section.settings.why_text | default: 'Todas as linhas Clenear passam por desenvolvimento técnico interno, controle rigoroso de qualidade e validação em aplicações reais.' }}</p>
+          <ul class="cl-pg-split__list">
+            <li>{{ section.settings.item1 | default: 'Formulação própria com insumos selecionados' }}</li>
+            <li>{{ section.settings.item2 | default: 'Alto rendimento por diluição controlada' }}</li>
+            <li>{{ section.settings.item3 | default: 'Suporte técnico especializado incluído' }}</li>
+            <li>{{ section.settings.item4 | default: 'Compatíveis com uso profissional intensivo' }}</li>
+            <li>{{ section.settings.item5 | default: 'Produção local no Espírito Santo' }}</li>
+          </ul>
+          <div class="cl-pg-btn-row">
+            <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20um%20or%C3%A7amento.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">{{ section.settings.cta_wa_label | default: 'Pedir orçamento' }}</a>
+          </div>
+        </div>
+        <div class="cl-pg-split__media cl-pg-fade cl-pg-fade--d2">
+          {%- if section.settings.why_image != blank -%}
+            {{ section.settings.why_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400, 700, 800', sizes: '(min-width: 1024px) 44vw, 90vw', alt: 'Qualidade Clenear' }}
+          {%- else -%}
+            <div class="cl-pg-placeholder"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Foto laboratório (16:9)</span></div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cl-pg-section--sm cl-pg-section--alt">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-mid-cta cl-pg-fade">
+        <h3>{{ section.settings.mid_cta_heading | default: 'Qual linha é ideal para o seu negócio?' }}</h3>
+        <p>{{ section.settings.mid_cta_text | default: 'Nossa equipe técnica orienta você na escolha dos produtos certos para cada aplicação.' }}</p>
+        <div class="cl-pg-btn-row">
+          <a href="{{ section.settings.cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20or%C3%A7amento%20ou%20indica%C3%A7%C3%A3o%20de%20linha.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">{{ section.settings.mid_cta_wa_label | default: 'Falar com especialista' }}</a>
+          <a href="{{ section.settings.cta2_url | default: '/pages/contato' }}" class="cl-pg-btn cl-pg-btn--outline">{{ section.settings.cta2_label | default: 'Formulário de contato' }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+(function(){
+  var fades=document.querySelectorAll('#linhas-why .cl-pg-fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-visible');io.unobserve(x.target);}});},{threshold:0.1});
+    fades.forEach(function(el){io.observe(el);});
+  } else { fades.forEach(function(el){el.classList.add('is-visible');}); }
+})();
+</script>
+{% schema %}
+{
+  "name": "Diferenciais e Mid CTA",
+  "settings": [
+    { "type": "header",   "content": "Diferenciais" },
+    { "type": "text",     "id": "why_eyebrow", "label": "Eyebrow",  "default": "Por que escolher a Clenear" },
+    { "type": "text",     "id": "why_title",   "label": "Título",   "default": "Qualidade <em>comprovada</em> em cada linha" },
+    { "type": "textarea", "id": "why_text",    "label": "Texto",    "default": "Todas as linhas Clenear passam por desenvolvimento técnico interno, controle rigoroso de qualidade e validação em aplicações reais." },
+    { "type": "image_picker", "id": "why_image", "label": "Imagem (16:9)" },
+    { "type": "header", "content": "Itens da lista" },
+    { "type": "text", "id": "item1", "label": "Item 1", "default": "Formulação própria com insumos selecionados" },
+    { "type": "text", "id": "item2", "label": "Item 2", "default": "Alto rendimento por diluição controlada" },
+    { "type": "text", "id": "item3", "label": "Item 3", "default": "Suporte técnico especializado incluído" },
+    { "type": "text", "id": "item4", "label": "Item 4", "default": "Compatíveis com uso profissional intensivo" },
+    { "type": "text", "id": "item5", "label": "Item 5", "default": "Produção local no Espírito Santo" },
+    { "type": "header", "content": "CTA WhatsApp" },
+    { "type": "text", "id": "cta_wa_label",     "label": "Label (diferenciais)", "default": "Pedir orçamento" },
+    { "type": "url",  "id": "cta_wa_url",       "label": "WhatsApp link" },
+    { "type": "header", "content": "Mid CTA" },
+    { "type": "text",     "id": "mid_cta_heading",  "label": "Título",   "default": "Qual linha é ideal para o seu negócio?" },
+    { "type": "textarea", "id": "mid_cta_text",     "label": "Texto",    "default": "Nossa equipe técnica orienta você na escolha dos produtos certos para cada aplicação." },
+    { "type": "text",     "id": "mid_cta_wa_label", "label": "CTA label","default": "Falar com especialista" },
+    { "type": "text",     "id": "cta2_label",       "label": "CTA 2 label", "default": "Formulário de contato" },
+    { "type": "url",      "id": "cta2_url",         "label": "CTA 2 link" }
+  ],
+  "presets": [{ "name": "Diferenciais e Mid CTA" }]
+}
+{% endschema %}
