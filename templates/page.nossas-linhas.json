@@ -34,6 +34,16 @@
             "anchor_id": "domissanitaria"
           }
         },
+        "l4": {
+          "type": "linha",
+          "settings": {
+            "image": "",
+            "tag": "Lavanderia",
+            "title": "Linha Lavanderia",
+            "description": "Amaciantes, detergentes e soluções para higienização têxtil, com foco em rendimento, padronização e suporte técnico para lavanderias.",
+            "anchor_id": "lavanderia"
+          }
+        },
         "l2": {
           "type": "linha",
           "settings": {
@@ -50,7 +60,7 @@
             "image": "shopify://shop_images/ceraliquida2.webp",
             "tag": "Industrial",
             "title": "Linha Industrial",
-            "description": "Soluções para limpeza pesada, manutenção, lavanderias, cozinhas industriais, transportadoras e processos produtivos. Produtos com suporte técnico.",
+            "description": "Soluções para limpeza pesada, manutenção, cozinhas industriais, transportadoras e processos produtivos. Produtos com suporte técnico.",
             "anchor_id": "industrial"
           }
         },
@@ -67,16 +77,17 @@
         "l6": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/fragancia.png",
-            "tag": "Insumos e fragrâncias",
-            "title": "Exóticas & Insumos",
-            "description": "Essências, fragrâncias e insumos para formuladores, marcas próprias e empresas que desenvolvem seus próprios produtos de limpeza.",
-            "anchor_id": ""
+            "image": "",
+            "tag": "Insumos",
+            "title": "Linha Insumos",
+            "description": "Insumos para formulação, produção e desenvolvimento de produtos de limpeza, com suporte técnico para empresas, formuladores e marcas parceiras.",
+            "anchor_id": "insumos"
           }
         }
       },
       "block_order": [
         "l1",
+        "l4",
         "l2",
         "l3",
         "l5",
