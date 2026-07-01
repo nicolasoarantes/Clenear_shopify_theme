@@ -37,6 +37,7 @@
         "l4": {
           "type": "linha",
           "settings": {
+            "image": "shopify://shop_images/amaciantefofura1.webp",
             "tag": "Lavanderia",
             "title": "Linha Lavanderia",
             "description": "Amaciantes, detergentes e soluções para higienização têxtil, com foco em rendimento, padronização e suporte técnico para lavanderias.",
@@ -56,7 +57,7 @@
         "l3": {
           "type": "linha",
           "settings": {
-            "image": "shopify://shop_images/ceraliquida2.webp",
+            "image": "shopify://shop_images/clean_max_2.png",
             "tag": "Industrial",
             "title": "Linha Industrial",
             "description": "Soluções para limpeza pesada, manutenção, cozinhas industriais, transportadoras e processos produtivos. Produtos com suporte técnico.",
@@ -76,6 +77,7 @@
         "l6": {
           "type": "linha",
           "settings": {
+            "image": "shopify://shop_images/fragancia.png",
             "tag": "Insumos",
             "title": "Linha Insumos",
             "description": "Insumos para formulação, produção e desenvolvimento de produtos de limpeza, com suporte técnico para empresas, formuladores e marcas parceiras.",
@@ -102,8 +104,8 @@
       "settings": {
         "image_dom": "shopify://shop_images/detergentemultiusoclenear3.webp",
         "image_auto": "shopify://shop_images/limpa.png",
-        "image_ind": "shopify://shop_images/AlisanteTerraSuperAC-marco-2020-186mmx140mm_1.png",
-        "image_cc": "shopify://shop_images/alisantesuperterra.webp",
+        "image_ind": "shopify://shop_images/clean_max_2.png",
+        "image_cc": "shopify://shop_images/AlisanteTerraSuperAC-marco-2020-186mmx140mm_1.png",
         "image_lav": "shopify://shop_images/amaciantefofura2.webp",
         "image_ins": "shopify://shop_images/fragancia.png"
       }
