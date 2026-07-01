@@ -115,55 +115,61 @@
         "sol1": {
           "type": "solution",
           "settings": {
-            "emoji": "🧺",
-            "title": "Lavanderia",
-            "text": "Amaciantes, detergentes e soluções para higienização têxtil.",
-            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20solu%C3%A7%C3%B5es%20para%20lavanderia."
+            "emoji": "🧽",
+            "icon_key": "domissanitaria",
+            "title": "Domissanitária",
+            "text": "Soluções para limpeza, higienização e manutenção de ambientes.",
+            "link": "/pages/nossas-linhas#linha-domissanitaria"
           }
         },
         "sol2": {
           "type": "solution",
           "settings": {
-            "emoji": "🚗",
-            "title": "Limpeza Automotiva",
-            "text": "Brilha+, Limpa+, Descola+, Revita+.",
-            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20linha%20de%20limpeza%20automotiva."
+            "emoji": "🧺",
+            "icon_key": "lavanderia",
+            "title": "Lavanderia",
+            "text": "Amaciantes, detergentes e soluções para higienização têxtil.",
+            "link": "/pages/nossas-linhas#linha-lavanderia"
           }
         },
         "sol3": {
           "type": "solution",
           "settings": {
-            "emoji": "🏢",
-            "title": "Uso Profissional",
-            "text": "Padrão, rendimento e regularidade para empresas.",
-            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20produtos%20para%20uso%20profissional."
+            "emoji": "🚗",
+            "icon_key": "automotiva",
+            "title": "Automotiva",
+            "text": "Produtos para estética, limpeza e manutenção automotiva profissional.",
+            "link": "/pages/nossas-linhas#linha-automotiva"
           }
         },
         "sol4": {
           "type": "solution",
           "settings": {
-            "emoji": "⚗️",
-            "title": "Alta Concentração",
-            "text": "Alto rendimento com diluição controlada.",
-            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20produtos%20de%20alta%20concentra%C3%A7%C3%A3o."
+            "emoji": "🏭",
+            "icon_key": "industrial",
+            "title": "Industrial",
+            "text": "Soluções para limpeza pesada, manutenção e processos produtivos.",
+            "link": "/pages/nossas-linhas#linha-industrial"
           }
         },
         "sol5": {
           "type": "solution",
           "settings": {
-            "emoji": "🏭",
-            "title": "Aditivos Industriais",
-            "text": "Remoção de graxa e sujeiras pesadas.",
-            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20aditivos%20industriais."
+            "emoji": "🧱",
+            "icon_key": "construcao-civil",
+            "title": "Construção Civil",
+            "text": "Aditivos e soluções técnicas para concreto, formas e superfícies.",
+            "link": "/pages/nossas-linhas#linha-construcao-civil"
           }
         },
         "sol6": {
           "type": "solution",
           "settings": {
-            "emoji": "🌸",
-            "title": "Essências e Matérias-Primas",
-            "text": "Insumos para formulação e marcas parceiras.",
-            "link": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20saber%20mais%20sobre%20ess%C3%AAncias%20e%20mat%C3%A9rias-primas."
+            "emoji": "⚗️",
+            "icon_key": "insumos",
+            "title": "Insumos",
+            "text": "Insumos para formulação, produção e desenvolvimento de produtos de limpeza.",
+            "link": "/pages/nossas-linhas#linha-insumos"
           }
         }
       },
