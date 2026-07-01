@@ -27,7 +27,7 @@
       class="cl-sl__search"
       id="cl-sl-search"
       type="search"
-      placeholder="Pesquisar sublinha ou produto..."
+      placeholder="Pesquisar linha, sublinha ou produto..."
       autocomplete="off"
       spellcheck="false"
     >
@@ -61,7 +61,7 @@
     </button>
     <button class="cl-sl__tab" role="tab" data-tab="insumos"         aria-selected="false" aria-controls="panel-insumos">
       <svg class="cl-sl__tab-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6l-5 8.5A2 2 0 0 0 7 21h10a2 2 0 0 0 1.8-3.5L14 9V3"/></svg>
-      Insumos
+      Insumos e Revenda
     </button>
   </div>
 
@@ -77,7 +77,7 @@
       <div class="cl-sl__line-info">
         <p class="cl-sl__ew">Linha</p>
         <h3 class="cl-sl__line-h3">Domissanitária</h3>
-        <p class="cl-sl__line-desc">Limpeza, higienização e perfumação para condomínios, comércios, escolas e ambientes coletivos. Inclui limpadores, detergentes, cloro, sabão líquido e aromatizantes.</p>
+        <p class="cl-sl__line-desc">Produtos para limpeza, higienização, desinfecção e perfumação de ambientes comerciais, residenciais, coletivos e institucionais.</p>
         {%- capture m -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse na Linha Domissanitária. Pode me enviar mais informações?{%- endcapture -%}
         <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
       </div>
@@ -85,26 +85,26 @@
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
     <div class="cl-sl__md" data-md="domissanitaria">
       <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Domissanitária">
-        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Cloro Desinfeção higienização superfícies"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Cloro e Desinfeção</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Limpadores Perfumados fragrância piso banheiro"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Limpadores Perfumados</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Limpadores Multiuso vidro plástico azulejo metal"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Limpadores Multiuso</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Detergentes louça gordura"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Detergentes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Sabão Líquido mãos higienização"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Sabão Líquido</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Aromatizantes Stigma ambiente odor perfume"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Aromatizantes — Clenear &amp; Stigma</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Cloro e desinfecção higienização superfícies água sanitária álcool pinho pastilha pedra sanitária"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Cloro e desinfecção</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Limpadores perfumados piso ambiente TOP Goclean higienizador"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Limpadores perfumados</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Limpadores multiuso superfícies Facilita Goclean cremoso"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Limpadores multiuso</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Detergentes louça coco limão neutro glicerinado Master Clean"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Detergentes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Sabão líquido em pó barra Omega MultiAção espuma limpeza pesada"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Sabão líquido, em pó e barra</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Aromatizantes ambiente perfume difusor refil Stigma Intense"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Aromatizantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
       </ul>
       <div class="cl-sl__md-detail">
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Cloro e Desinfeção (Linha Domissanitária).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Cloro e Desinfeção</h4><p class="cl-sl__md-desc">Desinfeção química de superfícies e ambientes com cloro ativo. Alta eficácia contra bactérias e vírus, indicado para ambientes coletivos, saúde e higiene pública.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Limpadores Perfumados (Linha Domissanitária).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Limpadores Perfumados</h4><p class="cl-sl__md-desc">Limpadores concentrados com fragrâncias premium para pisos, banheiros e superfícies. Limpeza e perfumação simultâneas com alto rendimento por diluição.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Limpadores Multiuso (Linha Domissanitária).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Limpadores Multiuso</h4><p class="cl-sl__md-desc">Formulação versátil para múltiplas superfícies: vidros, plásticos, azulejos e metais. Alta performance com fórmula equilibrada para uso diário intenso.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Cloro e desinfecção (Linha Domissanitária).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Cloro e desinfecção</h4><p class="cl-sl__md-desc">Soluções para higienização, desinfecção e apoio à limpeza diária de ambientes e superfícies.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Água Sanitária 1L</li><li>Água Sanitária 5L</li><li>Cloro Clenear</li><li>Álcool 70%</li><li>Álcool em Gel 70%</li><li>Desinfetante Pinho Bril</li><li>Pinho Gel</li><li>Pastilhas sanitárias</li><li>Pedra sanitária</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Limpadores perfumados (Linha Domissanitária).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Limpadores perfumados</h4><p class="cl-sl__md-desc">Produtos para limpeza de pisos e ambientes com fragrâncias agradáveis e rendimento profissional.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Limpa Piso Perfumado TOP 2L</li><li>Limpa Piso Perfumado TOP 5L</li><li>Limpa Piso Perfumado TOP 20L</li><li>Limpa Piso Perfumado TOP 50L</li><li>Limpa Piso Edição Especial</li><li>Goclean Limpa Piso Perfumado</li><li>Higienizador Perfumado</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Limpadores multiuso (Linha Domissanitária).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Limpadores multiuso</h4><p class="cl-sl__md-desc">Soluções versáteis para limpeza de superfícies, remoção de sujeiras leves e manutenção diária.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Multiuso Clenear</li><li>Multiuso 500mL Clássico Barra</li><li>Facilita Multiuso Floral</li><li>Facilita Multiuso Lavanda/Tradicional</li><li>Goclean Cremoso Suavez</li><li>Goclean Detergente Neutro</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Detergentes (Linha Domissanitária).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Detergentes</h4><p class="cl-sl__md-desc">Detergentes de alta performance para louças e superfícies. Alto poder de corte de gordura, espuma consistente e rendimento profissional por litro.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Sabão Líquido (Linha Domissanitária).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Sabão Líquido</h4><p class="cl-sl__md-desc">Sabão líquido para higienização eficaz em ambientes comerciais e coletivos. Suavidade com eficiência limpante para uso contínuo.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Aromatizantes Clenear e Stigma (Linha Domissanitária).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Aromatizantes — Clenear &amp; Stigma</h4><p class="cl-sl__md-desc">Fragrâncias exclusivas para ambientes. Linha Clenear clássica e Stigma premium. Neutralização de odores e perfumação duradoura para espaços comerciais.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Detergentes</h4><p class="cl-sl__md-desc">Detergentes para limpeza de louças, superfícies e rotinas de higienização com bom rendimento.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Detergente Coco Clenear</li><li>Detergente Limão Clenear 5L</li><li>Detergente Neutro Clenear</li><li>Detergente Neutro Incolor Clenear</li><li>Detergente Glicerinado Morango</li><li>Detergente Glicerinado Erva Doce</li><li>Detergente Master Clean</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Sabão líquido, em pó e barra (Linha Domissanitária).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Sabão líquido, em pó e barra</h4><p class="cl-sl__md-desc">Soluções para lavagem, limpeza pesada e rotinas domésticas ou profissionais de higienização.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Sabão Líquido Omega MultiAção</li><li>Sabão Líquido Omega MultiAção Baby</li><li>Sabão em Pó Omega MultiAção Clenear</li><li>Sabão Limpeza Pesada 5L</li><li>Sabão Espuma Concentrado 5L</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Aromatizantes (Linha Domissanitária).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Aromatizantes</h4><p class="cl-sl__md-desc">Produtos acabados para perfumar ambientes e entregar sensação de limpeza, cuidado e bem-estar.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Aromatizante Clenear 20mL</li><li>Aromatizante Clenear 250mL</li><li>Aromatizante Clenear 5L</li><li>Aromatizante Stigma 1L</li><li>Aromatizante Stigma 5L</li><li>Difusor Intense 250mL</li><li>Refil Difusor Lavanda 250mL</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -121,7 +121,7 @@
       <div class="cl-sl__line-info">
         <p class="cl-sl__ew">Linha</p>
         <h3 class="cl-sl__line-h3">Lavanderia</h3>
-        <p class="cl-sl__line-desc">Amaciantes, detergentes e soluções para higienização têxtil, com foco em rendimento, padronização e suporte técnico para lavanderias comerciais e industriais.</p>
+        <p class="cl-sl__line-desc">Soluções para higienização têxtil, lavagem, amaciamento e limpeza pesada em lavanderias comerciais, industriais e operações de grande volume.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Lavanderia. Pode me enviar mais informações?{%- endcapture -%}
         <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
       </div>
@@ -129,26 +129,20 @@
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
     <div class="cl-sl__md" data-md="lavanderia">
       <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Lavanderia">
-        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Amaciantes maciez perfumação acabamento têxtil"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Amaciantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Detergentes têxteis roupa uniforme limpeza profunda"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Detergentes Têxteis</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Alvejantes mancha clareamento branqueamento"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Alvejantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Neutralizadores pH proteção tecido"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Neutralizadores</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Lavanderias comerciais hotel hospital padronização"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Lavanderias Comerciais</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Lavanderias industriais grande volume têxtil"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Lavanderias Industriais</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Amaciantes maciez tecido Fofura Amacitel revenda"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Amaciantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Sabão e lava roupas Omega MultiAção Astra Uzzilim Minuano"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Sabão e lava roupas</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Limpeza pesada têxtil sabão espuma concentrado detergente em pó lavanda"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Limpeza pesada têxtil</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Apoio operacional lavanderias panos trapos sacos alvejados baldes mops rodos"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Apoio operacional para lavanderias</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
       </ul>
       <div class="cl-sl__md-detail">
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Amaciantes (Linha Lavanderia).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Amaciantes</h4><p class="cl-sl__md-desc">Amaciantes concentrados para maciez, perfumação e acabamento dos tecidos. Alto rendimento por diluição e fragrâncias duradouras para lavanderias.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Detergentes Têxteis (Linha Lavanderia).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Detergentes Têxteis</h4><p class="cl-sl__md-desc">Detergentes para limpeza profunda de tecidos, uniformes e roupas profissionais. Remoção eficiente de sujeira com cuidado com as fibras.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Alvejantes (Linha Lavanderia).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Alvejantes</h4><p class="cl-sl__md-desc">Alvejantes para remoção de manchas e clareamento dos tecidos, com ação eficaz e segura para uso profissional.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Neutralizadores (Linha Lavanderia).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Neutralizadores</h4><p class="cl-sl__md-desc">Neutralizadores para equilíbrio de pH e proteção dos tecidos ao final do processo de lavagem, garantindo conforto e durabilidade.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Lavanderias Comerciais (Linha Lavanderia).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Lavanderias Comerciais</h4><p class="cl-sl__md-desc">Soluções completas para lavanderias comerciais, com padronização de processo, rendimento e suporte técnico do início ao fim.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Lavanderias Industriais (Linha Lavanderia).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Lavanderias Industriais</h4><p class="cl-sl__md-desc">Produtos de alto rendimento para lavanderias industriais e grandes volumes de higienização têxtil, com consistência de resultado.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Amaciantes</h4><p class="cl-sl__md-desc">Produtos para cuidado têxtil, maciez e finalização de peças em rotinas de lavanderia.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Amaciante Fofura 2L</li><li>Amaciante Fofura 5L</li><li>Amaciante Fofura 20L</li><li>Amaciante Fofura 50L</li><li>Amacitel e similares de revenda</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Sabão e lava roupas (Linha Lavanderia).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Sabão e lava roupas</h4><p class="cl-sl__md-desc">Soluções para lavagem de roupas e tecidos, com foco em rendimento, limpeza e produtividade.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Sabão Líquido Omega MultiAção</li><li>Sabão Líquido Omega MultiAção Baby</li><li>Sabão em Pó Omega MultiAção Clenear</li><li>Lava Roupa Astra 5kg</li><li>Detergente em pó Uzzilim</li><li>Detergente em pó Minuano</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Limpeza pesada têxtil (Linha Lavanderia).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Limpeza pesada têxtil</h4><p class="cl-sl__md-desc">Produtos para remoção de sujeiras mais difíceis em tecidos, uniformes e operações de maior volume.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Sabão Limpeza Pesada 5L</li><li>Sabão Espuma Concentrado 5L</li><li>Detergente em pó Lavanda</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Apoio operacional para lavanderias (Linha Lavanderia).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Apoio operacional para lavanderias</h4><p class="cl-sl__md-desc">Itens de apoio para rotina, manuseio, limpeza e organização em ambientes de lavanderia.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Panos de limpeza</li><li>Trapos</li><li>Sacos alvejados</li><li>Baldes</li><li>Mops</li><li>Rodos</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -165,7 +159,7 @@
       <div class="cl-sl__line-info">
         <p class="cl-sl__ew">Linha</p>
         <h3 class="cl-sl__line-h3">Automotiva</h3>
-        <p class="cl-sl__line-desc">Linha completa para lava-rápidos, estéticas automotivas, frotas e profissionais. Shampoos, desengraxantes, ceras, limpadores de vidro e kit de acabamento.</p>
+        <p class="cl-sl__line-desc">Linha para lavagem, desengraxe, acabamento, conservação e limpeza interna de veículos, frotas, lava-rápidos e operações automotivas profissionais.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Automotiva. Pode me enviar mais informações?{%- endcapture -%}
         <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
       </div>
@@ -173,35 +167,26 @@
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
     <div class="cl-sl__md" data-md="automotiva">
       <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Automotiva">
-        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Shampoo Omega Espuma lavagem pintura"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Shampoos Automotivos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Desengraxante Beta Super motor chassis rodas"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Desengraxantes Beta / Beta Super</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Limpa Alumínio Delta cromo metal oxidação"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Limpa Alumínio Delta / Delta Super</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Brilha cera líquida proteção UV brilho"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Brilha+</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Brilha Vidro oleosidade film residuo"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Brilha Vidro+</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Limpa plástico vinil painel interior"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Limpa+</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="6" data-search="Descola adesivo asfalto inseto cola"><span class="cl-sl__md-num">07</span><span class="cl-sl__md-name">Descola+</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="7" data-search="Revita Renova plástico borracha pneu UV"><span class="cl-sl__md-num">08</span><span class="cl-sl__md-name">Revita+ / Renova+</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="8" data-search="Acabamento Interior Pretinho carpete painel hand clean"><span class="cl-sl__md-num">09</span><span class="cl-sl__md-name">Acabamento &amp; Interior</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Shampoos e detergentes automotivos Omega Super espuma Grand Prix Lava Autos Snow Foam"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Shampoos e detergentes automotivos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Desengraxantes automotivos Beta S Super AC Hand Clean gel"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Desengraxantes automotivos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Limpa alumínio e desincrustantes Delta S Super Incolor Eco desincrustante ácido"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Limpa alumínio e desincrustantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Acabamento brilho e proteção Brilha Cera Líquida Renova Revita Revitale Pneu Black Alfa"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Acabamento, brilho e proteção</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Vidros interior e estofados Cristalizador Painel Gama Carpet Zeta HidraCouro HigiCouro"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Vidros, interior e estofados</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Acessórios automotivos e revenda luva microfibra escova pincel aplicador flanela"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Acessórios automotivos e revenda</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
       </ul>
       <div class="cl-sl__md-detail">
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na sublinha Shampoos Automotivos (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Shampoos Automotivos</h4><p class="cl-sl__md-desc">Shampoo Omega Super e Espuma+ para lavagem profissional. Alta espuma, proteção da pintura e alto rendimento por litro diluído. Ideal para lava-rápidos e frotas.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse nos Desengraxantes Beta / Beta Super (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Desengraxantes Beta / Beta Super</h4><p class="cl-sl__md-desc">Fórmula concentrada para remoção de gordura em motores, chassis, rodas e freios. Alto poder de penetração com segurança na aplicação profissional.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Limpa Alumínio Delta / Delta Super (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Limpa Alumínio Delta / Delta Super</h4><p class="cl-sl__md-desc">Limpeza e brilho de alumínio, cromo e metais automotivos. Remove oxidação e manchas sem agredir a superfície, com acabamento espelhado.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Brilha+ (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Brilha+</h4><p class="cl-sl__md-desc">Cera líquida protetora com alto brilho espelhado. Proteção UV e efeito hidrofugante para toda a pintura. Acabamento profissional duradouro.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Brilha Vidro+ (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Brilha Vidro+</h4><p class="cl-sl__md-desc">Remove oleosidade, films e resíduos de vidros automotivos sem deixar manchas. Visibilidade perfeita em qualquer condição climática.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Limpa+ (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Limpa+</h4><p class="cl-sl__md-desc">Limpador multiuso para plásticos internos, vinílicos e painéis. Limpeza profunda sem danos às superfícies sensíveis do interior do veículo.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Descola+ (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="6"><h4 class="cl-sl__md-h4">Descola+</h4><p class="cl-sl__md-desc">Remove adesivos, asfalto, picada de insetos e cola da pintura e vidros sem risco de arranhados. Fórmula específica para superfícies automotivas.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Revita+ / Renova+ (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="7"><h4 class="cl-sl__md-h4">Revita+ / Renova+</h4><p class="cl-sl__md-desc">Revitalizador de plásticos externos, borrachas e pneus. Proteção UV, restauração de superfícies opacas e efeito renovado duradouro.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Acabamento e Interior (Linha Automotiva).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="8"><h4 class="cl-sl__md-h4">Acabamento &amp; Interior</h4><p class="cl-sl__md-desc">Pretinho Alfa (pneus), Limpa Carpete Zeta, Painel Gama Gel e Hand Clean. Kit completo para limpeza e acabamento profissional de interiores.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Shampoos e detergentes automotivos (Linha Automotiva).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Shampoos e detergentes automotivos</h4><p class="cl-sl__md-desc">Produtos para lavagem profissional de veículos, com espuma, rendimento e proteção da superfície.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Shampoo Automotivo Ômega Super</li><li>Detergente Automotivo Omega Super com Cera</li><li>Detergente Automotivo Omega Super sem Cera</li><li>Shampoo Automotivo Espuma / Espuma+</li><li>Detergente Automotivo Grand Prix Gel</li><li>Lava Autos</li><li>Snow Foam</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Desengraxantes automotivos (Linha Automotiva).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Desengraxantes automotivos</h4><p class="cl-sl__md-desc">Soluções para remoção de graxa, óleo e sujeiras pesadas em chassis, motores, rodas e peças.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Desengraxante Beta</li><li>Desengraxante Beta S / Beta Super</li><li>Desengraxante Beta AC</li><li>Hand Clean Desengraxante Gel</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Limpa alumínio e desincrustantes (Linha Automotiva).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Limpa alumínio e desincrustantes</h4><p class="cl-sl__md-desc">Produtos para limpeza técnica de alumínio, rodas, baús, motores, peças e superfícies com sujeira intensa.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Limpa Alumínio Delta</li><li>Limpa Alumínio Delta S / Delta Super</li><li>Limpa Alumínio Delta Incolor</li><li>Limpa Alumínio Eco</li><li>Desincrustante Ácido Clenear</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Acabamento, brilho e proteção (Linha Automotiva).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Acabamento, brilho e proteção</h4><p class="cl-sl__md-desc">Produtos para brilho, conservação, revitalização e proteção de partes internas e externas.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Brilha+ Clenear</li><li>Cera Líquida Clenear</li><li>Cera Líquida Eco Clenear</li><li>Renova+</li><li>Revita+</li><li>Revitale Plus</li><li>Revitale Super</li><li>Pneu Black</li><li>Limpa Pneu Alfa Clenear</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Vidros, interior e estofados (Linha Automotiva).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Vidros, interior e estofados</h4><p class="cl-sl__md-desc">Soluções para limpeza interna, vidros, painéis, carpetes, estofados e acabamento automotivo.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Limpa Vidros Clenear</li><li>Cristalizador para Para-brisa</li><li>Limpa Painel Gama Gel</li><li>Limpa Carpet Zeta</li><li>Limpa Estofados Spray</li><li>HidraCouro</li><li>HigiCouro</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Acessórios automotivos e revenda (Linha Automotiva).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Acessórios automotivos e revenda</h4><p class="cl-sl__md-desc">Itens de apoio para lavagem, acabamento e detalhamento automotivo.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Luva para lavar automóveis</li><li>Toalhas de microfibra</li><li>Escovas automotivas</li><li>Pincéis automotivos</li><li>Aplicadores de cera</li><li>Flanelas</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -212,13 +197,13 @@
         {%- if section.settings.image_ind != blank -%}
           {{ section.settings.image_ind | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,700,800', sizes: '(min-width:900px) 40vw, 90vw', alt: 'Linha Industrial' }}
         {%- else -%}
-          <img src="{{ 'ceraliquida2.webp' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Industrial" loading="lazy">
+          <img src="{{ 'cleanmax.webp' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Industrial" loading="lazy">
         {%- endif -%}
       </div>
       <div class="cl-sl__line-info">
         <p class="cl-sl__ew">Linha</p>
         <h3 class="cl-sl__line-h3">Industrial</h3>
-        <p class="cl-sl__line-desc">Soluções para limpeza pesada, manutenção, cozinhas industriais, transportadoras e processos produtivos. Produtos de alta performance com suporte técnico.</p>
+        <p class="cl-sl__line-desc">Soluções para limpeza pesada, manutenção de equipamentos, cozinhas industriais e processos produtivos. Produtos de alta performance para remoção de graxas, óleos, incrustações e sujeiras de difícil remoção, com suporte técnico para aplicação profissional — incluindo o segmento de transportadoras.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Industrial. Pode me enviar mais informações?{%- endcapture -%}
         <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
       </div>
@@ -226,26 +211,26 @@
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
     <div class="cl-sl__md" data-md="industrial">
       <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Industrial">
-        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Transportadoras frota caminhão estrutura limpeza pesada"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Transportadoras</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Desengraxante concentrado Beta CL Max industrial máquina"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Desengraxantes Concentrados</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Desincrustante ácido calcário ferrugem mineral tubulação"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Desincrustantes Ácidos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Limpadores alcalinos gordura cozinha industrial frigorifico"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Limpadores Alcalinos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Sanitizante alimento ANVISA superfície contato"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Sanitizantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Cozinha industrial forno fritadeira exaustor preparo alimento"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Cozinhas Industriais</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Desengraxantes concentrados Clean Max CL Max 15 Beta Impact Power XR"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Desengraxantes concentrados</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Desincrustantes ácidos Delta Super Pedra AS 98"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Desincrustantes ácidos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Limpadores alcalinos Clean Max Incolor CL 50 Max desengordurante Power"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Limpadores alcalinos</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Sanitizantes Bactran ProKitchen finalizador verduras"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Sanitizantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Cozinhas industriais ProKitchen desengordurante Clean Max sanitizante gordura pesada"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Cozinhas industriais</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Limpeza pesada Clean Max CL Max 15 X Power CL XR Delta Super"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Limpeza pesada</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
       </ul>
       <div class="cl-sl__md-detail">
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Transportadoras (Linha Industrial).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Transportadoras</h4><p class="cl-sl__md-desc">Produtos para limpeza de frotas, caminhões e estruturas de transportadoras. Remoção de graxa e sujeira pesada com alto rendimento e segurança na aplicação.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Desengraxantes Concentrados (Linha Industrial).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Desengraxantes Concentrados</h4><p class="cl-sl__md-desc">Beta Super, CL Max 15 e Clean Max para remoção de graxa pesada em máquinas, pisos e equipamentos industriais. Alta concentração, baixo custo por aplicação.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Desincrustantes Ácidos (Linha Industrial).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Desincrustantes Ácidos</h4><p class="cl-sl__md-desc">Remoção de calcário, ferrugem e depósitos minerais em tubulações, trocadores de calor e superfícies metálicas. Delta Super e Desincrustante Ácido.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Limpadores Alcalinos (Linha Industrial).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Limpadores Alcalinos</h4><p class="cl-sl__md-desc">Clean Max e CL Max 15 para limpeza de gordura animal e vegetal em cozinhas industriais, frigoríficos e superfícies de preparo de alimentos.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Desengraxantes concentrados (Linha Industrial).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Desengraxantes concentrados</h4><p class="cl-sl__md-desc">Produtos para remoção de graxas, óleos e sujeiras pesadas em superfícies, peças, equipamentos e ambientes profissionais.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Detergente Alcalino Clean Max</li><li>Clean Max</li><li>Detergente Desengraxante CL Max 15</li><li>Desengraxante Beta S / Beta Super</li><li>Desengraxante Beta</li><li>Desengraxante Beta AC</li><li>CL X Power</li><li>CL XR / CL XR Concentrado</li><li>Impact 5L</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Desincrustantes ácidos (Linha Industrial).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Desincrustantes ácidos</h4><p class="cl-sl__md-desc">Soluções de alta performance para remoção de incrustações severas, resíduos minerais e sujeiras de difícil remoção.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Desincrustante Ácido Clenear</li><li>Limpa Alumínio Delta Super</li><li>Limpa Alumínio Delta S</li><li>Limpa Pedra AS 98</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Limpadores alcalinos (Linha Industrial).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Limpadores alcalinos</h4><p class="cl-sl__md-desc">Limpadores profissionais para sujeiras orgânicas, gorduras e resíduos persistentes em rotinas de limpeza pesada.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Detergente Alcalino Clean Max</li><li>Clean Max Incolor</li><li>CL Max 15</li><li>CL 50 Max</li><li>Detergente Desengordurante 5L</li><li>X Power 10/300</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Sanitizantes (Linha Industrial).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Sanitizantes</h4><p class="cl-sl__md-desc">Sanitização de superfícies em contato com alimentos, conformidade com normas ANVISA. Indicado para indústrias alimentícias, restaurantes e cozinhas coletivas.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Cozinhas Industriais (Linha Industrial).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Cozinhas Industriais</h4><p class="cl-sl__md-desc">Linha completa para fornos, fritadeiras, exaustores e superfícies industriais de preparo de alimentos. Eficácia máxima com segurança sanitária comprovada.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Sanitizantes</h4><p class="cl-sl__md-desc">Soluções para higienização e apoio à segurança sanitária em ambientes profissionais e produtivos.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Sanitizante Finalizador 1,5L</li><li>Sanitizante Finalizador 5L</li><li>ProKitchen Sanitizante de Verduras 1kg</li><li>Bactran 1,5L</li><li>Bactran 5L</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Cozinhas industriais (Linha Industrial).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Cozinhas industriais</h4><p class="cl-sl__md-desc">Produtos para limpeza de superfícies, equipamentos, fornos, fritadeiras, exaustores e áreas de preparo profissional.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>ProKitchen Sanitizante</li><li>Detergente Desengordurante 5L</li><li>Detergente Alcalino Clean Max</li><li>Sanitizantes</li><li>Produtos para gordura pesada</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Limpeza pesada (Linha Industrial).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Limpeza pesada</h4><p class="cl-sl__md-desc">Soluções concentradas para aplicações exigentes, com alto rendimento e suporte técnico de uso.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Clean Max</li><li>CL Max 15</li><li>X Power</li><li>CL XR</li><li>Desincrustante Ácido Clenear</li><li>Limpa Alumínio Delta Super</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -262,7 +247,7 @@
       <div class="cl-sl__line-info">
         <p class="cl-sl__ew">Linha</p>
         <h3 class="cl-sl__line-h3">Construção Civil</h3>
-        <p class="cl-sl__line-desc">Aditivos e soluções técnicas para concreto, formas e proteção de superfícies, com aplicação profissional e suporte técnico.</p>
+        <p class="cl-sl__line-desc">Aditivos e soluções técnicas para concreto, formas, acabamento e proteção de superfícies, com aplicação profissional e suporte técnico.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Construção Civil. Pode me enviar mais informações?{%- endcapture -%}
         <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
       </div>
@@ -270,20 +255,20 @@
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
     <div class="cl-sl__md" data-md="construcao-civil">
       <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Construção Civil">
-        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Superplastificante concreto trabalhabilidade resistência"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Superplastificante</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Desmoldante forma madeira metal plástico acabamento"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Desmoldante</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Redutor água plastificante concreto denso impermável"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Redutor de Água</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Impermeabilizante estrutura fundação laje infiltração"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Impermeabilizantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Superplastificante concreto trabalhabilidade Alisante Terra Plus Super"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Superplastificante</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Desmoldante forma desforma Alisante Desmoldante amostra"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Desmoldante</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Redutor de água dosagem Alisante Terra Plus Super"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Redutor de Água</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Impermeabilizantes umidade infiltração ativador de cor black incolor"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Impermeabilizantes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
       </ul>
       <div class="cl-sl__md-detail">
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Superplastificante (Linha Construção Civil).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Superplastificante</h4><p class="cl-sl__md-desc">Aditivo para aumento da trabalhabilidade do concreto com redução da relação água/cimento. Maior resistência final e melhor acabamento superficial das peças.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Consultar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Superplastificante</h4><p class="cl-sl__md-desc">Aditivo para aumento da trabalhabilidade do concreto, redução da relação água/cimento e melhor acabamento superficial.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Alisante Terra Plus 25/300 - 25L</li><li>Alisante Terra Super</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Desmoldante (Linha Construção Civil).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Desmoldante</h4><p class="cl-sl__md-desc">Agente desmoldante para formas de madeira, metal e plástico. Acabamento liso, fácil desmolde e proteção da forma para múltiplos usos sem contaminação.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Consultar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Desmoldante</h4><p class="cl-sl__md-desc">Solução para facilitar a desforma, proteger formas e contribuir para melhor acabamento das peças.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Alisante Desmoldante</li><li>Amostra Alisante Desmoldante 1L</li><li>Amostra Alisante Desmoldante 2L</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse no Redutor de Água (Linha Construção Civil).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Redutor de Água</h4><p class="cl-sl__md-desc">Plastificante redutor de água para concretos mais densos e imperméaveis. Ideal para elementos estruturais que exigem alta durabilidade e menor porosidade.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Consultar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Redutor de Água</h4><p class="cl-sl__md-desc">Aditivo para otimização da dosagem de água, melhoria do desempenho e apoio à produtividade na aplicação.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Alisante Terra Plus</li><li>Alisante Terra Super</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse nos Impermeabilizantes (Linha Construção Civil).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Impermeabilizantes</h4><p class="cl-sl__md-desc">Impermeabilização de estruturas de concreto, fundações, lajes e reservatórios. Proteção duradoura contra infiltrações e umidade ascendente.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Consultar via WhatsApp</a></div>
+        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Impermeabilizantes</h4><p class="cl-sl__md-desc">Soluções para proteção de superfícies contra umidade, infiltrações e desgaste em aplicações profissionais.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Amostra Impermeabilizante Ativador de Cor Black</li><li>Amostra Impermeabilizante Ativador de Cor Incolor</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -292,42 +277,39 @@
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img cl-sl__line-img--ph">
         {%- if section.settings.image_ins != blank -%}
-          {{ section.settings.image_ins | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,700,800', sizes: '(min-width:900px) 40vw, 90vw', alt: 'Linha Insumos' }}
+          {{ section.settings.image_ins | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,700,800', sizes: '(min-width:900px) 40vw, 90vw', alt: 'Linha Insumos e Revenda' }}
         {%- else -%}
           <div class="cl-sl__ph-inner"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6h12"/><path d="M20 6v12L10 36a4 4 0 0 0 3.5 6h21a4 4 0 0 0 3.5-6L28 18V6"/><path d="M15 30h18"/></svg><p>Imagem da linha</p></div>
         {%- endif -%}
       </div>
       <div class="cl-sl__line-info">
         <p class="cl-sl__ew">Linha</p>
-        <h3 class="cl-sl__line-h3">Insumos</h3>
-        <p class="cl-sl__line-desc">Insumos para formulação, produção e desenvolvimento de produtos de limpeza, com suporte técnico para empresas, formuladores e marcas parceiras.</p>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha de Insumos. Pode me enviar mais informações?{%- endcapture -%}
+        <h3 class="cl-sl__line-h3">Insumos e Revenda</h3>
+        <p class="cl-sl__line-desc">Insumos, componentes, embalagens, acessórios e produtos de revenda para apoiar a formulação, produção, manutenção e operação de empresas, formuladores e marcas parceiras.</p>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Insumos e Revenda. Pode me enviar mais informações?{%- endcapture -%}
         <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
     <div class="cl-sl__md" data-md="insumos">
-      <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Insumos">
-        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Fragrâncias essências perfumação formulação"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Fragrâncias e Essências</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Bases matérias-primas desenvolvimento produção"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Bases e Matérias-Primas</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Insumos formuladores componentes desenvolvimento"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Insumos para Formuladores</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Marcas parceiras marca própria private label"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Insumos para Marcas Parceiras</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Apoio técnico suporte desenvolvimento empresas"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Apoio Técnico</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
-        <li class="cl-sl__md-item" role="option" data-idx="5" data-search="Linhas próprias desenvolvimento componentes"><span class="cl-sl__md-num">06</span><span class="cl-sl__md-name">Linhas Próprias</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+      <ul class="cl-sl__md-list" role="listbox" aria-label="Sublinhas Insumos e Revenda">
+        <li class="cl-sl__md-item" role="option" data-idx="0" data-search="Insumos químicos e componentes ácido lático soda hipoclorito quaternário BHT bicarbonato"><span class="cl-sl__md-num">01</span><span class="cl-sl__md-name">Insumos químicos e componentes</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="1" data-search="Essências e fragrâncias para formulação MT Citratus Quorum Premier Mil Flores Pimenta Rosa"><span class="cl-sl__md-num">02</span><span class="cl-sl__md-name">Essências e fragrâncias para formulação</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="2" data-search="Embalagens e acessórios de produção flip top spray frascos gatilhos tampas bombonas tambores"><span class="cl-sl__md-num">03</span><span class="cl-sl__md-name">Embalagens e acessórios de produção</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="3" data-search="Revenda e operação lixeiras sacos papel EPIs luvas mops rodos dispensers"><span class="cl-sl__md-num">04</span><span class="cl-sl__md-name">Revenda e operação</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
+        <li class="cl-sl__md-item" role="option" data-idx="4" data-search="Absorventes e mitigação ambiental manta turfa kit contenção pallet tambor"><span class="cl-sl__md-num">05</span><span class="cl-sl__md-name">Absorventes e mitigação ambiental</span><svg class="cl-sl__md-arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg></li>
       </ul>
       <div class="cl-sl__md-detail">
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Fragrâncias e Essências (Linha Insumos).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Fragrâncias e Essências</h4><p class="cl-sl__md-desc">Fragrâncias e essências para formulação de produtos de limpeza, com opções para perfumação e diferenciação de linhas.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Bases e Matérias-Primas (Linha Insumos).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Bases e Matérias-Primas</h4><p class="cl-sl__md-desc">Bases e matérias-primas para desenvolvimento e produção de produtos de limpeza, com qualidade e padronização.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Insumos para Formuladores (Linha Insumos).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Insumos para Formuladores</h4><p class="cl-sl__md-desc">Componentes e insumos para empresas e profissionais que formulam seus próprios produtos de limpeza.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Insumos para Marcas Parceiras (Linha Insumos).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Insumos para Marcas Parceiras</h4><p class="cl-sl__md-desc">Apoio em insumos para marcas parceiras que desejam lançar ou ampliar sua linha de limpeza com identidade própria.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Apoio Técnico (Linha Insumos).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Apoio Técnico</h4><p class="cl-sl__md-desc">Suporte técnico para empresas que desenvolvem produtos, da escolha do insumo à formulação final.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
-        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Linhas Próprias (Linha Insumos).{%- endcapture -%}
-        <div class="cl-sl__md-content" data-idx="5"><h4 class="cl-sl__md-h4">Linhas Próprias</h4><p class="cl-sl__md-desc">Componentes e orientação para o desenvolvimento de linhas próprias de produtos de limpeza, do conceito à produção.</p><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Insumos químicos e componentes (Linha Insumos e Revenda).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="0"><h4 class="cl-sl__md-h4">Insumos químicos e componentes</h4><p class="cl-sl__md-desc">Componentes técnicos para formulação, produção e ajuste de desempenho de produtos de limpeza.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>CL Ácido Lático 85%</li><li>CL Soda Líquida</li><li>CL Ácido Oxálico</li><li>CL Ácido Sulfônico</li><li>CL Betaina</li><li>CL Silicato de Sódio</li><li>CL Renex 95</li><li>CL Hipoclorito</li><li>BHT</li><li>Bicarbonato de Sódio</li><li>Hidróxido de Sódio</li><li>Quaternário de Amônio</li><li>Sulfato de Alumínio</li><li>Fixador de Essência / Galaxolide</li><li>Anti-espumante</li><li>Base Perolada</li><li>Corretor de pH</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Essências e fragrâncias para formulação (Linha Insumos e Revenda).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="1"><h4 class="cl-sl__md-h4">Essências e fragrâncias para formulação</h4><p class="cl-sl__md-desc">Essências e fragrâncias técnicas para formulação, perfumação e diferenciação de produtos.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>MT Essência Citratus</li><li>MT Essência Citratus Amores Secretos</li><li>MT Essência Citratus Jasmim Extra</li><li>MT Essência Citratus Lavanda Campestre</li><li>MT Essência Citratus Monte Verde</li><li>MT Essência Premier</li><li>MT Essência Quorum</li><li>MT Essência Quorum Rosa</li><li>MT Essência Quorum Belíssima</li><li>MT Lavanda Musk</li><li>MT Mil Flores</li><li>Pimenta Rosa</li><li>Roma</li><li>V-Light</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Embalagens e acessórios de produção (Linha Insumos e Revenda).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="2"><h4 class="cl-sl__md-h4">Embalagens e acessórios de produção</h4><p class="cl-sl__md-desc">Itens para envase, aplicação, armazenamento e acabamento de produtos.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Embalagem 1L + tampa flip top</li><li>Embalagem 2L + tampa flip top</li><li>Embalagem 500mL + tampa flip top</li><li>Embalagem spray 20mL</li><li>Embalagem vidro para difusor</li><li>Frascos</li><li>Gatilhos</li><li>Sprays</li><li>Tampas</li><li>Varetas</li><li>Palito de difusor</li><li>Bombonas</li><li>Tambores homologados</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Revenda e operação (Linha Insumos e Revenda).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="3"><h4 class="cl-sl__md-h4">Revenda e operação</h4><p class="cl-sl__md-desc">Produtos de apoio para empresas, condomínios, comércios, operações de limpeza e manutenção.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Lixeiras</li><li>Sacos de lixo</li><li>Papel higiênico</li><li>Papel toalha</li><li>Copos descartáveis</li><li>Panos</li><li>Flanelas</li><li>Trapos</li><li>EPIs</li><li>Luvas</li><li>Óculos</li><li>Máscaras</li><li>Mops</li><li>Rodos</li><li>Vassouras</li><li>Baldes</li><li>Dispensers</li><li>Coletores</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
+        {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse em Absorventes e mitigação ambiental (Linha Insumos e Revenda).{%- endcapture -%}
+        <div class="cl-sl__md-content" data-idx="4"><h4 class="cl-sl__md-h4">Absorventes e mitigação ambiental</h4><p class="cl-sl__md-desc">Itens para contenção, absorção e apoio em operações com líquidos, óleos e resíduos.</p><p class="cl-sl__md-products-label">Produtos exemplo</p><ul class="cl-sl__md-products"><li>Travesseiro absorvente para líquidos agressivos</li><li>Manta absorvente para líquidos agressivos</li><li>Manta adsorvente petróleo e derivados</li><li>Turfa absorvente óleo hidrofóbico</li><li>Kit mitigação ambiental</li><li>Kit proteção ambiental</li><li>Bacia de contenção</li><li>Pallet de contenção</li><li>Tambor homologado</li></ul><a class="cl-sl__md-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Solicitar via WhatsApp</a></div>
       </div>
     </div>
   </div>
@@ -338,36 +320,34 @@
 <style>
 .cl-sl{background:#071d18;color:#fff;padding:clamp(64px,9vw,112px) 0}
 .cl-sl__head .cl-sl__ew{font-size:14px}
-.cl-sl__head .cl-sl__lead{font-size:clamp(17px,2vw,21px);color:rgba(255,255,255,.72)}
+.cl-sl__head .cl-sl__lead{font-size:clamp(17px,2vw,21px);color:rgba(255,255,255,.78)}
 .cl-sl__wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
 .cl-sl__head{text-align:center;max-width:760px;margin:0 auto clamp(40px,6vw,64px)}
 .cl-sl__ew{color:#4dd1b0;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px}
 .cl-sl__h2{font-size:clamp(40px,5.5vw,72px);font-weight:900;line-height:1.02;letter-spacing:-.03em;margin:0 0 20px;color:#fff}
-.cl-sl__lead{color:rgba(255,255,255,.62);font-size:clamp(16px,1.8vw,19px);line-height:1.65;margin:0}
+.cl-sl__lead{color:rgba(255,255,255,.72);font-size:clamp(16px,1.8vw,19px);line-height:1.65;margin:0}
 .cl-sl__search-wrap{position:relative;margin-bottom:clamp(28px,4vw,40px)}
-.cl-sl__search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:rgba(255,255,255,.35);pointer-events:none}
+.cl-sl__search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:rgba(255,255,255,.45);pointer-events:none}
 .cl-sl__search{width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(77,209,176,.2);border-radius:12px;color:#fff;font-size:16px;font-weight:500;padding:15px 48px 15px 50px;outline:none;transition:border-color 180ms;-webkit-appearance:none;box-sizing:border-box}
 .cl-sl__search:focus{border-color:rgba(77,209,176,.55);background:rgba(255,255,255,.08)}
-.cl-sl__search::placeholder{color:rgba(255,255,255,.32)}
+.cl-sl__search::placeholder{color:rgba(255,255,255,.42)}
 .cl-sl__search-clear{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;background:rgba(255,255,255,.1);border:none;border-radius:50%;display:grid;place-items:center;cursor:pointer;padding:0}
 .cl-sl__search-clear svg{width:12px;height:12px;color:#fff}
 .cl-sl__search-clear:hover{background:rgba(255,255,255,.18)}
 .cl-sl__search-results{position:absolute;top:calc(100% + 10px);left:0;right:0;background:#0c2820;border:1px solid rgba(77,209,176,.22);border-radius:12px;overflow:hidden;z-index:100;box-shadow:0 20px 60px rgba(0,0,0,.55)}
-.cl-sl__sr-empty{padding:24px;text-align:center;color:rgba(255,255,255,.38);font-size:14px}
+.cl-sl__sr-empty{padding:24px;text-align:center;color:rgba(255,255,255,.5);font-size:14px}
 .cl-sl__sr-item{display:flex;align-items:center;gap:16px;padding:13px 20px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.06);transition:background 120ms}
 .cl-sl__sr-item:last-child{border-bottom:none}
 .cl-sl__sr-item:hover{background:rgba(77,209,176,.08)}
 .cl-sl__sr-line{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#4dd1b0;min-width:130px}
-.cl-sl__sr-name{font-size:14px;font-weight:600;color:rgba(255,255,255,.88)}
+.cl-sl__sr-name{font-size:14px;font-weight:600;color:#fff}
 .cl-sl__tabs{display:flex;gap:8px;margin:0 0 clamp(28px,4vw,44px);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
 .cl-sl__tabs::-webkit-scrollbar{display:none}
-.cl-sl__tab{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.65);font-size:15px;font-weight:700;cursor:pointer;transition:all 160ms ease;white-space:nowrap;letter-spacing:.005em}
+.cl-sl__tab{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.75);font-size:15px;font-weight:700;cursor:pointer;transition:all 160ms ease;white-space:nowrap;letter-spacing:.005em}
 .cl-sl__tab:hover{border-color:rgba(77,209,176,.45);color:#fff;background:rgba(77,209,176,.06)}
 .cl-sl__tab.is-active,.cl-sl__tab[aria-selected=true]{background:rgba(77,209,176,.12);border-color:#4dd1b0;color:#fff}
 .cl-sl__tab-svg{width:18px;height:18px;flex-shrink:0;opacity:.7}
 .cl-sl__tab.is-active .cl-sl__tab-svg,.cl-sl__tab[aria-selected=true] .cl-sl__tab-svg{opacity:1;stroke:#4dd1b0}
-.cl-sl__tab-badge{font-size:10px;font-weight:800;letter-spacing:.06em;padding:2px 8px;border-radius:999px;background:rgba(255,200,50,.18);color:#ffc832;border:1px solid rgba(255,200,50,.3)}
-.cl-sl__tab-badge--sm{font-size:9px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.12)}
 .cl-sl__panel{animation:cl-panel-in 240ms ease}
 .cl-sl__panel[hidden]{display:none}
 @keyframes cl-panel-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -376,38 +356,37 @@
 .cl-sl__line-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 600ms ease}
 .cl-sl__line-header:hover .cl-sl__line-img img{transform:scale(1.04)}
 .cl-sl__line-img--ph{display:flex;align-items:center;justify-content:center}
-.cl-sl__ph-inner{text-align:center;color:rgba(255,255,255,.25)}
+.cl-sl__ph-inner{text-align:center;color:rgba(255,255,255,.35)}
 .cl-sl__ph-inner svg{width:56px;height:56px;margin-bottom:10px}
 .cl-sl__ph-inner p{font-size:13px;margin:0}
 .cl-sl__line-info{padding:clamp(24px,3vw,44px);padding-left:0}
 .cl-sl__line-h3{font-size:clamp(36px,4.5vw,56px);font-weight:900;letter-spacing:-.03em;line-height:1.02;margin:10px 0 16px;color:#fff}
-.cl-sl__line-desc{color:rgba(255,255,255,.65);font-size:16px;line-height:1.65;margin:0 0 24px}
+.cl-sl__line-desc{color:rgba(255,255,255,.75);font-size:16px;line-height:1.65;margin:0 0 24px}
 .cl-sl__line-desc strong{color:#ffc832}
-.cl-sl__dev-badge{display:inline-block;font-size:12px;font-weight:700;color:#ffc832;border:1px solid rgba(255,200,50,.3);border-radius:6px;padding:5px 12px;margin-bottom:20px}
 .cl-sl__line-wa{display:inline-flex;align-items:center;gap:8px;background:#1d6e5a;color:#fff;text-decoration:none;font-size:15px;font-weight:700;padding:13px 22px;border-radius:9px;transition:background 160ms,transform 160ms}
 .cl-sl__line-wa:hover{background:#24917a;color:#fff;transform:translateY(-2px)}
-.cl-sl__sub-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin:0 0 14px}
-.cl-sl__sub-label span{font-weight:500;letter-spacing:0;text-transform:none;opacity:.7}
+.cl-sl__sub-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 14px}
+.cl-sl__sub-label span{font-weight:500;letter-spacing:0;text-transform:none;opacity:.8}
 .cl-sl__md{display:grid;grid-template-columns:300px 1fr;border:1px solid rgba(77,209,176,.12);border-radius:16px;overflow:hidden;min-height:340px}
-.cl-sl__md-list{list-style:none;padding:10px;margin:0;display:flex;flex-direction:column;gap:3px;border-right:1px solid rgba(77,209,176,.1);background:rgba(0,0,0,.18);overflow-y:auto;max-height:480px}
+.cl-sl__md-list{list-style:none;padding:10px;margin:0;display:flex;flex-direction:column;gap:3px;border-right:1px solid rgba(77,209,176,.1);background:rgba(0,0,0,.18);overflow-y:auto;max-height:520px}
 .cl-sl__md-list::-webkit-scrollbar{width:4px}
 .cl-sl__md-list::-webkit-scrollbar-thumb{background:rgba(77,209,176,.25);border-radius:4px}
-.cl-sl__md-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:8px;cursor:pointer;transition:background 140ms,color 140ms;color:rgba(255,255,255,.58);font-size:14px;font-weight:600;line-height:1.3;user-select:none}
-.cl-sl__md-item:hover:not(.is-active){background:rgba(255,255,255,.05);color:rgba(255,255,255,.82)}
+.cl-sl__md-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:8px;cursor:pointer;transition:background 140ms,color 140ms;color:rgba(255,255,255,.7);font-size:14px;font-weight:600;line-height:1.3;user-select:none}
+.cl-sl__md-item:hover:not(.is-active){background:rgba(255,255,255,.05);color:#fff}
 .cl-sl__md-item.is-active{background:rgba(77,209,176,.14);color:#fff;border:1px solid rgba(77,209,176,.25)}
 .cl-sl__md-item.is-active .cl-sl__md-arr{opacity:1;color:#4dd1b0;transform:translateX(2px)}
-.cl-sl__md-item--star.is-active{background:rgba(255,200,50,.12);border-color:rgba(255,200,50,.3)}
-.cl-sl__md-item--star .cl-sl__md-num{color:#ffc832}
 .cl-sl__md-num{font-size:11px;font-weight:800;color:#4dd1b0;min-width:22px;letter-spacing:.04em;flex-shrink:0}
 .cl-sl__md-name{flex:1;display:flex;align-items:center;flex-wrap:wrap;gap:6px}
-.cl-sl__md-chip{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:999px;background:rgba(255,200,50,.2);color:#ffc832;border:1px solid rgba(255,200,50,.35)}
-.cl-sl__md-arr{width:14px;height:14px;flex-shrink:0;opacity:.25;transition:opacity 140ms,transform 140ms}
+.cl-sl__md-arr{width:14px;height:14px;flex-shrink:0;opacity:.3;transition:opacity 140ms,transform 140ms}
 .cl-sl__md-detail{padding:clamp(24px,3vw,40px);position:relative;background:rgba(255,255,255,.015)}
 .cl-sl__md-content{display:none}
 .cl-sl__md-content.is-active{display:flex;flex-direction:column;animation:cl-fade-up 200ms ease}
 @keyframes cl-fade-up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .cl-sl__md-h4{font-size:clamp(22px,2.8vw,34px);font-weight:900;color:#fff;margin:0 0 16px;letter-spacing:-.02em;line-height:1.08}
-.cl-sl__md-desc{color:rgba(255,255,255,.68);font-size:16px;line-height:1.7;margin:0 0 28px;flex:1}
+.cl-sl__md-desc{color:rgba(255,255,255,.78);font-size:16px;line-height:1.7;margin:0 0 24px}
+.cl-sl__md-products-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:0 0 10px}
+.cl-sl__md-products{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-wrap:wrap;gap:8px}
+.cl-sl__md-products li{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.82);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 12px}
 .cl-sl__md-wa{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,.14);color:#25d366;border:1px solid rgba(37,211,102,.3);text-decoration:none;font-size:14px;font-weight:700;padding:11px 18px;border-radius:8px;align-self:flex-start;transition:background 160ms,border-color 160ms}
 .cl-sl__md-wa::before{content:'💬';font-size:14px}
 .cl-sl__md-wa:hover{background:rgba(37,211,102,.24);border-color:rgba(37,211,102,.5);color:#25d366}
@@ -467,7 +446,13 @@
     panel.querySelectorAll('.cl-sl__md-item').forEach(function(item){
       var name=item.querySelector('.cl-sl__md-name');
       name=name?name.textContent.trim():'';
-      var search=(item.dataset.search||'')+' '+name;
+      var content=panel.querySelector('.cl-sl__md-content[data-idx="'+item.dataset.idx+'"]');
+      var products='';
+      if(content){
+        var prodEls=content.querySelectorAll('.cl-sl__md-products li');
+        prodEls.forEach(function(p){products+=' '+p.textContent.trim();});
+      }
+      var search=(item.dataset.search||'')+' '+name+' '+products;
       index.push({line:line,lineLabel:lineLabel,name:name,idx:item.dataset.idx,search:search.toLowerCase()});
     });
   });
@@ -507,7 +492,7 @@
     { "type": "image_picker", "id": "image_ind",  "label": "Linha Industrial" },
     { "type": "image_picker", "id": "image_cc",   "label": "Linha Construção Civil" },
     { "type": "image_picker", "id": "image_lav",  "label": "Linha Lavanderia" },
-    { "type": "image_picker", "id": "image_ins",  "label": "Linha Insumos" }
+    { "type": "image_picker", "id": "image_ins",  "label": "Linha Insumos e Revenda" }
   ],
   "presets": [{ "name": "Linhas e Sublinhas" }]
 }

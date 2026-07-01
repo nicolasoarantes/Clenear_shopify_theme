@@ -153,7 +153,7 @@
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20Pesquisa%20e%20Inova%C3%A7%C3%A3o%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20Setor%20T%C3%A9cnico.",
         "cta2_label": "Conheça Nossas Linhas",
         "cta2_url": "/pages/nossas-linhas",
-        "cta3_label": "Quero revender",
+        "cta3_label": "",
         "cta3_url": "",
         "phone": "(27) 3228-0140",
         "email": "",

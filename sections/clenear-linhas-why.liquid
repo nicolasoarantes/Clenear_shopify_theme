@@ -41,6 +41,19 @@
       </div>
     </div>
   </section>
+  {%- if section.settings.show_dev_cta -%}
+  <section class="cl-pg-section--sm">
+    <div class="cl-pg-wrap">
+      <div class="cl-pg-mid-cta cl-pg-fade">
+        <h3>{{ section.settings.dev_cta_heading | default: 'Desenvolvemos soluções para a sua operação' }}</h3>
+        <p>{{ section.settings.dev_cta_text | default: 'A Clenear desenvolve fórmulas, produtos e linhas com foco em desempenho, segurança, rendimento e aplicação profissional.' }}</p>
+        <div class="cl-pg-btn-row">
+          <a href="{{ section.settings.dev_cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20sobre%20desenvolvimento%20de%20f%C3%B3rmula%2Fproduto.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">{{ section.settings.dev_cta_wa_label | default: 'Falar sobre desenvolvimento' }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
 </div>
 <script>
 (function(){
@@ -74,7 +87,13 @@
     { "type": "textarea", "id": "mid_cta_text",     "label": "Texto",    "default": "Nossa equipe técnica orienta você na escolha dos produtos certos para cada aplicação." },
     { "type": "text",     "id": "mid_cta_wa_label", "label": "CTA label","default": "Falar com especialista" },
     { "type": "text",     "id": "cta2_label",       "label": "CTA 2 label", "default": "Formulário de contato" },
-    { "type": "url",      "id": "cta2_url",         "label": "CTA 2 link" }
+    { "type": "url",      "id": "cta2_url",         "label": "CTA 2 link" },
+    { "type": "header", "content": "Chamada — Desenvolvemos sua fórmula/produto" },
+    { "type": "checkbox", "id": "show_dev_cta", "label": "Exibir chamada de desenvolvimento", "default": true },
+    { "type": "text",     "id": "dev_cta_heading",  "label": "Título", "default": "Desenvolvemos soluções para a sua operação" },
+    { "type": "textarea", "id": "dev_cta_text",     "label": "Texto",  "default": "A Clenear desenvolve fórmulas, produtos e linhas com foco em desempenho, segurança, rendimento e aplicação profissional." },
+    { "type": "text",     "id": "dev_cta_wa_label", "label": "CTA label", "default": "Falar sobre desenvolvimento" },
+    { "type": "url",      "id": "dev_cta_wa_url",   "label": "CTA WhatsApp/contato link" }
   ],
   "presets": [{ "name": "Diferenciais e Mid CTA" }]
 }

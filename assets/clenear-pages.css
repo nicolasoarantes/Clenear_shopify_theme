@@ -40,7 +40,7 @@
 }
 
 .cl-final-cta__channel span {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -209,7 +209,7 @@
 }
 
 .cl-pg-lead {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.75rem;
   line-height: 1.65;
   margin: 1.8rem 0 0;
@@ -417,7 +417,7 @@
 }
 
 .cl-pg-stat span {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.62);
   font-size: 1.3rem;
   line-height: 1.35;
 }
@@ -477,7 +477,7 @@
 }
 
 .cl-pg-card__text {
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.72);
   flex: 1;
   font-size: 1.5rem;
   line-height: 1.65;
@@ -637,7 +637,7 @@
 }
 
 .cl-pg-tl-item p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
   line-height: 1.6;
   margin: 0;
@@ -688,7 +688,7 @@
 
 .cl-pg-split__list li {
   align-items: flex-start;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.78);
   display: flex;
   font-size: 1.55rem;
   gap: 1.2rem;
@@ -747,7 +747,7 @@
 }
 
 .cl-pg-step p {
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 1.5rem;
   line-height: 1.6;
   margin: 0;
@@ -797,7 +797,7 @@
 }
 
 .cl-pg-mvv-card p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 1.5rem;
   line-height: 1.65;
   margin: 0;
@@ -821,7 +821,7 @@
 }
 
 .cl-pg-mid-cta p {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.7rem;
   line-height: 1.6;
   margin: 0 auto 0;
@@ -865,7 +865,7 @@
 }
 
 .cl-pg-diff p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.4rem;
   line-height: 1.55;
   margin: 0;

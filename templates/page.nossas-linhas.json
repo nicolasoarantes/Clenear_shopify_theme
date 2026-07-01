@@ -14,7 +14,7 @@
       "settings": {
         "hero_eyebrow": "Nossas Linhas",
         "hero_title": "Criamos e desenvolvemos <em>a sua linha</em>",
-        "hero_subtitle": "Formulação sob medida para cada segmento: domissanitária, automotiva, industrial e construção civil. Insumos selecionados, rigor técnico e suporte especializado do início ao fim.",
+        "hero_subtitle": "Linhas completas para cada segmento: domissanitária, lavanderia, automotiva, industrial, construção civil e insumos e revenda — com rigor técnico e suporte especializado do início ao fim.",
         "cta_wa_label": "Solicitar tabela de preços",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20receber%20a%20tabela%20de%20pre%C3%A7os.",
         "cta2_label": "Consultar condições de revenda",
@@ -30,7 +30,7 @@
             "image": "shopify://shop_images/detergentemultiusoclenear2.webp",
             "tag": "Domissanitária",
             "title": "Linha Domissanitária",
-            "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos. Inclui limpadores, detergentes, sabão líquido, cloro e aromatizantes Clenear e Stigma.",
+            "description": "Produtos para limpeza, higienização, desinfecção e perfumação de ambientes comerciais, residenciais, coletivos e institucionais.",
             "anchor_id": "domissanitaria"
           }
         },
@@ -40,7 +40,7 @@
             "image": "shopify://shop_images/amaciantefofura1.webp",
             "tag": "Lavanderia",
             "title": "Linha Lavanderia",
-            "description": "Amaciantes, detergentes e soluções para higienização têxtil, com foco em rendimento, padronização e suporte técnico para lavanderias.",
+            "description": "Soluções para higienização têxtil, lavagem, amaciamento e limpeza pesada em lavanderias comerciais, industriais e operações de grande volume.",
             "anchor_id": "lavanderia"
           }
         },
@@ -48,9 +48,9 @@
           "type": "linha",
           "settings": {
             "image": "shopify://shop_images/limpa.png",
-            "tag": "Automotivo",
+            "tag": "Automotiva",
             "title": "Linha Automotiva",
-            "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos. Shampoos, desengraxantes, limpa alumínio, ceras, vidros, interiores e acabamento.",
+            "description": "Lavagem, desengraxe, acabamento, conservação e limpeza interna de veículos, frotas, lava-rápidos e operações automotivas profissionais.",
             "anchor_id": "automotiva"
           }
         },
@@ -60,7 +60,7 @@
             "image": "shopify://shop_images/clean_max_2.png",
             "tag": "Industrial",
             "title": "Linha Industrial",
-            "description": "Soluções para limpeza pesada, manutenção, cozinhas industriais, transportadoras e processos produtivos. Produtos com suporte técnico.",
+            "description": "Limpeza pesada, manutenção de equipamentos, cozinhas industriais e processos produtivos, com suporte técnico — inclui atendimento a transportadoras.",
             "anchor_id": "industrial"
           }
         },
@@ -70,7 +70,7 @@
             "image": "shopify://shop_images/alisantesuperterra2.webp",
             "tag": "Construção Civil",
             "title": "Linha Construção Civil",
-            "description": "Aditivos e soluções técnicas para concreto, formas e proteção de superfícies. Superplastificantes, desmoldantes, redutores de água e impermeabilizantes.",
+            "description": "Aditivos e soluções técnicas para concreto, formas, acabamento e proteção de superfícies, com aplicação profissional e suporte técnico.",
             "anchor_id": "construcao-civil"
           }
         },
@@ -78,9 +78,9 @@
           "type": "linha",
           "settings": {
             "image": "shopify://shop_images/fragancia.png",
-            "tag": "Insumos",
-            "title": "Linha Insumos",
-            "description": "Insumos para formulação, produção e desenvolvimento de produtos de limpeza, com suporte técnico para empresas, formuladores e marcas parceiras.",
+            "tag": "Insumos e Revenda",
+            "title": "Linha Insumos e Revenda",
+            "description": "Insumos, embalagens, acessórios e produtos de revenda para apoiar a formulação, produção, manutenção e operação de empresas, formuladores e marcas parceiras.",
             "anchor_id": "insumos"
           }
         }
@@ -125,7 +125,7 @@
         "cta_wa_label": "Pedir orçamento",
         "cta_wa_url": "",
         "mid_cta_heading": "Qual linha se encaixa no seu segmento?",
-        "mid_cta_text": "Nossa equipe orienta a escolha certa: domissanitária, automotiva, industrial ou construção civil.",
+        "mid_cta_text": "Nossa equipe orienta a escolha certa: domissanitária, lavanderia, automotiva, industrial, construção civil ou insumos e revenda.",
         "mid_cta_wa_label": "Falar com especialista",
         "cta2_label": "Formulário de contato",
         "cta2_url": ""

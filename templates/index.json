@@ -56,7 +56,7 @@
         "cta_primary_url": "#solucoes",
         "cta_whatsapp_label": "Falar no WhatsApp",
         "cta_whatsapp_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20sobre%20solu%C3%A7%C3%B5es%20profissionais%20de%20limpeza%20e%20saneantes.",
-        "cta_secondary_label": "Quero revender",
+        "cta_secondary_label": "Quero ser revendedor",
         "cta_secondary_url": "#revenda",
         "wave_color": "#1A5C30"
       }
@@ -167,8 +167,8 @@
           "settings": {
             "emoji": "⚗️",
             "icon_key": "insumos",
-            "title": "Insumos",
-            "text": "Insumos para formulação, produção e desenvolvimento de produtos de limpeza.",
+            "title": "Insumos e Revenda",
+            "text": "Insumos, embalagens, acessórios e produtos de revenda para empresas e formuladores.",
             "link": "/pages/nossas-linhas#linha-insumos"
           }
         }
@@ -246,7 +246,7 @@
         "b5": {
           "type": "benefit",
           "settings": {
-            "text": "Alta concentração — rende mais"
+            "text": "Fórmula concentrada — rende mais"
           }
         }
       },
@@ -331,7 +331,7 @@
             "emoji": "⚗️",
             "number": "01",
             "title": "Desenvolvimento de fórmulas",
-            "text": "Formulado internamente com foco em eficiência, segurança e rendimento."
+            "text": "Formulações desenvolvidas internamente com foco em eficiência, segurança e rendimento."
           }
         },
         "q2": {
@@ -340,7 +340,7 @@
             "emoji": "🔬",
             "number": "02",
             "title": "Controle de qualidade",
-            "text": "Padrão constante em todas as etapas da produção."
+            "text": "Processos padronizados para manter consistência, desempenho e segurança em cada lote."
           }
         },
         "q3": {
@@ -349,7 +349,7 @@
             "emoji": "✅",
             "number": "03",
             "title": "Resultado comprovado",
-            "text": "Testado em aplicações reais: limpeza pesada, automotivo, lavanderia."
+            "text": "Produtos aplicados em rotinas reais de limpeza, manutenção, lavanderia, automotivo e uso profissional."
           }
         }
       },
@@ -434,7 +434,7 @@
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20a%20equipe.",
         "cta2_label": "Solicitar orçamento",
         "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
-        "cta3_label": "Quero revender",
+        "cta3_label": "Quero ser revendedor",
         "cta3_url": "#revenda",
         "phone": "(27) 3228-0140",
         "email": "",

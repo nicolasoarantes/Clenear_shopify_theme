@@ -62,10 +62,12 @@
         </div>
 
         {%- comment -%} — FORM COLUMN — {%- endcomment -%}
+        <span id="deixe-sua-opiniao" style="display:block;height:0;visibility:hidden;" aria-hidden="true"></span>
         <div class="cl-pg-contact-form-wrap cl-pg-fade cl-pg-fade--d2">
           <div class="cl-pg-contact-form-card">
-            <p class="cl-pg-eyebrow">Formulário de contato</p>
-            <h2 class="cl-pg-h3" style="margin-bottom:2.4rem;">{{ section.settings.form_heading | default: 'Envie sua mensagem' }}</h2>
+            <p class="cl-pg-eyebrow" id="cl-contact-eyebrow">Formulário de contato</p>
+            <h2 class="cl-pg-h3" id="cl-contact-heading" style="margin-bottom:0.8rem;">{{ section.settings.form_heading | default: 'Envie sua mensagem' }}</h2>
+            <p style="color:rgba(255,255,255,0.6);font-size:1.4rem;line-height:1.6;margin:0 0 2.4rem;">Sua experiência ajuda a Clenear a melhorar produtos, atendimento e soluções — use este formulário também para deixar sua opinião.</p>
 
             {%- form 'contact', id: 'cl-contact-form', class: 'cl-pg-form' -%}
               {%- if form.posted_successfully? -%}
@@ -111,8 +113,14 @@
                     <option value="Suporte técnico">Suporte técnico</option>
                     <option value="Desenvolvimento de fórmula">Desenvolvimento de fórmula</option>
                     <option value="Marca própria">Marca própria</option>
+                    <option value="Deixar minha opinião">Deixar minha opinião</option>
                     <option value="Outro assunto">Outro assunto</option>
                   </select>
+                </div>
+
+                <div class="cl-pg-form__field">
+                  <label for="cl-contact-line">Produto / linha relacionada</label>
+                  <input type="text" id="cl-contact-line" name="contact[line]" placeholder="Ex.: Domissanitária, Automotiva, Industrial...">
                 </div>
 
                 <div class="cl-pg-form__field">
@@ -120,7 +128,7 @@
                   <textarea id="cl-contact-message" name="contact[body]" rows="5" required placeholder="Descreva sua necessidade ou dúvida...">{{ form.body }}</textarea>
                 </div>
 
-                <button type="submit" class="cl-pg-btn cl-pg-btn--teal cl-pg-btn--full">
+                <button type="submit" id="cl-contact-submit" class="cl-pg-btn cl-pg-btn--teal cl-pg-btn--full">
                   {{ section.settings.submit_label | default: 'Enviar mensagem' }}
                 </button>
               {%- endif -%}
@@ -287,6 +295,17 @@
   } else {
     fades.forEach(function (el) { el.classList.add('is-visible'); });
   }
+
+  if (window.location.hash === '#deixe-sua-opiniao') {
+    var eyebrow = document.getElementById('cl-contact-eyebrow');
+    var heading = document.getElementById('cl-contact-heading');
+    var subject = document.getElementById('cl-contact-subject');
+    var submit = document.getElementById('cl-contact-submit');
+    if (eyebrow) eyebrow.textContent = 'Deixe sua opinião';
+    if (heading) heading.textContent = 'Deixe sua opinião';
+    if (subject) subject.value = 'Deixar minha opinião';
+    if (submit) submit.textContent = 'Enviar opinião';
+  }
 })();
 </script>
 
@@ -304,7 +323,7 @@
     { "type": "header", "content": "Dados de contato" },
     { "type": "text", "id": "phone", "label": "Telefone", "default": "(27) 3228-0140" },
     { "type": "text", "id": "email", "label": "E-mail" },
-    { "type": "text", "id": "hours", "label": "Horário", "default": "Segunda a sexta, 8h às 17h" },
+    { "type": "text", "id": "hours", "label": "Horário", "default": "Segunda a sexta, 07:15 às 17h" },
     { "type": "text", "id": "city", "label": "Localização", "default": "Serra — Espírito Santo" },
     { "type": "header", "content": "Formulário" },
     { "type": "text", "id": "form_heading", "label": "Título do form", "default": "Envie sua mensagem" },

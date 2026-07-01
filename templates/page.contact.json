@@ -18,7 +18,7 @@
         "wa_label": "Chamar no WhatsApp",
         "wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20contato%20da%20Clenear%20e%20gostaria%20de%20atendimento.",
         "phone": "(27) 3228-0140",
-        "hours": "Segunda a sexta, 8h às 17h",
+        "hours": "Segunda a sexta, 07:15 às 17h",
         "city": "Serra — Espírito Santo",
         "form_heading": "Envie sua mensagem",
         "submit_label": "Enviar mensagem"
@@ -29,7 +29,7 @@
       "settings": {
         "eyebrow": "Ou fale direto conosco",
         "heading": "Resposta rápida via WhatsApp",
-        "subtext": "Nossa equipe comercial e técnica está disponível de segunda a sexta, das 8h às 17h.",
+        "subtext": "Nossa equipe comercial e técnica está disponível de segunda a sexta, das 07:15 às 17h.",
         "cta_wa_label": "Chamar no WhatsApp",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20contato%20da%20Clenear%20e%20gostaria%20de%20atendimento.",
         "cta2_label": "Ver nossas linhas",
