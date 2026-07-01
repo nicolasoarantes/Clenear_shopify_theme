@@ -328,7 +328,6 @@
         "q1": {
           "type": "pillar",
           "settings": {
-            "image": "shopify://shop_images/lab3.png",
             "emoji": "⚗️",
             "number": "01",
             "title": "Desenvolvimento de fórmulas",
