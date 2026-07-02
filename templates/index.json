@@ -338,6 +338,7 @@
         "q2": {
           "type": "pillar",
           "settings": {
+            "image": "shopify://shop_images/controle_qualidade_monique.png",
             "emoji": "🔬",
             "number": "02",
             "title": "Controle de qualidade",
