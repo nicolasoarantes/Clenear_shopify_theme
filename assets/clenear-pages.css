@@ -39,6 +39,10 @@
   gap: 0.4rem;
 }
 
+.cl-final-cta__channel--location {
+  max-width: 34rem;
+}
+
 .cl-final-cta__channel span {
   color: rgba(255, 255, 255, 0.55);
   font-size: 1.1rem;
@@ -56,6 +60,22 @@
 
 .cl-final-cta__channel a:hover {
   color: #fff;
+}
+
+.cl-final-cta__map {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.2rem;
+  height: 26rem;
+  margin: 3.2rem auto 0;
+  max-width: 72rem;
+  overflow: hidden;
+}
+
+.cl-final-cta__map iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 /* --- Variables & Base ---------------------------------------- */
