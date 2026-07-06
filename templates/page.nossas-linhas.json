@@ -105,7 +105,7 @@
         "image_dom": "shopify://shop_images/detergentemultiusoclenear3.webp",
         "image_auto": "shopify://shop_images/limpa.png",
         "image_ind": "shopify://shop_images/clean_max_2.png",
-        "image_cc": "shopify://shop_images/AlisanteTerraSuperAC-marco-2020-186mmx140mm_1.png",
+        "image_cc": "shopify://shop_images/Alisante_super_terra2.png",
         "image_lav": "shopify://shop_images/amaciantefofura2.webp",
         "image_ins": "shopify://shop_images/Insumos.png"
       }
@@ -150,7 +150,9 @@
         "cta3_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Tenho%20uma%20dúvida%20técnica%20sobre%20produtos%20Clenear.",
         "phone": "(27) 3228-0140",
         "email": "",
-        "city": "Av. Cel. Manoel Nunes, 489 - Laranjeiras Velha, Serra - ES, 29162-155"
+        "city": "Av. Cel. Manoel Nunes, 489 - Laranjeiras Velha, Serra - ES, 29162-155",
+        "map_url": "",
+        "show_map": true
       }
     }
   },
