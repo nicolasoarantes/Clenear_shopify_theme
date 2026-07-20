@@ -133,7 +133,7 @@
         "proc_eyebrow": "Da ideia ao produto",
         "proc_title": "Um processo rigoroso de desenvolvimento",
         "proc_text": "",
-        "proc_image": "shopify://shop_images/lab4.png",
+        "proc_image": "shopify://shop_images/Clean_max_att.png",
         "parceria_eyebrow": "Desenvolvimento colaborativo",
         "parceria_title": "Formulamos sob medida para o seu negócio",
         "parceria_text": "",
@@ -157,7 +157,9 @@
         "cta3_url": "",
         "phone": "(27) 3228-0140",
         "email": "",
-        "city": "Av. Cel. Manoel Nunes, 489 - Laranjeiras Velha, Serra - ES, 29162-155"
+        "city": "Av. Cel. Manoel Nunes, 489 - Laranjeiras Velha, Serra - ES, 29162-155",
+        "map_url": "",
+        "show_map": true
       }
     }
   },
