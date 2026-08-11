@@ -1,13 +1,69 @@
 {
   "sections": {
     "main": {
-      "type": "main-list-collections",
+      "type": "clenear-storefront",
+      "blocks": {
+        "domissanitaria": {
+          "type": "line",
+          "settings": {
+            "collection_handle": "limpeza-domissanitaria",
+            "kicker": "Linha comercial",
+            "title": "Domissanitária",
+            "description": "Produtos de limpeza, higienização e manutenção de ambientes com cadastro real já publicado no Shopify.",
+            "subline_links": "Cloro e desinfecção|clenear-cloro-desinfeccao\nLimpadores perfumados|clenear-limpadores-perfumados\nLimpadores multiuso|clenear-limpadores-multiuso\nDetergentes|clenear-detergentes\nSabão líquido, em pó e barra|clenear-sabao-liquido-po-barra\nAromatizantes|clenear-aromatizantes"
+          }
+        },
+        "automotiva": {
+          "type": "line",
+          "settings": {
+            "collection_handle": "linha-automotiva",
+            "kicker": "Linha comercial",
+            "title": "Automotiva",
+            "description": "Soluções para limpeza, acabamento e manutenção automotiva com produtos reais publicados.",
+            "subline_links": "Detergentes automotivos|clenear-detergentes-automotivos\nCeras e acabamento|clenear-ceras-acabamento\nLimpa pneus e painel|clenear-limpa-pneus-painel\nDesengraxantes automotivos|clenear-desengraxantes-automotivos"
+          }
+        },
+        "lavanderia": {
+          "type": "line",
+          "settings": {
+            "collection_handle": "linha-lavanderia",
+            "kicker": "Linha comercial",
+            "title": "Lavanderia",
+            "description": "Produtos têxteis e de apoio à lavanderia para compra online conforme disponibilidade do catálogo.",
+            "subline_links": "Amaciantes|clenear-amaciantes\nSabão e lava roupas|clenear-sabao-lava-roupas\nLimpeza pesada têxtil|clenear-limpeza-pesada-textil"
+          }
+        },
+        "industrial": {
+          "type": "line",
+          "settings": {
+            "collection_handle": "linha-industrial",
+            "kicker": "Linha comercial",
+            "title": "Industrial",
+            "description": "Produtos técnicos e de limpeza pesada presentes nas collections comerciais atuais.",
+            "subline_links": "Limpeza pesada|clenear-limpeza-pesada-industrial\nDesengraxantes concentrados|clenear-desengraxantes-concentrados\nAditivos e alisantes|clenear-aditivos-alisantes"
+          }
+        }
+      },
+      "block_order": [
+        "domissanitaria",
+        "automotiva",
+        "lavanderia",
+        "industrial"
+      ],
       "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square",
+        "eyebrow": "Loja Clenear",
+        "heading": "Loja CLENEAR",
+        "lead": "Produtos profissionais da CLENEAR com compra online para apresentações elegíveis nesta primeira etapa.",
+        "lines_page_url": "/pages/nossas-linhas",
+        "lines_heading": "Linhas comerciais disponíveis",
+        "lines_text": "Escolha uma linha, acompanhe as sublinhas disponíveis e acesse os produtos publicados para compra online.",
+        "products_to_show": 4,
         "columns_desktop": 3,
-        "columns_mobile": "2"
+        "columns_mobile": "2",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "admin_heading": "Loja em evolução",
+        "admin_text": "Novas sublinhas serão liberadas conforme a disponibilidade dos produtos para venda online."
       }
     }
   },

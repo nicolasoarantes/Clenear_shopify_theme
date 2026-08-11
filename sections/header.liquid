@@ -110,6 +110,10 @@
   endfor
 
   assign institutional_mode = section.settings.enable_institutional_mode
+  assign commerce_entrypoints = true
+  if institutional_mode and section.settings.enable_storefront_entrypoints == false
+    assign commerce_entrypoints = false
+  endif
 -%}
 
 {% liquid
@@ -146,7 +150,7 @@
         render 'header-drawer'
       endif
 
-      if institutional_mode == false and section.settings.logo_position == 'top-center' or institutional_mode == false and section.settings.menu == blank
+      if commerce_entrypoints and section.settings.logo_position == 'top-center' or commerce_entrypoints and section.settings.menu == blank
         render 'header-search', input_id: 'Search-In-Modal-1'
       endif
     -%}
@@ -230,7 +234,7 @@
     {%- endif -%}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
-      {%- unless institutional_mode -%}
+      {%- if institutional_mode == false -%}
         <div class="desktop-localization-wrapper">
           {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
             <localization-form class="small-hide medium-hide" data-prevent-hide>
@@ -254,8 +258,10 @@
             </localization-form>
           {%- endif -%}
         </div>
+      {%- endif -%}
+      {%- if commerce_entrypoints -%}
         {% render 'header-search', input_id: 'Search-In-Modal' %}
-      {%- endunless -%}
+      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled and institutional_mode == false -%}
         <a
@@ -293,7 +299,7 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      {%- unless institutional_mode -%}
+      {%- if commerce_entrypoints -%}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
@@ -310,12 +316,12 @@
             </div>
           {%- endif -%}
         </a>
-      {%- endunless -%}
+      {%- endif -%}
     </div>
   </header>
 </{{ header_tag }}>
 
-{%- if settings.cart_type == 'notification' and institutional_mode == false -%}
+{%- if settings.cart_type == 'notification' and commerce_entrypoints -%}
   {%- render 'cart-notification',
     color_scheme: section.settings.color_scheme,
     desktop_menu_type: section.settings.menu_type_desktop
@@ -488,6 +494,13 @@
       "default": false,
       "label": "Modo institucional temporario",
       "info": "Oculta navegacao de e-commerce no header sem remover carrinho, checkout, produtos ou colecoes."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_storefront_entrypoints",
+      "default": true,
+      "label": "Mostrar Loja, busca e carrinho",
+      "info": "Mantem a navegacao institucional, mas libera os pontos de entrada comerciais da loja."
     },
     {
       "type": "select",

@@ -39,6 +39,7 @@
       "type": "header",
       "settings": {
         "enable_institutional_mode": true,
+        "enable_storefront_entrypoints": true,
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
