@@ -1,0 +1,6 @@
+{%- liquid
+  assign cl_whatsapp_phone = settings.clenear_whatsapp_phone | default: '552732280140'
+  assign cl_whatsapp_phone = cl_whatsapp_phone | remove: '(' | remove: ')' | remove: '-' | remove: ' ' | remove: '+'
+  assign cl_whatsapp_message = message | default: 'Ola! Vim pelo site da Clenear e gostaria de falar com a equipe comercial.'
+-%}
+https://api.whatsapp.com/send?phone={{ cl_whatsapp_phone }}&text={{ cl_whatsapp_message | url_encode }}

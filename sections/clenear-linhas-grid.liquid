@@ -11,7 +11,30 @@
     <div class="cl-pg-cards cl-pg-cards--linhas cl-pg-fade">
       {%- for block in section.blocks -%}
         {%- if block.type == 'linha' -%}
-          {%- assign wa_text = 'Olá! Vim pelo site da Clenear e gostaria de saber mais sobre a linha ' | append: block.settings.title | url_encode -%}
+          {%- liquid
+            assign store_handle = ''
+            case block.settings.anchor_id
+              when 'domissanitaria'
+                assign store_handle = 'limpeza-domissanitaria'
+              when 'lavanderia'
+                assign store_handle = 'linha-lavanderia'
+              when 'automotiva'
+                assign store_handle = 'linha-automotiva'
+              when 'industrial'
+                assign store_handle = 'linha-industrial'
+              when 'construcao-civil'
+                assign store_handle = 'linha-construcao-civil'
+              when 'insumos'
+                assign store_handle = 'linha-insumos-revenda'
+            endcase
+            assign store_collection = collections[store_handle]
+            capture wa_text
+              echo 'Olá! Vim pelo site da Clenear e gostaria de saber mais sobre a '
+              echo block.settings.title
+              echo '.'
+            endcapture
+          -%}
+
           <div class="cl-pg-card cl-pg-card--linha" {{ block.shopify_attributes }}>
             <div class="cl-pg-card__img">
               {%- if block.settings.image != blank -%}
@@ -27,12 +50,19 @@
             <h3 class="cl-pg-card__title">{{ block.settings.title }}</h3>
             <p class="cl-pg-card__text">{{ block.settings.description }}</p>
             <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;">
-              <a href="https://api.whatsapp.com/send?phone=552732280140&text={{ wa_text }}" class="cl-pg-card__link" target="_blank" rel="noopener" aria-label="Saiba mais sobre {{ block.settings.title }} via WhatsApp">
-                Saiba mais via WhatsApp <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              {%- if store_collection != blank and store_collection.all_products_count > 0 -%}
+                <a href="{{ store_collection.url }}" class="cl-pg-card__link cl-pg-card__link--store" aria-label="Ver produtos da linha {{ block.settings.title }} na loja">
+                  Ver na Loja
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              {%- endif -%}
+              <a href="{% render 'clenear-whatsapp-url', message: wa_text %}" class="cl-pg-card__link" target="_blank" rel="noopener" aria-label="Saiba mais sobre {{ block.settings.title }} via WhatsApp">
+                Saiba mais via WhatsApp
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
               {%- if block.settings.anchor_id != blank -%}
-                <a href="#linha-{{ block.settings.anchor_id }}" class="cl-pg-card__link cl-pg-card__link--outline" aria-label="Ver produtos da linha {{ block.settings.title }}">
-                  Ver produtos ↓
+                <a href="#linha-{{ block.settings.anchor_id }}" class="cl-pg-card__link cl-pg-card__link--outline" aria-label="Ver detalhes da linha {{ block.settings.title }}">
+                  Conhecer linha
                 </a>
               {%- endif -%}
             </div>
@@ -40,29 +70,30 @@
         {%- endif -%}
       {%- endfor -%}
     </div>
-    <!-- Bridge: connects grid to sublinhas section below -->
     <div class="cl-lg__bridge">
       <p class="cl-lg__bridge-text">Selecione uma linha acima para ir direto, ou role abaixo para explorar todas as sublinhas</p>
       <svg class="cl-lg__bridge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
     </div>
   </div>
-  <!-- Gradient foot: smooth transition to dark sublinhas section (#071d18) -->
   <div class="cl-lg__gradient-foot" aria-hidden="true"></div>
 </section>
 
 <style>
 .cl-pg-cards--linhas{grid-template-columns:repeat(3,1fr)}
 @media(max-width:1023px){.cl-pg-cards--linhas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.cl-pg-cards--linhas{grid-template-columns:1fr}}
 #linhas-grid .cl-pg-card__link{font-size:17px!important;font-weight:700;color:#1d6e5a}
 #linhas-grid .cl-pg-card__link svg{width:19px;height:19px}
+#linhas-grid .cl-pg-card__link--store{background:rgba(29,110,90,.1);border:1px solid rgba(29,110,90,.28);border-radius:6px;padding:10px 16px;text-decoration:none}
+#linhas-grid .cl-pg-card__link--store:hover{background:rgba(29,110,90,.16)}
 #linhas-grid .cl-pg-card__link--outline{color:#14503f;border:1px solid rgba(29,110,90,0.55);border-radius:6px;padding:10px 16px;font-size:17px!important;font-weight:700;text-decoration:none;display:inline-flex;align-items:center}
 #linhas-grid .cl-pg-card__link--outline:hover{background:rgba(29,110,90,0.08);color:#14503f}
-/* Bridge + gradient transition to sublinhas */
 .cl-lg{position:relative;padding-bottom:0!important}
 .cl-lg__bridge{text-align:center;padding:40px 0 36px;display:flex;flex-direction:column;align-items:center;gap:14px}
-#linhas-grid .cl-lg__bridge-text{font-size:18px!important;font-weight:700;color:rgba(255,255,255,0.92)!important;letter-spacing:.01em;margin:0;max-width:520px;line-height:1.5}
+#linhas-grid .cl-lg__bridge-text{font-size:18px!important;font-weight:700;color:rgba(255,255,255,0.92)!important;letter-spacing:0;margin:0;max-width:520px;line-height:1.5}
 #linhas-grid .cl-lg__bridge-arrow{width:32px;height:32px;color:rgba(255,255,255,0.6)!important;animation:cl-lg-bounce 2s ease-in-out infinite}
 @keyframes cl-lg-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@media(prefers-reduced-motion:reduce){#linhas-grid .cl-lg__bridge-arrow{animation:none}}
 .cl-lg__gradient-foot{height:80px;background:linear-gradient(to bottom,transparent,#071d18)}
 </style>
 
@@ -80,8 +111,8 @@
 {
   "name": "Grid de Linhas",
   "settings": [
-    { "type": "text",     "id": "grid_eyebrow",  "label": "Eyebrow",   "default": "Portfólio institucional" },
-    { "type": "text",     "id": "grid_title",    "label": "Título",    "default": "Linhas completas para cada segmento" },
+    { "type": "text", "id": "grid_eyebrow", "label": "Eyebrow", "default": "Portfólio institucional" },
+    { "type": "text", "id": "grid_title", "label": "Título", "default": "Linhas completas para cada segmento" },
     { "type": "textarea", "id": "grid_subtitle", "label": "Subtítulo", "default": "Produtos com qualidade, performance e suporte técnico para cada necessidade profissional." }
   ],
   "blocks": [
@@ -89,11 +120,11 @@
       "type": "linha",
       "name": "Linha de produto",
       "settings": [
-        { "type": "image_picker", "id": "image",     "label": "Imagem (4:3)" },
-        { "type": "text",         "id": "tag",       "label": "Tag / segmento",                          "default": "Linha profissional" },
-        { "type": "text",         "id": "title",     "label": "Nome da linha" },
-        { "type": "textarea",     "id": "description","label": "Descrição institucional" },
-        { "type": "text",         "id": "anchor_id", "label": "ID âncora (ex: domissanitaria)", "info": "Liga o card à seção de sublinhas via link #linha-{id}" }
+        { "type": "image_picker", "id": "image", "label": "Imagem (4:3)" },
+        { "type": "text", "id": "tag", "label": "Tag / segmento", "default": "Linha profissional" },
+        { "type": "text", "id": "title", "label": "Nome da linha" },
+        { "type": "textarea", "id": "description", "label": "Descrição institucional" },
+        { "type": "text", "id": "anchor_id", "label": "ID âncora (ex: domissanitaria)", "info": "Liga o card à seção de sublinhas via link #linha-{id}" }
       ]
     }
   ],
@@ -101,9 +132,9 @@
     {
       "name": "Grid de Linhas",
       "blocks": [
-        { "type": "linha", "settings": { "tag": "Domissanitária",   "title": "Linha Domissanitária",   "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos.", "anchor_id": "domissanitaria" } },
-        { "type": "linha", "settings": { "tag": "Automotivo",       "title": "Linha Automotiva",       "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos.", "anchor_id": "automotiva" } },
-        { "type": "linha", "settings": { "tag": "Industrial",       "title": "Linha Industrial",       "description": "Limpeza pesada, manutenção, lavanderias e cozinhas industriais.", "anchor_id": "industrial" } },
+        { "type": "linha", "settings": { "tag": "Domissanitária", "title": "Linha Domissanitária", "description": "Limpeza, higienização e perfumação para condomínios, comércios e ambientes coletivos.", "anchor_id": "domissanitaria" } },
+        { "type": "linha", "settings": { "tag": "Automotivo", "title": "Linha Automotiva", "description": "Lavagem, proteção e acabamento para lava-rápidos, frotas e profissionais automotivos.", "anchor_id": "automotiva" } },
+        { "type": "linha", "settings": { "tag": "Industrial", "title": "Linha Industrial", "description": "Limpeza pesada, manutenção, lavanderias e cozinhas industriais.", "anchor_id": "industrial" } },
         { "type": "linha", "settings": { "tag": "Construção Civil", "title": "Linha Construção Civil", "description": "Aditivos técnicos para concreto, formas e impermeabilização.", "anchor_id": "construcao-civil" } }
       ]
     }

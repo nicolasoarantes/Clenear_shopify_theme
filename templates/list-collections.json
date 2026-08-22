@@ -7,9 +7,12 @@
           "type": "line",
           "settings": {
             "collection_handle": "limpeza-domissanitaria",
+            "anchor_id": "domissanitaria",
+            "image": "shopify://shop_images/detergentemultiusoclenear3.webp",
+            "tone": "green",
             "kicker": "Linha comercial",
             "title": "Domissanitária",
-            "description": "Produtos de limpeza, higienização e manutenção de ambientes com cadastro real já publicado no Shopify.",
+            "description": "Produtos para limpeza, higienização e manutenção de ambientes, com compra online quando houver apresentações elegíveis.",
             "subline_links": "Cloro e desinfecção|clenear-cloro-desinfeccao\nLimpadores perfumados|clenear-limpadores-perfumados\nLimpadores multiuso|clenear-limpadores-multiuso\nDetergentes|clenear-detergentes\nSabão líquido, em pó e barra|clenear-sabao-liquido-po-barra\nAromatizantes|clenear-aromatizantes"
           }
         },
@@ -17,30 +20,65 @@
           "type": "line",
           "settings": {
             "collection_handle": "linha-automotiva",
+            "anchor_id": "automotiva",
+            "image": "shopify://shop_images/limpa.png",
+            "tone": "blue",
             "kicker": "Linha comercial",
             "title": "Automotiva",
-            "description": "Soluções para limpeza, acabamento e manutenção automotiva com produtos reais publicados.",
-            "subline_links": "Detergentes automotivos|clenear-detergentes-automotivos\nCeras e acabamento|clenear-ceras-acabamento\nLimpa pneus e painel|clenear-limpa-pneus-painel\nDesengraxantes automotivos|clenear-desengraxantes-automotivos"
+            "description": "Limpeza, desengraxe, acabamento e manutenção automotiva para rotinas profissionais.",
+            "subline_links": "Shampoos e detergentes automotivos|clenear-detergentes-automotivos\nDesengraxantes automotivos|clenear-desengraxantes-automotivos\nLimpa alumínio e desincrustantes|clenear-limpa-aluminio-desincrustantes\nAcabamento, brilho e proteção|clenear-acabamento-brilho-protecao\nVidros, interior e estofados|clenear-vidros-interior-estofados"
           }
         },
         "lavanderia": {
           "type": "line",
           "settings": {
             "collection_handle": "linha-lavanderia",
+            "anchor_id": "lavanderia",
+            "image": "shopify://shop_images/amaciantefofura2.webp",
+            "tone": "green",
             "kicker": "Linha comercial",
             "title": "Lavanderia",
-            "description": "Produtos têxteis e de apoio à lavanderia para compra online conforme disponibilidade do catálogo.",
-            "subline_links": "Amaciantes|clenear-amaciantes\nSabão e lava roupas|clenear-sabao-lava-roupas\nLimpeza pesada têxtil|clenear-limpeza-pesada-textil"
+            "description": "Produtos têxteis e de apoio à lavanderia, com organização preparada para compra online conforme disponibilidade.",
+            "subline_links": "Amaciantes|clenear-amaciantes\nSabão e lava roupas|clenear-sabao-lava-roupas\nLimpeza pesada têxtil|clenear-limpeza-pesada-textil\nApoio operacional para lavanderias|clenear-apoio-operacional-lavanderias"
           }
         },
         "industrial": {
           "type": "line",
           "settings": {
             "collection_handle": "linha-industrial",
+            "anchor_id": "industrial",
+            "image": "shopify://shop_images/clean_max_2.png",
+            "tone": "gray",
             "kicker": "Linha comercial",
             "title": "Industrial",
-            "description": "Produtos técnicos e de limpeza pesada presentes nas collections comerciais atuais.",
-            "subline_links": "Limpeza pesada|clenear-limpeza-pesada-industrial\nDesengraxantes concentrados|clenear-desengraxantes-concentrados\nAditivos e alisantes|clenear-aditivos-alisantes"
+            "description": "Produtos técnicos e de limpeza pesada para contextos profissionais e industriais.",
+            "subline_links": "Desengraxantes concentrados|clenear-desengraxantes-concentrados\nDesincrustantes ácidos|clenear-desincrustantes-acidos\nLimpadores alcalinos|clenear-limpadores-alcalinos\nSanitizantes|clenear-sanitizantes\nCozinhas industriais|clenear-cozinhas-industriais\nLimpeza pesada|clenear-limpeza-pesada-industrial"
+          }
+        },
+        "construcao_civil": {
+          "type": "line",
+          "settings": {
+            "collection_handle": "linha-construcao-civil",
+            "anchor_id": "construcao-civil",
+            "image": "shopify://shop_images/AlisanteTerraSuperAC-marco-2020-186mmx140mm_1.png",
+            "tone": "yellow",
+            "kicker": "Linha em organizacao",
+            "title": "Construção Civil",
+            "description": "Aditivos e soluções técnicas para concreto, formas, acabamento e proteção de superfícies.",
+            "subline_links": "Superplastificante|clenear-superplastificante\nDesmoldante|clenear-desmoldante\nRedutor de água|clenear-redutor-de-agua\nImpermeabilizantes|clenear-impermeabilizantes"
+          }
+        },
+        "insumos_revenda": {
+          "type": "line",
+          "settings": {
+            "collection_handle": "linha-insumos-revenda",
+            "anchor_id": "insumos",
+            "image": "shopify://shop_images/Insumos.png",
+            "tone": "gray",
+            "kicker": "Linha em organizacao",
+            "title": "Insumos e Revenda",
+            "description": "Insumos, embalagens, acessórios e produtos de revenda para apoiar formuladores, empresas e marcas parceiras.",
+            "subline_links": "Insumos químicos e componentes|clenear-insumos-quimicos-componentes\nEssências e fragrâncias para formulação|clenear-essencias-fragrancias\nEmbalagens e acessórios de produção|clenear-embalagens-acessorios\nRevenda e operação|clenear-revenda-operacao\nAbsorventes e mitigação ambiental|clenear-absorventes-mitigacao-ambiental"
           }
         }
       },
@@ -48,22 +86,25 @@
         "domissanitaria",
         "automotiva",
         "lavanderia",
-        "industrial"
+        "industrial",
+        "construcao_civil",
+        "insumos_revenda"
       ],
       "settings": {
         "eyebrow": "Loja Clenear",
         "heading": "Loja CLENEAR",
-        "lead": "Produtos profissionais da CLENEAR com compra online para apresentações elegíveis nesta primeira etapa.",
+        "lead": "Soluções profissionais para cada tipo de limpeza. Navegue pelas linhas comerciais, encontre produtos publicados e compre apresentações elegíveis nesta primeira etapa.",
         "lines_page_url": "/pages/nossas-linhas",
-        "lines_heading": "Linhas comerciais disponíveis",
-        "lines_text": "Escolha uma linha, acompanhe as sublinhas disponíveis e acesse os produtos publicados para compra online.",
+        "lines_kicker": "Linhas comerciais",
+        "lines_heading": "Escolha a linha ideal para sua rotina",
+        "lines_text": "Algumas linhas já estão prontas para compra online. Outras ficam mapeadas para receber produtos, collections e metafields conforme a evolução do catálogo.",
         "products_to_show": 4,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "columns_mobile": "2",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "admin_heading": "Loja em evolução",
-        "admin_text": "Novas sublinhas serão liberadas conforme a disponibilidade dos produtos para venda online."
+        "admin_text": "Novas sublinhas serão liberadas conforme a disponibilidade dos produtos para venda online, organização de collections e validação dos dados comerciais."
       }
     }
   },

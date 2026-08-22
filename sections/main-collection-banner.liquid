@@ -1,55 +1,122 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
-    }
-  }
-{%- endstyle -%}
+{%- liquid
+  assign collection_tone = 'green'
+  if collection.handle contains 'automotiva' or collection.handle contains 'aluminio' or collection.handle contains 'vidro'
+    assign collection_tone = 'blue'
+  elsif collection.handle contains 'construcao' or collection.handle contains 'superplastificante' or collection.handle contains 'desmoldante'
+    assign collection_tone = 'yellow'
+  elsif collection.handle contains 'industrial' or collection.handle contains 'insumos'
+    assign collection_tone = 'gray'
+  endif
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <nav class="cl-store-breadcrumb" aria-label="Navegação da loja">
-        <a href="{{ routes.collections_url }}">Loja</a>
-        <span aria-hidden="true">/</span>
-        <span>{{ collection.title | escape }}</span>
-      </nav>
+  assign metafield_sublines = collection.metafields.custom.sublinhas.value
+  if metafield_sublines == blank
+    assign metafield_sublines = collection.metafields.custom.subcollections.value
+  endif
+  if metafield_sublines == blank
+    assign metafield_sublines = collection.metafields.custom.subcollections_da_linha.value
+  endif
+-%}
 
-      <h1 class="collection-hero__title">
+<div class="cl-collection-hero cl-collection-hero--{{ collection_tone }}{% if section.settings.show_collection_image and collection.image %} cl-collection-hero--with-image{% endif %}">
+  {%- if section.settings.show_collection_image and collection.image -%}
+    <div class="cl-collection-hero__bg" aria-hidden="true">
+      <img
+        srcset="
+          {%- if collection.image.width >= 375 -%}{{ collection.image | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if collection.image.width >= 1100 -%}{{ collection.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {{ collection.image | image_url }} {{ collection.image.width }}w
+        "
+        src="{{ collection.image | image_url: width: 1100 }}"
+        sizes="100vw"
+        alt=""
+        width="{{ collection.image.width }}"
+        height="{{ collection.image.height }}"
+      >
+    </div>
+  {%- endif -%}
+
+  <div class="cl-collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <nav class="cl-store-breadcrumb cl-store-breadcrumb--on-dark" aria-label="Navegação da loja">
+      <a href="{{ routes.collections_url }}">Loja</a>
+      <span aria-hidden="true">/</span>
+      <span>{{ collection.title | escape }}</span>
+    </nav>
+
+    <div class="cl-collection-hero__content">
+      <p class="cl-store__eyebrow">Linha CLENEAR</p>
+      <h1 class="collection-hero__title cl-collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
 
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+      {%- if section.settings.show_collection_description and collection.description != blank -%}
+        <div class="collection-hero__description rte cl-collection-hero__description">{{ collection.description }}</div>
+      {%- else -%}
+        <p class="cl-collection-hero__description">Produtos e sublinhas comerciais organizados para compra online conforme disponibilidade do catálogo.</p>
       {%- endif -%}
     </div>
-
-    {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
-        <img
-          srcset="
-            {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
-            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ collection.image | image_url }} {{ collection.image.width }}w
-          "
-          src="{{ collection.image | image_url: width: 750 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-          alt="{{ collection.image.alt | escape }}"
-          width="{{ collection.image.width }}"
-          height="{{ collection.image.height }}"
-        >
-      </div>
-    {%- endif -%}
   </div>
 </div>
+
+{%- capture fallback_subline_markup -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'subline_map' and block.settings.parent_handle == collection.handle and block.settings.subline_links != blank -%}
+      {%- assign rows = block.settings.subline_links | newline_to_br | split: '<br />' -%}
+      {%- for row in rows -%}
+        {%- liquid
+          assign clean_row = row | strip
+          assign parts = clean_row | split: '|'
+          assign subline_label = parts[0] | strip
+          assign subline_handle = parts[1] | strip
+          assign subline_collection = collections[subline_handle]
+        -%}
+        {%- if subline_label != blank -%}
+          {%- if subline_collection != blank and subline_collection.all_products_count > 0 -%}
+            <a class="cl-collection-subline" href="{{ subline_collection.url }}">
+              <span>{{ subline_label | escape }}</span>
+              <small>{{ subline_collection.all_products_count }} produtos</small>
+            </a>
+          {%- else -%}
+            <span class="cl-collection-subline cl-collection-subline--pending">
+              <span>{{ subline_label | escape }}</span>
+              <small>Em preparação</small>
+            </span>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign fallback_subline_markup = fallback_subline_markup | strip -%}
+
+{%- if metafield_sublines != blank or fallback_subline_markup != blank -%}
+  <section class="cl-collection-explore page-width" aria-labelledby="CollectionExplore-{{ section.id }}">
+    <div class="cl-collection-explore__head">
+      <p class="cl-store__eyebrow">Explore esta linha</p>
+      <h2 id="CollectionExplore-{{ section.id }}">Sublinhas e categorias</h2>
+    </div>
+
+    <div class="cl-collection-explore__grid">
+      {%- if metafield_sublines != blank -%}
+        {%- for subline_collection in metafield_sublines -%}
+          {%- if subline_collection != blank -%}
+            <a class="cl-collection-subline" href="{{ subline_collection.url }}">
+              <span>{{ subline_collection.title | escape }}</span>
+              <small>{{ subline_collection.all_products_count }} produtos</small>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {{ fallback_subline_markup }}
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
 
 {% schema %}
 {
@@ -69,7 +136,7 @@
     {
       "type": "checkbox",
       "id": "show_collection_image",
-      "default": false,
+      "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_image.label"
     },
     {
@@ -77,6 +144,25 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subline_map",
+      "name": "Mapa de sublinhas",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent_handle",
+          "label": "Handle da collection principal"
+        },
+        {
+          "type": "textarea",
+          "id": "subline_links",
+          "label": "Sublinhas (Nome|handle, uma por linha)",
+          "info": "Fallback até existir metafield de referências de collections na collection principal."
+        }
+      ]
     }
   ]
 }

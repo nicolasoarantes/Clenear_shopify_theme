@@ -2,6 +2,58 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "blocks": {
+        "domissanitaria": {
+          "type": "subline_map",
+          "settings": {
+            "parent_handle": "limpeza-domissanitaria",
+            "subline_links": "Cloro e desinfecção|clenear-cloro-desinfeccao\nLimpadores perfumados|clenear-limpadores-perfumados\nLimpadores multiuso|clenear-limpadores-multiuso\nDetergentes|clenear-detergentes\nSabão líquido, em pó e barra|clenear-sabao-liquido-po-barra\nAromatizantes|clenear-aromatizantes"
+          }
+        },
+        "automotiva": {
+          "type": "subline_map",
+          "settings": {
+            "parent_handle": "linha-automotiva",
+            "subline_links": "Shampoos e detergentes automotivos|clenear-detergentes-automotivos\nDesengraxantes automotivos|clenear-desengraxantes-automotivos\nLimpa alumínio e desincrustantes|clenear-limpa-aluminio-desincrustantes\nAcabamento, brilho e proteção|clenear-acabamento-brilho-protecao\nVidros, interior e estofados|clenear-vidros-interior-estofados"
+          }
+        },
+        "lavanderia": {
+          "type": "subline_map",
+          "settings": {
+            "parent_handle": "linha-lavanderia",
+            "subline_links": "Amaciantes|clenear-amaciantes\nSabão e lava roupas|clenear-sabao-lava-roupas\nLimpeza pesada têxtil|clenear-limpeza-pesada-textil\nApoio operacional para lavanderias|clenear-apoio-operacional-lavanderias"
+          }
+        },
+        "industrial": {
+          "type": "subline_map",
+          "settings": {
+            "parent_handle": "linha-industrial",
+            "subline_links": "Desengraxantes concentrados|clenear-desengraxantes-concentrados\nDesincrustantes ácidos|clenear-desincrustantes-acidos\nLimpadores alcalinos|clenear-limpadores-alcalinos\nSanitizantes|clenear-sanitizantes\nCozinhas industriais|clenear-cozinhas-industriais\nLimpeza pesada|clenear-limpeza-pesada-industrial"
+          }
+        },
+        "construcao": {
+          "type": "subline_map",
+          "settings": {
+            "parent_handle": "linha-construcao-civil",
+            "subline_links": "Superplastificante|clenear-superplastificante\nDesmoldante|clenear-desmoldante\nRedutor de água|clenear-redutor-de-agua\nImpermeabilizantes|clenear-impermeabilizantes"
+          }
+        },
+        "insumos": {
+          "type": "subline_map",
+          "settings": {
+            "parent_handle": "linha-insumos-revenda",
+            "subline_links": "Insumos químicos e componentes|clenear-insumos-quimicos-componentes\nEssências e fragrâncias para formulação|clenear-essencias-fragrancias\nEmbalagens e acessórios de produção|clenear-embalagens-acessorios\nRevenda e operação|clenear-revenda-operacao\nAbsorventes e mitigação ambiental|clenear-absorventes-mitigacao-ambiental"
+          }
+        }
+      },
+      "block_order": [
+        "domissanitaria",
+        "automotiva",
+        "lavanderia",
+        "industrial",
+        "construcao",
+        "insumos"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
@@ -16,7 +68,7 @@
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
@@ -24,8 +76,8 @@
         "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 32,
+        "padding_bottom": 56
       }
     }
   },

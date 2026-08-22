@@ -1451,5 +1451,17 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Clenear",
+    "settings": [
+      {
+        "type": "text",
+        "id": "clenear_whatsapp_phone",
+        "label": "WhatsApp comercial",
+        "default": "552732280140",
+        "info": "Use somente numeros, com DDI e DDD. Exemplo: 552732280140."
+      }
+    ]
   }
 ]

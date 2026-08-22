@@ -1,6 +1,10 @@
 {{ 'clenear-pages.css' | asset_url | stylesheet_tag }}
 
-{%- assign wa_base = 'https://api.whatsapp.com/send?phone=552732280140&text=' -%}
+{%- liquid
+  assign wa_phone = settings.clenear_whatsapp_phone | default: '552732280140'
+  assign wa_phone = wa_phone | remove: '(' | remove: ')' | remove: '-' | remove: ' ' | remove: '+'
+  assign wa_base = 'https://api.whatsapp.com/send?phone=' | append: wa_phone | append: '&text='
+-%}
 
 <!-- Anchor bridge — cards section "Ver linha ↓" links point here -->
 <span id="linha-domissanitaria"  style="display:block;height:0;visibility:hidden;" aria-hidden="true"></span>
@@ -71,7 +75,7 @@
         {%- if section.settings.image_dom != blank -%}
           {{ section.settings.image_dom | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,700,800', sizes: '(min-width:900px) 40vw, 90vw', alt: 'Linha Domissanitária' }}
         {%- else -%}
-          <img src="{{ 'detergentemultiusoclenear2.webp' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Domissanitária" loading="lazy">
+          <img src="{{ 'detergentemultiusoclenear2.webp' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Domissanitária" width="800" height="800" loading="lazy">
         {%- endif -%}
       </div>
       <div class="cl-sl__line-info">
@@ -153,7 +157,7 @@
         {%- if section.settings.image_auto != blank -%}
           {{ section.settings.image_auto | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,700,800', sizes: '(min-width:900px) 40vw, 90vw', alt: 'Linha Automotiva' }}
         {%- else -%}
-          <img src="{{ 'limpa.png' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Automotiva" loading="lazy">
+          <img src="{{ 'limpa.png' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Automotiva" width="800" height="800" loading="lazy">
         {%- endif -%}
       </div>
       <div class="cl-sl__line-info">
@@ -197,7 +201,7 @@
         {%- if section.settings.image_ind != blank -%}
           {{ section.settings.image_ind | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,700,800', sizes: '(min-width:900px) 40vw, 90vw', alt: 'Linha Industrial' }}
         {%- else -%}
-          <img src="{{ 'cleanmax.webp' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Industrial" loading="lazy">
+          <img src="{{ 'cleanmax.webp' | file_img_url: '800x800', crop: 'center' }}" alt="Linha Industrial" width="800" height="800" loading="lazy">
         {%- endif -%}
       </div>
       <div class="cl-sl__line-info">
