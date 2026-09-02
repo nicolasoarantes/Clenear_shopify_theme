@@ -31,8 +31,8 @@
                class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
               {{ section.settings.cta_wa_label | default: 'Falar com o Setor Técnico' }}
             </a>
-            <a href="{{ section.settings.cta2_url | default: '/pages/nossas-linhas' }}" class="cl-pg-btn cl-pg-btn--outline">
-              {{ section.settings.cta2_label | default: 'Conheça Nossas Linhas' }}
+            <a href="{{ section.settings.cta2_url | default: routes.collections_url }}" class="cl-pg-btn cl-pg-btn--outline">
+              {{ section.settings.cta2_label | default: 'Ver catalogo online' }}
             </a>
           </div>
         </div>
@@ -204,8 +204,8 @@
              class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">
             {{ section.settings.cta_wa_label | default: 'Falar com o Setor Técnico' }}
           </a>
-          <a href="{{ section.settings.cta2_url | default: '/pages/nossas-linhas' }}" class="cl-pg-btn cl-pg-btn--outline">
-            {{ section.settings.cta2_label | default: 'Conheça Nossas Linhas' }}
+          <a href="{{ section.settings.cta2_url | default: routes.collections_url }}" class="cl-pg-btn cl-pg-btn--outline">
+            {{ section.settings.cta2_label | default: 'Ver catalogo online' }}
           </a>
         </div>
       </div>
@@ -227,7 +227,7 @@
     { "type": "textarea", "id": "hero_subtitle", "label": "Subtítulo" },
     { "type": "text", "id": "cta_wa_label", "label": "CTA WhatsApp", "default": "Falar com o Setor Técnico" },
     { "type": "url", "id": "cta_wa_url", "label": "Link WhatsApp" },
-    { "type": "text", "id": "cta2_label", "label": "CTA secundário", "default": "Conheça Nossas Linhas" },
+    { "type": "text", "id": "cta2_label", "label": "CTA secundário", "default": "Ver catalogo online" },
     { "type": "url", "id": "cta2_url", "label": "Link CTA secundário" },
     { "type": "header", "content": "Seção: Pilares" },
     { "type": "text", "id": "pilares_eyebrow", "label": "Eyebrow", "default": "Nossos pilares" },

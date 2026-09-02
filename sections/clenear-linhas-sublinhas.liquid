@@ -69,7 +69,7 @@
     </button>
   </div>
 
-  <div class="cl-sl__panel" id="panel-domissanitaria" data-panel="domissanitaria" role="tabpanel">
+  <div class="cl-sl__panel" id="panel-domissanitaria" data-panel="domissanitaria" data-store-url="{{ routes.collections_url }}/limpeza-domissanitaria" role="tabpanel">
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img">
         {%- if section.settings.image_dom != blank -%}
@@ -83,7 +83,10 @@
         <h3 class="cl-sl__line-h3">Domissanitária</h3>
         <p class="cl-sl__line-desc">Produtos para limpeza, higienização, desinfecção e perfumação de ambientes comerciais, residenciais, coletivos e institucionais.</p>
         {%- capture m -%}Olá! Vim pela página de Linhas da Clenear e tenho interesse na Linha Domissanitária. Pode me enviar mais informações?{%- endcapture -%}
-        <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
+        <div class="cl-sl__line-actions">
+          <a class="cl-sl__line-store" href="{{ routes.collections_url }}/limpeza-domissanitaria">Comprar esta linha</a>
+          <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar via WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
@@ -113,7 +116,7 @@
     </div>
   </div>
 
-  <div class="cl-sl__panel" id="panel-lavanderia" data-panel="lavanderia" role="tabpanel" hidden>
+  <div class="cl-sl__panel" id="panel-lavanderia" data-panel="lavanderia" data-store-url="{{ routes.collections_url }}/linha-lavanderia" role="tabpanel" hidden>
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img cl-sl__line-img--ph">
         {%- if section.settings.image_lav != blank -%}
@@ -127,7 +130,10 @@
         <h3 class="cl-sl__line-h3">Lavanderia</h3>
         <p class="cl-sl__line-desc">Soluções para higienização têxtil, lavagem, amaciamento e limpeza pesada em lavanderias comerciais, industriais e operações de grande volume.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Lavanderia. Pode me enviar mais informações?{%- endcapture -%}
-        <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
+        <div class="cl-sl__line-actions">
+          <a class="cl-sl__line-store" href="{{ routes.collections_url }}/linha-lavanderia">Comprar esta linha</a>
+          <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar via WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
@@ -151,7 +157,7 @@
     </div>
   </div>
 
-  <div class="cl-sl__panel" id="panel-automotiva" data-panel="automotiva" role="tabpanel" hidden>
+  <div class="cl-sl__panel" id="panel-automotiva" data-panel="automotiva" data-store-url="{{ routes.collections_url }}/linha-automotiva" role="tabpanel" hidden>
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img">
         {%- if section.settings.image_auto != blank -%}
@@ -165,7 +171,10 @@
         <h3 class="cl-sl__line-h3">Automotiva</h3>
         <p class="cl-sl__line-desc">Linha para lavagem, desengraxe, acabamento, conservação e limpeza interna de veículos, frotas, lava-rápidos e operações automotivas profissionais.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Automotiva. Pode me enviar mais informações?{%- endcapture -%}
-        <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
+        <div class="cl-sl__line-actions">
+          <a class="cl-sl__line-store" href="{{ routes.collections_url }}/linha-automotiva">Comprar esta linha</a>
+          <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar via WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
@@ -195,7 +204,7 @@
     </div>
   </div>
 
-  <div class="cl-sl__panel" id="panel-industrial" data-panel="industrial" role="tabpanel" hidden>
+  <div class="cl-sl__panel" id="panel-industrial" data-panel="industrial" data-store-url="{{ routes.collections_url }}/linha-industrial" role="tabpanel" hidden>
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img">
         {%- if section.settings.image_ind != blank -%}
@@ -209,7 +218,10 @@
         <h3 class="cl-sl__line-h3">Industrial</h3>
         <p class="cl-sl__line-desc">Soluções para limpeza pesada, manutenção de equipamentos, cozinhas industriais e processos produtivos. Produtos de alta performance para remoção de graxas, óleos, incrustações e sujeiras de difícil remoção, com suporte técnico para aplicação profissional — incluindo o segmento de transportadoras.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Industrial. Pode me enviar mais informações?{%- endcapture -%}
-        <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
+        <div class="cl-sl__line-actions">
+          <a class="cl-sl__line-store" href="{{ routes.collections_url }}/linha-industrial">Comprar esta linha</a>
+          <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar via WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
@@ -239,7 +251,7 @@
     </div>
   </div>
 
-  <div class="cl-sl__panel" id="panel-construcao-civil" data-panel="construcao-civil" role="tabpanel" hidden>
+  <div class="cl-sl__panel" id="panel-construcao-civil" data-panel="construcao-civil" data-store-url="{{ routes.collections_url }}/linha-construcao-civil" role="tabpanel" hidden>
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img cl-sl__line-img--ph">
         {%- if section.settings.image_cc != blank -%}
@@ -253,7 +265,10 @@
         <h3 class="cl-sl__line-h3">Construção Civil</h3>
         <p class="cl-sl__line-desc">Aditivos e soluções técnicas para concreto, formas, acabamento e proteção de superfícies, com aplicação profissional e suporte técnico.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Construção Civil. Pode me enviar mais informações?{%- endcapture -%}
-        <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
+        <div class="cl-sl__line-actions">
+          <a class="cl-sl__line-store" href="{{ routes.collections_url }}/linha-construcao-civil">Comprar esta linha</a>
+          <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar via WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
@@ -277,7 +292,7 @@
     </div>
   </div>
 
-  <div class="cl-sl__panel" id="panel-insumos" data-panel="insumos" role="tabpanel" hidden>
+  <div class="cl-sl__panel" id="panel-insumos" data-panel="insumos" data-store-url="{{ routes.collections_url }}/linha-insumos-revenda" role="tabpanel" hidden>
     <div class="cl-sl__line-header">
       <div class="cl-sl__line-img cl-sl__line-img--ph">
         {%- if section.settings.image_ins != blank -%}
@@ -291,7 +306,10 @@
         <h3 class="cl-sl__line-h3">Insumos e Revenda</h3>
         <p class="cl-sl__line-desc">Insumos, componentes, embalagens, acessórios e produtos de revenda para apoiar a formulação, produção, manutenção e operação de empresas, formuladores e marcas parceiras.</p>
         {%- capture m -%}Olá! Vim pela página da Clenear e tenho interesse na Linha Insumos e Revenda. Pode me enviar mais informações?{%- endcapture -%}
-        <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar sobre essa linha</a>
+        <div class="cl-sl__line-actions">
+          <a class="cl-sl__line-store" href="{{ routes.collections_url }}/linha-insumos-revenda">Comprar esta linha</a>
+          <a class="cl-sl__line-wa" href="{{ wa_base }}{{ m | url_encode }}" target="_blank" rel="noopener">Falar via WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="cl-sl__sub-label">Sublinhas <span>— selecione para ver detalhes</span></div>
@@ -367,8 +385,12 @@
 .cl-sl__line-h3{font-size:clamp(36px,4.5vw,56px);font-weight:900;letter-spacing:-.03em;line-height:1.02;margin:10px 0 16px;color:#fff}
 .cl-sl__line-desc{color:rgba(255,255,255,.75);font-size:16px;line-height:1.65;margin:0 0 24px}
 .cl-sl__line-desc strong{color:#ffc832}
-.cl-sl__line-wa{display:inline-flex;align-items:center;gap:8px;background:#1d6e5a;color:#fff;text-decoration:none;font-size:15px;font-weight:700;padding:13px 22px;border-radius:9px;transition:background 160ms,transform 160ms}
-.cl-sl__line-wa:hover{background:#24917a;color:#fff;transform:translateY(-2px)}
+.cl-sl__line-actions{display:flex;flex-wrap:wrap;gap:10px}
+.cl-sl__line-store,.cl-sl__line-wa{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:15px;font-weight:800;padding:13px 22px;border-radius:9px;transition:background 160ms,border-color 160ms,color 160ms,transform 160ms}
+.cl-sl__line-store{background:#fff;color:#071d18;border:1px solid rgba(255,255,255,.9)}
+.cl-sl__line-store:hover{background:#4dd1b0;border-color:#4dd1b0;color:#071d18;transform:translateY(-2px)}
+.cl-sl__line-wa{background:rgba(37,211,102,.13);border:1px solid rgba(37,211,102,.32);color:#25d366}
+.cl-sl__line-wa:hover{background:rgba(37,211,102,.22);border-color:rgba(37,211,102,.52);color:#25d366;transform:translateY(-2px)}
 .cl-sl__sub-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 14px}
 .cl-sl__sub-label span{font-weight:500;letter-spacing:0;text-transform:none;opacity:.8}
 .cl-sl__md{display:grid;grid-template-columns:300px 1fr;border:1px solid rgba(77,209,176,.12);border-radius:16px;overflow:hidden;min-height:340px}
@@ -391,11 +413,15 @@
 .cl-sl__md-products-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:0 0 10px}
 .cl-sl__md-products{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-wrap:wrap;gap:8px}
 .cl-sl__md-products li{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.82);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 12px}
-.cl-sl__md-wa{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,.14);color:#25d366;border:1px solid rgba(37,211,102,.3);text-decoration:none;font-size:14px;font-weight:700;padding:11px 18px;border-radius:8px;align-self:flex-start;transition:background 160ms,border-color 160ms}
+.cl-sl__md-store,.cl-sl__md-wa{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:800;padding:11px 18px;border-radius:8px;align-self:flex-start;transition:background 160ms,border-color 160ms,color 160ms,transform 160ms}
+.cl-sl__md-store{background:#fff;color:#071d18;border:1px solid rgba(255,255,255,.9);margin-right:8px;margin-bottom:8px}
+.cl-sl__md-store:hover{background:#4dd1b0;border-color:#4dd1b0;color:#071d18;transform:translateY(-1px)}
+.cl-sl__md-wa{background:rgba(37,211,102,.14);color:#25d366;border:1px solid rgba(37,211,102,.3)}
 .cl-sl__md-wa::before{content:'💬';font-size:14px}
 .cl-sl__md-wa:hover{background:rgba(37,211,102,.24);border-color:rgba(37,211,102,.5);color:#25d366}
 @media(max-width:1000px){.cl-sl__line-header{grid-template-columns:1fr}.cl-sl__line-img{height:220px}.cl-sl__line-info{padding:24px;padding-top:0}}
 @media(max-width:760px){.cl-sl__md{grid-template-columns:1fr;min-height:unset}.cl-sl__md-list{flex-direction:row;flex-wrap:wrap;border-right:none;border-bottom:1px solid rgba(77,209,176,.1);max-height:unset;padding:12px}.cl-sl__md-item{flex:1;min-width:calc(50% - 4px);font-size:13px;padding:10px 12px}.cl-sl__md-arr{display:none}.cl-sl__md-detail{padding:20px}.cl-sl__tab{padding:10px 16px;font-size:14px}}
+@media(max-width:520px){.cl-sl__line-actions{flex-direction:column}.cl-sl__line-store,.cl-sl__line-wa{width:100%}}
 @media(max-width:480px){.cl-sl__md-item{min-width:100%}}
 </style>
 
@@ -428,7 +454,20 @@
       });
     });
   }
-  panels.forEach(function(p){initMD(p);});
+  panels.forEach(function(p){
+    initMD(p);
+    var storeUrl=p.dataset.storeUrl;
+    if(storeUrl){
+      p.querySelectorAll('.cl-sl__md-wa').forEach(function(wa){
+        if(wa.parentNode.querySelector('.cl-sl__md-store'))return;
+        var store=document.createElement('a');
+        store.className='cl-sl__md-store';
+        store.href=storeUrl;
+        store.textContent='Comprar na loja virtual';
+        wa.parentNode.insertBefore(store,wa);
+      });
+    }
+  });
   function handleHash(){
     var h=window.location.hash;
     if(!h)return;

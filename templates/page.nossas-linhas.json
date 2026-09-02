@@ -17,8 +17,8 @@
         "hero_subtitle": "Linhas completas para cada segmento: domissanitária, lavanderia, automotiva, industrial, construção civil e insumos e revenda — com rigor técnico e suporte especializado do início ao fim.",
         "cta_wa_label": "Solicitar tabela de preços",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20receber%20a%20tabela%20de%20pre%C3%A7os.",
-        "cta2_label": "Consultar condições de revenda",
-        "cta2_url": "/pages/revenda"
+        "cta2_label": "Ver loja virtual",
+        "cta2_url": "/collections"
       }
     },
     "linhas_grid": {
@@ -94,9 +94,9 @@
         "l6"
       ],
       "settings": {
-        "grid_eyebrow": "Portfólio institucional",
+        "grid_eyebrow": "Portfolio comercial",
         "grid_title": "Linhas completas para cada segmento",
-        "grid_subtitle": "Produtos com qualidade, performance e suporte técnico para cada necessidade profissional."
+        "grid_subtitle": "Escolha uma linha e siga direto para os produtos disponiveis na loja virtual."
       }
     },
     "linhas_sublinhas": {
@@ -127,8 +127,8 @@
         "mid_cta_heading": "Qual linha se encaixa no seu segmento?",
         "mid_cta_text": "Nossa equipe orienta a escolha certa: domissanitária, lavanderia, automotiva, industrial, construção civil ou insumos e revenda.",
         "mid_cta_wa_label": "Falar com especialista",
-        "cta2_label": "Formulário de contato",
-        "cta2_url": "",
+        "cta2_label": "Ver catalogo online",
+        "cta2_url": "/collections",
         "show_dev_cta": true,
         "dev_cta_heading": "Desenvolvemos soluções para a sua operação",
         "dev_cta_text": "A Clenear desenvolve fórmulas, produtos e linhas com foco em desempenho, segurança, rendimento e aplicação profissional.",
@@ -144,8 +144,8 @@
         "subtext": "Portfólio completo, suporte técnico e condições especiais para empresas e revendedores.",
         "cta_wa_label": "Solicitar orçamento de produtos",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20linhas%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
-        "cta2_label": "Quero ser revendedor",
-        "cta2_url": "/pages/revenda",
+        "cta2_label": "Ver loja virtual",
+        "cta2_url": "/collections",
         "cta3_label": "Dúvida técnica",
         "cta3_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Tenho%20uma%20dúvida%20técnica%20sobre%20produtos%20Clenear.",
         "phone": "(27) 3228-0140",
