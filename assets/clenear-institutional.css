@@ -33,10 +33,10 @@ html {
 
 .clenear-institutional-menu .header__menu-item {
   color: #1d2b2a;
-  font-size: 1.45rem;
-  font-weight: 700;
+  font-size: 1.62rem;
+  font-weight: 800;
   letter-spacing: 0;
-  padding: 1.2rem 1.3rem;
+  padding: 1.35rem 1.45rem;
   text-decoration: none;
 }
 
@@ -58,6 +58,7 @@ html {
 }
 
 .clenear-institutional-menu-drawer .menu-drawer__menu-item {
+  font-size: 1.65rem;
   font-weight: 700;
   letter-spacing: 0;
 }

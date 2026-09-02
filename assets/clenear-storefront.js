@@ -114,9 +114,58 @@
     }
   }
 
+  var facetTranslations = {
+    Availability: 'Disponibilidade',
+    Price: 'Preço',
+    'Product type': 'Tipo de produto',
+    Brand: 'Marca',
+    Vendor: 'Marca',
+    Size: 'Tamanho',
+    Color: 'Cor',
+    'In stock': 'Em estoque',
+    'Out of stock': 'Esgotado',
+    Available: 'Disponível',
+    Unavailable: 'Indisponível',
+    Featured: 'Destaques',
+    'Best selling': 'Mais vendidos',
+    Alphabetically: 'Ordem alfabética',
+    'Price, low to high': 'Menor preço',
+    'Price, high to low': 'Maior preço',
+    'Date, old to new': 'Mais antigos',
+    'Date, new to old': 'Mais recentes'
+  };
+
+  function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function translateFacetText(root) {
+    var scope = root || document;
+    var containers = scope.querySelectorAll
+      ? scope.querySelectorAll('.facets-container, .facets-wrapper, .mobile-facets')
+      : [];
+
+    containers.forEach(function (facetRoot) {
+      var walker = document.createTreeWalker(facetRoot, NodeFilter.SHOW_TEXT);
+      var textNode;
+      while ((textNode = walker.nextNode())) {
+        var nextValue = textNode.nodeValue;
+        Object.keys(facetTranslations)
+          .sort(function (a, b) {
+            return b.length - a.length;
+          })
+          .forEach(function (source) {
+            nextValue = nextValue.replace(new RegExp('\\b' + escapeRegExp(source) + '\\b', 'g'), facetTranslations[source]);
+          });
+        textNode.nodeValue = nextValue;
+      }
+    });
+  }
+
   function init() {
     document.querySelectorAll('variant-selects').forEach(guardVariantPicker);
     guardCartCheckout();
+    translateFacetText(document);
   }
 
   if (document.readyState === 'loading') {
@@ -126,4 +175,20 @@
   }
 
   document.addEventListener('shopify:section:load', init);
+  document.addEventListener('facet:updated', init);
+
+  if (window.MutationObserver) {
+    var facetObserver = new MutationObserver(function (mutations) {
+      if (
+        mutations.some(function (mutation) {
+          return Array.from(mutation.addedNodes).some(function (node) {
+            return node.nodeType === 1 && node.querySelector && node.querySelector('.facets-container, .facets-wrapper');
+          });
+        })
+      ) {
+        translateFacetText(document);
+      }
+    });
+    facetObserver.observe(document.documentElement, { childList: true, subtree: true });
+  }
 })();

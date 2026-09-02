@@ -31,16 +31,40 @@
           {%- if section.settings.lead != blank -%}
             <p class="cl-store__lead">{{ section.settings.lead | escape }}</p>
           {%- endif -%}
-          <div class="cl-store__hero-actions">
-            <a class="button button--primary" href="#linhas-comerciais">Ver linhas comerciais</a>
-            <a class="button button--secondary" href="{{ section.settings.lines_page_url }}">Nossas Linhas</a>
-          </div>
+          <nav class="cl-store__line-nav" aria-label="Linhas comerciais da loja">
+            <p>Escolha por linha</p>
+            <div class="cl-store__line-nav-list">
+              {%- for block in section.blocks -%}
+                {%- liquid
+                  assign nav_collection_handle = block.settings.collection_handle | strip
+                  assign nav_collection = collections[nav_collection_handle]
+                  assign nav_title = block.settings.title
+                  assign nav_count = 0
+
+                  if nav_collection != blank
+                    assign nav_count = nav_collection.all_products_count
+                    if nav_title == blank
+                      assign nav_title = nav_collection.title
+                    endif
+                  endif
+                -%}
+                <a class="cl-store__line-nav-item cl-store__line-nav-item--{{ block.settings.tone }}" href="#linha-{{ block.id }}">
+                  <span>{{ nav_title | default: 'Linha Clenear' | escape }}</span>
+                  {%- if nav_count > 0 -%}
+                    <small>{{ nav_count }} produtos</small>
+                  {%- else -%}
+                    <small>Em preparo</small>
+                  {%- endif -%}
+                </a>
+              {%- endfor -%}
+            </div>
+          </nav>
         </div>
 
         <div class="cl-store__status" aria-label="Resumo da loja">
           <span class="cl-store__status-kicker">Compra online</span>
           <span class="cl-store__status-number">{{ available_lines }}</span>
-          <span class="cl-store__status-label">linhas com produtos publicados nesta primeira versão comercial.</span>
+          <span class="cl-store__status-label">linhas com compra online ativa e catálogo em expansão.</span>
           <div class="cl-store__status-meta">
             <span>{{ prepared_lines }} linhas mapeadas</span>
             <span>apresentações abaixo de 25L</span>
@@ -136,11 +160,11 @@
               {%- if line_image != blank -%}
                 {{
                   line_image
-                  | image_url: width: 900
+                  | image_url: width: 1600
                   | image_tag:
                     loading: 'lazy',
-                    widths: '360, 540, 720, 900',
-                    sizes: '(min-width: 990px) 34vw, 100vw',
+                    widths: '540, 720, 900, 1200, 1600',
+                    sizes: '(min-width: 1200px) 430px, (min-width: 990px) 34vw, 100vw',
                     alt: line_title
                 }}
               {%- else -%}
@@ -195,34 +219,33 @@
                   {%- capture whatsapp_message -%}Olá! Vim pela loja Clenear e gostaria de saber quando a {{ line_title }} estará disponível para compra online.{%- endcapture -%}
                   <a class="button button--secondary" href="{% render 'clenear-whatsapp-url', message: whatsapp_message %}" target="_blank" rel="noopener">Falar sobre a linha</a>
                 {%- endif -%}
-                <a class="cl-store__view-all" href="{{ section.settings.lines_page_url }}#linha-{{ block.settings.anchor_id | default: collection_handle }}">Ver no institucional</a>
               </div>
-
-              {%- if has_line_products -%}
-                <div class="cl-store__products">
-                  <div class="cl-store__products-head">
-                    <h4>Produtos desta linha</h4>
-                  </div>
-                  <ul class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
-                    {%- for product in line_collection.products limit: section.settings.products_to_show -%}
-                      <li class="grid__item">
-                        {% render 'card-product',
-                          card_product: product,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          image_shape: 'default',
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: false,
-                          show_rating: false,
-                          lazy_load: true,
-                          quick_add: 'none',
-                          section_id: section.id
-                        %}
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
-              {%- endif -%}
             </div>
+            {%- if has_line_products -%}
+              <div class="cl-store__products">
+                <div class="cl-store__products-head">
+                  <h4>Produtos desta linha</h4>
+                  <a href="{{ line_url }}">Ver todos</a>
+                </div>
+                <ul class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+                  {%- for product in line_collection.products limit: section.settings.products_to_show -%}
+                    <li class="grid__item">
+                      {% render 'card-product',
+                        card_product: product,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        image_shape: 'default',
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: false,
+                        show_rating: false,
+                        lazy_load: true,
+                        quick_add: 'none',
+                        section_id: section.id
+                      %}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
           </article>
         {%- endfor -%}
       </div>

@@ -189,14 +189,14 @@
       "clear_all": "Remover tudo",
       "from": "De",
       "filter_and_sort": "Filtrar e organizar",
-      "filter_by_label": "Filtrar:",
+      "filter_by_label": "Filtros",
       "filter_button": "Filtrar",
       "filters_selected": {
         "one": "{{ count }} selecionado",
         "other": "{{ count }} selecionados",
         "many": "{{ count }} selecionados"
       },
-      "max_price": "O maior preço é {{ price }}",
+      "max_price": "Preço máximo: {{ price }}",
       "product_count": {
         "one": "{{ product_count }} de {{ count }} produto",
         "other": "{{ product_count }} de {{ count }} produtos",
@@ -207,15 +207,15 @@
         "other": "{{ count }} produtos",
         "many": "{{ count }} produtos"
       },
-      "reset": "Reinicializar",
-      "sort_button": "Organizar",
+      "reset": "Limpar",
+      "sort_button": "Ordenar",
       "sort_by_label": "Ordenar por:",
       "to": "Para",
       "clear_filter": "Remover filtro",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtros selecionados)",
       "show_more": "Exibir mais",
       "show_less": "Exibir menos",
-      "filter_and_operator_subtitle": "Corresponder todos"
+      "filter_and_operator_subtitle": "Combinar todos"
     }
   },
   "templates": {
