@@ -52,12 +52,12 @@
         "hero_image_alt": "",
         "badge_value": "+18 anos",
         "badge_label": "de experiência no mercado",
-        "cta_primary_label": "Conhecer soluções",
-        "cta_primary_url": "#solucoes",
+        "cta_primary_label": "Comprar online",
+        "cta_primary_url": "/collections",
         "cta_whatsapp_label": "Falar no WhatsApp",
         "cta_whatsapp_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20sobre%20solu%C3%A7%C3%B5es%20profissionais%20de%20limpeza%20e%20saneantes.",
-        "cta_secondary_label": "Quero ser revendedor",
-        "cta_secondary_url": "#revenda",
+        "cta_secondary_label": "Ver linhas na loja",
+        "cta_secondary_url": "/collections",
         "wave_color": "#1A5C30"
       }
     },
@@ -119,7 +119,7 @@
             "icon_key": "domissanitaria",
             "title": "Domissanitária",
             "text": "Soluções para limpeza, higienização e manutenção de ambientes.",
-            "link": "/pages/nossas-linhas#linha-domissanitaria"
+            "link": "/collections/limpeza-domissanitaria"
           }
         },
         "sol2": {
@@ -129,7 +129,7 @@
             "icon_key": "lavanderia",
             "title": "Lavanderia",
             "text": "Amaciantes, detergentes e soluções para higienização têxtil.",
-            "link": "/pages/nossas-linhas#linha-lavanderia"
+            "link": "/collections/linha-lavanderia"
           }
         },
         "sol3": {
@@ -139,7 +139,7 @@
             "icon_key": "automotiva",
             "title": "Automotiva",
             "text": "Produtos para estética, limpeza e manutenção automotiva profissional.",
-            "link": "/pages/nossas-linhas#linha-automotiva"
+            "link": "/collections/linha-automotiva"
           }
         },
         "sol4": {
@@ -149,7 +149,7 @@
             "icon_key": "industrial",
             "title": "Industrial",
             "text": "Soluções para limpeza pesada, manutenção e processos produtivos.",
-            "link": "/pages/nossas-linhas#linha-industrial"
+            "link": "/collections/linha-industrial"
           }
         },
         "sol5": {
@@ -159,7 +159,7 @@
             "icon_key": "construcao-civil",
             "title": "Construção Civil",
             "text": "Aditivos e soluções técnicas para concreto, formas e superfícies.",
-            "link": "/pages/nossas-linhas#linha-construcao-civil"
+            "link": "/collections/linha-construcao-civil"
           }
         },
         "sol6": {
@@ -169,7 +169,7 @@
             "icon_key": "insumos",
             "title": "Insumos e Revenda",
             "text": "Insumos, embalagens, acessórios e produtos de revenda para empresas e formuladores.",
-            "link": "/pages/nossas-linhas#linha-insumos"
+            "link": "/collections/linha-insumos-revenda"
           }
         }
       },
@@ -184,7 +184,7 @@
       "settings": {
         "eyebrow": "Soluções completas",
         "heading": "Linhas pensadas para cada necessidade",
-        "subtext": "Produtos com qualidade, performance e suporte técnico para cada segmento.",
+        "subtext": "Escolha a linha ideal e acesse os produtos disponíveis para compra online.",
         "default_link": ""
       }
     },
@@ -265,8 +265,8 @@
         "eyebrow": "Linha automotiva",
         "heading": "Performance e proteção para o cuidado veicular",
         "subtext": "Resultado visível, proteção duradoura e praticidade em cada etapa.",
-        "cta_label": "Conhecer a linha",
-        "cta_url": "#solucoes",
+        "cta_label": "Comprar automotiva",
+        "cta_url": "/collections/linha-automotiva",
         "cta2_label": "Pedir orçamento",
         "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20a%20linha%20automotiva.",
         "wave_color": "#F7FAF8"
@@ -422,8 +422,8 @@
         "box_text": "Entre em contato com nossa equipe e comece a revender.",
         "cta_wa_label": "Falar com comercial",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20o%20comercial%20sobre%20revenda.",
-        "cta2_label": "Ver condições",
-        "cta2_url": "#revenda",
+        "cta2_label": "Ver catalogo online",
+        "cta2_url": "/collections",
         "note": "Atendimento em dias úteis."
       }
     },
@@ -435,8 +435,8 @@
         "subtext": "Orçamento, revenda ou dúvida técnica? Nossa equipe está pronta.",
         "cta_wa_label": "Chamar no WhatsApp",
         "cta_wa_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20com%20a%20equipe.",
-        "cta2_label": "Solicitar orçamento",
-        "cta2_url": "https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
+        "cta2_label": "Ver catalogo online",
+        "cta2_url": "/collections",
         "cta3_label": "Quero ser revendedor",
         "cta3_url": "#revenda",
         "phone": "(27) 3228-0140",

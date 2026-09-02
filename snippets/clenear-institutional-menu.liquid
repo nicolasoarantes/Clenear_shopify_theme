@@ -1,4 +1,13 @@
 {%- comment -%}v3 — dynamic menu with dropdown support for child links{%- endcomment -%}
+{%- liquid
+  assign has_store_link = false
+  for link in section.settings.menu.links
+    assign link_title = link.title | downcase | strip
+    if link_title == 'loja' or link.url == routes.collections_url
+      assign has_store_link = true
+    endif
+  endfor
+-%}
 <nav class="header__inline-menu clenear-institutional-menu" aria-label="Menu institucional">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
@@ -49,6 +58,17 @@
           </a>
         {%- endif -%}
       </li>
+      {%- if forloop.first and has_store_link == false -%}
+        <li>
+          <a
+            id="HeaderMenu-loja"
+            href="{{ routes.collections_url }}"
+            class="header__menu-item list-menu__item link link--text focus-inset clenear-store-nav-link"
+          >
+            <span>Loja</span>
+          </a>
+        </li>
+      {%- endif -%}
     {%- endfor -%}
   </ul>
 </nav>

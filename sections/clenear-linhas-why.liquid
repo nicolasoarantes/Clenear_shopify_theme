@@ -42,19 +42,42 @@
     </div>
   </section>
   {%- if section.settings.show_dev_cta -%}
-  <section class="cl-pg-section--sm">
+  <section class="cl-pg-section--sm cl-lw-dev-cta-section">
     <div class="cl-pg-wrap">
-      <div class="cl-pg-mid-cta cl-pg-fade">
+      <div class="cl-pg-mid-cta cl-lw-dev-cta cl-pg-fade">
         <h3>{{ section.settings.dev_cta_heading | default: 'Desenvolvemos soluções para a sua operação' }}</h3>
         <p>{{ section.settings.dev_cta_text | default: 'A Clenear desenvolve fórmulas, produtos e linhas com foco em desempenho, segurança, rendimento e aplicação profissional.' }}</p>
         <div class="cl-pg-btn-row">
           <a href="{{ section.settings.dev_cta_wa_url | default: 'https://api.whatsapp.com/send?phone=552732280140&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clenear%20e%20gostaria%20de%20falar%20sobre%20desenvolvimento%20de%20f%C3%B3rmula%2Fproduto.' }}" class="cl-pg-btn cl-pg-btn--wa" target="_blank" rel="noopener">{{ section.settings.dev_cta_wa_label | default: 'Falar sobre desenvolvimento' }}</a>
+          <a href="{{ routes.collections_url }}" class="cl-pg-btn cl-pg-btn--outline">Ver catalogo online</a>
         </div>
       </div>
     </div>
   </section>
   {%- endif -%}
 </div>
+<style>
+  #linhas-why .cl-lw-dev-cta-section {
+    background: linear-gradient(135deg, #071d18 0%, #0f352b 62%, #09231d 100%);
+    position: relative;
+  }
+
+  #linhas-why .cl-lw-dev-cta {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(77, 209, 176, 0.28);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+    margin-top: 0;
+  }
+
+  #linhas-why .cl-lw-dev-cta h3,
+  #linhas-why .cl-lw-dev-cta p {
+    color: #fff;
+  }
+
+  #linhas-why .cl-lw-dev-cta .cl-pg-btn-row {
+    justify-content: center;
+  }
+</style>
 <script>
 (function(){
   var fades=document.querySelectorAll('#linhas-why .cl-pg-fade');

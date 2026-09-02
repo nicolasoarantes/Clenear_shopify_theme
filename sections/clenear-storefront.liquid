@@ -1,0 +1,442 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign available_lines = 0
+  assign prepared_lines = section.blocks.size
+
+  for block in section.blocks
+    assign collection_handle = block.settings.collection_handle | strip
+    assign line_collection = collections[collection_handle]
+
+    if line_collection != blank
+      if line_collection.all_products_count > 0
+        assign available_lines = available_lines | plus: 1
+      endif
+    endif
+  endfor
+-%}
+
+<section class="cl-store">
+  <div class="cl-store__hero">
+    <div class="cl-store__hero-pattern" aria-hidden="true"></div>
+    <div class="cl-store__wrap">
+      <div class="cl-store__hero-grid">
+        <div class="cl-store__hero-copy">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="cl-store__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {%- endif -%}
+          <h1 class="cl-store__title">{{ section.settings.heading | escape }}</h1>
+          {%- if section.settings.lead != blank -%}
+            <p class="cl-store__lead">{{ section.settings.lead | escape }}</p>
+          {%- endif -%}
+          <nav class="cl-store__line-nav" aria-label="Linhas comerciais da loja">
+            <p>Escolha por linha</p>
+            <div class="cl-store__line-nav-list">
+              {%- for block in section.blocks -%}
+                {%- liquid
+                  assign nav_collection_handle = block.settings.collection_handle | strip
+                  assign nav_collection = collections[nav_collection_handle]
+                  assign nav_title = block.settings.title
+                  assign nav_count = 0
+
+                  if nav_collection != blank
+                    assign nav_count = nav_collection.all_products_count
+                    if nav_title == blank
+                      assign nav_title = nav_collection.title
+                    endif
+                  endif
+                -%}
+                <a class="cl-store__line-nav-item cl-store__line-nav-item--{{ block.settings.tone }}" href="#linha-{{ block.id }}">
+                  <span>{{ nav_title | default: 'Linha Clenear' | escape }}</span>
+                  {%- if nav_count == 1 -%}
+                    <small>1 produto</small>
+                  {%- elsif nav_count > 1 -%}
+                    <small>{{ nav_count }} produtos</small>
+                  {%- else -%}
+                    <small>Em preparo</small>
+                  {%- endif -%}
+                </a>
+              {%- endfor -%}
+            </div>
+          </nav>
+        </div>
+
+        <div class="cl-store__status" aria-label="Resumo da loja">
+          <span class="cl-store__status-kicker">Compra online</span>
+          <span class="cl-store__status-number">{{ available_lines }}</span>
+          <span class="cl-store__status-label">linhas com compra online ativa e catálogo em expansão.</span>
+          <div class="cl-store__status-meta">
+            <span>{{ prepared_lines }} linhas organizadas</span>
+            <span>apresentações abaixo de 25L</span>
+          </div>
+          <div class="cl-store__hero-thumbs" aria-label="Produtos e linhas comerciais">
+            {%- assign hero_thumb_count = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- liquid
+                assign collection_handle = block.settings.collection_handle | strip
+                assign thumb_collection = collections[collection_handle]
+                assign thumb_media = blank
+
+                if block.settings.image != blank
+                  assign thumb_media = block.settings.image
+                elsif thumb_collection.image != blank
+                  assign thumb_media = thumb_collection.image
+                elsif thumb_collection.products.first.featured_media != blank
+                  assign thumb_media = thumb_collection.products.first.featured_media
+                endif
+              -%}
+              {%- if thumb_media != blank and hero_thumb_count < 4 -%}
+                <div class="cl-store__hero-thumb">
+                  {{
+                    thumb_media
+                    | image_url: width: 420
+                    | image_tag:
+                      loading: 'eager',
+                      widths: '180, 300, 420',
+                      sizes: '(min-width: 990px) 120px, 22vw',
+                      alt: block.settings.title
+                  }}
+                </div>
+                {%- assign hero_thumb_count = hero_thumb_count | plus: 1 -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cl-store__lines" id="linhas-comerciais">
+    <div class="cl-store__wrap">
+      <div class="cl-store__section-head">
+        <div>
+          <p class="cl-store__eyebrow">{{ section.settings.lines_kicker | escape }}</p>
+          <h2>{{ section.settings.lines_heading | escape }}</h2>
+        </div>
+        <p>{{ section.settings.lines_text | escape }}</p>
+      </div>
+
+      <div class="cl-store__line-grid-list">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign collection_handle = block.settings.collection_handle | strip
+            assign line_collection = collections[collection_handle]
+            assign has_line_products = false
+            assign line_url = blank
+            assign line_title = block.settings.title
+            assign line_description = block.settings.description
+            assign line_image = block.settings.image
+            assign line_products_count = 0
+
+            if line_collection != blank
+              assign line_url = line_collection.url
+              assign line_products_count = line_collection.all_products_count
+              if line_title == blank
+                assign line_title = line_collection.title
+              endif
+              if line_description == blank and line_collection.description != blank
+                assign line_description = line_collection.description | strip_html
+              endif
+              if line_image == blank and line_collection.image != blank
+                assign line_image = line_collection.image
+              elsif line_image == blank and line_collection.products.first.featured_media != blank
+                assign line_image = line_collection.products.first.featured_media
+              endif
+              if line_collection.all_products_count > 0
+                assign has_line_products = true
+              endif
+            endif
+
+            assign line_state = 'Em preparação'
+            if has_line_products
+              if line_products_count == 1
+                assign line_state = '1 produto'
+              else
+                assign line_state = line_products_count | append: ' produtos'
+              endif
+            elsif line_collection != blank
+              assign line_state = 'Collection criada'
+            endif
+          -%}
+
+          <article class="cl-store__line-card cl-store__line-card--{{ block.settings.tone }}" id="linha-{{ block.id }}" {{ block.shopify_attributes }}>
+            <div class="cl-store__line-media">
+              {%- if line_image != blank -%}
+                {{
+                  line_image
+                  | image_url: width: 1600
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '540, 720, 900, 1200, 1600',
+                    sizes: '(min-width: 1200px) 430px, (min-width: 990px) 34vw, 100vw',
+                    alt: line_title
+                }}
+              {%- else -%}
+                <div class="cl-store__line-placeholder">
+                  <span>{{ line_title | default: 'Linha Clenear' | escape }}</span>
+                </div>
+              {%- endif -%}
+              <span class="cl-store__line-state{% unless has_line_products %} cl-store__line-state--pending{% endunless %}">
+                {{ line_state | escape }}
+              </span>
+            </div>
+
+            <div class="cl-store__line-body">
+              <p class="cl-store__eyebrow">{{ block.settings.kicker | default: 'Linha comercial' | escape }}</p>
+              <h3 class="cl-store__line-title">{{ line_title | escape }}</h3>
+              {%- if line_description != blank -%}
+                <p class="cl-store__line-description">{{ line_description | escape }}</p>
+              {%- endif -%}
+
+              {%- assign subline_rows = block.settings.subline_links | newline_to_br | split: '<br />' -%}
+              {%- if block.settings.subline_links != blank -%}
+                <p class="cl-store__subline-label">Explore esta linha</p>
+                <div class="cl-store__subline-list" aria-label="Sublinhas comerciais">
+                  {%- for row in subline_rows -%}
+                    {%- liquid
+                      assign clean_row = row | strip
+                      assign parts = clean_row | split: '|'
+                      assign subline_label = parts[0] | strip
+                      assign subline_handle = parts[1] | strip
+                      assign subline_collection = collections[subline_handle]
+                    -%}
+                    {%- if subline_label != blank -%}
+                      {%- if subline_handle != blank and subline_collection != blank and subline_collection.all_products_count > 0 -%}
+                        <a class="cl-store__subline" href="{{ subline_collection.url }}">{{ subline_label | escape }}</a>
+                      {%- else -%}
+                        <span class="cl-store__subline cl-store__subline--pending">
+                          {{ subline_label | escape }}
+                          <span>Em breve</span>
+                        </span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+
+              <div class="cl-store__line-actions">
+                {%- if has_line_products -%}
+                  <a class="button button--primary" href="{{ line_url }}">Ver produtos</a>
+                {%- elsif line_collection != blank -%}
+                  <a class="button button--secondary" href="{{ line_url }}">Conhecer collection</a>
+                {%- else -%}
+                  {%- capture whatsapp_message -%}Olá! Vim pela loja Clenear e gostaria de saber quando a {{ line_title }} estará disponível para compra online.{%- endcapture -%}
+                  <a class="button button--secondary" href="{% render 'clenear-whatsapp-url', message: whatsapp_message %}" target="_blank" rel="noopener">Falar sobre a linha</a>
+                {%- endif -%}
+              </div>
+            </div>
+            {%- if has_line_products -%}
+              <div class="cl-store__products">
+                <div class="cl-store__products-head">
+                  <h4>Produtos desta linha</h4>
+                  <a href="{{ line_url }}">Ver todos</a>
+                </div>
+                <ul class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+                  {%- for product in line_collection.products limit: section.settings.products_to_show -%}
+                    <li class="grid__item">
+                      {% render 'card-product',
+                        card_product: product,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        image_shape: 'default',
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: false,
+                        show_rating: false,
+                        lazy_load: true,
+                        quick_add: 'none',
+                        section_id: section.id
+                      %}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          </article>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.blocks.size == 0 -%}
+        <div class="cl-store__empty">
+          A loja online esta sendo preparada. Em breve as primeiras linhas comerciais estarao disponiveis por aqui.
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="cl-store__admin-note">
+    <div class="cl-store__wrap">
+      <h2>{{ section.settings.admin_heading | escape }}</h2>
+      <p>{{ section.settings.admin_text | escape }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Loja Clenear",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Loja Clenear"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "Loja CLENEAR"
+    },
+    {
+      "type": "textarea",
+      "id": "lead",
+      "label": "Texto introdutorio",
+      "default": "Soluções profissionais para cada tipo de limpeza. Navegue pelas linhas comerciais, encontre produtos publicados e compre apresentações elegíveis nesta primeira etapa."
+    },
+    {
+      "type": "text",
+      "id": "lines_page_url",
+      "label": "Link da pagina institucional Nossas Linhas",
+      "default": "/pages/nossas-linhas"
+    },
+    {
+      "type": "text",
+      "id": "lines_kicker",
+      "label": "Rotulo da area de linhas",
+      "default": "Linhas comerciais"
+    },
+    {
+      "type": "text",
+      "id": "lines_heading",
+      "label": "Titulo das linhas",
+      "default": "Escolha a linha ideal para sua rotina"
+    },
+    {
+      "type": "textarea",
+      "id": "lines_text",
+      "label": "Texto das linhas",
+      "default": "Algumas linhas já estão prontas para compra online. Outras ficam mapeadas para receber produtos, collections e metafields conforme a evolução do catálogo."
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "label": "Produtos por linha"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4,
+      "label": "Colunas desktop"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "Colunas mobile",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "default": "adapt",
+      "label": "Proporcao da imagem",
+      "options": [
+        { "value": "adapt", "label": "Adaptar" },
+        { "value": "square", "label": "Quadrada" },
+        { "value": "portrait", "label": "Retrato" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": true,
+      "label": "Mostrar segunda imagem"
+    },
+    {
+      "type": "text",
+      "id": "admin_heading",
+      "label": "Titulo da nota Admin",
+      "default": "Loja em evolucao"
+    },
+    {
+      "type": "textarea",
+      "id": "admin_text",
+      "label": "Texto da nota Admin",
+      "default": "Novas sublinhas serão liberadas conforme a disponibilidade dos produtos para venda online, organização de collections e validação dos dados comerciais."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "line",
+      "name": "Linha comercial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collection_handle",
+          "label": "Handle da collection"
+        },
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Ancora institucional",
+          "info": "Exemplo: domissanitaria. Usado em /pages/nossas-linhas#linha-{valor}."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagem da linha"
+        },
+        {
+          "type": "select",
+          "id": "tone",
+          "label": "Personalidade visual",
+          "default": "green",
+          "options": [
+            { "value": "green", "label": "Verde Clenear" },
+            { "value": "blue", "label": "Azul tecnico" },
+            { "value": "yellow", "label": "Amarelo destaque" },
+            { "value": "gray", "label": "Industrial neutro" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Rotulo",
+          "default": "Linha comercial"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo comercial"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descricao comercial"
+        },
+        {
+          "type": "textarea",
+          "id": "subline_links",
+          "label": "Sublinhas (Nome|handle, uma por linha)",
+          "info": "Quando a collection existir e tiver produtos, o item vira link. Caso contrario aparece como item em breve."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Loja Clenear"
+    }
+  ]
+}
+{% endschema %}
