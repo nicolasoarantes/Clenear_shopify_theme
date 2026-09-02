@@ -3,14 +3,13 @@
 
 {%- liquid
   assign available_lines = 0
-  assign prepared_lines = 0
+  assign prepared_lines = section.blocks.size
 
   for block in section.blocks
     assign collection_handle = block.settings.collection_handle | strip
     assign line_collection = collections[collection_handle]
 
     if line_collection != blank
-      assign prepared_lines = prepared_lines | plus: 1
       if line_collection.all_products_count > 0
         assign available_lines = available_lines | plus: 1
       endif
@@ -50,7 +49,9 @@
                 -%}
                 <a class="cl-store__line-nav-item cl-store__line-nav-item--{{ block.settings.tone }}" href="#linha-{{ block.id }}">
                   <span>{{ nav_title | default: 'Linha Clenear' | escape }}</span>
-                  {%- if nav_count > 0 -%}
+                  {%- if nav_count == 1 -%}
+                    <small>1 produto</small>
+                  {%- elsif nav_count > 1 -%}
                     <small>{{ nav_count }} produtos</small>
                   {%- else -%}
                     <small>Em preparo</small>
@@ -66,7 +67,7 @@
           <span class="cl-store__status-number">{{ available_lines }}</span>
           <span class="cl-store__status-label">linhas com compra online ativa e catálogo em expansão.</span>
           <div class="cl-store__status-meta">
-            <span>{{ prepared_lines }} linhas mapeadas</span>
+            <span>{{ prepared_lines }} linhas organizadas</span>
             <span>apresentações abaixo de 25L</span>
           </div>
           <div class="cl-store__hero-thumbs" aria-label="Produtos e linhas comerciais">
@@ -149,7 +150,11 @@
 
             assign line_state = 'Em preparação'
             if has_line_products
-              assign line_state = line_products_count | append: ' produtos'
+              if line_products_count == 1
+                assign line_state = '1 produto'
+              else
+                assign line_state = line_products_count | append: ' produtos'
+              endif
             elsif line_collection != blank
               assign line_state = 'Collection criada'
             endif
