@@ -220,9 +220,6 @@
                 if subline_count > 0
                   assign has_line_products = true
                   assign line_product_fallback_count = line_product_fallback_count | plus: subline_count
-                  if line_url == blank or line_url == line_collection.url
-                    assign line_url = subline_collection.url
-                  endif
                 endif
 
                 for product in subline_collection.products
