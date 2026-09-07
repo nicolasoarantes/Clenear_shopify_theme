@@ -8,6 +8,16 @@
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign clenear_cart_has_blocked_variant = false
+  for item in cart.items
+    if item.variant.metafields.clenear.elegivel_loja.value == false
+      assign clenear_cart_has_blocked_variant = true
+      break
+    endif
+  endfor
+-%}
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
@@ -118,7 +128,12 @@
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
+                      <tr
+                        id="CartDrawer-Item-{{ item.index | plus: 1 }}"
+                        class="cart-item"
+                        role="row"
+                        data-clenear-elegible-loja="{% if item.variant.metafields.clenear.elegivel_loja.value == false %}false{% else %}true{% endif %}"
+                      >
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -220,6 +235,11 @@
                               </li>
                             {%- endfor -%}
                           </ul>
+                          {%- if item.variant.metafields.clenear.elegivel_loja.value == false -%}
+                            <p class="product-option cl-cart-variant-warning">
+                              Variante nao elegivel para checkout online.
+                            </p>
+                          {%- endif -%}
                         </td>
 
                         <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
@@ -542,13 +562,18 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
+          {%- if clenear_cart_has_blocked_variant -%}
+            <div class="cl-cart-large-variant-warning" role="alert">
+              O carrinho contem uma variante nao elegivel para compra online. Remova esse item para finalizar pelo checkout ou fale com a equipe comercial.
+            </div>
+          {%- endif -%}
           <button
             type="submit"
             id="CartDrawer-Checkout"
             class="cart__checkout-button button"
             name="checkout"
             form="CartDrawer-Form"
-            {% if cart == empty %}
+            {% if cart == empty or clenear_cart_has_blocked_variant %}
               disabled
             {% endif %}
           >

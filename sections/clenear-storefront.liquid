@@ -6,13 +6,34 @@
   assign prepared_lines = section.blocks.size
 
   for block in section.blocks
-    assign collection_handle = block.settings.collection_handle | strip
-    assign line_collection = collections[collection_handle]
+    assign line_has_subline_products = false
+    assign subline_rows = block.settings.subline_links | newline_to_br | split: '<br />'
 
-    if line_collection != blank
-      if line_collection.all_products_count > 0
-        assign available_lines = available_lines | plus: 1
+    for row in subline_rows
+      assign clean_row = row | strip
+      assign parts = clean_row | split: '|'
+      assign subline_handle = parts[1] | strip
+      assign subline_collection = collections[subline_handle]
+      assign subline_count = 0
+
+      if subline_collection != blank
+        if subline_collection.products_count > 0
+          assign subline_count = subline_collection.products_count
+        elsif subline_collection.all_products_count > 0
+          assign subline_count = subline_collection.all_products_count
+        elsif subline_collection.products.size > 0
+          assign subline_count = subline_collection.products.size
+        endif
       endif
+
+      if subline_count > 0
+        assign line_has_subline_products = true
+        break
+      endif
+    endfor
+
+    if line_has_subline_products
+      assign available_lines = available_lines | plus: 1
     endif
   endfor
 -%}
@@ -39,12 +60,45 @@
                   assign nav_collection = collections[nav_collection_handle]
                   assign nav_title = block.settings.title
                   assign nav_count = 0
+                  assign nav_product_ids = ''
+                  assign nav_fallback_count = 0
+                  assign nav_subline_rows = block.settings.subline_links | newline_to_br | split: '<br />'
 
                   if nav_collection != blank
-                    assign nav_count = nav_collection.all_products_count
                     if nav_title == blank
                       assign nav_title = nav_collection.title
                     endif
+                  endif
+
+                  for row in nav_subline_rows
+                    assign clean_row = row | strip
+                    assign parts = clean_row | split: '|'
+                    assign subline_handle = parts[1] | strip
+                    assign subline_collection = collections[subline_handle]
+                    assign subline_count = 0
+
+                    if subline_collection != blank
+                      if subline_collection.products_count > 0
+                        assign subline_count = subline_collection.products_count
+                      elsif subline_collection.all_products_count > 0
+                        assign subline_count = subline_collection.all_products_count
+                      elsif subline_collection.products.size > 0
+                        assign subline_count = subline_collection.products.size
+                      endif
+
+                      assign nav_fallback_count = nav_fallback_count | plus: subline_count
+                      for product in subline_collection.products
+                        assign product_token = '|' | append: product.id | append: '|'
+                        unless nav_product_ids contains product_token
+                          assign nav_product_ids = nav_product_ids | append: product_token
+                          assign nav_count = nav_count | plus: 1
+                        endunless
+                      endfor
+                    endif
+                  endfor
+
+                  if nav_count == 0 and nav_fallback_count > 0
+                    assign nav_count = nav_fallback_count
                   endif
                 -%}
                 <a class="cl-store__line-nav-item cl-store__line-nav-item--{{ block.settings.tone }}" href="#linha-{{ block.id }}">
@@ -68,7 +122,7 @@
           <span class="cl-store__status-label">linhas com compra online ativa e catálogo em expansão.</span>
           <div class="cl-store__status-meta">
             <span>{{ prepared_lines }} linhas organizadas</span>
-            <span>apresentações abaixo de 25L</span>
+            <span>variantes elegiveis no Admin</span>
           </div>
           <div class="cl-store__hero-thumbs" aria-label="Produtos e linhas comerciais">
             {%- assign hero_thumb_count = 0 -%}
@@ -128,10 +182,12 @@
             assign line_description = block.settings.description
             assign line_image = block.settings.image
             assign line_products_count = 0
+            assign line_product_fallback_count = 0
+            assign line_product_ids = ''
+            assign subline_rows = block.settings.subline_links | newline_to_br | split: '<br />'
 
             if line_collection != blank
               assign line_url = line_collection.url
-              assign line_products_count = line_collection.all_products_count
               if line_title == blank
                 assign line_title = line_collection.title
               endif
@@ -143,9 +199,44 @@
               elsif line_image == blank and line_collection.products.first.featured_media != blank
                 assign line_image = line_collection.products.first.featured_media
               endif
-              if line_collection.all_products_count > 0
-                assign has_line_products = true
+            endif
+
+            for row in subline_rows
+              assign clean_row = row | strip
+              assign parts = clean_row | split: '|'
+              assign subline_handle = parts[1] | strip
+              assign subline_collection = collections[subline_handle]
+              assign subline_count = 0
+
+              if subline_collection != blank
+                if subline_collection.products_count > 0
+                  assign subline_count = subline_collection.products_count
+                elsif subline_collection.all_products_count > 0
+                  assign subline_count = subline_collection.all_products_count
+                elsif subline_collection.products.size > 0
+                  assign subline_count = subline_collection.products.size
+                endif
+
+                if subline_count > 0
+                  assign has_line_products = true
+                  assign line_product_fallback_count = line_product_fallback_count | plus: subline_count
+                  if line_url == blank or line_url == line_collection.url
+                    assign line_url = subline_collection.url
+                  endif
+                endif
+
+                for product in subline_collection.products
+                  assign product_token = '|' | append: product.id | append: '|'
+                  unless line_product_ids contains product_token
+                    assign line_product_ids = line_product_ids | append: product_token
+                    assign line_products_count = line_products_count | plus: 1
+                  endunless
+                endfor
               endif
+            endfor
+
+            if line_products_count == 0 and line_product_fallback_count > 0
+              assign line_products_count = line_product_fallback_count
             endif
 
             assign line_state = 'Em preparação'
@@ -155,8 +246,6 @@
               else
                 assign line_state = line_products_count | append: ' produtos'
               endif
-            elsif line_collection != blank
-              assign line_state = 'Collection criada'
             endif
           -%}
 
@@ -200,9 +289,20 @@
                       assign subline_label = parts[0] | strip
                       assign subline_handle = parts[1] | strip
                       assign subline_collection = collections[subline_handle]
+                      assign subline_count = 0
+
+                      if subline_collection != blank
+                        if subline_collection.products_count > 0
+                          assign subline_count = subline_collection.products_count
+                        elsif subline_collection.all_products_count > 0
+                          assign subline_count = subline_collection.all_products_count
+                        elsif subline_collection.products.size > 0
+                          assign subline_count = subline_collection.products.size
+                        endif
+                      endif
                     -%}
                     {%- if subline_label != blank -%}
-                      {%- if subline_handle != blank and subline_collection != blank and subline_collection.all_products_count > 0 -%}
+                      {%- if subline_handle != blank and subline_collection != blank and subline_count > 0 -%}
                         <a class="cl-store__subline" href="{{ subline_collection.url }}">{{ subline_label | escape }}</a>
                       {%- else -%}
                         <span class="cl-store__subline cl-store__subline--pending">
@@ -218,8 +318,6 @@
               <div class="cl-store__line-actions">
                 {%- if has_line_products -%}
                   <a class="button button--primary" href="{{ line_url }}">Ver produtos</a>
-                {%- elsif line_collection != blank -%}
-                  <a class="button button--secondary" href="{{ line_url }}">Conhecer collection</a>
                 {%- else -%}
                   {%- capture whatsapp_message -%}Olá! Vim pela loja Clenear e gostaria de saber quando a {{ line_title }} estará disponível para compra online.{%- endcapture -%}
                   <a class="button button--secondary" href="{% render 'clenear-whatsapp-url', message: whatsapp_message %}" target="_blank" rel="noopener">Falar sobre a linha</a>
@@ -233,20 +331,50 @@
                   <a href="{{ line_url }}">Ver todos</a>
                 </div>
                 <ul class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
-                  {%- for product in line_collection.products limit: section.settings.products_to_show -%}
-                    <li class="grid__item">
-                      {% render 'card-product',
-                        card_product: product,
-                        media_aspect_ratio: section.settings.image_ratio,
-                        image_shape: 'default',
-                        show_secondary_image: section.settings.show_secondary_image,
-                        show_vendor: false,
-                        show_rating: false,
-                        lazy_load: true,
-                        quick_add: 'none',
-                        section_id: section.id
-                      %}
-                    </li>
+                  {%- liquid
+                    assign rendered_product_ids = ''
+                    assign rendered_product_count = 0
+                  -%}
+                  {%- for row in subline_rows -%}
+                    {%- liquid
+                      assign clean_row = row | strip
+                      assign parts = clean_row | split: '|'
+                      assign subline_handle = parts[1] | strip
+                      assign subline_collection = collections[subline_handle]
+                    -%}
+                    {%- if subline_collection != blank -%}
+                      {%- for product in subline_collection.products -%}
+                        {%- liquid
+                          assign product_token = '|' | append: product.id | append: '|'
+                          assign should_render_product = true
+                          if rendered_product_ids contains product_token
+                            assign should_render_product = false
+                          endif
+                          if rendered_product_count >= section.settings.products_to_show
+                            assign should_render_product = false
+                          endif
+                        -%}
+                        {%- if should_render_product -%}
+                          <li class="grid__item">
+                            {% render 'card-product',
+                              card_product: product,
+                              media_aspect_ratio: section.settings.image_ratio,
+                              image_shape: 'default',
+                              show_secondary_image: section.settings.show_secondary_image,
+                              show_vendor: false,
+                              show_rating: false,
+                              lazy_load: true,
+                              quick_add: 'none',
+                              section_id: section.id
+                            %}
+                          </li>
+                          {%- liquid
+                            assign rendered_product_ids = rendered_product_ids | append: product_token
+                            assign rendered_product_count = rendered_product_count | plus: 1
+                          -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
                   {%- endfor -%}
                 </ul>
               </div>

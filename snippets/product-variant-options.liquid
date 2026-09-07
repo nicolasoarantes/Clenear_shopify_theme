@@ -6,6 +6,7 @@
   - option: {Object} current product_option object.
   - block: {Object} block object.
   - picker_type: {String} type of picker to dispay
+  - selected_variant: {Object} variant object that can be purchased by the storefront.
 
 
   Usage:
@@ -18,6 +19,8 @@
 {% endcomment %}
 {%- liquid
   assign product_form_id = 'product-form-' | append: section.id
+  assign option_index = option.position | minus: 1
+  assign selected_option_value = selected_variant.options[option_index]
 -%}
 
 {%- for value in option.values -%}
@@ -33,9 +36,27 @@
       assign swatch_value = null
     endif
 
+    assign value_label = value | strip
+    assign value_has_eligible_variant = false
+    for variant in product.variants
+      if variant.options[option_index] == value_label
+        unless variant.metafields.clenear.elegivel_loja.value == false
+          if variant.available
+            assign value_has_eligible_variant = true
+            break
+          endif
+        endunless
+      endif
+    endfor
+
     assign option_disabled = true
-    if value.available
+    if value.available and value_has_eligible_variant
       assign option_disabled = false
+    endif
+
+    assign value_selected = false
+    if selected_option_value == value_label
+      assign value_selected = true
     endif
   -%}
 
@@ -50,6 +71,7 @@
   {%- capture input_dataset -%}
     data-product-url="{{ value.product_url }}"
     data-option-value-id="{{ value.id }}"
+    data-clenear-elegible-loja="{% if value_has_eligible_variant %}true{% else %}false{% endif %}"
   {%- endcapture -%}
 
   {%- capture label_unavailable -%}
@@ -71,11 +93,12 @@
       name="{{ input_name | escape }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
-      {% if value.selected %}
+      {% if value_selected %}
         checked
       {% endif %}
       {% if option_disabled %}
-        class="disabled"
+        class="disabled{% unless value_has_eligible_variant %} cl-variant-option-hidden{% endunless %}"
+        disabled
       {% endif %}
       {{ input_dataset }}
     >
@@ -87,8 +110,11 @@
     <option
       id="{{ input_id }}"
       value="{{ value | escape }}"
-      {% if value.selected %}
+      {% if value_selected %}
         selected="selected"
+      {% endif %}
+      {% if option_disabled %}
+        disabled
       {% endif %}
       {% if swatch_value and picker_type == 'swatch_dropdown' %}
         data-option-swatch-value="{{ swatch_value }}"

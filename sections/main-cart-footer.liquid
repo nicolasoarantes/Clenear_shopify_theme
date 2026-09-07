@@ -3,6 +3,16 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign clenear_cart_has_blocked_variant = false
+  for item in cart.items
+    if item.variant.metafields.clenear.elegivel_loja.value == false
+      assign clenear_cart_has_blocked_variant = true
+      break
+    endif
+  endfor
+-%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -105,12 +115,17 @@
               </div>
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
+                {%- if clenear_cart_has_blocked_variant -%}
+                  <div class="cl-cart-large-variant-warning" role="alert">
+                    O carrinho contem uma variante nao elegivel para compra online. Remova esse item para finalizar pelo checkout ou fale com a equipe comercial.
+                  </div>
+                {%- endif -%}
                 <button
                   type="submit"
                   id="checkout"
                   class="cart__checkout-button button"
                   name="checkout"
-                  {% if cart == empty %}
+                  {% if cart == empty or clenear_cart_has_blocked_variant %}
                     disabled
                   {% endif %}
                   form="cart"
@@ -119,7 +134,7 @@
                 </button>
               </div>
 
-              {%- if additional_checkout_buttons -%}
+              {%- if additional_checkout_buttons and clenear_cart_has_blocked_variant == false -%}
                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                   {{ content_for_additional_checkout_buttons }}
                 </div>

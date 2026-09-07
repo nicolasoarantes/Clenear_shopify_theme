@@ -74,12 +74,23 @@
           assign subline_label = parts[0] | strip
           assign subline_handle = parts[1] | strip
           assign subline_collection = collections[subline_handle]
+          assign subline_count = 0
+
+          if subline_collection != blank
+            if subline_collection.products_count > 0
+              assign subline_count = subline_collection.products_count
+            elsif subline_collection.all_products_count > 0
+              assign subline_count = subline_collection.all_products_count
+            elsif subline_collection.products.size > 0
+              assign subline_count = subline_collection.products.size
+            endif
+          endif
         -%}
         {%- if subline_label != blank -%}
-          {%- if subline_collection != blank and subline_collection.all_products_count > 0 -%}
+          {%- if subline_collection != blank and subline_count > 0 -%}
             <a class="cl-collection-subline" href="{{ subline_collection.url }}">
               <span>{{ subline_label | escape }}</span>
-              <small>{{ subline_collection.all_products_count }} produtos</small>
+              <small>{{ subline_count }} produtos</small>
             </a>
           {%- else -%}
             <span class="cl-collection-subline cl-collection-subline--pending">
@@ -105,10 +116,27 @@
       {%- if metafield_sublines != blank -%}
         {%- for subline_collection in metafield_sublines -%}
           {%- if subline_collection != blank -%}
-            <a class="cl-collection-subline" href="{{ subline_collection.url }}">
-              <span>{{ subline_collection.title | escape }}</span>
-              <small>{{ subline_collection.all_products_count }} produtos</small>
-            </a>
+            {%- liquid
+              assign subline_count = 0
+              if subline_collection.products_count > 0
+                assign subline_count = subline_collection.products_count
+              elsif subline_collection.all_products_count > 0
+                assign subline_count = subline_collection.all_products_count
+              elsif subline_collection.products.size > 0
+                assign subline_count = subline_collection.products.size
+              endif
+            -%}
+            {%- if subline_count > 0 -%}
+              <a class="cl-collection-subline" href="{{ subline_collection.url }}">
+                <span>{{ subline_collection.title | escape }}</span>
+                <small>{{ subline_count }} produtos</small>
+              </a>
+            {%- else -%}
+              <span class="cl-collection-subline cl-collection-subline--pending">
+                <span>{{ subline_collection.title | escape }}</span>
+                <small>Em preparaÃ§Ã£o</small>
+              </span>
+            {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
       {%- else -%}

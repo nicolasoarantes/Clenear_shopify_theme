@@ -79,7 +79,11 @@
 
               <tbody>
                 {%- for item in cart.items -%}
-                  <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                  <tr
+                    class="cart-item"
+                    id="CartItem-{{ item.index | plus: 1 }}"
+                    data-clenear-elegible-loja="{% if item.variant.metafields.clenear.elegivel_loja.value == false %}false{% else %}true{% endif %}"
+                  >
                     <td class="cart-item__media">
                       {% if item.image %}
                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -169,6 +173,11 @@
                           </li>
                         {%- endfor -%}
                       </ul>
+                      {%- if item.variant.metafields.clenear.elegivel_loja.value == false -%}
+                        <p class="product-option cl-cart-variant-warning">
+                          Variante nao elegivel para checkout online.
+                        </p>
+                      {%- endif -%}
                     </td>
 
                     <td class="cart-item__totals right medium-hide large-up-hide">

@@ -35,7 +35,7 @@
             "kicker": "Linha comercial",
             "title": "Automotiva",
             "description": "Limpeza, desengraxe, acabamento e manutenção automotiva para rotinas profissionais.",
-            "subline_links": "Shampoos e detergentes automotivos|clenear-detergentes-automotivos\nDesengraxantes automotivos|clenear-desengraxantes-automotivos\nLimpa alumínio e desincrustantes|clenear-limpa-aluminio-desincrustantes\nAcabamento, brilho e proteção|clenear-acabamento-brilho-protecao\nVidros, interior e estofados|clenear-vidros-interior-estofados"
+            "subline_links": "Detergentes Automotivos|clenear-detergentes-automotivos\nDesengraxantes Automotivos|clenear-desengraxantes-automotivos\nLimpa Alumínio e Desincrustantes|clenear-limpa-aluminio-desincrustantes\nAcabamento, Brilho e Proteção|clenear-acabamento-brilho-protecao\nVidros, Interior e Estofados|clenear-vidros-interior-estofados"
           }
         },
         "lavanderia": {
@@ -48,7 +48,7 @@
             "kicker": "Linha comercial",
             "title": "Lavanderia",
             "description": "Produtos têxteis e de apoio à lavanderia, com organização preparada para compra online conforme disponibilidade.",
-            "subline_links": "Amaciantes|clenear-amaciantes\nSabão e lava roupas|clenear-sabao-lava-roupas\nLimpeza pesada têxtil|clenear-limpeza-pesada-textil\nApoio operacional para lavanderias|clenear-apoio-operacional-lavanderias"
+            "subline_links": "Amaciantes|clenear-amaciantes\nSabão e Lava-Roupas|clenear-sabao-lava-roupas\nLimpeza Pesada Têxtil|clenear-limpeza-pesada-textil"
           }
         },
         "industrial": {
@@ -61,7 +61,7 @@
             "kicker": "Linha comercial",
             "title": "Industrial",
             "description": "Produtos técnicos e de limpeza pesada para contextos profissionais e industriais.",
-            "subline_links": "Desengraxantes concentrados|clenear-desengraxantes-concentrados\nDesincrustantes ácidos|clenear-desincrustantes-acidos\nLimpadores alcalinos|clenear-limpadores-alcalinos\nSanitizantes|clenear-sanitizantes\nCozinhas industriais|clenear-cozinhas-industriais\nLimpeza pesada|clenear-limpeza-pesada-industrial"
+            "subline_links": "Desengraxantes Concentrados|clenear-desengraxantes-concentrados\nDesincrustantes Ácidos|clenear-desincrustantes-acidos\nLimpadores Alcalinos|clenear-limpadores-alcalinos\nSanitizantes|clenear-sanitizantes\nCozinhas Industriais|clenear-cozinhas-industriais\nLimpeza Pesada Industrial|clenear-limpeza-pesada-industrial"
           }
         },
         "construcao_civil": {
@@ -87,7 +87,7 @@
             "kicker": "Linha em organizacao",
             "title": "Insumos e Revenda",
             "description": "Insumos, embalagens, acessórios e produtos de revenda para apoiar formuladores, empresas e marcas parceiras.",
-            "subline_links": "Insumos químicos e componentes|clenear-insumos-quimicos-componentes\nEssências e fragrâncias para formulação|clenear-essencias-fragrancias\nEmbalagens e acessórios de produção|clenear-embalagens-acessorios\nRevenda e operação|clenear-revenda-operacao\nAbsorventes e mitigação ambiental|clenear-absorventes-mitigacao-ambiental"
+            "subline_links": "Insumos Químicos e Componentes|clenear-insumos-quimicos-componentes\nEssências e Fragrâncias|clenear-essencias-fragrancias\nEmbalagens e Acessórios|clenear-embalagens-acessorios\nRevenda e Operação|clenear-revenda-operacao\nAbsorventes e Mitigação Ambiental|clenear-absorventes-mitigacao-ambiental"
           }
         }
       },

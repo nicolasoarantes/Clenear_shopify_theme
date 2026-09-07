@@ -5,17 +5,29 @@
   - product: {Object} product object.
   - block: {Object} passing the block information.
   - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - selected_variant: {Object} variant object that can be purchased by the storefront.
+  - has_eligible_variant: {Boolean} true when the product has at least one purchasable storefront variant.
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+{%- liquid
+  assign has_eligible_variant = has_eligible_variant | default: true, allow_false: true
+  if selected_variant == blank and has_eligible_variant
+    assign selected_variant = product.selected_or_first_available_variant
+  endif
+-%}
+
 {%- unless product.has_only_default_variant -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
     data-section="{{ section.id }}"
+    data-clenear-has-eligibility="true"
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
       {%- liquid
+        assign option_index = option.position | minus: 1
+        assign selected_option_value = selected_variant.options[option_index] | default: option.selected_value
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
 
@@ -32,14 +44,15 @@
           <legend class="form__label">
             {{ option.name }}:
             <span data-selected-value>
-              {{- option.selected_value -}}
+              {{- selected_option_value -}}
             </span>
           </legend>
           {% render 'product-variant-options',
             product: product,
             option: option,
             block: block,
-            picker_type: picker_type
+            picker_type: picker_type,
+            selected_variant: selected_variant
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
@@ -49,7 +62,8 @@
             product: product,
             option: option,
             block: block,
-            picker_type: picker_type
+            picker_type: picker_type,
+            selected_variant: selected_variant
           %}
         </fieldset>
       {%- else -%}
@@ -76,7 +90,8 @@
                 product: product,
                 option: option,
                 block: block,
-                picker_type: picker_type
+                picker_type: picker_type,
+                selected_variant: selected_variant
               %}
             </select>
             <span class="svg-wrapper">
@@ -88,7 +103,25 @@
     {%- endfor -%}
 
     <script type="application/json" data-selected-variant>
-      {{ product.selected_or_first_available_variant | json }}
+      {{ selected_variant | json }}
+    </script>
+    <script type="application/json" data-clenear-eligible-variant-ids>
+      [
+        {%- liquid
+          assign first_eligible_id = true
+          for variant in product.variants
+            unless variant.metafields.clenear.elegivel_loja.value == false
+              if variant.available
+                unless first_eligible_id
+                  echo ','
+                endunless
+                echo variant.id | json
+                assign first_eligible_id = false
+              endif
+            endunless
+          endfor
+        -%}
+      ]
     </script>
   </variant-selects>
 {%- endunless -%}

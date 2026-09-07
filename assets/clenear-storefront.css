@@ -832,7 +832,8 @@ product-info {
 }
 
 .cl-large-variant-notice,
-.cl-cart-large-variant-warning {
+.cl-cart-large-variant-warning,
+.cl-cart-variant-warning {
   background: rgba(255, 200, 50, 0.14);
   border: 1px solid rgba(189, 132, 0, 0.32);
   border-radius: 8px;
@@ -844,6 +845,11 @@ product-info {
 
 .cl-large-variant-notice {
   margin: 0 0 18px;
+}
+
+.cl-cart-variant-warning {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .cl-variant-option-hidden {

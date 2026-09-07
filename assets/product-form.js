@@ -23,6 +23,12 @@ if (!customElements.get('product-form')) {
 
         this.handleErrorMessage();
 
+        if (!this.isSelectedVariantEligible()) {
+          this.submitButton.setAttribute('aria-disabled', true);
+          this.handleErrorMessage('Esta variante nao esta elegivel para compra online.');
+          return;
+        }
+
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
         this.querySelector('.loading__spinner').classList.remove('hidden');
@@ -131,6 +137,22 @@ if (!customElements.get('product-form')) {
         } else {
           this.submitButton.removeAttribute('disabled');
           this.submitButtonText.textContent = window.variantStrings.addToCart;
+        }
+      }
+
+      isSelectedVariantEligible() {
+        const productInfo = this.closest('product-info') || document;
+        if (productInfo.dataset?.clenearHasEligibleVariant === 'false') return false;
+        const eligibleVariantScript = productInfo.querySelector('[data-clenear-eligible-variant-ids]');
+        if (!eligibleVariantScript) return true;
+
+        try {
+          const eligibleVariantIds = JSON.parse(eligibleVariantScript.textContent).map((id) => id.toString());
+          const selectedVariantId = this.variantIdInput?.value?.toString();
+          return Boolean(selectedVariantId && eligibleVariantIds.includes(selectedVariantId));
+        } catch (error) {
+          console.error(error);
+          return false;
         }
       }
 
