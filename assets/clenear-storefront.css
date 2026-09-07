@@ -1269,3 +1269,23 @@ product-info {
     grid-template-columns: 1fr;
   }
 }
+
+@media screen and (max-width: 749px) {
+  .cl-store__products .product-grid .grid__item {
+    flex: 0 0 84%;
+    max-width: 84%;
+    width: 84%;
+  }
+
+  .cl-store__products .product-card-wrapper .card > .card__inner {
+    min-height: 20rem;
+  }
+
+  .cl-store__products .product-card-wrapper .card > .card__content {
+    padding: 1.9rem 2rem 2rem;
+  }
+
+  .cl-store__products .card__heading {
+    font-size: 1.8rem;
+  }
+}
