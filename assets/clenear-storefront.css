@@ -1235,6 +1235,25 @@ product-info {
 }
 
 @media screen and (max-width: 989px) {
+  .cl-store__line-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cl-store__line-card::before {
+    height: 5px;
+    inset: 0 0 auto;
+    width: auto;
+  }
+
+  .cl-store__line-media {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+
+  .cl-store__line-body {
+    min-width: 0;
+  }
+
   .cl-store__line-nav-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
