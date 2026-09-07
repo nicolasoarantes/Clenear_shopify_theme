@@ -1149,6 +1149,18 @@ product-info {
   padding: 16px;
 }
 
+.cl-store__products .product-card-wrapper .card .card__media,
+.cl-store__products .product-card-wrapper .card--standard .card__media {
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.cl-store__products .product-card-wrapper .card__media .media img {
+  object-fit: cover;
+  padding: 0;
+}
+
 .collection .product-card-wrapper .card > .card__content,
 .cl-store .product-card-wrapper .card > .card__content {
   display: flex;
